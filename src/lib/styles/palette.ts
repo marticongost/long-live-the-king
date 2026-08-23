@@ -1,0 +1,28 @@
+import type { HexColor } from './types';
+
+export const black: HexColor = '#000';
+export const white: HexColor = '#fff';
+export const pinkSwan: HexColor = '#c1b4b4';
+export const red: HexColor = '#a15555';
+export const lightPink: HexColor = '#cca0a0';
+export const blush: HexColor = '#e9dedd';
+export const buccaneer: HexColor = '#702e2e';
+export const thatch: HexColor = '#bd9898';
+export const brown: HexColor = '#a17a55';
+export const oldGold: HexColor = '#d2b532';
+export const gold: HexColor = '#8a6519';
+export const green: HexColor = '#aacea3';
+export const blue: HexColor = '#5555a1';
+export const violet: HexColor = '#a155a1';
+export const purple: HexColor = '#7655a1';
+export const shade: HexColor = '#282828';
+export const somber: HexColor = '#222';
+export const cloud: HexColor = '#cfd5db';
+export const ash: HexColor = '#333';
+export const cinder: HexColor = '#444';
+export const steel: HexColor = '#b0baba';
+export const gray: HexColor = '#888';
+export const ivory: HexColor = '#f0f0e0';
+export const cedar: HexColor = '#330f1b';
+export const cocoaBrown: HexColor = '#150f12';
+export const dawn: HexColor = '#a3a09d';
