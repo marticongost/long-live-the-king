@@ -22,10 +22,10 @@
 			width: `${cardWidth}mm`,
 			height: `${cardHeight}mm`,
 			"&[data-type='office']": {
-				'--header-background-color': css.palette.pinkSwan
+				'--header-background-color': css.palette.lightPink
 			},
 			"&[data-type='player-card']": {
-				'--header-background-color': css.palette.green
+				'--header-background-color': css.palette.bone
 			}
 		},
 		header: {
