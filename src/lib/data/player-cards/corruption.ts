@@ -7,7 +7,7 @@ export default {
 			type: 'single-choice',
 			choices: [
 				{
-					title: 'Segur que ningú ho nota...',
+					title: 'Segur que ningú ho notarà...',
 					type: 'secret',
 					effects:
 						'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {gold 1}, i el regne rep {wealth -1}.'
