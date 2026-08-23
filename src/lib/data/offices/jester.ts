@@ -17,16 +17,10 @@ export default {
 				'No pots participar en lleis. Perds els teus altres {offices} i no en pots guanyar de nous.'
 		},
 		{
-			title: 'Picaresca',
-			type: 'action',
-			cost: { intrigue: 1 },
-			effects: "Roba una carta aleatòria d'un altre membre del regne. {happiness 1}."
-		},
-		{
 			title: 'Ridiculitzar',
 			type: 'action',
 			effects:
-				'{duel} {power} + {intrigue}. El perdedor dona {prestige 1} al vencedor. Si guanyes el duel, {happiness 1}.'
+				'{duel} {power} + {intrigue} contra un altre membre del regne. El perdedor dona {prestige 1} al vencedor. Si el bufó guanya el duel, {happiness 1}. Si el guanya per 2+, roba una carta aleatòria al rival.'
 		}
 	]
 } satisfies OfficeData;
