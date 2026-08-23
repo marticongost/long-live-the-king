@@ -26,3 +26,4 @@ export const ivory: HexColor = '#f0f0e0';
 export const cedar: HexColor = '#330f1b';
 export const cocoaBrown: HexColor = '#150f12';
 export const dawn: HexColor = '#a3a09d';
+export const sandal: HexColor = '#a68e6d';

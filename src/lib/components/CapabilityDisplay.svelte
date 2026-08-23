@@ -17,10 +17,39 @@
 		concreteCapability: {
 			...css.row('sm'),
 			alignItems: 'flex-start',
-			padding: css.spacing.sm,
-			'& + *': {
-				borderTop: `1px dotted ${css.palette.lightPink}`
-			}
+			padding: css.spacing.sm
+		},
+		choice: {
+			position: 'relative'
+		},
+		connector: {
+			position: 'absolute',
+			left: '0.9em',
+			top: '1.8em',
+			bottom: '-0.2em',
+			width: 0,
+			'--connector-color': css.palette.ash,
+			borderLeft: '2px solid var(--connector-color)'
+		},
+		rhombus: {
+			position: 'absolute',
+			left: '-0.06em',
+			top: '50%',
+			width: '1.1em',
+			height: '1.1em',
+			transform: 'translate(-50%, -50%) rotate(45deg)',
+			backgroundColor: 'var(--connector-color)',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center'
+		},
+		rhombusText: {
+			transform: 'rotate(-45deg)',
+			fontFamily: css.fonts.heading,
+			fontSize: '0.7em',
+			fontWeight: 900,
+			lineHeight: 1,
+			color: css.palette.white
 		},
 		icon: {
 			flexShrink: 0,
@@ -47,7 +76,7 @@
 		},
 		trigger: {
 			fontWeight: 'bold',
-			color: css.text.subtleColor
+			color: css.palette.sandal
 		}
 	});
 
@@ -82,7 +111,16 @@
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>
 	{#if capability instanceof SingleChoice}
 		{#each capability.choices as choice, index (index)}
-			<Self capability={choice} />
+			<div class={styles.choice}>
+				<Self capability={choice} />
+				{#if index < capability.choices.length - 1}
+					<div class={styles.connector}>
+						<div class={styles.rhombus}>
+							<span class={styles.rhombusText}>O</span>
+						</div>
+					</div>
+				{/if}
+			</div>
 		{/each}
 	{:else if capability instanceof ConcreteCapability}
 		<div class={styles.concreteCapability}>
