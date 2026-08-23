@@ -62,7 +62,9 @@
 		},
 		header: {
 			...css.row(),
-			marginBottom: css.spacing.xs
+			marginBottom: '0.1em',
+			paddingBottom: '0.1em',
+			borderBottom: `1px solid ${css.palette.blush}`
 		},
 		title: {
 			fontSize: '0.9em',
@@ -70,6 +72,9 @@
 			fontFamily: css.fonts.heading,
 			margin: 0,
 			marginRight: 'auto'
+		},
+		cost: {
+			fontSize: '0.9em'
 		},
 		body: {
 			fontSize: '0.8em'
@@ -130,7 +135,7 @@
 					<div class={styles.title}>
 						{capability.title}
 					</div>
-					<CostDisplay cost={capability.cost} />
+					<CostDisplay class={styles.cost} cost={capability.cost} />
 				</div>
 				<div class={styles.body}>
 					{#if capability instanceof Reaction}
