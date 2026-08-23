@@ -19,7 +19,7 @@ export default {
 			title: 'Excomulgar',
 			type: 'action',
 			effects:
-				'{duel} {power} + {intrigue} contra un altre membre del regne. El vencedor és {exiled} del regne. Els empats no tenen cap efecte.'
+				'{duel} {power} + {intrigue} contra un altre membre del regne. El perdedor és {exiled} del regne.'
 		}
 	]
 } satisfies OfficeData;
