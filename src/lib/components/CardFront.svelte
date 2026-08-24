@@ -8,36 +8,35 @@
 		return `${(cardWidth * percent) / 100}mm`;
 	}
 
-	function ch(percent: number) {
-		return `${(cardHeight * percent) / 100}mm`;
-	}
+	const variant = css.styleVariants(['office', 'goal', 'player-card']);
 
-	const styles = css.styles({
+	const stylesFor = css.multipleStyles({
 		card: {
-			...css.column,
+			...css.column(),
 			position: 'relative',
 			fontFamily: css.fonts.text,
 			backgroundColor: css.palette.white,
 			color: css.text.regularColor,
 			width: `${cardWidth}mm`,
-			height: `${cardHeight}mm`,
-			"&[data-type='office']": {
-				'--header-background-color': css.palette.lightPink
-			},
-			"&[data-type='player-card']": {
-				'--header-background-color': css.palette.bone
-			}
+			height: `${cardHeight}mm`
 		},
 		header: {
-			...css.row('sm'),
+			...css.column(),
 			position: 'relative',
-			backgroundColor: 'var(--header-background-color)',
-			height: ch(10)
+			color: css.palette.white,
+			height: '32mm',
+			[variant('office')]: {
+				height: '9.4mm',
+				justifyContent: 'center'
+			}
 		},
 		title: {
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			height: '9.4mm',
 			width: '100%',
 			fontWeight: 900,
-			color: css.text.headingColor,
 			margin: 0,
 			textAlign: 'center'
 		},
@@ -46,57 +45,38 @@
 			alignSelf: 'flex-start',
 			display: 'flex',
 			alignItems: 'center',
-			justifyContent: 'center'
-		},
-		officeIconFrame: {
-			position: 'absolute',
-			left: 0,
-			top: 0,
-			width: cw(20),
-			height: cw(20)
-		},
-		playerCardIconFrame: {
-			backgroundColor: 'var(--header-background-color)'
-		},
-		officeDecoration: {
-			position: 'absolute',
-			left: 0,
-			top: 0,
-			width: '100%',
-			height: '100%',
-			zIndex: 1
-		},
-		playerCardDecoration: {
-			position: 'absolute',
-			left: 0,
-			top: '60%',
-			width: '100%',
-			height: 'auto',
-			color: 'var(--header-background-color)'
+			justifyContent: 'center',
+			[variant('office')]: {
+				position: 'absolute',
+				left: 0,
+				top: 0,
+				width: cw(20),
+				height: cw(20)
+			}
 		},
 		icon: {
 			position: 'relative',
 			width: '20%',
 			height: 'auto',
 			zIndex: 2,
-			color: css.palette.white
+			color: css.palette.white,
+			[variant('office')]: {
+				width: '60%',
+				top: '-10%'
+			}
 		},
-		officeIcon: {
-			width: '60%',
-			top: '-10%'
-		},
-		body: {},
-		officeBody: {
-			paddingTop: css.spacing.md
-		},
-		playerCardBody: {
-			paddingTop: css.spacing.lg
+		body: {
+			[variant('office')]: {
+				paddingTop: css.spacing.md
+			}
 		}
 	});
 
-	function getType(card: Card): 'office' | 'player-card' {
+	function getType(card: Card): 'office' | 'goal' | 'player-card' {
 		if (card instanceof Office) {
 			return 'office';
+		} else if (card instanceof Goal) {
+			return 'goal';
 		} else if (card instanceof PlayerCard) {
 			return 'player-card';
 		}
@@ -106,6 +86,8 @@
 	function getIcon(card: Card): string {
 		if (card instanceof Office) {
 			return `offices/${card.id}.svg`;
+		} else if (card instanceof Goal) {
+			return `goals/${card.id}.svg`;
 		} else if (card instanceof PlayerCard) {
 			return `player-cards/${card.id}.svg`;
 		}
@@ -115,44 +97,32 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import { Office, PlayerCard, type Card } from '$lib/models/cards';
+	import { Goal, Office, PlayerCard, type Card } from '$lib/models/cards';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
-	import { cx } from '@emotion/css';
 
 	interface Props extends StandardAttributeProps {
 		card: Card;
 	}
 
 	const { card, ...attributes }: Props = $props();
+	const type = $derived(getType(card));
 	const icon = $derived(getIcon(card));
-	const isOffice = $derived(card instanceof Office);
-	const isPlayerCard = $derived(card instanceof PlayerCard);
+	const styles = $derived(stylesFor(type));
 </script>
 
-<div {...standardAttributes(attributes, styles.card)} data-type={getType(card)}>
+<div
+	{...standardAttributes(attributes, styles.card)}
+	data-type={type}
+	style:background-image="url(/svg/card-backgrounds/{type}.svg)"
+>
 	<div class={styles.header}>
 		<div class={styles.title}>{card.title}</div>
+		<div class={styles.iconFrame}>
+			<InlineSvg class={styles.icon} src={icon} />
+		</div>
 	</div>
-	<div
-		class={cx(styles.iconFrame, {
-			[styles.officeIconFrame]: isOffice,
-			[styles.playerCardIconFrame]: isPlayerCard
-		})}
-	>
-		{#if isOffice}
-			<InlineSvg class={styles.officeDecoration} src="decorations/office-ribbon.svg" />
-		{:else if isPlayerCard}
-			<InlineSvg class={styles.playerCardDecoration} src="decorations/player-card-header.svg" />
-		{/if}
-		<InlineSvg class={cx(styles.icon, { [styles.officeIcon]: isOffice })} src={icon} />
-	</div>
-	<div
-		class={cx(styles.body, {
-			[styles.officeBody]: isOffice,
-			[styles.playerCardBody]: isPlayerCard
-		})}
-	>
+	<div class={styles.body}>
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
 		{/each}

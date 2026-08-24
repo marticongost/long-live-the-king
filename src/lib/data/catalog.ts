@@ -1,4 +1,12 @@
-import { Office, PlayerCard, type Card, type OfficeData } from '$lib/models/cards';
+import {
+	Goal,
+	Office,
+	PlayerCard,
+	type Card,
+	type GoalData,
+	type OfficeData,
+	type PlayerCardData
+} from '$lib/models/cards';
 
 class CardsCatalog {
 	private cards: Record<string, Card> = {};
@@ -34,7 +42,15 @@ cardsCatalog.load(
 );
 
 cardsCatalog.load(
-	import.meta.glob<OfficeData>(`./player-cards/**/*.ts`, {
+	import.meta.glob<GoalData>(`./goals/**/*.ts`, {
+		eager: true,
+		import: 'default'
+	}),
+	Goal
+);
+
+cardsCatalog.load(
+	import.meta.glob<PlayerCardData>(`./player-cards/**/*.ts`, {
 		eager: true,
 		import: 'default'
 	}),
