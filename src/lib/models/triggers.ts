@@ -4,6 +4,7 @@ interface TriggerData {
 
 const triggerData: Record<string, TriggerData> = {
 	turnStart: { title: 'Inici del torn' },
+	turnEnd: { title: 'Final del torn' },
 	gameEnd: { title: 'Final de la partida' }
 };
 
