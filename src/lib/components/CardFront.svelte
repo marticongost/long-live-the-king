@@ -8,10 +8,10 @@
 		return `${(cardWidth * percent) / 100}mm`;
 	}
 
-	const cardTypes = ['office', 'goal', 'event', 'player-card'] as const;
+	const cardTypes = ['office', 'goal', 'event', 'law', 'player-card'] as const;
 	type CardType = (typeof cardTypes)[number];
 
-	const variant = css.styleVariants(cardTypes);
+	const variant = css.styleVariants<CardType>(cardTypes);
 
 	const stylesFor = css.multipleStyles({
 		card: {
@@ -82,6 +82,8 @@
 			return 'goal';
 		} else if (card instanceof Event) {
 			return 'event';
+		} else if (card instanceof Law) {
+			return 'law';
 		} else if (card instanceof PlayerCard) {
 			return 'player-card';
 		}
@@ -95,6 +97,8 @@
 			return `goals/${card.id}.svg`;
 		} else if (card instanceof Event) {
 			return `events/${card.id}.svg`;
+		} else if (card instanceof Law) {
+			return `laws/${card.id}.svg`;
 		} else if (card instanceof PlayerCard) {
 			return `player-cards/${card.id}.svg`;
 		}
@@ -104,7 +108,7 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import { Event, Goal, Office, PlayerCard, type Card } from '$lib/models/cards';
+	import { Event, Goal, Law, Office, PlayerCard, type Card } from '$lib/models/cards';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
 

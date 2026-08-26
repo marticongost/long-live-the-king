@@ -1,10 +1,13 @@
 import {
 	Event,
 	Goal,
+	Law,
 	Office,
 	PlayerCard,
 	type Card,
+	type EventData,
 	type GoalData,
+	type LawData,
 	type OfficeData,
 	type PlayerCardData
 } from '$lib/models/cards';
@@ -51,7 +54,7 @@ cardsCatalog.load(
 );
 
 cardsCatalog.load(
-	import.meta.glob<PlayerCardData>(`./events/**/*.ts`, {
+	import.meta.glob<EventData>(`./events/**/*.ts`, {
 		eager: true,
 		import: 'default'
 	}),
@@ -64,4 +67,12 @@ cardsCatalog.load(
 		import: 'default'
 	}),
 	PlayerCard
+);
+
+cardsCatalog.load(
+	import.meta.glob<LawData>(`./laws/**/*.ts`, {
+		eager: true,
+		import: 'default'
+	}),
+	Law
 );

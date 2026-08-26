@@ -1,7 +1,7 @@
 import { css, cx } from '@emotion/css';
 import type { CSSObject } from '@emotion/css/create-instance';
 
-export const styleVariants = <T>(values: Array<T>): ((value: T) => symbol) => {
+export const styleVariants = <T>(values: ReadonlyArray<T>): ((value: T) => symbol) => {
 	const variants = new Map<T, symbol>();
 	for (const value of values) {
 		variants.set(value, Symbol(String(value)));
