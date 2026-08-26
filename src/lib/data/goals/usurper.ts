@@ -1,0 +1,14 @@
+import type { GoalData } from '$lib/models/cards';
+
+export default {
+	title: 'Usurpador',
+	capabilities: [
+		{
+			title: 'Objectiu',
+			type: 'reaction',
+			trigger: 'gameEnd',
+			effects:
+				'Si durant la partida has estat coronat com a rei del teu regne inicial, guanya {prestige 5}. No pots triar aquest objectiu si ets el Rei.'
+		}
+	]
+} satisfies GoalData;
