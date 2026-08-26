@@ -3,7 +3,8 @@ interface TriggerData {
 }
 
 const triggerData: Record<string, TriggerData> = {
-	turnStart: { title: 'Inici del torn' }
+	turnStart: { title: 'Inici del torn' },
+	gameEnd: { title: 'Final de la partida' }
 };
 
 export type TriggerType = keyof typeof triggerData;
@@ -25,5 +26,9 @@ for (const [type, data] of Object.entries(triggerData)) {
 }
 
 export function getTrigger(type: TriggerType): Trigger {
-	return triggersMap[type];
+	const trigger = triggersMap[type];
+	if (!trigger) {
+		throw new Error(`Unknown trigger: ${type}`);
+	}
+	return trigger;
 }

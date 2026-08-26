@@ -1,4 +1,5 @@
 import {
+	Event,
 	Goal,
 	Office,
 	PlayerCard,
@@ -47,6 +48,14 @@ cardsCatalog.load(
 		import: 'default'
 	}),
 	Goal
+);
+
+cardsCatalog.load(
+	import.meta.glob<PlayerCardData>(`./events/**/*.ts`, {
+		eager: true,
+		import: 'default'
+	}),
+	Event
 );
 
 cardsCatalog.load(
