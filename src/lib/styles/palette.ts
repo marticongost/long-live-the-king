@@ -28,3 +28,4 @@ export const cocoaBrown: HexColor = '#150f12';
 export const dawn: HexColor = '#a3a09d';
 export const sandal: HexColor = '#a68e6d';
 export const bone: HexColor = '#ddcdb8';
+export const stone: HexColor = '#dedad5';

@@ -69,9 +69,19 @@
 			}
 		},
 		body: {
+			flex: '1 1 auto',
 			[variant('office')]: {
 				paddingTop: css.spacing.md
 			}
+		},
+		footer: {
+			...css.row('md')
+		},
+		discardBonus: {
+			marginLeft: 'auto',
+			padding: css.spacing.xs,
+			backgroundColor: css.palette.stone,
+			borderTopLeftRadius: css.spacing.md
 		}
 	});
 
@@ -109,8 +119,10 @@
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
 	import { Event, Goal, Law, Office, PlayerCard, type Card } from '$lib/models/cards';
+	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
+	import ResourceDisplay from './ResourceDisplay.svelte';
 
 	interface Props extends StandardAttributeProps {
 		card: Card;
@@ -137,5 +149,16 @@
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
 		{/each}
+	</div>
+	<div class={styles.footer}>
+		{#if !card.discardBonus.empty()}
+			<div class={styles.discardBonus}>
+				{#each resourceTypes as resourceType (resourceType)}
+					{#each { length: card.discardBonus[resourceType] } as n (n)}
+						<ResourceDisplay resource={resourceType} />
+					{/each}
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>

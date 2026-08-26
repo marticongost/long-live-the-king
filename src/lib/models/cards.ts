@@ -1,19 +1,23 @@
 import { buildCapability, type Capability, type CapabilitySpec } from './capabilities';
+import { ResourceSet, type ResourceSetProps } from './resourcesets';
 
 export interface CardData {
 	title: string;
 	capabilities?: Array<CapabilitySpec>;
+	discardBonus?: ResourceSetProps;
 }
 
 export abstract class Card {
 	readonly id: string;
 	readonly title: string;
 	readonly capabilities: Array<Capability>;
+	readonly discardBonus: ResourceSet;
 
-	constructor(id: string, { title, capabilities }: CardData) {
+	constructor(id: string, { title, capabilities, discardBonus }: CardData) {
 		this.id = id;
 		this.title = title;
 		this.capabilities = capabilities ? capabilities.map(buildCapability) : [];
+		this.discardBonus = new ResourceSet(discardBonus ?? {});
 	}
 }
 
