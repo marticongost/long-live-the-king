@@ -4,7 +4,6 @@ export default {
 	title: 'Rei',
 	capabilities: [
 		{ title: 'Poder reial', type: 'reaction', trigger: 'turnStart', effects: 'Guanya {power 1}' },
-		{ title: 'Autoritat', type: 'constant', effects: 'Trenques els empats en qualsevol disputa.' },
 		{
 			title: 'Nomenament',
 			type: 'action',

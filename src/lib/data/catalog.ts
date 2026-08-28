@@ -3,13 +3,13 @@ import {
 	Goal,
 	Law,
 	Office,
-	PlayerCard,
+	Tactic,
 	type Card,
 	type EventData,
 	type GoalData,
 	type LawData,
 	type OfficeData,
-	type PlayerCardData
+	type TacticData
 } from '$lib/models/cards';
 
 class CardsCatalog {
@@ -62,11 +62,11 @@ cardsCatalog.load(
 );
 
 cardsCatalog.load(
-	import.meta.glob<PlayerCardData>(`./player-cards/**/*.ts`, {
+	import.meta.glob<TacticData>(`./tactics/**/*.ts`, {
 		eager: true,
 		import: 'default'
 	}),
-	PlayerCard
+	Tactic
 );
 
 cardsCatalog.load(

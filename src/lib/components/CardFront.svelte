@@ -8,9 +8,6 @@
 		return `${(cardWidth * percent) / 100}mm`;
 	}
 
-	const cardTypes = ['office', 'goal', 'event', 'law', 'player-card'] as const;
-	type CardType = (typeof cardTypes)[number];
-
 	const variant = css.styleVariants<CardType>(cardTypes);
 
 	const stylesFor = css.multipleStyles({
@@ -75,30 +72,29 @@
 			}
 		},
 		footer: {
-			...css.row('md')
+			...css.row('md'),
+			...css.hpadding('sm'),
+			height: '8mm',
+			backgroundColor: css.palette.carrara
 		},
 		discardBonus: {
-			marginLeft: 'auto',
-			padding: css.spacing.xs,
-			backgroundColor: css.palette.stone,
-			borderTopLeftRadius: css.spacing.md
+			marginLeft: 'auto'
+		},
+		properties: {
+			margin: 0,
+			listStyleType: 'none',
+			color: css.text.subtleColor,
+			lineHeight: '1em'
+		},
+		propertyEntry: {
+			margin: 0,
+			fontSize: '0.8em',
+			display: 'inline',
+			'&:not(:last-child):after': {
+				content: '", "'
+			}
 		}
 	});
-
-	function getType(card: Card): CardType {
-		if (card instanceof Office) {
-			return 'office';
-		} else if (card instanceof Goal) {
-			return 'goal';
-		} else if (card instanceof Event) {
-			return 'event';
-		} else if (card instanceof Law) {
-			return 'law';
-		} else if (card instanceof PlayerCard) {
-			return 'player-card';
-		}
-		throw new Error(`Unknown card type ${card.constructor.name}`);
-	}
 
 	function getIcon(card: Card): string {
 		if (card instanceof Office) {
@@ -109,8 +105,8 @@
 			return `events/${card.id}.svg`;
 		} else if (card instanceof Law) {
 			return `laws/${card.id}.svg`;
-		} else if (card instanceof PlayerCard) {
-			return `player-cards/${card.id}.svg`;
+		} else if (card instanceof Tactic) {
+			return `tactics/${card.id}.svg`;
 		}
 		throw new Error(`Unknown card type ${card.constructor.name}`);
 	}
@@ -118,7 +114,16 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import { Event, Goal, Law, Office, PlayerCard, type Card } from '$lib/models/cards';
+	import {
+		cardTypes,
+		Event,
+		Goal,
+		Law,
+		Office,
+		Tactic,
+		type Card,
+		type CardType
+	} from '$lib/models/cards';
 	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
@@ -129,15 +134,14 @@
 	}
 
 	const { card, ...attributes }: Props = $props();
-	const type = $derived(getType(card));
 	const icon = $derived(getIcon(card));
-	const styles = $derived(stylesFor(type));
+	const styles = $derived(stylesFor(card.type));
 </script>
 
 <div
 	{...standardAttributes(attributes, styles.card)}
-	data-type={type}
-	style:background-image="url(/svg/card-backgrounds/{type}.svg)"
+	data-type={card.type}
+	style:background-image="url(/svg/card-backgrounds/{card.type}.svg)"
 >
 	<div class={styles.header}>
 		<div class={styles.title}>{card.title}</div>
@@ -151,6 +155,11 @@
 		{/each}
 	</div>
 	<div class={styles.footer}>
+		<ul class={styles.properties}>
+			{#each card.properties as property (property.id)}
+				<li class={styles.propertyEntry}>{property.title}</li>
+			{/each}
+		</ul>
 		{#if !card.discardBonus.empty()}
 			<div class={styles.discardBonus}>
 				{#each resourceTypes as resourceType (resourceType)}
