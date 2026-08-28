@@ -12,7 +12,8 @@ export const keywords = {
 	aggression: 'agressió',
 	duel: 'Duel',
 	exiled: 'expulsat',
-	plot: 'complot'
+	plot: 'complot',
+	execute: 'executar'
 };
 
 export type Keyword = keyof typeof keywords;

@@ -2,7 +2,7 @@ import { buildCapability, type Capability, type CapabilitySpec } from './capabil
 import { getProperty, type Property, type PropertyId } from './properties';
 import { ResourceSet, type ResourceSetProps } from './resourcesets';
 
-export const cardTypes = ['office', 'goal', 'event', 'law', 'tactic'] as const;
+export const cardTypes = ['office', 'goal', 'event', 'law', 'tactic', 'asset'] as const;
 
 export type CardType = (typeof cardTypes)[number];
 
@@ -64,6 +64,14 @@ export type TacticData = CardData;
 export class Tactic extends Card {
 	override get type(): CardType {
 		return 'tactic';
+	}
+}
+
+export type AssetsData = CardData;
+
+export class Asset extends Card {
+	override get type(): CardType {
+		return 'asset';
 	}
 }
 

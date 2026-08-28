@@ -4,6 +4,7 @@ const propertyData = {
 	office: 'Càrrec',
 	goal: 'Objectiu',
 	tactic: 'Tàctica',
+	asset: 'Propietat',
 	law: 'Llei',
 
 	// Card sub-types (explicit properties)

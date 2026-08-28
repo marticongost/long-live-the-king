@@ -107,6 +107,8 @@
 			return `laws/${card.id}.svg`;
 		} else if (card instanceof Tactic) {
 			return `tactics/${card.id}.svg`;
+		} else if (card instanceof Asset) {
+			return `assets/${card.id}.svg`;
 		}
 		throw new Error(`Unknown card type ${card.constructor.name}`);
 	}
@@ -115,6 +117,7 @@
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
 	import {
+		Asset,
 		cardTypes,
 		Event,
 		Goal,
@@ -163,7 +166,7 @@
 		{#if !card.discardBonus.empty()}
 			<div class={styles.discardBonus}>
 				{#each resourceTypes as resourceType (resourceType)}
-					{#each { length: card.discardBonus[resourceType] } as n (n)}
+					{#each { length: card.discardBonus[resourceType] } as _, index (index)}
 						<ResourceDisplay resource={resourceType} />
 					{/each}
 				{/each}
