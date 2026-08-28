@@ -2,7 +2,7 @@ import type { GoalData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de transparència',
-	discardBonus: { power: 1 },
+	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			title: 'Proposar la llei',

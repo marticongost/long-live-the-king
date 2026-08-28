@@ -2,6 +2,7 @@ import type { GoalData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de promeses vinculants',
+	discardBonus: { power: 1 },
 	capabilities: [
 		{
 			title: 'Efecte',
