@@ -1,0 +1,13 @@
+import type { GoalData } from '$lib/models/cards';
+
+export default {
+	title: 'Conflictiu',
+	capabilities: [
+		{
+			title: 'Objectiu',
+			type: 'reaction',
+			trigger: 'gameEnd',
+			effects: 'Si has iniciat 5+ duels durant la partida, guanya {prestige 3}.'
+		}
+	]
+} satisfies GoalData;
