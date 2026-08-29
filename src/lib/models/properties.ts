@@ -11,7 +11,8 @@ const propertyData = {
 	machination: 'Maquinació',
 	agression: 'Agressió',
 	magic: 'Màgia',
-	land: 'Terres'
+	land: 'Terres',
+	illicit: 'Il·lícit'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;
