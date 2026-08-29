@@ -18,6 +18,7 @@
 		keyword: {
 			color: css.text.highlightColor
 		},
+		keywordIcon: {},
 		input: {
 			display: 'inline-block',
 			border: `2px solid ${css.palette.red}`,
@@ -41,6 +42,7 @@
 </script>
 
 <script lang="ts">
+	import InlineSvg from './InlineSvg.svelte';
 	import { standardAttributes, type StandardAttributeProps } from './utils';
 
 	interface Props extends StandardAttributeProps {
@@ -64,7 +66,12 @@
 		{:else if chunk.type === 'text'}
 			<span class={styles.text}>{chunk.text}</span>
 		{:else if chunk.type === 'keyword'}
-			<strong class={styles.keyword}>{keywords[chunk.keyword]}</strong>
+			{@const label = keywords[chunk.keyword]}
+			{#if label === undefined}
+				<InlineSvg class={styles.keywordIcon} src="keywords/{chunk.keyword}.svg" />
+			{:else}
+				<strong class={styles.keyword}>{keywords[chunk.keyword]}</strong>
+			{/if}
 		{:else if chunk.type === 'resource'}
 			<ResourceDisplay resource={chunk.resource} amount={chunk.amount} />
 		{:else if chunk.type === 'kingdom-stat'}
