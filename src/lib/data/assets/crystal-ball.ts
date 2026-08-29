@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Omniscència',
 			type: 'reaction',
-			trigger: 'turnStart',
+			trigger: 'turnEnd',
 			effects: 'Guanyar {intrigue 1}'
 		},
 		{

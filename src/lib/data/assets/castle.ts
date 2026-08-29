@@ -6,10 +6,9 @@ export default {
 	discardBonus: { gold: 2 },
 	capabilities: [
 		{
-			title: 'Rumors',
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'Guanyar {strength 1}.'
+			title: 'Fortalesa',
+			type: 'action',
+			effects: 'Guanyar {strength 1}. Límit un cop per torn.'
 		},
 		{
 			title: 'Ampliació',

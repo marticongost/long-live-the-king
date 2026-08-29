@@ -7,9 +7,8 @@ export default {
 	capabilities: [
 		{
 			title: 'Ostentació',
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'Guanyar {power 1}.'
+			type: 'action',
+			effects: 'Guanyar {power 1}. Límit un cop per torn.'
 		},
 		{
 			title: 'Banquet',

@@ -7,9 +7,8 @@ export default {
 	capabilities: [
 		{
 			title: 'Rumors',
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'Guanyar {intrigue 1}.'
+			type: 'action',
+			effects: 'Guanyar {intrigue 1}. Límit un cop per torn.'
 		},
 		{
 			title: 'Convido a la primera ronda!',

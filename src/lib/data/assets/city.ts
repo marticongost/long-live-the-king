@@ -7,10 +7,8 @@ export default {
 	capabilities: [
 		{
 			title: 'Centre de poder',
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects:
-				'Guanyar {input check} {power 1}, {input check} {gold 1}, {input check} {intrigue 1} o {input check} {strength 1}.'
+			type: 'action',
+			effects: 'Guanyar {power 1}, {gold 1}, {intrigue 1} o {strength 1}. Límit un cop per torn.'
 		}
 	]
 } satisfies GoalData;

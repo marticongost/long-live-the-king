@@ -7,9 +7,8 @@ export default {
 	capabilities: [
 		{
 			title: 'Impostos',
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'Guanyar {gold 1}.'
+			type: 'action',
+			effects: 'Guanyar {gold 1}. Límit un cop per torn.'
 		},
 		{
 			title: 'Collita',
