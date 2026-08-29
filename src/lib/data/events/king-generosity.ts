@@ -1,13 +1,13 @@
 import type { GoalData } from '$lib/models/cards';
 
 export default {
-	title: 'Mala collita',
+	title: 'Generositat reial',
 	capabilities: [
 		{
 			title: 'Resolució',
 			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'El regne pateix {food -2}.'
+			trigger: 'gameEnd',
+			effects: 'Foobar'
 		}
 	]
 } satisfies GoalData;
