@@ -29,6 +29,11 @@
 		numericInput: {
 			width: '2em'
 		},
+		checkInput: {
+			width: '1em',
+			borderRadius: '0.8em',
+			height: '1em'
+		},
 		textInput: {
 			width: '5em'
 		}
@@ -68,7 +73,8 @@
 			<span
 				class={cx(styles.input, {
 					[styles.numericInput]: chunk.format === 'number',
-					[styles.textInput]: chunk.format === 'text'
+					[styles.textInput]: chunk.format === 'text',
+					[styles.checkInput]: chunk.format === 'check'
 				})}
 			></span>
 		{:else}

@@ -10,7 +10,8 @@ const propertyData = {
 	// Card sub-types (explicit properties)
 	machination: 'Maquinació',
 	agression: 'Agressió',
-	magic: 'Màgia'
+	magic: 'Màgia',
+	land: 'Terres'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;

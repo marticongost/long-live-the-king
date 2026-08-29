@@ -5,11 +5,6 @@ export default {
 	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
-			title: 'Proposar la llei',
-			type: 'action',
-			effects: 'Iniciar una {vote}. Si té èxit, la llei entra en vigor. Si no, descartar la carta.'
-		},
-		{
 			title: 'Efecte',
 			type: 'constant',
 			effects:

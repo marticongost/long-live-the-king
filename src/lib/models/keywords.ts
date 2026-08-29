@@ -13,6 +13,7 @@ export const keywords = {
 	duel: 'Duel',
 	exiled: 'expulsat',
 	plot: 'complot',
+	plots: 'complots',
 	execute: 'executar'
 };
 

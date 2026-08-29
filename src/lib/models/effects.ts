@@ -26,7 +26,7 @@ export interface KeywordChunk {
 
 export interface InputChunk {
 	type: 'input';
-	format: 'text' | 'number';
+	format: 'text' | 'number' | 'check';
 }
 
 export interface InvalidChunk {
@@ -80,10 +80,10 @@ function keywordBuilder(keyword: Keyword): ChunkBuilder {
 
 function buildInput({ params, args }: BuilderInput): Chunk {
 	const format: string = (params.format || args[0]) ?? 'text';
-	if (format !== 'text' && format !== 'number') {
+	if (format !== 'text' && format !== 'number' && format !== 'check') {
 		return {
 			type: 'invalid',
-			message: `Invalid input format; expected 'text' or 'number', got '${format}' instead`
+			message: `Invalid input format; expected 'text', 'number' or 'check', got '${format}' instead`
 		};
 	}
 	return { type: 'input', format };
