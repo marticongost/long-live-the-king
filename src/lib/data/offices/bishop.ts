@@ -7,7 +7,7 @@ export default {
 			title: "Cap de l'església",
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanyar {power 1} / {intrigue 1} / {might 1} / {gold 1} (a la teva el·lecció).'
+			effects: 'Guanyar {power 1} / {intrigue 1} / {strength 1} / {gold 1} (a la teva el·lecció).'
 		},
 		{
 			title: 'Sermó',

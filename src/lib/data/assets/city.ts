@@ -10,7 +10,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Guanyar {input check} {power 1}, {input check} {gold 1}, {input check} {intrigue 1} o {input check} {might 1}.'
+				'Guanyar {input check} {power 1}, {input check} {gold 1}, {input check} {intrigue 1} o {input check} {strength 1}.'
 		}
 	]
 } satisfies GoalData;

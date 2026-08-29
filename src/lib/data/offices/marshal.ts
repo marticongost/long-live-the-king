@@ -7,18 +7,18 @@ export default {
 			title: 'Guardià del regne',
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanya {might 3}, roba carta ({aggression}).'
+			effects: 'Guanya {strength 3}, roba carta ({aggression}).'
 		},
 		{
 			title: 'Cridar a files',
 			type: 'action',
 			cost: { power: 1 },
-			effects: 'Guanya {might 1}.'
+			effects: 'Guanya {strength 1}.'
 		},
 		{
 			title: 'Intimidació',
 			type: 'action',
-			effects: '{duel} {might}. El perdedor dona {power 1} al vencedor.'
+			effects: '{duel} {strength}. El perdedor dona {power 1} al vencedor.'
 		}
 	]
 } satisfies OfficeData;
