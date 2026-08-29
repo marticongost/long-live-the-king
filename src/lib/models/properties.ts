@@ -35,3 +35,7 @@ for (const [id, title] of Object.entries(propertyData)) {
 export function getProperty(id: PropertyId): Property {
 	return propertiesMap[id];
 }
+
+export function getProperties(): ReadonlyArray<Property> {
+	return Object.values(propertiesMap);
+}

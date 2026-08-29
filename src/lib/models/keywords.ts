@@ -1,3 +1,5 @@
+import { getProperties } from './properties';
+
 export const keywords = {
 	resource: 'recurs',
 	office: 'càrrec',
@@ -14,7 +16,8 @@ export const keywords = {
 	exiled: 'expulsat',
 	plot: 'complot',
 	plots: 'complots',
-	execute: 'executar'
+	execute: 'executar',
+	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
 };
 
 export type Keyword = keyof typeof keywords;
