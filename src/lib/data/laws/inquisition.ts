@@ -9,7 +9,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects:
-				"Si està en vigor, cada jugador revela 2 cartes aleatòries. Si una d'elles té el tret Màgia, {execute} el propietari."
+				"Si està en vigor, cada jugador revela 2 cartes aleatòries. Si una d'elles té el tret {magic}, {execute} el propietari."
 		}
 	]
 } satisfies GoalData;
