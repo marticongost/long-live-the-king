@@ -9,7 +9,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Si està en vigor, cada {players} del regne que tingui 2+ {land} ha de pagar {gold 1} al Tresorer.'
+				'Si està en vigor, cada {players} del regne que tingui {land} que generin un total de 2+ {gold} per torn ha de pagar {gold 1} al Tresorer.'
 		}
 	]
 } satisfies GoalData;
