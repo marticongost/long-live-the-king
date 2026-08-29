@@ -16,8 +16,7 @@
 		},
 		concreteCapability: {
 			...css.row('sm'),
-			alignItems: 'flex-start',
-			padding: css.spacing.sm
+			alignItems: 'flex-start'
 		},
 		choice: {
 			position: 'relative'

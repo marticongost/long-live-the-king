@@ -66,6 +66,8 @@
 			}
 		},
 		body: {
+			...css.column('sm'),
+			padding: css.spacing.sm,
 			flex: '1 1 auto',
 			[variant('office')]: {
 				paddingTop: css.spacing.md
