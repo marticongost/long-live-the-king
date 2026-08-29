@@ -3,7 +3,7 @@ import type { GoalData } from '$lib/models/cards';
 export default {
 	title: 'Port',
 	properties: ['land'],
-	discardBonus: { gold: 2 },
+	discardBonus: { gold: 3 },
 	capabilities: [
 		{
 			title: 'Guanys',
