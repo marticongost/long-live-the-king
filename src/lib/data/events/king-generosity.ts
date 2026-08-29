@@ -6,7 +6,7 @@ export default {
 		{
 			title: 'Resolució',
 			type: 'reaction',
-			trigger: 'turnStart',
+			trigger: 'whenRevealed',
 			effects:
 				"El Rei revela tantes cartes com {players} al regne, i en dona una a cada un. El rei escull quina carta donar a cada jugador, i s'assigna una de les cartes a si mateix."
 		}

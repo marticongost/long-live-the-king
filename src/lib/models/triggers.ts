@@ -3,6 +3,7 @@ interface TriggerData {
 }
 
 const triggerData: Record<string, TriggerData> = {
+	whenRevealed: { title: 'En ser revelada' },
 	turnStart: { title: 'Inici del torn' },
 	turnEnd: { title: 'Final del torn' },
 	gameEnd: { title: 'Final de la partida' },
