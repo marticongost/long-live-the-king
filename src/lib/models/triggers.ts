@@ -5,7 +5,8 @@ interface TriggerData {
 const triggerData: Record<string, TriggerData> = {
 	turnStart: { title: 'Inici del torn' },
 	turnEnd: { title: 'Final del torn' },
-	gameEnd: { title: 'Final de la partida' }
+	gameEnd: { title: 'Final de la partida' },
+	ownerIsExecuted: { title: 'Quan siguis executat' }
 };
 
 export type TriggerType = keyof typeof triggerData;
