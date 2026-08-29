@@ -11,6 +11,13 @@ export interface ReactionData extends ConcreteCapabilityData {
 	trigger: TriggerType;
 }
 
+export interface CrisisData {
+	test: string;
+	difficulty: string;
+	penalty: string;
+	highestContributionReward: string;
+}
+
 export interface SingleChoiceData {
 	choices: Array<CapabilitySpec>;
 }
@@ -19,13 +26,15 @@ export type ActionSpec = { type: 'action' } & ConcreteCapabilityData;
 export type SecretSpec = { type: 'secret' } & ConcreteCapabilityData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
 export type ConstantSpec = { type: 'constant' } & ConcreteCapabilityData;
+export type CrisisSpec = { type: 'crisis' } & CrisisData;
 export type SingleChoiceSpec = { type: 'single-choice' } & SingleChoiceData;
 export type CapabilitySpec =
-	ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | SingleChoiceSpec;
+	ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec | SingleChoiceSpec;
 
 export function buildCapability(spec: ActionSpec): Action;
 export function buildCapability(spec: ReactionSpec): Reaction;
 export function buildCapability(spec: ConstantSpec): Constant;
+export function buildCapability(spec: CrisisSpec): Crisis;
 export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
@@ -37,6 +46,8 @@ export function buildCapability(spec: CapabilitySpec): Capability {
 			return new Reaction(spec);
 		case 'constant':
 			return new Constant(spec);
+		case 'crisis':
+			return new Crisis(spec);
 		case 'single-choice':
 			return new SingleChoice(spec);
 	}
@@ -71,6 +82,21 @@ export class Reaction extends ConcreteCapability {
 }
 
 export class Constant extends ConcreteCapability {}
+
+export class Crisis extends Capability {
+	readonly test: string;
+	readonly difficulty: string;
+	readonly penalty: string;
+	readonly highestContributionReward: string;
+
+	constructor({ test, difficulty, penalty, highestContributionReward }: CrisisData) {
+		super();
+		this.test = test;
+		this.difficulty = difficulty;
+		this.penalty = penalty;
+		this.highestContributionReward = highestContributionReward;
+	}
+}
 
 export class SingleChoice extends Capability {
 	readonly choices: Array<Capability>;
