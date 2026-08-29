@@ -20,7 +20,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects:
-				'Si ets el membre del regne amb més {prestige} i no has pagat aquest torn, es revela el teu historial.'
+				"Si ets el membre del regne amb més {prestige} i no has pagat aquest torn, es revela el teu historial i es descarta l'esdeveniment."
 		}
 	]
 } satisfies GoalData;
