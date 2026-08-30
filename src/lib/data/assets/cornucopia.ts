@@ -1,9 +1,10 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Cornucòpia',
 	properties: ['magic'],
 	discardBonus: { gold: 2 },
+	hidden: true,
 	capabilities: [
 		{
 			title: 'Abundància',
@@ -12,4 +13,4 @@ export default {
 			effects: 'Guanyar {prestige 1}. El teu regne guanya {food 1}.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

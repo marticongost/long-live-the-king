@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Església',
@@ -18,4 +18,4 @@ export default {
 				"Mira en secret les dues següents cartes d'esdeveniment. Torna una de les cartes a dalt de la pila, descarta l'altra."
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

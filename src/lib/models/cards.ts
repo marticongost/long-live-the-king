@@ -30,6 +30,14 @@ export abstract class Card {
 
 	abstract get type(): CardType;
 
+	/**
+	 * Indicates whether the card is kept secret from other players (true) or must be
+	 * shown publicly (false).
+	 */
+	get hidden(): boolean {
+		return true;
+	}
+
 	get properties(): ReadonlySet<Property> {
 		return new Set([this.type, ...this.ownProperties].map(getProperty));
 	}
@@ -49,6 +57,10 @@ export class Office extends Card {
 	override get type(): CardType {
 		return 'office';
 	}
+
+	override get hidden(): boolean {
+		return false;
+	}
 }
 
 export type GoalData = CardData;
@@ -67,11 +79,24 @@ export class Tactic extends Card {
 	}
 }
 
-export type AssetsData = CardData;
+export interface AssetData extends CardData {
+	hidden?: boolean;
+}
 
 export class Asset extends Card {
+	private readonly _hidden: boolean;
+
+	constructor(id: string, { hidden = false, ...base }: AssetData) {
+		super(id, base);
+		this._hidden = hidden;
+	}
+
 	override get type(): CardType {
 		return 'asset';
+	}
+
+	override get hidden(): boolean {
+		return this._hidden;
 	}
 }
 

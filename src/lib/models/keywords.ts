@@ -18,6 +18,7 @@ export const keywords = {
 	plots: 'complots',
 	execute: 'executar',
 	players: undefined,
+	visible: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
 };
 

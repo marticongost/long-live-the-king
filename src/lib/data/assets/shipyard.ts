@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Port',
@@ -11,4 +11,4 @@ export default {
 			effects: 'Guanyar {gold 2}. Límit un cop per torn.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

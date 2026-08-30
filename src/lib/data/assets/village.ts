@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Poble',
@@ -11,4 +11,4 @@ export default {
 			effects: 'Guanyar {power 1}, {gold 1}, {intrigue 1} o {strength 1}. Límit un cop per torn.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

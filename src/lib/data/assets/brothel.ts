@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Burdell',
@@ -17,4 +17,4 @@ export default {
 			effects: 'Guanya una carta. Límit un cop per torn.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

@@ -1,9 +1,10 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Bola de cristall',
 	properties: ['magic'],
 	discardBonus: { intrigue: 2 },
+	hidden: true,
 	capabilities: [
 		{
 			title: 'Omniscència',
@@ -18,4 +19,4 @@ export default {
 			effects: "El director de joc t'ensenya en secret les següents 3 cartes d'esdeveniment."
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Ma dreta',
@@ -11,4 +11,4 @@ export default {
 			effects: 'Guanyar 1 carta. Límit un cop per torn.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

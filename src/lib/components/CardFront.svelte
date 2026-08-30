@@ -95,6 +95,20 @@
 			'&:not(:last-child):after': {
 				content: '", "'
 			}
+		},
+		publicCard: {
+			...css.row('sm')
+		},
+		publicCardIcon: {
+			flexShrink: 0,
+			width: '1em',
+			height: 'auto',
+			color: css.palette.dawn
+		},
+		publicCardText: {
+			fontSize: '0.8em',
+			fontWeight: 'bold',
+			color: css.palette.sandal
 		}
 	});
 
@@ -113,6 +127,13 @@
 			return `assets/${card.id}.svg`;
 		}
 		throw new Error(`Unknown card type ${card.constructor.name}`);
+	}
+
+	function getBackgroundImage(card: Card): string {
+		if (card instanceof Asset && card.hidden) {
+			return 'url(/svg/card-backgrounds/hidden-asset.svg)';
+		}
+		return `url(/svg/card-backgrounds/${card.type}.svg)`;
 	}
 </script>
 
@@ -146,7 +167,7 @@
 <div
 	{...standardAttributes(attributes, styles.card)}
 	data-type={card.type}
-	style:background-image="url(/svg/card-backgrounds/{card.type}.svg)"
+	style:background-image={getBackgroundImage(card)}
 >
 	<div class={styles.header}>
 		<div class={styles.title}>{card.title}</div>
@@ -155,6 +176,12 @@
 		</div>
 	</div>
 	<div class={styles.body}>
+		{#if !card.hidden}
+			<div class={styles.publicCard}>
+				<InlineSvg class={styles.publicCardIcon} src="keywords/visible.svg" />
+				<span class={styles.publicCardText}>Carta visible</span>
+			</div>
+		{/if}
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
 		{/each}

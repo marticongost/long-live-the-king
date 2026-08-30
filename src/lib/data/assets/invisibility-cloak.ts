@@ -1,8 +1,9 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: "Capa d'invisibilitat",
 	properties: ['magic'],
+	hidden: true,
 	discardBonus: { intrigue: 1, gold: 1 },
 	capabilities: [
 		{
@@ -11,4 +12,4 @@ export default {
 			effects: 'Repeteix els daus fallits en resoldre els {plots} que hagis iniciat.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

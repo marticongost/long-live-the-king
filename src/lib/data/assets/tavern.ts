@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Taverna',
@@ -17,4 +17,4 @@ export default {
 			effects: 'El teu regne guanya {happiness 1}.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;

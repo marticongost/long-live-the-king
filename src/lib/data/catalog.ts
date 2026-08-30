@@ -5,7 +5,7 @@ import {
 	Law,
 	Office,
 	Tactic,
-	type AssetsData,
+	type AssetData,
 	type Card,
 	type EventData,
 	type GoalData,
@@ -72,7 +72,7 @@ cardsCatalog.load(
 );
 
 cardsCatalog.load(
-	import.meta.glob<AssetsData>(`./assets/**/*.ts`, {
+	import.meta.glob<AssetData>(`./assets/**/*.ts`, {
 		eager: true,
 		import: 'default'
 	}),

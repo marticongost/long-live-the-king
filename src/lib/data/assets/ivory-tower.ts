@@ -1,9 +1,10 @@
-import type { GoalData } from '$lib/models/cards';
+import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: "Torre d'ivori",
 	properties: ['land', 'magic'],
 	discardBonus: { intrigue: 1, power: 1 },
+	hidden: true,
 	capabilities: [
 		{
 			title: 'Col·lecció de curiositats',
@@ -18,4 +19,4 @@ export default {
 			effects: 'Guanyar {power 1}.'
 		}
 	]
-} satisfies GoalData;
+} satisfies AssetData;
