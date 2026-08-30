@@ -12,6 +12,7 @@ const propertyData = {
 	agression: 'Agressió',
 	magic: 'Màgia',
 	land: 'Terres',
+	retinue: 'Sèquit',
 	illicit: 'Il·lícit'
 } as const;
 

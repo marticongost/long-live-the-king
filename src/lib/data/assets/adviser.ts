@@ -1,0 +1,14 @@
+import type { GoalData } from '$lib/models/cards';
+
+export default {
+	title: 'Ma dreta',
+	properties: ['retinue'],
+	discardBonus: { power: 2 },
+	capabilities: [
+		{
+			title: 'Consell',
+			type: 'action',
+			effects: 'Guanyar 1 carta. Límit un cop per torn.'
+		}
+	]
+} satisfies GoalData;
