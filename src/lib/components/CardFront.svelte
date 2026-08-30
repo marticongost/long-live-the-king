@@ -24,7 +24,7 @@
 			...css.column(),
 			position: 'relative',
 			color: css.palette.white,
-			height: '32mm',
+			height: '30mm',
 			[variant('office')]: {
 				height: '9.4mm',
 				justifyContent: 'center'
@@ -56,7 +56,7 @@
 		},
 		icon: {
 			position: 'relative',
-			width: '20%',
+			width: '19%',
 			height: 'auto',
 			zIndex: 2,
 			color: css.palette.white,

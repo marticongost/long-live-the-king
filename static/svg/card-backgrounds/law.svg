@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="2"
-     inkscape:cx="73.75"
-     inkscape:cy="122.5"
+     inkscape:cx="73.5"
+     inkscape:cy="122"
      inkscape:window-width="2560"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -36,7 +36,7 @@
   <path
      id="path27"
      style="fill:#7e597e;fill-opacity:1;stroke-width:0.264583"
-     d="M 0,-6.6639056e-5 V 19.262843 30.206362 l 31.49989,-4.413685 31.49989,4.413685 V 19.262843 -6.6639056e-5 Z"
+     d="M 0,-6.6639056e-5 V 19.262843 28.999937 l 31.49989,-3.20726 31.49989,3.20726 V 19.262843 -6.6639056e-5 Z"
      sodipodi:nodetypes="cccccccc" />
   <path
      id="rect1"
