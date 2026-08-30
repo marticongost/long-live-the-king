@@ -7,13 +7,13 @@ export default {
 			title: 'Guardià del regne',
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanya {strength 3}, roba carta ({aggression}).'
+			effects: 'Guanya {strength 2}, roba carta ({aggression}).'
 		},
 		{
 			title: 'Cridar a files',
 			type: 'action',
-			cost: { power: 1 },
-			effects: 'Guanya {strength 1}.'
+			cost: { strength: 2 },
+			effects: 'El regne guanya {might 1}.'
 		},
 		{
 			title: 'Intimidació',

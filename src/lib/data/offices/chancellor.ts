@@ -7,7 +7,7 @@ export default {
 			title: 'Animal polític',
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanya {power 2}, robar carta ({law}).'
+			effects: "Guanya {power 2}, roba dues cartes ({law}); queda-te'n una i descarta l'altra."
 		},
 		{
 			title: 'Abolir llei',
