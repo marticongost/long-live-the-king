@@ -4,10 +4,11 @@ export default {
 	title: 'Rebel·lió',
 	capabilities: [
 		{
-			title: 'Resolució',
-			type: 'reaction',
-			trigger: 'gameEnd',
-			effects: 'Foobar'
+			type: 'crisis',
+			test: '{strength}',
+			difficulty: '(5 - {happiness}) x {players}',
+			highestContributionReward: '{prestige 1}',
+			penalty: '{supremacy -1}, {happiness -1}. Si {happiness} és 1, {execute} al Rei.'
 		}
 	]
 } satisfies GoalData;
