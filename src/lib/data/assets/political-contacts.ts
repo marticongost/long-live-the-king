@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Contactes polítics',
-	properties: ['retinue'],
+	properties: ['illicit', 'retinue'],
 	discardBonus: { power: 2 },
 	hidden: true,
 	capabilities: [

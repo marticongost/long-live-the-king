@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Bola de cristall',
-	properties: ['magic'],
+	properties: ['magic', 'object'],
 	discardBonus: { intrigue: 2 },
 	hidden: true,
 	capabilities: [

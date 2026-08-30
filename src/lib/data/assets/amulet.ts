@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Amulet',
-	properties: ['magic'],
+	properties: ['magic', 'object'],
 	discardBonus: { gold: 2 },
 	hidden: true,
 	capabilities: [

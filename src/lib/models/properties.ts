@@ -10,6 +10,7 @@ const propertyData = {
 	// Card sub-types (explicit properties)
 	machination: 'Maquinació',
 	agression: 'Agressió',
+	object: 'Objecte',
 	magic: 'Màgia',
 	land: 'Terres',
 	retinue: 'Sèquit',

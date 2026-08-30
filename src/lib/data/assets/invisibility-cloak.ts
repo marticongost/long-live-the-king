@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: "Capa d'invisibilitat",
-	properties: ['magic'],
+	properties: ['magic', 'object'],
 	hidden: true,
 	discardBonus: { intrigue: 1, gold: 1 },
 	capabilities: [
