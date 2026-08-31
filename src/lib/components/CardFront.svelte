@@ -74,7 +74,7 @@
 			}
 		},
 		footer: {
-			...css.row('md'),
+			...css.row('sm'),
 			...css.hpadding('sm'),
 			height: '8mm',
 			backgroundColor: css.palette.carrara
@@ -97,19 +97,8 @@
 				content: '", "'
 			}
 		},
-		publicCard: {
-			...css.row('sm')
-		},
-		publicCardIcon: {
-			flexShrink: 0,
-			width: '1em',
-			height: 'auto',
-			color: css.palette.dawn
-		},
-		publicCardText: {
-			fontSize: '0.8em',
-			fontWeight: 'bold',
-			color: css.palette.sandal
+		visibilityIcon: {
+			opacity: '0.8'
 		}
 	});
 
@@ -179,17 +168,15 @@
 		</div>
 	</div>
 	<div class={styles.body}>
-		{#if !card.hidden}
-			<div class={styles.publicCard}>
-				<InlineSvg class={styles.publicCardIcon} src="keywords/visible.svg" />
-				<span class={styles.publicCardText}>Carta visible</span>
-			</div>
-		{/if}
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
 		{/each}
 	</div>
 	<div class={styles.footer}>
+		<InlineSvg
+			class={styles.visibilityIcon}
+			src="keywords/{card.hidden ? 'hidden' : 'visible'}.svg"
+		/>
 		<ul class={styles.properties}>
 			{#each card.properties as property (property.id)}
 				<li class={styles.propertyEntry}>{property.title}</li>

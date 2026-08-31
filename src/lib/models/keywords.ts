@@ -19,6 +19,7 @@ export const keywords = {
 	execute: 'executar',
 	players: undefined,
 	visible: undefined,
+	hidden: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
 };
 
