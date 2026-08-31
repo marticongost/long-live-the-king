@@ -80,6 +80,7 @@
 			backgroundColor: css.palette.carrara
 		},
 		discardBonus: {
+			opacity: 0.7,
 			marginLeft: 'auto'
 		},
 		properties: {
