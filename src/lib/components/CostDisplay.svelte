@@ -5,7 +5,8 @@
 	const styles = css.styles({
 		cost: {
 			display: 'inline-flex',
-			alignItems: 'center'
+			alignItems: 'center',
+			gap: css.spacing.sm
 		}
 	});
 </script>
