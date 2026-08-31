@@ -1,16 +1,16 @@
 import type { AssetData } from '$lib/models/cards';
 
 export default {
-	title: 'Contactes polítics',
-	properties: ['illicit', 'retinue'],
-	discardBonus: { power: 2 },
+	title: "Xarxa d'informants",
+	properties: ['retinue'],
+	discardBonus: { strength: 2 },
 	hidden: true,
 	capabilities: [
 		{
-			title: 'Engreixar la roda',
+			title: 'Obtenir informació',
 			type: 'secret',
 			cost: { gold: 1 },
-			effects: 'Guanyar {power 2}.'
+			effects: 'Guanyar {intrigue 2}.'
 		}
 	]
 } satisfies AssetData;
