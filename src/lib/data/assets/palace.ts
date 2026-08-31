@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Ostentació',
 			type: 'action',
-			effects: 'Guanyar {power 1}. Límit un cop per torn.'
+			effects: 'Guanyar {power 1}.'
 		},
 		{
 			title: 'Banquet',

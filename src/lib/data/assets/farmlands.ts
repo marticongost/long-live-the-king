@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Impostos',
 			type: 'action',
-			effects: 'Guanyar {gold 1}. Límit un cop per torn.'
+			effects: 'Guanyar {gold 1}.'
 		},
 		{
 			title: 'Collita',

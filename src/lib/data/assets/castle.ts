@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Fortalesa',
 			type: 'action',
-			effects: 'Guanyar {strength 1}. Límit un cop per torn.'
+			effects: 'Guanyar {strength 1}.'
 		},
 		{
 			title: 'Ampliació',

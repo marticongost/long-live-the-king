@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Guanys',
 			type: 'action',
-			effects: 'Guanyar {gold 2}. Límit un cop per torn.'
+			effects: 'Guanyar {gold 2}.'
 		}
 	]
 } satisfies AssetData;

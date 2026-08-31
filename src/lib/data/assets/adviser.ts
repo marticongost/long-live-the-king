@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Consell',
 			type: 'action',
-			effects: 'Guanyar 1 carta. Límit un cop per torn.'
+			effects: 'Guanyar 1 carta.'
 		}
 	]
 } satisfies AssetData;

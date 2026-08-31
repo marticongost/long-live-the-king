@@ -8,7 +8,7 @@ export default {
 		{
 			title: "L'ombra de la creu",
 			type: 'action',
-			effects: 'Guanyar {power 1} o {gold 1}. Límit un cop per torn.'
+			effects: 'Guanyar {power 1} o {gold 1}.'
 		},
 		{
 			title: 'Pregària',

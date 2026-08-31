@@ -8,13 +8,13 @@ export default {
 		{
 			title: 'Guanys',
 			type: 'action',
-			effects: 'Guanyar {gold 1} o {intrigue 1}. Límit un cop per torn.'
+			effects: 'Guanyar {gold 1} o {intrigue 1}.'
 		},
 		{
 			title: 'Confidències',
 			type: 'action',
 			cost: { intrigue: 1 },
-			effects: 'Guanya una carta. Límit un cop per torn.'
+			effects: 'Guanya una carta.'
 		}
 	]
 } satisfies AssetData;

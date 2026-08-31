@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Centre de poder',
 			type: 'action',
-			effects: 'Guanyar {power 2}, {gold 2}, {intrigue 2} o {strength 2}. Límit un cop per torn.'
+			effects: 'Guanyar {power 2}, {gold 2}, {intrigue 2} o {strength 2}.'
 		}
 	]
 } satisfies AssetData;

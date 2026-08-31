@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Rumors',
 			type: 'action',
-			effects: 'Guanyar {intrigue 1}. Límit un cop per torn.'
+			effects: 'Guanyar {intrigue 1}.'
 		},
 		{
 			title: 'Convido a la primera ronda!',
