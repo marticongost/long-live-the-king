@@ -5,11 +5,10 @@ export default {
 	capabilities: [
 		{ title: 'Poder reial', type: 'reaction', trigger: 'turnStart', effects: 'Guanya {power 1}' },
 		{
-			title: 'Nomenament',
+			title: 'Reorganitzar el consell',
 			type: 'action',
 			cost: { power: 3 },
-			effects:
-				"Escull un {office} de la teva reserva o assignat a un {subject}. Assigna'l a un {subject} de la teva el·lecció, o torna'l a la teva reserva."
+			effects: 'Assigna, reassigna o retira qualsevol número de {offices}.'
 		},
 		{
 			title: 'Tirania',
