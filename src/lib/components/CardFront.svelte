@@ -132,6 +132,8 @@
 	function getBackgroundImage(card: Card): string {
 		if (card instanceof Asset && card.hidden) {
 			return 'url(/svg/card-backgrounds/hidden-asset.svg)';
+		} else if (card instanceof Goal) {
+			return `url(/svg/card-backgrounds/${card.goalType}-goal.svg)`;
 		}
 		return `url(/svg/card-backgrounds/${card.type}.svg)`;
 	}

@@ -63,9 +63,20 @@ export class Office extends Card {
 	}
 }
 
-export type GoalData = CardData;
+export type GoalType = 'collective' | 'personal';
+
+export interface GoalData extends CardData {
+	goalType: GoalType;
+}
 
 export class Goal extends Card {
+	readonly goalType: GoalType;
+
+	constructor(id: string, { goalType, ...base }: GoalData) {
+		super(id, base);
+		this.goalType = goalType;
+	}
+
 	override get type(): CardType {
 		return 'goal';
 	}

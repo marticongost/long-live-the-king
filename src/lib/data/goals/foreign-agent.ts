@@ -2,6 +2,7 @@ import type { GoalData } from '$lib/models/cards';
 
 export default {
 	title: 'Agent estranger',
+	goalType: 'collective',
 	capabilities: [
 		{
 			title: 'Objectiu',

@@ -2,6 +2,7 @@ import type { GoalData } from '$lib/models/cards';
 
 export default {
 	title: 'Llibertari',
+	goalType: 'collective',
 	capabilities: [
 		{
 			title: 'Objectiu',
