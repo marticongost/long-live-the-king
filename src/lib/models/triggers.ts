@@ -7,6 +7,8 @@ const triggerData: Record<string, TriggerData> = {
 	turnStart: { title: 'Inici del torn' },
 	turnEnd: { title: 'Final del torn' },
 	gameEnd: { title: 'Final de la partida' },
+	targetedByDuel: { title: 'Quan siguis desafiat a un duel' },
+	voting: { title: 'Quan votis una llei' },
 	ownerIsExecuted: { title: 'Quan siguis executat' }
 };
 
