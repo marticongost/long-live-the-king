@@ -6,7 +6,6 @@ export default {
 	properties: [],
 	capabilities: [
 		{
-			title: 'Un pas per endavant',
 			type: 'reaction',
 			trigger: 'targetedByDuel',
 			cost: { power: 1 },

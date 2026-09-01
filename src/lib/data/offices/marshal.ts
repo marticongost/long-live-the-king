@@ -4,7 +4,6 @@ export default {
 	title: 'Comandant',
 	capabilities: [
 		{
-			title: 'Guardià del regne',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: 'Guanya {strength 2}, roba carta ({aggression}).'

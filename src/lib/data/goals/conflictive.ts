@@ -5,7 +5,6 @@ export default {
 	goalType: 'personal',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects: 'Si has iniciat 5+ duels durant la partida, guanya {prestige 3}.'

@@ -1,55 +1,25 @@
 <script lang="ts" module>
 	import {
 		Action,
+		BaseAction,
 		ConcreteCapability,
 		Constant,
 		Crisis,
 		Reaction,
 		Secret,
-		SingleChoice,
 		type Capability
 	} from '$lib/models/capabilities';
 	import * as css from '$lib/styles';
 
-	const styles = css.styles({
+	const variants = css.styleVariants(['regular', 'actionLike']);
+
+	const stylesFor = css.multipleStyles({
 		capabilityDisplay: {
 			lineHeight: '1em'
 		},
 		entry: {
 			...css.row('sm'),
 			alignItems: 'flex-start'
-		},
-		choice: {
-			position: 'relative'
-		},
-		connector: {
-			position: 'absolute',
-			left: '0.9em',
-			top: '1.8em',
-			bottom: '-0.2em',
-			width: 0,
-			'--connector-color': css.palette.ash,
-			borderLeft: '2px solid var(--connector-color)'
-		},
-		rhombus: {
-			position: 'absolute',
-			left: '-0.06em',
-			top: '50%',
-			width: '1.1em',
-			height: '1.1em',
-			transform: 'translate(-50%, -50%) rotate(45deg)',
-			backgroundColor: 'var(--connector-color)',
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center'
-		},
-		rhombusText: {
-			transform: 'rotate(-45deg)',
-			fontFamily: css.fonts.heading,
-			fontSize: '0.7em',
-			fontWeight: 900,
-			lineHeight: 1,
-			color: css.palette.white
 		},
 		icon: {
 			flexShrink: 0,
@@ -62,26 +32,41 @@
 		},
 		header: {
 			...css.row(),
+			color: css.palette.wood,
 			marginBottom: '0.1em',
 			paddingBottom: '0.1em',
 			borderBottom: `1px solid ${css.palette.blush}`
 		},
+		heading: {
+			...css.row('xs'),
+			marginRight: 'auto'
+		},
 		title: {
-			fontSize: '0.9em',
-			fontWeight: 900,
+			fontSize: '0.85em',
 			fontFamily: css.fonts.heading,
 			margin: 0,
-			marginRight: 'auto'
+			fontWeight: 600,
+			[variants('actionLike')]: {
+				fontWeight: 900
+			},
+			[variants('regular')]: {
+				fontStyle: 'italic'
+			}
+		},
+		subtitle: {
+			fontSize: '0.7em',
+			':before': {
+				content: '"("'
+			},
+			':after': {
+				content: '")"'
+			}
 		},
 		cost: {
 			fontSize: '0.9em'
 		},
 		body: {
 			fontSize: '0.8em'
-		},
-		trigger: {
-			fontWeight: 'bold',
-			color: css.palette.sandal
 		},
 		crisisOutcome: {
 			...css.row('sm'),
@@ -100,7 +85,9 @@
 			position: 'relative',
 			top: '0.2em'
 		},
-		crisisTest: {},
+		crisisTest: {
+			marginLeft: 'auto'
+		},
 		crisisBody: {
 			fontSize: '0.8em',
 			...css.column('sm')
@@ -134,11 +121,32 @@
 		}
 		throw new Error(`Unknown capability type: ${capability.constructor.name}`);
 	}
+
+	function getTitle(capability: Capability): string {
+		if (capability instanceof BaseAction) {
+			return capability.title;
+		} else if (capability instanceof Reaction) {
+			return capability.trigger.title;
+		} else if (capability instanceof Constant) {
+			return 'Constant';
+		} else if (capability instanceof Crisis) {
+			return 'Crisis';
+		}
+		throw new Error(`Unknown capability type: ${capability.constructor.name}`);
+	}
+
+	function getSubtitle(capability: Capability): string | undefined {
+		if (capability instanceof Action) {
+			return 'Acció';
+		} else if (capability instanceof Secret) {
+			return 'Secret';
+		}
+		return undefined;
+	}
 </script>
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from './utils';
-	import Self from './CapabilityDisplay.svelte';
 	import EffectsText from './EffectsText.svelte';
 	import InlineSvg from './InlineSvg.svelte';
 	import CostDisplay from './CostDisplay.svelte';
@@ -149,63 +157,57 @@
 	}
 
 	const { capability, ...attributes }: Props = $props();
+	const styles = $derived(stylesFor(capability instanceof BaseAction ? 'actionLike' : 'regular'));
 </script>
 
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>
-	{#if capability instanceof SingleChoice}
-		{#each capability.choices as choice, index (index)}
-			<div class={styles.choice}>
-				<Self capability={choice} />
-				{#if index < capability.choices.length - 1}
-					<div class={styles.connector}>
-						<div class={styles.rhombus}>
-							<span class={styles.rhombusText}>O</span>
-						</div>
+	<div class={styles.entry}>
+		<InlineSvg class={styles.icon} src={getIcon(capability)} />
+		<div class={styles.details}>
+			{#if capability instanceof Crisis}
+				<div class={styles.header}>
+					<div class={styles.title}>Crisis</div>
+					<EffectsText class={styles.crisisTest} effects={capability.test} />
+				</div>
+				<div class={styles.crisisBody}>
+					<div class={styles.crisisDifficulty}>
+						<div class={styles.crisisDifficultyLabel}>Dificultat:</div>
+						<EffectsText class={styles.crisisDifficultyValue} effects={capability.difficulty} />
 					</div>
-				{/if}
-			</div>
-		{/each}
-	{:else}
-		<div class={styles.entry}>
-			<InlineSvg class={styles.icon} src={getIcon(capability)} />
-			<div class={styles.details}>
-				{#if capability instanceof ConcreteCapability}
-					<div class={styles.header}>
+					<div class={cx(styles.crisisOutcome, styles.reward)}>
+						<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/reward.svg" />
+						<EffectsText
+							class={styles.crisisOutcomeValue}
+							effects={capability.highestContributionReward}
+						/>
+					</div>
+					<div class={cx(styles.crisisOutcome, styles.penalty)}>
+						<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/penalty.svg" />
+						<EffectsText class={styles.crisisOutcomeValue} effects={capability.penalty} />
+					</div>
+				</div>
+			{:else if capability instanceof ConcreteCapability || capability instanceof Constant}
+				{@const title = getTitle(capability)}
+				{@const subtitle = getSubtitle(capability)}
+				<div class={styles.header}>
+					<div class={styles.heading}>
 						<div class={styles.title}>
-							{capability.title}
+							{title}
 						</div>
-						<CostDisplay class={styles.cost} cost={capability.cost} />
-					</div>
-					<div class={styles.body}>
-						{#if capability instanceof Reaction}
-							<span class={styles.trigger}>{capability.trigger.title}:</span>
+						{#if subtitle}
+							<span class={styles.subtitle}>
+								{subtitle}
+							</span>
 						{/if}
-						<EffectsText effects={capability.effects} />
 					</div>
-				{:else if capability instanceof Crisis}
-					<div class={styles.header}>
-						<div class={styles.title}>Crisis</div>
-						<EffectsText class={styles.crisisTest} effects={capability.test} />
-					</div>
-					<div class={styles.crisisBody}>
-						<div class={styles.crisisDifficulty}>
-							<div class={styles.crisisDifficultyLabel}>Dificultat:</div>
-							<EffectsText class={styles.crisisDifficultyValue} effects={capability.difficulty} />
-						</div>
-						<div class={cx(styles.crisisOutcome, styles.reward)}>
-							<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/reward.svg" />
-							<EffectsText
-								class={styles.crisisOutcomeValue}
-								effects={capability.highestContributionReward}
-							/>
-						</div>
-						<div class={cx(styles.crisisOutcome, styles.penalty)}>
-							<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/penalty.svg" />
-							<EffectsText class={styles.crisisOutcomeValue} effects={capability.penalty} />
-						</div>
-					</div>
-				{/if}
-			</div>
+					{#if capability instanceof ConcreteCapability}
+						<CostDisplay class={styles.cost} cost={capability.cost} />
+					{/if}
+				</div>
+				<div class={styles.body}>
+					<EffectsText effects={capability.effects} />
+				</div>
+			{/if}
 		</div>
-	{/if}
+	</div>
 </div>

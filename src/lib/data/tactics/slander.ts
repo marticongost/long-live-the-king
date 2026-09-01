@@ -6,7 +6,6 @@ export default {
 	properties: ['machination'],
 	capabilities: [
 		{
-			title: 'Escampar rumors',
 			type: 'secret',
 			cost: { power: 2 },
 			effects:

@@ -5,7 +5,6 @@ export default {
 	goalType: 'personal',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects: 'Si acabes la partida amb 8 o més cartes a la mà, guanya {prestige 3}.'

@@ -5,7 +5,6 @@ export default {
 	discardBonus: { power: 1 },
 	capabilities: [
 		{
-			title: 'Aplicar',
 			type: 'action',
 			cost: { power: 1 },
 			effects:

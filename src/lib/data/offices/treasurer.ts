@@ -4,7 +4,6 @@ export default {
 	title: 'Tresorer',
 	capabilities: [
 		{
-			title: 'Banquer del regne',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: 'Guanyar {wealth} + {taxes} en {gold}.'

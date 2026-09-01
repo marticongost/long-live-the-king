@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { EventData } from '$lib/models/cards';
 
 export default {
 	title: 'Malestar entre les tropes',
@@ -11,4 +11,4 @@ export default {
 			penalty: '{might -1}, {happiness -1}'
 		}
 	]
-} satisfies GoalData;
+} satisfies EventData;

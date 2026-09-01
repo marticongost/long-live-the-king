@@ -1,13 +1,12 @@
-import type { GoalData } from '$lib/models/cards';
+import type { EventData } from '$lib/models/cards';
 
 export default {
 	title: 'Mala collita',
 	capabilities: [
 		{
-			title: 'Resolució',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: 'El regne pateix {food -2}.'
 		}
 	]
-} satisfies GoalData;
+} satisfies EventData;

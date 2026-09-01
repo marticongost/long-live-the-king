@@ -11,7 +11,7 @@ export default {
 			effects: 'Guanyar {intrigue 1}.'
 		},
 		{
-			title: 'Convido a la primera ronda!',
+			title: 'Una ronda per tots!',
 			type: 'action',
 			cost: { gold: 2 },
 			effects: 'El teu regne guanya {happiness 1}.'

@@ -4,7 +4,6 @@ export default {
 	title: 'Bisbe',
 	capabilities: [
 		{
-			title: "Cap de l'església",
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: 'Guanyar {power 1} / {intrigue 1} / {strength 1} / {gold 1} (a la teva el·lecció).'

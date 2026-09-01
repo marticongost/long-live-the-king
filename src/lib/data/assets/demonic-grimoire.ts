@@ -7,7 +7,7 @@ export default {
 	hidden: true,
 	capabilities: [
 		{
-			title: 'Ritual a la llum de la lluna',
+			title: 'Ritual blasfem',
 			type: 'secret',
 			cost: { power: 1, intrigue: 1 },
 			effects:

@@ -5,7 +5,6 @@ export default {
 	goalType: 'personal',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects:

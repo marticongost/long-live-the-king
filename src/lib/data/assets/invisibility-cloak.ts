@@ -7,7 +7,6 @@ export default {
 	discardBonus: { intrigue: 1, gold: 1 },
 	capabilities: [
 		{
-			title: "Fondre's amb les ombres",
 			type: 'constant',
 			effects: 'Repeteix els daus fallits en resoldre els {plots} que hagis iniciat.'
 		}

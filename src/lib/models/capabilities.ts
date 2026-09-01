@@ -1,14 +1,22 @@
 import { type ResourceSetProps, ResourceSet } from './resourcesets';
 import { getTrigger, type Trigger, type TriggerType } from './triggers';
 
-export interface ConcreteCapabilityData {
-	title: string;
+export interface CapabilityCostFields {
 	cost?: ResourceSetProps;
+}
+
+export interface CapabilityEffectsFields {
 	effects: string;
 }
 
+export type ConcreteCapabilityData = CapabilityCostFields & CapabilityEffectsFields;
+
 export interface ReactionData extends ConcreteCapabilityData {
 	trigger: TriggerType;
+}
+
+export interface BaseActionData extends ConcreteCapabilityData {
+	title?: string;
 }
 
 export interface CrisisData {
@@ -18,24 +26,17 @@ export interface CrisisData {
 	highestContributionReward: string;
 }
 
-export interface SingleChoiceData {
-	choices: Array<CapabilitySpec>;
-}
-
-export type ActionSpec = { type: 'action' } & ConcreteCapabilityData;
-export type SecretSpec = { type: 'secret' } & ConcreteCapabilityData;
+export type ActionSpec = { type: 'action' } & BaseActionData;
+export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
-export type ConstantSpec = { type: 'constant' } & ConcreteCapabilityData;
+export type ConstantSpec = { type: 'constant' } & CapabilityEffectsFields;
 export type CrisisSpec = { type: 'crisis' } & CrisisData;
-export type SingleChoiceSpec = { type: 'single-choice' } & SingleChoiceData;
-export type CapabilitySpec =
-	ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec | SingleChoiceSpec;
+export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
 export function buildCapability(spec: ActionSpec): Action;
 export function buildCapability(spec: ReactionSpec): Reaction;
 export function buildCapability(spec: ConstantSpec): Constant;
 export function buildCapability(spec: CrisisSpec): Crisis;
-export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
 		case 'action':
@@ -48,29 +49,34 @@ export function buildCapability(spec: CapabilitySpec): Capability {
 			return new Constant(spec);
 		case 'crisis':
 			return new Crisis(spec);
-		case 'single-choice':
-			return new SingleChoice(spec);
 	}
 }
 
 export abstract class Capability {}
 
 export abstract class ConcreteCapability extends Capability {
-	readonly title: string;
 	readonly cost: ResourceSet;
 	readonly effects: string;
 
-	constructor({ title, cost, effects }: ConcreteCapabilityData) {
+	constructor({ cost, effects }: ConcreteCapabilityData) {
 		super();
-		this.title = title;
 		this.cost = new ResourceSet(cost ?? {});
 		this.effects = effects;
 	}
 }
 
-export class Action extends ConcreteCapability {}
+export abstract class BaseAction extends ConcreteCapability {
+	readonly title: string;
 
-export class Secret extends ConcreteCapability {}
+	constructor({ title = 'Aplicar', ...base }: BaseActionData) {
+		super(base);
+		this.title = title;
+	}
+}
+
+export class Action extends BaseAction {}
+
+export class Secret extends BaseAction {}
 
 export class Reaction extends ConcreteCapability {
 	readonly trigger: Trigger;
@@ -81,7 +87,14 @@ export class Reaction extends ConcreteCapability {
 	}
 }
 
-export class Constant extends ConcreteCapability {}
+export class Constant extends Capability {
+	readonly effects: string;
+
+	constructor({ effects }: CapabilityEffectsFields) {
+		super();
+		this.effects = effects;
+	}
+}
 
 export class Crisis extends Capability {
 	readonly test: string;
@@ -95,14 +108,5 @@ export class Crisis extends Capability {
 		this.difficulty = difficulty;
 		this.penalty = penalty;
 		this.highestContributionReward = highestContributionReward;
-	}
-}
-
-export class SingleChoice extends Capability {
-	readonly choices: Array<Capability>;
-
-	constructor({ choices }: SingleChoiceSpec) {
-		super();
-		this.choices = choices.map(buildCapability);
 	}
 }

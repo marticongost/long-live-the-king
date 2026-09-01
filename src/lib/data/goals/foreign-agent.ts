@@ -5,7 +5,6 @@ export default {
 	goalType: 'collective',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects:

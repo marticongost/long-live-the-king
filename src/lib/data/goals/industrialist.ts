@@ -5,7 +5,6 @@ export default {
 	goalType: 'collective',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects: 'Si la {wealth} del teu regne és 4 o més, guanya {prestige 3}.'

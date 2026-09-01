@@ -5,7 +5,6 @@ export default {
 	goalType: 'collective',
 	capabilities: [
 		{
-			title: 'Objectiu',
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects: 'Si acabes la partida no formant part de cap reialme, guanya {prestige 4}.'

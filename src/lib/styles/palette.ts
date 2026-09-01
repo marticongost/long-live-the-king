@@ -25,6 +25,7 @@ export const cinder: HexColor = '#444';
 export const steel: HexColor = '#b0baba';
 export const gray: HexColor = '#888';
 export const ivory: HexColor = '#f0f0e0';
+export const wood: HexColor = '#594D4C';
 export const cedar: HexColor = '#330f1b';
 export const cocoaBrown: HexColor = '#150f12';
 export const dawn: HexColor = '#a3a09d';

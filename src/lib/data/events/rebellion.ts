@@ -1,4 +1,4 @@
-import type { GoalData } from '$lib/models/cards';
+import type { EventData } from '$lib/models/cards';
 
 export default {
 	title: 'Rebel·lió',
@@ -11,4 +11,4 @@ export default {
 			penalty: '{supremacy -1}, {happiness -1}. Si {happiness} és 1, {execute} al Rei.'
 		}
 	]
-} satisfies GoalData;
+} satisfies EventData;

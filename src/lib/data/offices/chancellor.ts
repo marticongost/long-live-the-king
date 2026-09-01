@@ -4,7 +4,6 @@ export default {
 	title: 'Canceller',
 	capabilities: [
 		{
-			title: 'Animal polític',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: "Guanya {power 2}, roba dues cartes ({law}); queda-te'n una i descarta l'altra."

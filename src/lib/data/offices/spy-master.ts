@@ -4,7 +4,6 @@ export default {
 	title: "Mestre d'espies",
 	capabilities: [
 		{
-			title: 'Mercader de secrets',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects: 'Guanyar {intrigue 3}, robar carta ({machination}).'

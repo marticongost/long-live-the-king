@@ -4,14 +4,12 @@ export default {
 	title: 'Bufó',
 	capabilities: [
 		{
-			title: 'Doble cara',
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
 				'Guanya {power 1} o {intrigue 1}. Si ets el membre del regne amb < {prestige}, guanya {prestige 1}.'
 		},
 		{
-			title: 'Ase dels cops',
 			type: 'constant',
 			effects:
 				'No pots participar en lleis. Perds els teus altres {offices} i no en pots guanyar de nous.'
