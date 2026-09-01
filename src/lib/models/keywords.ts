@@ -17,6 +17,8 @@ export const keywords = {
 	plot: 'complot',
 	plots: 'complots',
 	execute: 'executar',
+	discard: 'descartar',
+	exhaust: 'exhaurir',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
