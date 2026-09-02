@@ -1,0 +1,13 @@
+import type { EventData } from '$lib/models/cards';
+
+export default {
+	title: 'Cacera',
+	capabilities: [
+		{
+			type: 'reaction',
+			trigger: 'whenRevealed',
+			effects:
+				'{duel} {power} entre tots els {players} del regne. Els vencedors guanyen {prestige 1}.'
+		}
+	]
+} satisfies EventData;
