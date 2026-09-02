@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Palau',
-	properties: ['land'],
+	properties: ['land', 'luxury'],
 	discardBonus: { gold: 2 },
 	capabilities: [
 		{
