@@ -9,7 +9,8 @@ const triggerData: Record<string, TriggerData> = {
 	gameEnd: { title: 'Final de la partida' },
 	actionActivated: { title: "Quan s'activi una acció" },
 	voting: { title: 'Quan votis una llei' },
-	ownerIsExecuted: { title: 'Quan siguis executat' }
+	ownerIsExecuted: { title: 'Quan siguis executat' },
+	playerDiscards: { title: 'Quan descartis una carta' }
 };
 
 export type TriggerType = keyof typeof triggerData;
