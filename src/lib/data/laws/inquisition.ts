@@ -1,14 +1,14 @@
 import type { LawData } from '$lib/models/cards';
 
 export default {
-	title: 'Llei anti-bruixeria',
+	title: 'Llei de persecució a la bruixeria',
 	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects:
-				"Si està en vigor, cada jugador revela 2 cartes aleatòries. Si una d'elles té el tret {magic}, {execute} el propietari."
+				'Si està en vigor, cada jugador revela 2 cartes aleatòries. Si 1+ de les cartes revelades o de les seves {assets} {visible} tenen el tret {magic}, {execute} el propietari.'
 		}
 	]
 } satisfies LawData;
