@@ -7,9 +7,9 @@ export default {
 	capabilities: [
 		{
 			type: 'reaction',
-			trigger: 'targetedByDuel',
+			trigger: 'actionActivated',
 			cost: { power: 1 },
-			effects: 'Cancel·la el {duel}.'
+			effects: "Cancel·lar l'acció i tots els seus efectes."
 		}
 	]
 } satisfies TacticData;
