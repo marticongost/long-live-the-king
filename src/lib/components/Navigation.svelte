@@ -8,9 +8,26 @@
 			...css.row(),
 			listStyleType: 'none'
 		},
-		entry: {},
+		entry: {
+			position: 'relative',
+			'a:before': {
+				content: '""',
+				position: 'absolute',
+				bottom: 0,
+				left: '50%',
+				transform: 'translateX(-50%)',
+				width: 0,
+				height: '0.1em',
+				backgroundColor: 'transparent',
+				transition: 'width 0.3s linear, background-color 0.3s linear'
+			}
+		},
 		selectedEntry: {
-			fontWeight: 900
+			fontWeight: 900,
+			'a:before': {
+				backgroundColor: css.palette.sandal,
+				width: '100%'
+			}
 		},
 		link: {
 			display: 'block',

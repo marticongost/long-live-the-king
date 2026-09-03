@@ -6,6 +6,7 @@
 		header: {
 			...css.row('md'),
 			borderBottom: `2px solid ${css.palette.sandal}`,
+			backgroundColor: css.palette.ivory,
 			color: css.palette.sandal
 		},
 		main: {
