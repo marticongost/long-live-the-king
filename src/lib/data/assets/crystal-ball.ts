@@ -7,7 +7,6 @@ export default {
 	hidden: true,
 	capabilities: [
 		{
-			title: 'Omniscència',
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects: 'Guanyar {intrigue 1}'

@@ -7,7 +7,6 @@ export default {
 	hidden: true,
 	capabilities: [
 		{
-			title: 'Protecció',
 			type: 'reaction',
 			trigger: 'ownerIsExecuted',
 			cost: { power: 2 },

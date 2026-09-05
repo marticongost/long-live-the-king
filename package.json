@@ -9,7 +9,7 @@
 		"build": "vite build",
 		"prebuild": "svgo -f src/lib/assets/svg -r",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
+		"prepare": "svelte-kit sync || echo '' && husky",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
@@ -18,7 +18,8 @@
 	},
 	"dependencies": {
 		"@emotion/css": "^11.13.5",
-		"@emotion/server": "^11.11.0"
+		"@emotion/server": "^11.11.0",
+		"marked": "^18.0.11"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
@@ -31,6 +32,8 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.19.0",
 		"globals": "^17.6.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.5.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^3.8.3",
 		"prettier-plugin-svelte": "^4.1.0",
@@ -40,5 +43,8 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite": "^8.0.16"
+	},
+	"lint-staged": {
+		"*.{ts,svelte,js,json,mjs,md,html}": "prettier --write"
 	}
 }

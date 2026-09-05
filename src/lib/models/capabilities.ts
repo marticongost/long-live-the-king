@@ -34,9 +34,11 @@ export type CrisisSpec = { type: 'crisis' } & CrisisData;
 export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
 export function buildCapability(spec: ActionSpec): Action;
+export function buildCapability(spec: SecretSpec): Secret;
 export function buildCapability(spec: ReactionSpec): Reaction;
 export function buildCapability(spec: ConstantSpec): Constant;
 export function buildCapability(spec: CrisisSpec): Crisis;
+export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
 		case 'action':
