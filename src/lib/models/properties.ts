@@ -21,10 +21,10 @@ const propertyData = {
 export type PropertyId = keyof typeof propertyData;
 
 export class Property {
-	readonly id: string;
+	readonly id: PropertyId;
 	readonly title: string;
 
-	constructor(id: string, title: string) {
+	constructor(id: PropertyId, title: string) {
 		this.id = id;
 		this.title = title;
 	}
@@ -33,7 +33,8 @@ export class Property {
 const propertiesMap = {} as Record<PropertyId, Property>;
 
 for (const [id, title] of Object.entries(propertyData)) {
-	propertiesMap[id as PropertyId] = new Property(id, title);
+	const propertyId = id as PropertyId;
+	propertiesMap[propertyId] = new Property(propertyId, title);
 }
 
 export function getProperty(id: PropertyId): Property {
