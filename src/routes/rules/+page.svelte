@@ -1,6 +1,17 @@
+<script lang="typescript" module>
+	import * as css from '$lib/styles';
+	const styles = css.styles({
+		rules: {
+			width: '50em',
+			textAlign: 'justify',
+			margin: 'auto'
+		}
+	});
+</script>
+
 <script lang="typescript">
 	import MarkdownRules from '$lib/components/MarkdownRules.svelte';
 	import rules from './rules.md?raw';
 </script>
 
-<MarkdownRules markdown={rules} />
+<MarkdownRules class={styles.rules} markdown={rules} />

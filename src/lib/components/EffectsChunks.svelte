@@ -8,9 +8,7 @@
 			backgroundColor: css.text.negativeColor,
 			color: css.palette.white
 		},
-		text: {
-			color: css.text.regularColor
-		},
+		text: {},
 		keyword: {
 			color: css.text.highlightColor
 		},

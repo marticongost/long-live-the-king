@@ -1,22 +1,44 @@
 <script lang="ts" module>
 	import * as css from '$lib/styles';
+	const paragraphSpacing = '0.8em';
 
 	const styles = css.styles({
 		root: {
-			color: css.text.regularColor
+			color: css.text.regularColor,
+			lineHeight: '1.2em',
+			'& > *:first-child': {
+				marginTop: 0
+			},
+			h1: {
+				marginTop: css.spacing.md,
+				color: css.palette.red,
+				paddingBottom: '0.25em',
+				borderImage: "url('/svg/decorations/separator.svg') 0 0 100% 0 / 0 0 0.1em 0 repeat"
+			},
+			h2: {
+				marginTop: css.spacing.md,
+				paddingBottom: '0.2em',
+				borderBottom: css.separators.regularBorder
+			},
+			h3: {
+				marginTop: paragraphSpacing,
+				paddingBottom: '0.2em',
+				borderBottom: css.separators.thinBorder
+			}
 		},
 		heading: {
 			fontFamily: css.fonts.heading,
-			color: css.text.headingColor,
-			lineHeight: '1.1',
-			margin: `${css.spacing.lg} 0 ${css.spacing.sm}`
+			color: css.palette.wood,
+			lineHeight: '1.1em',
+			margin: 0
 		},
 		paragraph: {
-			margin: `${css.spacing.md} 0`
+			...css.vmargin(paragraphSpacing)
 		},
 		list: {
-			margin: `${css.spacing.md} 0`,
-			paddingLeft: css.spacing.lg
+			...css.vmargin(paragraphSpacing),
+			paddingLeft: css.spacing.lg,
+			listStyleType: 'disc'
 		},
 		listItem: {
 			margin: `${css.spacing.xs} 0`
@@ -61,12 +83,13 @@
 	import type { Token, Tokens } from 'marked';
 	import { parse } from '$lib/models/effects';
 	import EffectsChunks from './EffectsChunks.svelte';
+	import { standardAttributes, type StandardAttributeProps } from './utils';
 
-	interface Props {
+	interface Props extends StandardAttributeProps {
 		markdown: string;
 	}
 
-	const { markdown }: Props = $props();
+	const { markdown, ...attributes }: Props = $props();
 	const tokens = $derived(lexer(markdown));
 
 	const headingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
@@ -76,7 +99,7 @@
 	}
 </script>
 
-<div class={styles.root}>
+<div {...standardAttributes(attributes, styles.root)}>
 	{#snippet renderBlocks(blocks: Token[])}
 		{#each blocks as token (token)}
 			{#if token.type === 'heading'}

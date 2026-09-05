@@ -1,7 +1,7 @@
 import type { HexColor } from './types';
 
 export const white: HexColor = '#fff';
-export const red: HexColor = '#a15555';
+export const red: HexColor = '#864949';
 export const rose: HexColor = '#B88787';
 export const blush: HexColor = '#e9dedd';
 export const buccaneer: HexColor = '#702e2e';
