@@ -2,7 +2,7 @@
 	import * as css from '$lib/styles';
 	const styles = css.styles({
 		rules: {
-			width: '50em',
+			width: '40em',
 			textAlign: 'justify',
 			margin: 'auto'
 		}
