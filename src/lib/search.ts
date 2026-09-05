@@ -71,24 +71,24 @@ export const filterEntries: ReadonlyArray<FilterEntry> = [
 	{
 		kind: 'group',
 		id: 'assets',
-		title: 'Propietats',
+		title: 'Actiu',
 		options: [
 			{
 				kind: 'option',
 				id: 'asset',
-				title: 'Propietat',
+				title: 'Actiu',
 				matches: (card) => card.type === 'asset'
 			},
 			{
 				kind: 'option',
 				id: 'asset-visible',
-				title: 'Propietat (visible)',
+				title: 'Actiu (visible)',
 				matches: (card) => card.type === 'asset' && !card.hidden
 			},
 			{
 				kind: 'option',
 				id: 'asset-hidden',
-				title: 'Propietat (oculta)',
+				title: 'Actiu (ocult)',
 				matches: (card) => card.type === 'asset' && card.hidden
 			}
 		]

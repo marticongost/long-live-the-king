@@ -7,7 +7,7 @@ export default {
 			type: 'crisis',
 			test: '{might} + {strength}',
 			difficulty: '5 + {players} al regne',
-			penalty: 'El regne pateix {supremacy -1}. Cada membre del regne perd una {asset} aleatòria.',
+			penalty: 'El regne pateix {supremacy -1}. Cada membre del regne perd un {asset} aleatòri.',
 			highestContributionReward: `{prestige 1}`
 		}
 	]
