@@ -92,15 +92,81 @@ agressions directes o defensa del regne contra els invasors, entre d'altres.
 
 ### Cartes
 
+El joc està format principalment per conjunts de cartes, corresponents a diferents
+tipus, que es descriuen a les seccions següents.
+
+Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
+
+- **Títol**: Cada carta té un títol únic que l'identifica, situat a la part superior
+- **Icona**: Una imatge il·lustrativa de la carta, purament decorativa i sense cap
+  efecte sobre el joc
+- **Capacitats:** Les capacitats representen diferents efectes sobre el joc que el
+  propietari de la carta pot activar en diferents moments. S'expliquen amb més detall
+  a una secció posterior. Es presenten al cos central de la carta.
+- **Visibilitat:** La cantonada inferior esquerra de les cartes conté una icona
+  {visible} o {hidden}, per indicar si la carta és visible o oculta, respectivament.
+  Les cartes ocultes s'han de mantenir en secret sense que la resta dels jugadors pugui
+  veure-les.
+- **Propietats:** La cantonada inferior esquerra de les cartes conté un llistat de
+  paraules clau, que serveixen per classificar la carta i associar-la a diferents
+  conjunts. Això pot ser rellevant per altres cartes, que poden fer referència a aquestes
+  propietats (_p. ex. un objectiu podria basar-se en acumular cartes amb la propietat
+  {luxury}_).
+- **Bonificació per descartar:** La majoria de cartes es poden sacrificar en comptes
+  d'utilitzar les seves capacitats normals, per guanyar una compensació en recursos. Els
+  recursos que es guanyaran si es sacrifica una carta s'indiquen a la cantonada inferior
+  dreta.
+
 #### Esdeveniments
+
+Els esdeveniments representen situacions fora del normal que afecten al regne i els seus
+membres. Cada torn, durant la **fase d'esdeveniments**, el rei revela una carta
+d'esdeveniment, la llegeix en veu alta i en resol els efectes corresponents.
+
+Alguns esdeveniments tindran efecte immediat, descartant la carta immediatament després
+de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar en joc
+per un o més torns.
 
 #### Objectius
 
+Els objectius són cartes que representen les ambicions secretes dels jugadors. Es
+divideixen en dos tipus:
+
+- **Objectius col·lectius:** representen les opinions o preferències d'un jugador envers
+  el regne al que pertany.
+- **Objectius personals:** representen fites o reptes de caràcter personal.
+
+Cada jugador comença el joc amb un objectiu de cada tipus. Les cartes d'objectiu s'han
+de mantenir en secret durant tota la partida - malgrat els jugadors poden preguntar i
+fer promeses al respecte (_"M'has de creure, el meu objectiu és que el regne tingui
+menjar de sobra!"_).
+
+Cada objectiu estableix una o més condicions a complir, i un número de punts de
+{prestige} prestigi que es guanyaran si es complexen.
+
 #### Tàctiques
+
+Les tàctiques són cartes d'un sol ús, que concedeixen al jugador diferents efectes i es
+descarten. Els jugadors comencen el joc amb 3 cartes de tàctica, i cada torn en roben
+una addicional.
 
 #### Actius
 
+Els actius representen possessions, bens i aliats de cada jugadors. A diferència de les
+tàctiques, un cop adquirits els actius es queden en joc, i el seu propietari pot activar
+les seves capacitats un cop cada torn.
+
+Els actius poden ser tant {visible} visibles com {hidden} ocults, tal i com s'indica a
+la seva carta (tant a la icona inferior esquerra, com pel color diferenciat de la
+carta - més clara en el cas d'actius visibles, més fosca pels ocults).
+
+La forma principal d'adquirir actius és la **subhasta de bens**, que es descriu a una
+secció posterior.
+
 #### Lleis
+
+Les lleis són propostes legislatives que, de ser aprovades, canvien les regles del joc
+per tots els membres del regne.
 
 ### Visibilitat
 
@@ -110,9 +176,13 @@ agressions directes o defensa del regne contra els invasors, entre d'altres.
 
 ### Complots
 
+### Crisis
+
 ### Expulsió de jugadors
 
 ### Execució de jugadors
+
+### Conflictes
 
 ## Seqüència del joc
 
