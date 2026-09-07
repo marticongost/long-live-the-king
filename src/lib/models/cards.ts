@@ -113,7 +113,7 @@ export class Asset extends Card {
 
 export type LawData = CardData;
 
-export class Law extends Tactic {
+export class Law extends Card {
 	override get type(): CardType {
 		return 'law';
 	}
