@@ -92,6 +92,12 @@ export const filterEntries: ReadonlyArray<FilterEntry> = [
 				matches: (card) => card.type === 'asset' && card.hidden
 			}
 		]
+	},
+	{
+		kind: 'option',
+		id: 'house',
+		title: getProperty('house').title,
+		matches: (card) => card.type === 'house'
 	}
 ];
 

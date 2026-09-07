@@ -2,7 +2,7 @@ import { buildCapability, type Capability, type CapabilitySpec } from './capabil
 import { getProperty, type Property, type PropertyId } from './properties';
 import { ResourceSet, type ResourceSetProps } from './resourcesets';
 
-export const cardTypes = ['office', 'goal', 'event', 'law', 'tactic', 'asset'] as const;
+export const cardTypes = ['office', 'goal', 'event', 'law', 'tactic', 'asset', 'house'] as const;
 
 export type CardType = (typeof cardTypes)[number];
 
@@ -118,3 +118,34 @@ export class Law extends Card {
 		return 'law';
 	}
 }
+
+export type HouseData = CardData;
+
+export class House extends Card {
+	constructor(id: string, { capabilities, ...base }: HouseData) {
+		super(id, { capabilities: [...commonHouseCapabilities, ...(capabilities ?? [])], ...base });
+	}
+
+	override get type(): CardType {
+		return 'house';
+	}
+
+	override get hidden(): boolean {
+		return false;
+	}
+}
+
+const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
+	{
+		type: 'action',
+		title: 'Proposar llei',
+		cost: { power: 1 },
+		effects: 'Escollir una llei de la fila i sotmetre-la a {vote}.'
+	},
+	{
+		type: 'secret',
+		title: 'Vigilar',
+		effects:
+			'Paga {input number} {intrigue} per establir la {vigilance} de la teva casa en aquell mateix valor.'
+	}
+] as const;

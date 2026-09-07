@@ -38,7 +38,10 @@
 			width: '100%',
 			fontWeight: 900,
 			margin: 0,
-			textAlign: 'center'
+			textAlign: 'center',
+			[variant('house')]: {
+				color: css.palette.wood
+			}
 		},
 		iconFrame: {
 			position: 'relative',
@@ -63,6 +66,9 @@
 			[variant('office')]: {
 				width: '60%',
 				top: '-10%'
+			},
+			[variant('house')]: {
+				width: '25%'
 			}
 		},
 		body: {
@@ -102,21 +108,29 @@
 		}
 	});
 
+	function assertNever(value: never): never {
+		throw new Error(`Unknown card type: ${value}`);
+	}
+
 	function getIcon(card: Card): string {
-		if (card instanceof Office) {
-			return `offices/${card.id}.svg`;
-		} else if (card instanceof Goal) {
-			return `goals/${card.id}.svg`;
-		} else if (card instanceof Event) {
-			return `events/${card.id}.svg`;
-		} else if (card instanceof Law) {
-			return `laws/${card.id}.svg`;
-		} else if (card instanceof Tactic) {
-			return `tactics/${card.id}.svg`;
-		} else if (card instanceof Asset) {
-			return `assets/${card.id}.svg`;
+		switch (card.type) {
+			case 'office':
+				return `offices/${card.id}.svg`;
+			case 'goal':
+				return `goals/${card.id}.svg`;
+			case 'event':
+				return `events/${card.id}.svg`;
+			case 'law':
+				return `laws/${card.id}.svg`;
+			case 'tactic':
+				return `tactics/${card.id}.svg`;
+			case 'asset':
+				return `assets/${card.id}.svg`;
+			case 'house':
+				return `houses/${card.id}.svg`;
+			default:
+				return assertNever(card.type);
 		}
-		throw new Error(`Unknown card type ${card.constructor.name}`);
 	}
 
 	function getBackgroundImage(card: Card): string {
@@ -131,17 +145,7 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import {
-		Asset,
-		cardTypes,
-		Event,
-		Goal,
-		Law,
-		Office,
-		Tactic,
-		type Card,
-		type CardType
-	} from '$lib/models/cards';
+	import { Asset, cardTypes, Goal, type Card, type CardType } from '$lib/models/cards';
 	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';

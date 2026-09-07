@@ -168,6 +168,10 @@ secció posterior.
 Les lleis són propostes legislatives que, de ser aprovades, canvien les regles del joc
 per tots els membres del regne.
 
+Al principi del joc, les cartes de llei s'apilen i barregen en una baralla, i se'n
+roben 3, col·locant-les a la **fila de lleis**. Les lleis de la fila són les lleis a les
+que els jugadors poden optar.
+
 ### Visibilitat
 
 ### Intercanvis

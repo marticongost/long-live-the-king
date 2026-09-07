@@ -6,6 +6,7 @@ const propertyData = {
 	tactic: 'Tàctica',
 	asset: 'Actiu',
 	law: 'Llei',
+	house: 'Casa',
 
 	// Card sub-types (explicit properties)
 	machination: 'Maquinació',
@@ -15,7 +16,8 @@ const propertyData = {
 	land: 'Terres',
 	retinue: 'Sèquit',
 	illicit: 'Il·lícit',
-	luxury: 'Luxe'
+	luxury: 'Luxe',
+	maritime: 'Marítim'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;

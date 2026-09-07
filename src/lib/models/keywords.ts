@@ -20,7 +20,7 @@ export const keywords = {
 	execute: 'executar',
 	discard: 'descartar',
 	exhaust: 'exhaurir',
-	assets: 'propietats',
+	assets: 'actius',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,

@@ -6,6 +6,7 @@ const triggerData: Record<string, TriggerData> = {
 	whenRevealed: { title: 'En ser revelada' },
 	turnStart: { title: 'Inici del torn' },
 	turnEnd: { title: 'Final del torn' },
+	gameStart: { title: 'Inici de la partida' },
 	gameEnd: { title: 'Final de la partida' },
 	actionActivated: { title: "Quan s'activi una acció" },
 	voting: { title: 'Quan votis una llei' },
