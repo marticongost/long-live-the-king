@@ -5,7 +5,13 @@
 
 	const styles = css.styles({
 		kingdomStatDisplay: {},
-		icon: {},
+		icon: {
+			height: '1.2em',
+			backgroundColor: css.palette.wood,
+			color: css.palette.white,
+			padding: '0.2em',
+			borderRadius: '0.4em'
+		},
 		amount: {}
 	});
 </script>

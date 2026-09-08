@@ -5,7 +5,9 @@
 
 	const styles = css.styles({
 		resourceDisplay: {},
-		icon: {},
+		icon: {
+			color: css.palette.wood
+		},
 		amount: {}
 	});
 </script>
