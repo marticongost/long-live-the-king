@@ -5,10 +5,9 @@ export default {
 	properties: ['retinue'],
 	capabilities: [
 		{
-			title: 'Cançó èpica',
-			type: 'action',
-			cost: { gold: 2, power: 2 },
-			effects: 'Guanyar {prestige 1}.'
+			type: 'reaction',
+			trigger: 'afterWinningDuel',
+			effects: 'Guanyar {prestige 1}. Màxim un cop per torn.'
 		}
 	]
 } satisfies AssetData;
