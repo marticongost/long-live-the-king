@@ -22,3 +22,4 @@ export const dawn: HexColor = '#a3a09d';
 export const sandal: HexColor = '#a68e6d';
 export const tobacco: HexColor = '#7a684e';
 export const carrara: HexColor = '#f5f4f2';
+export const twine: HexColor = '#be824e';

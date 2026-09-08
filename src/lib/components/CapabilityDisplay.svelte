@@ -68,11 +68,21 @@
 		body: {
 			fontSize: '0.8em'
 		},
+		crisisTest: {
+			...css.row('sm'),
+			padding: css.spacing.sm,
+			borderRadius: css.spacing.xs,
+			border: `1px solid ${css.palette.twine}`,
+			borderLeftWidth: '3px',
+			marginTop: css.spacing.xs
+		},
 		crisisOutcome: {
 			...css.row('sm'),
 			alignItems: 'flex-start',
 			border: '1px solid currentColor',
-			padding: css.spacing.xs
+			borderRadius: css.spacing.xs,
+			borderLeftWidth: '3px',
+			padding: css.spacing.sm
 		},
 		reward: {
 			color: css.palette.grass
@@ -85,22 +95,9 @@
 			position: 'relative',
 			top: '0.2em'
 		},
-		crisisTest: {
-			marginLeft: 'auto'
-		},
 		crisisBody: {
 			fontSize: '0.8em',
 			...css.column('sm')
-		},
-		crisisDifficulty: {
-			...css.row('sm')
-		},
-		crisisDifficultyLabel: {
-			fontWeight: 'bold',
-			color: css.palette.sandal
-		},
-		crisisDifficultyValue: {
-			color: css.text.regularColor
 		},
 		crisisOutcomeValue: {
 			color: css.text.regularColor
@@ -167,12 +164,12 @@
 			{#if capability instanceof Crisis}
 				<div class={styles.header}>
 					<div class={styles.title}>Crisis</div>
-					<EffectsText class={styles.crisisTest} effects={capability.test} />
 				</div>
 				<div class={styles.crisisBody}>
-					<div class={styles.crisisDifficulty}>
-						<div class={styles.crisisDifficultyLabel}>Dificultat:</div>
-						<EffectsText class={styles.crisisDifficultyValue} effects={capability.difficulty} />
+					<div class={styles.crisisTest}>
+						<EffectsText effects={capability.test} />
+						≥
+						<EffectsText effects={capability.difficulty} />
 					</div>
 					<div class={cx(styles.crisisOutcome, styles.reward)}>
 						<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/reward.svg" />
