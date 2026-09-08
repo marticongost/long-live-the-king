@@ -2,7 +2,6 @@ import type { LawData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de persecució a la bruixeria',
-	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			type: 'reaction',

@@ -2,7 +2,6 @@ import type { LawData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de transparència',
-	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			type: 'constant',

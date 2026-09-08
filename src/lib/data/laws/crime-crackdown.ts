@@ -2,7 +2,6 @@ import type { LawData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de persecució al crim',
-	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			type: 'reaction',

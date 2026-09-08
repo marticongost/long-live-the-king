@@ -2,7 +2,6 @@ import type { LawData } from '$lib/models/cards';
 
 export default {
 	title: 'Llei de promeses vinculants',
-	discardBonus: { power: 1 },
 	capabilities: [
 		{
 			type: 'constant',

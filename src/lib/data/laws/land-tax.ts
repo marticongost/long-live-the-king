@@ -2,7 +2,6 @@ import type { LawData } from '$lib/models/cards';
 
 export default {
 	title: "Llei d'impost a la propietat",
-	discardBonus: { intrigue: 1 },
 	capabilities: [
 		{
 			type: 'reaction',
