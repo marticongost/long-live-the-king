@@ -6,7 +6,14 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: "Guanya {power 2}, roba dues cartes ({law}); queda-te'n una i descarta l'altra."
+			effects: 'Guanya {power 2}.'
+		},
+		{
+			title: 'Maniobres polítiques',
+			type: 'action',
+			cost: { power: 1 },
+			effects:
+				'Roba una {law} i junta-la amb les cartes a la fila. Descarta una de les cartes, reordena la fila com tu vulguis.'
 		},
 		{
 			title: 'Abolir llei',
