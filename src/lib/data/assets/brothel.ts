@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Burdell',
 	properties: ['land', 'illicit'],
-	discardBonus: { gold: 2 },
 	capabilities: [
 		{
 			title: 'Guanys',

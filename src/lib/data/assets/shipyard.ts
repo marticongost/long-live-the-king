@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Port',
 	properties: ['land', 'maritime'],
-	discardBonus: { gold: 3 },
 	capabilities: [
 		{
 			title: 'Guanys',

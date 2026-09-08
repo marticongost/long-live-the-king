@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Església',
 	properties: ['land'],
-	discardBonus: { gold: 1, power: 1 },
 	capabilities: [
 		{
 			title: "L'ombra de la creu",

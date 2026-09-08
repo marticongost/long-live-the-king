@@ -9,7 +9,6 @@ export type CardType = (typeof cardTypes)[number];
 export interface CardData {
 	title: string;
 	capabilities?: ReadonlyArray<CapabilitySpec>;
-	discardBonus?: ResourceSetProps;
 	properties?: ReadonlyArray<PropertyId>;
 }
 
@@ -17,14 +16,12 @@ export abstract class Card {
 	readonly id: string;
 	readonly title: string;
 	readonly capabilities: Array<Capability>;
-	readonly discardBonus: ResourceSet;
 	private readonly ownProperties: ReadonlyArray<PropertyId>;
 
-	constructor(id: string, { title, capabilities, discardBonus, properties }: CardData) {
+	constructor(id: string, { title, capabilities, properties }: CardData) {
 		this.id = id;
 		this.title = title;
 		this.capabilities = capabilities ? capabilities.map(buildCapability) : [];
-		this.discardBonus = new ResourceSet(discardBonus ?? {});
 		this.ownProperties = properties ?? [];
 	}
 
@@ -82,9 +79,18 @@ export class Goal extends Card {
 	}
 }
 
-export type TacticData = CardData;
+export interface TacticData extends CardData {
+	discardBonus?: ResourceSetProps;
+}
 
 export class Tactic extends Card {
+	readonly discardBonus: ResourceSet;
+
+	constructor(id: string, { discardBonus, ...base }: TacticData) {
+		super(id, base);
+		this.discardBonus = new ResourceSet(discardBonus ?? {});
+	}
+
 	override get type(): CardType {
 		return 'tactic';
 	}

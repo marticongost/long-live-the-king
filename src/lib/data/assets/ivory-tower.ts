@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: "Torre d'ivori",
 	properties: ['land', 'magic', 'luxury'],
-	discardBonus: { intrigue: 1, power: 1 },
 	hidden: true,
 	capabilities: [
 		{

@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Capità de la guàrdia',
 	properties: ['retinue'],
-	discardBonus: { strength: 2 },
 	capabilities: [
 		{
 			title: 'Puny de ferro',

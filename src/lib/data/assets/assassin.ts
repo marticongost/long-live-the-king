@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Assassí',
 	properties: ['illicit', 'retinue'],
-	discardBonus: { gold: 2 },
 	hidden: true,
 	capabilities: [
 		{

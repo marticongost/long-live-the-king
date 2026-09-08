@@ -145,7 +145,7 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import { Asset, cardTypes, Goal, type Card, type CardType } from '$lib/models/cards';
+	import { Asset, cardTypes, Goal, Tactic, type Card, type CardType } from '$lib/models/cards';
 	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
@@ -186,7 +186,7 @@
 				<li class={styles.propertyEntry}>{property.title}</li>
 			{/each}
 		</ul>
-		{#if !card.discardBonus.empty()}
+		{#if card instanceof Tactic && !card.discardBonus.empty()}
 			<div class={styles.discardBonus}>
 				{#each resourceTypes as resourceType (resourceType)}
 					{#each { length: card.discardBonus[resourceType] } as _, index (index)}

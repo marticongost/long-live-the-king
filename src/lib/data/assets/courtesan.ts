@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: 'Cortesana',
 	properties: ['retinue'],
-	discardBonus: { intrigue: 2 },
 	capabilities: [
 		{
 			title: 'Seducció',

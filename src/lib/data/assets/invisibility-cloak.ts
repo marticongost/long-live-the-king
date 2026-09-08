@@ -4,7 +4,6 @@ export default {
 	title: "Capa d'invisibilitat",
 	properties: ['magic', 'object'],
 	hidden: true,
-	discardBonus: { intrigue: 1, gold: 1 },
 	capabilities: [
 		{
 			type: 'constant',

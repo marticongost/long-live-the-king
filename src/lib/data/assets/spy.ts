@@ -3,7 +3,6 @@ import type { AssetData } from '$lib/models/cards';
 export default {
 	title: "Xarxa d'informants",
 	properties: ['retinue'],
-	discardBonus: { strength: 2 },
 	hidden: true,
 	capabilities: [
 		{
