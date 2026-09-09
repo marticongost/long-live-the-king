@@ -16,10 +16,13 @@
 </script>
 
 <script lang="ts">
+	import { page } from '$app/state';
+	import { replaceState } from '$app/navigation';
+	import type { ResolvedPathname } from '$app/types';
 	import { standardAttributes, type StandardAttributeProps } from './utils';
 	import type { Card } from '$lib/models/cards';
-	import type { PropertyId } from '$lib/models/properties';
-	import { countByOption, countByProperty, filterCards } from '$lib/search';
+	import { getProperties, type PropertyId } from '$lib/models/properties';
+	import { countByOption, countByProperty, filterCards, findFilterOption } from '$lib/search';
 	import CardGrid from './CardGrid.svelte';
 	import CardSearchControls from './CardSearchControls.svelte';
 
@@ -29,9 +32,36 @@
 
 	const { cards, ...attributes }: Props = $props();
 
-	let search = $state('');
-	let selectedFilter = $state('all');
-	let selectedProperties = $state<Array<PropertyId>>([]);
+	const params = page.url.searchParams;
+	const validPropertyIds = new Set(getProperties().map((property) => property.id));
+	const filterParam = params.get('filter');
+
+	let search = $state(params.get('q') ?? '');
+	let selectedFilter = $state(filterParam && findFilterOption(filterParam) ? filterParam : 'all');
+	let selectedProperties = $state<Array<PropertyId>>(
+		params.getAll('p').filter((id): id is PropertyId => validPropertyIds.has(id as PropertyId))
+	);
+
+	function currentHref(): ResolvedPathname {
+		const url = new URL(page.url);
+
+		if (search) url.searchParams.set('q', search);
+		else url.searchParams.delete('q');
+
+		if (selectedFilter && selectedFilter !== 'all') url.searchParams.set('filter', selectedFilter);
+		else url.searchParams.delete('filter');
+
+		url.searchParams.delete('p');
+		for (const id of selectedProperties) url.searchParams.append('p', id);
+
+		return (page.url.pathname + url.search) as ResolvedPathname;
+	}
+
+	$effect(() => {
+		const href = currentHref();
+		if (href === page.url.pathname + page.url.search) return;
+		replaceState(href, {});
+	});
 
 	const optionCounts = $derived(countByOption(cards, search, selectedProperties));
 	const propertyCounts = $derived(
