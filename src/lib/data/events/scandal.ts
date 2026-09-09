@@ -4,10 +4,12 @@ export default {
 	title: 'Escàndol',
 	capabilities: [
 		{
-			type: 'reaction',
-			trigger: 'turnEnd',
-			effects:
-				'El jugador amb més {prestige} del regne escull si pagar {power 3} o perdre {prestige 1}.'
+			type: 'crisis',
+			test: '{intrigue}',
+			difficulty: '{players} al regne',
+			highestContributionReward: '{prestige 1}',
+			penalty:
+				'El regne pateix {supremacy -2}. El jugador amb més {prestige} del regne perd {prestige 1}.'
 		}
 	]
 } satisfies EventData;
