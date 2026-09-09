@@ -223,6 +223,43 @@ director de joc, que s'encarrega de la seva gestió.
 
 ## Intercanvis
 
+El comerç entre jugadors està permès, i és una part essencial del joc. Els jugadors són
+lliures d'intercanviar cartes i recursos amb els demés jugadors a canvi de diferents
+contrapartides.
+
+### Què es pot intercanviar
+
+Els jugadors poden comerciar amb:
+
+- Cartes de tàctica de la seva ma
+- Actius que posseeixin ({visible} visibles o {hidden} ocults)
+- Recursos ({gold}, {power}, {intrigue}, {strength})
+- Informació (_ex. "et revelaré qui et va robar el torn anterior"_)
+- Promeses (_"ex. et donaré el primer {gold} que obtingui"_, _"votaré a favor teu quan
+  es debati la llei X"_)
+
+Per contra, els següents elements són intransferibles i no poden formar part de cap
+intercanvi:
+
+- {prestige} prestigi
+- Cartes de casa
+- Cartes d'objectiu
+
+### Quan es pot fer un intercanvi
+
+Els intercanvis es poden fer en qualsevol moment de la partida, exceptuant aquells
+moments en que el director de joc hagi la interrupció del joc per resoldre una capacitat
+o regla.
+
+### Tractes vinculants
+
+Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono {intrigue 2}"_, "tu em dones {strength 1}, jo et dic quin és el meu objectiu") són vinculants: si les parts acorden uns termes, els jugadors han
+de complir-los.
+
+Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures. Els
+jugadors són lliures d'incomplir-los - a costa de la seva reputació, i el que els altres
+jugadors puguin pensar d'ells...
+
 ## Duels
 
 ## Complots
