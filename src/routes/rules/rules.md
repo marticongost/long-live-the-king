@@ -47,53 +47,53 @@ Cada càrrec proporciona poder i responsabilitats addicionals al jugador que el 
 rei haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
 poder i ambicions personals dels membres del consell amb les necessitats del seu regne.
 
-# Com jugar
+# Conceptes
 
-## Conceptes
-
-### Recursos
+## Recursos
 
 Els jugadors poden acumular diferents tipus de recursos. Els recursos es poden guanyar,
 perdre, gastar i intercanviar durant la partida, a través de diferents accions i efectes
 del joc.
 
-#### {prestige} Prestigi
+### {prestige} Prestigi
 
 El prestigi representa el reconeixement, la fama i el llegat acumulat per un personatge.
 És el recurs més valuós del joc: a diferència de la resta de recursos, no és habitual
 utilitzar-lo per pagar l'activació d'habilitats i efectes, ja que l'objectiu de la
 partida és acumular tant prestigi com sigui possible.
 
-#### {power} Poder
+### {power} Poder
 
 El poder representa el capital polític i la influència del jugador. Com la majoria de
 recursos, s'utilitza per pagar el cost de molts efectes i habilitats; a més a més, és
 especialment important per influir en el resultat de les **votacions** quan es debaten
 noves lleis al consell.
 
-#### {gold} Diners
+### {gold} Diners
 
 Els diners representen el poder econòmic i financer del jugador. Com la majoria de
 recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; a més a més, són
 especialment rellevants a l'hora d'aquirir nous **actius**, durant la **subhasta de
 bens**.
 
-#### {intrigue} Intriga
+### {intrigue} Intriga
 
 La intriga representa l'astúcia, plans secrets i afinitat pel joc brut del jugador. Com
 la majoria de recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; en
 particular, són la moneda principal a l'hora d'executar (o evitar) **complots**.
 
-#### {strength} Força
+### {strength} Força
 
 La intriga representen les forces militars i talent marcial del jugador. Com la majoria
 de recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; en particular,
 agressions directes o defensa del regne contra els invasors, entre d'altres.
 
-### Cartes
+## Cartes
 
 El joc està format principalment per conjunts de cartes, corresponents a diferents
 tipus, que es descriuen a les seccions següents.
+
+### Anatomia de les cartes
 
 Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
 
@@ -116,6 +116,8 @@ Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
   d'utilitzar les seves capacitats normals, per guanyar una compensació en recursos. Els
   recursos que es guanyaran si es sacrifica una carta s'indiquen a la cantonada inferior
   dreta.
+
+### Tipus de cartes
 
 #### Esdeveniments
 
@@ -169,35 +171,56 @@ Les lleis són propostes legislatives que, de ser aprovades, canvien les regles 
 per tots els membres del regne.
 
 Al principi del joc, les cartes de llei s'apilen i barregen en una baralla, i se'n
-roben 3, col·locant-les a la **fila de lleis**. Les lleis de la fila són les lleis a les
-que els jugadors poden optar.
+roben 3, col·locant-les a la **fila de lleis**.
 
-### Visibilitat
+Per posar un joc una llei, cal seguir els següents passos:
 
-### Intercanvis
+- Activar una capacitat que permeti fer una {vote} (típicament, l'acció _Proposar
+  llei_ de la carta de casa)
+- Escollir una de les lleis de la fila, i llegir-ne el títol i els efectes en veu alta:
+  aquesta serà la llei que serà sotmesa a votació
+- Començant pel jugador que fa la proposta, i seguint en ordre del rellotge, els
+  jugadors s'alternen per influir en la votació:
+  - Si vol participar en la votació, el jugador gasta una quantitat de {power} i
+    l'assigna a una pila corresponent a la seva opció preferida ("a favor" o
+    "en contra")
+  - Alternativament, pot retirar-se i no gastar cap recurs
+  - El procés continua fins que tots els jugadors es retiren
 
-### Duels
+Finalment, si l'opció "a favor" ha acumulat més {power} que l'opció "en contra", la
+carta de llei entra en joc i s'apliquen els seus efectes. En cas d'**empat**, el
+**rei decideix** quina de les opcions guanya. Si no hi ha cap rei actualment, la llei es
+descarta sense efecte.
 
-### Complots
+Tot el {power} gastat pels jugadors es perd i torna a la reserva
+(independentment de quina opció hagi guanyat).
 
-### Crisis
+## Visibilitat
 
-### Expulsió de jugadors
+## Intercanvis
 
-### Execució de jugadors
+## Duels
 
-### Conflictes
+## Complots
 
-## Seqüència del joc
+## Crisis
 
-### Fase d'esdeveniments
+## Expulsió de jugadors
 
-### Fase d'acció
+## Execució de jugadors
 
-### Fase de secrets
+## Conflictes
 
-### Fase d'adquisició
+# Seqüència del joc
 
-### Final del torn
+## Fase d'esdeveniments
 
-## Final de la partida
+## Fase d'acció
+
+## Fase de secrets
+
+## Fase d'adquisició
+
+## Final del torn
+
+# Final de la partida
