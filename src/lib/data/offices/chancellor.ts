@@ -20,7 +20,7 @@ export default {
 			type: 'action',
 			cost: { power: 1 },
 			effects:
-				'Escull una {law} en vigor al teu regne. La llei es submet a una nova {vote}. Si el vot fracassa, la llei es descarta.'
+				'Escull una {law} en vigor al teu regne. La llei es sotmet a una nova {vote}. Si el vot fracassa, la llei es descarta.'
 		}
 	]
 } satisfies OfficeData;
