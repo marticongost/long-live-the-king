@@ -197,6 +197,30 @@ Tot el {power} gastat pels jugadors es perd i torna a la reserva
 
 ## Visibilitat
 
+Cada jugador té una pantalla que ha d'utilitzar per mantenir en secret la major part de
+les seves possessions, incloent:
+
+- Tots els recursos (incloent els punts de victòria)
+- Totes les cartes amb la icona {hidden} (objectius, tàctiques, actius amb fons fosc)
+
+Únicament aquelles cartes marcades amb la icona {visible} han de romandre a la vista
+dels demés jugadors en tot moment, incloent les cartes de casa, els càrrecs i actius amb
+fons clar.
+
+Les cartes d'esdeveniment en curs i les lleis en vigor o a la fila de lleis es situen
+als espais comuns, i com a tal, són visibles.
+
+En posar en joc una capacitat d'una carta cal revelar la carta corresponent als demés
+jugadors - fins i tot si es tracta d'una carta oculta. La única excepció a aquesta regla
+són els {secrets}, que el director de joc resol a esquenes dels jugadors.
+
+Els jugadors són lliures de preguntar als demés sobre les seves possessions, i de
+respondre amb la veritat, mentir o guardar silenci - però no poden ensenyar físicament
+components designats com a no visibles.
+
+Les cartes descartades es mantenen també en secret - els jugadors han de donar-les al
+director de joc, que s'encarrega de la seva gestió.
+
 ## Intercanvis
 
 ## Duels

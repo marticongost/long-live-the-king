@@ -21,6 +21,7 @@ export const keywords = {
 	discard: 'descartar',
 	exhaust: 'exhaurir',
 	assets: 'actius',
+	secrets: 'secrets',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
