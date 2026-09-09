@@ -4,9 +4,11 @@ export default {
 	title: 'Mala collita',
 	capabilities: [
 		{
-			type: 'reaction',
-			trigger: 'turnStart',
-			effects: 'El regne pateix {food -2}.'
+			type: 'crisis',
+			test: '{gold}',
+			difficulty: '{players} al regne x 2',
+			highestContributionReward: '{prestige 1}',
+			penalty: 'El regne pateix {food -2} i {happiness -1}.'
 		}
 	]
 } satisfies EventData;
