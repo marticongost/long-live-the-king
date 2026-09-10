@@ -128,8 +128,11 @@ export class Law extends Card {
 export type HouseData = CardData;
 
 export class House extends Card {
+	readonly houseCapabilities: ReadonlyArray<Capability>;
+
 	constructor(id: string, { capabilities, ...base }: HouseData) {
-		super(id, { capabilities: [...commonHouseCapabilities, ...(capabilities ?? [])], ...base });
+		super(id, { capabilities: commonHouseCapabilities, ...base });
+		this.houseCapabilities = (capabilities ?? []).map(buildCapability);
 	}
 
 	override get type(): CardType {
@@ -146,12 +149,12 @@ const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
 		type: 'action',
 		title: 'Proposar llei',
 		cost: { power: 1 },
-		effects: 'Escollir una llei de la fila i sotmetre-la a {vote}.'
+		effects: 'Sotmetre una llei de la fila a {vote}.'
 	},
 	{
 		type: 'secret',
 		title: 'Vigilar',
 		effects:
-			'Paga {input number} {intrigue} per establir la {vigilance} de la teva casa en aquell mateix valor.'
+			'Paga {input number} {intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
 	}
 ] as const;

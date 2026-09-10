@@ -28,6 +28,10 @@
 			[variant('office')]: {
 				height: '9.4mm',
 				justifyContent: 'center'
+			},
+			[variant('house')]: {
+				height: '9.4mm',
+				justifyContent: 'center'
 			}
 		},
 		title: {
@@ -38,10 +42,7 @@
 			width: '100%',
 			fontWeight: 900,
 			margin: 0,
-			textAlign: 'center',
-			[variant('house')]: {
-				color: css.palette.wood
-			}
+			textAlign: 'center'
 		},
 		iconFrame: {
 			position: 'relative',
@@ -50,6 +51,13 @@
 			alignItems: 'center',
 			justifyContent: 'center',
 			[variant('office')]: {
+				position: 'absolute',
+				left: 0,
+				top: 0,
+				width: cw(20),
+				height: cw(20)
+			},
+			[variant('house')]: {
 				position: 'absolute',
 				left: 0,
 				top: 0,
@@ -68,8 +76,14 @@
 				top: '-10%'
 			},
 			[variant('house')]: {
-				width: '25%'
+				width: '80%'
 			}
+		},
+		houseCapabilities: {
+			...css.column('sm'),
+			marginTop: css.spacing.sm,
+			padding: css.spacing.sm,
+			flex: '1 1 auto'
 		},
 		body: {
 			...css.column('sm'),
@@ -145,7 +159,15 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import { Asset, cardTypes, Goal, Tactic, type Card, type CardType } from '$lib/models/cards';
+	import {
+		Asset,
+		cardTypes,
+		Goal,
+		House,
+		Tactic,
+		type Card,
+		type CardType
+	} from '$lib/models/cards';
 	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
@@ -171,6 +193,13 @@
 			<InlineSvg class={styles.icon} src={icon} />
 		</div>
 	</div>
+	{#if card instanceof House}
+		<div class={styles.houseCapabilities}>
+			{#each card.houseCapabilities as capability, index (index)}
+				<CapabilityDisplay {capability} />
+			{/each}
+		</div>
+	{/if}
 	<div class={styles.body}>
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
