@@ -83,7 +83,8 @@
 			...css.column('sm'),
 			marginTop: css.spacing.sm,
 			padding: css.spacing.sm,
-			flex: '1 1 auto'
+			flex: '0 0 auto',
+			height: '22%'
 		},
 		body: {
 			...css.column('sm'),
