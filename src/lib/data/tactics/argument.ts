@@ -8,8 +8,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'voting',
-			cost: { power: 1 },
-			effects: 'Suma +/- 3 al resultat de la {vote}.'
+			effects: 'Suma +/- 2 al resultat de la {vote}.'
 		},
 		{
 			type: 'reaction',
