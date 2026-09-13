@@ -17,7 +17,9 @@ const propertyData = {
 	retinue: 'Sèquit',
 	illicit: 'Il·lícit',
 	luxury: 'Luxe',
-	maritime: 'Marítim'
+	maritime: 'Marítim',
+	selfishness: 'Egoïsme',
+	boost: 'Millora'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;

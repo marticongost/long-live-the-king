@@ -1,14 +1,14 @@
 import { type TacticData } from '$lib/models/cards';
 
 export default {
-	title: 'Patriotisme',
+	title: 'Inversió',
 	properties: ['boost'],
 	discardBonus: { gold: 1 },
 	capabilities: [
 		{
 			type: 'action',
-			cost: { power: 2 },
-			effects: 'El teu regne guanya {supremacy 1}.'
+			cost: { gold: 2 },
+			effects: 'El teu regne guanya {wealth 1}.'
 		}
 	]
 } satisfies TacticData;

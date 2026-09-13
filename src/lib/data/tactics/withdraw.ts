@@ -1,15 +1,15 @@
 import { type TacticData } from '$lib/models/cards';
 
 export default {
-	title: 'Corrupció',
+	title: 'Defensar-se',
 	discardBonus: { power: 1 },
 	properties: ['machination', 'selfishness'],
 	capabilities: [
 		{
-			title: 'Segur que ningú ho notarà...',
+			title: 'No els calen les meves tropes...',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {gold 1}, i el regne rep {wealth -1}.'
+				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {strength 1}, i el regne rep {might -1}.'
 		}
 	]
 } satisfies TacticData;
