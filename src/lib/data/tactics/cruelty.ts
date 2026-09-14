@@ -9,7 +9,7 @@ export default {
 			title: 'Res més que bruts pagesos...',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {power 1}, i el regne rep {happiness -1}.'
+				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {power 1}, i el regne rep {stability -1}.'
 		}
 	]
 } satisfies TacticData;

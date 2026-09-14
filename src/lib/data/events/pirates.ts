@@ -9,7 +9,7 @@ export default {
 			difficulty: '{players} al regne x 2',
 			highestContributionReward: '{prestige 1}, {power 2}',
 			penalty:
-				'El regne pateix {supremacy -1} i {wealth -1}. Els jugadors que menys hagin contribuit perden {gold 3}.'
+				'El regne pateix {stability -1} i {wealth -1}. Els jugadors que menys hagin contribuit perden {gold 3}.'
 		}
 	]
 } satisfies EventData;

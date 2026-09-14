@@ -6,13 +6,13 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanya {strength 2}, roba carta ({aggression}).'
+			effects: 'Guanya {strength 2}.'
 		},
 		{
-			title: 'Cridar a files',
+			title: 'Preparacions de guerra',
 			type: 'action',
-			cost: { strength: 2 },
-			effects: 'El regne guanya {might 1}.'
+			cost: { strength: 3 },
+			effects: 'El teu regne guanya {might 1}.'
 		},
 		{
 			title: 'Intimidació',

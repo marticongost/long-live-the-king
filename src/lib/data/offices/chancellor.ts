@@ -9,6 +9,12 @@ export default {
 			effects: 'Guanya {power 2}.'
 		},
 		{
+			title: 'Govern',
+			type: 'action',
+			cost: { power: 3 },
+			effects: 'El teu regne guanya {stability 1}.'
+		},
+		{
 			title: 'Maniobres polítiques',
 			type: 'action',
 			cost: { power: 1 },

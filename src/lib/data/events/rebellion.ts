@@ -6,9 +6,9 @@ export default {
 		{
 			type: 'crisis',
 			test: '{strength}',
-			difficulty: '(5 - {happiness}) x {players}',
+			difficulty: '(5 - {stability}) x {players}',
 			highestContributionReward: '{prestige 1}',
-			penalty: '{supremacy -1}, {happiness -1}. Si {happiness} és 1, {execute} al Rei.'
+			penalty: '{stability -2}. Si {stability} és 1, {execute} al Rei.'
 		}
 	]
 } satisfies EventData;

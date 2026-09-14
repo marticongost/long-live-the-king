@@ -23,6 +23,7 @@ export const keywords = {
 	assets: 'actius',
 	secrets: 'secrets',
 	kingdomStat: 'indicador del regne',
+	kingdomStats: 'indicadors del regne',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,

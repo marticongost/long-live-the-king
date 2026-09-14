@@ -6,14 +6,20 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'Guanyar {wealth} + {taxes} en {gold}.'
+			effects: 'Guanyar {gold 2}.'
+		},
+		{
+			title: 'Augmentar els ingressos',
+			type: 'action',
+			cost: { gold: 3 },
+			effects: 'El teu regne guanya {wealth 1}.'
 		},
 		{
 			title: 'Fixar impostos',
 			type: 'action',
 			cost: { power: 1 },
 			effects:
-				'Moure {taxes} 1 o 2 espais en qualsevol direcció. Canviar {happiness} en la mateixa quantitat, en la direcció oposada.'
+				'Moure {taxes} 1 o 2 espais en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'
 		}
 	]
 } satisfies OfficeData;

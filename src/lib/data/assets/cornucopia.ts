@@ -9,7 +9,7 @@ export default {
 			title: 'Abundància',
 			type: 'secret',
 			cost: { power: 3 },
-			effects: 'Guanyar {prestige 1}. El teu regne guanya {food 1}.'
+			effects: 'Guanyar {prestige 1}. El teu regne guanya {stability 1}.'
 		}
 	]
 } satisfies AssetData;

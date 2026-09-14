@@ -9,7 +9,7 @@ export default {
 			title: 'Que ha fet el rei per mi?',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {intrigue 1}, i el regne rep {supremacy -1}.'
+				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {intrigue 1}, i el regne rep {stability -1}.'
 		}
 	]
 } satisfies TacticData;

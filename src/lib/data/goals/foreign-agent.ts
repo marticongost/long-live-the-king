@@ -8,7 +8,7 @@ export default {
 			type: 'reaction',
 			trigger: 'gameEnd',
 			effects:
-				"Si un altre regne (escollit a l'inici de la partida) acaba la partida amb més {supremacy} que el teu regne, guanya {prestige 3}."
+				"Si un altre regne (escollit a l'inici de la partida) acaba la majoria d'{kingdomStats} per sobre el teu regne, guanya {prestige 3}."
 		}
 	]
 } satisfies GoalData;

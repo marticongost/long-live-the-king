@@ -9,7 +9,7 @@ export default {
 			difficulty: '{players} al regne',
 			highestContributionReward: '{prestige 1}',
 			penalty:
-				'El regne pateix {supremacy -2}. El jugador amb més {prestige} del regne perd {prestige 1}.'
+				'El regne pateix {stability -2}. El jugador amb més {prestige} del regne perd {prestige 1}.'
 		}
 	]
 } satisfies EventData;

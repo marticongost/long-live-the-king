@@ -8,7 +8,7 @@ export default {
 			test: '{gold}',
 			difficulty: '{players} al regne',
 			highestContributionReward: '{prestige 1}',
-			penalty: '{might -1}, {happiness -1}'
+			penalty: '{might -1}, {stability -1}'
 		}
 	]
 } satisfies EventData;

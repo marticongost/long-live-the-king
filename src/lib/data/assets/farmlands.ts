@@ -13,7 +13,7 @@ export default {
 			title: 'Collita',
 			type: 'action',
 			cost: { gold: 2 },
-			effects: 'El teu regne guanya {food 1}.'
+			effects: 'El teu regne guanya {stability 1}.'
 		}
 	]
 } satisfies AssetData;

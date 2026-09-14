@@ -18,7 +18,7 @@ export default {
 			title: 'Ridiculitzar',
 			type: 'action',
 			effects:
-				'{duel} {power} + {intrigue} contra un altre membre del regne. El perdedor dona {prestige 1} al vencedor. Si el bufó guanya el duel, {happiness 1}. Si el guanya per 2+, roba una carta aleatòria al rival.'
+				'{duel} {power} + {intrigue} contra un altre membre del regne. El perdedor dona {prestige 1} al vencedor. Si el bufó guanya el duel per 2+, roba una carta aleatòria al rival.'
 		}
 	]
 } satisfies OfficeData;

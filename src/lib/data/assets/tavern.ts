@@ -13,7 +13,7 @@ export default {
 			title: 'Una ronda per tots!',
 			type: 'action',
 			cost: { gold: 2 },
-			effects: 'El teu regne guanya {happiness 1}.'
+			effects: 'El teu regne guanya {stability 1}.'
 		}
 	]
 } satisfies AssetData;

@@ -13,7 +13,7 @@ export default {
 			title: 'Banquet',
 			type: 'action',
 			cost: { gold: 3 },
-			effects: 'El teu regne guanya {supremacy 1}.'
+			effects: 'El teu regne guanya {stability 1}.'
 		}
 	]
 } satisfies AssetData;

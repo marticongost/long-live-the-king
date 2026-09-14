@@ -19,7 +19,8 @@ const propertyData = {
 	luxury: 'Luxe',
 	maritime: 'Marítim',
 	selfishness: 'Egoïsme',
-	boost: 'Millora'
+	boost: 'Millora',
+	food: 'Menjar'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;

@@ -1,3 +1,3 @@
-export const kingdomStats = ['supremacy', 'wealth', 'taxes', 'happiness', 'food', 'might'] as const;
+export const kingdomStats = ['stability', 'wealth', 'taxes', 'might', 'grace'] as const;
 
 export type KingdomStat = (typeof kingdomStats)[number];

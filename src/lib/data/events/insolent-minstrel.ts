@@ -7,7 +7,7 @@ export default {
 			type: 'reaction',
 			trigger: 'whenRevealed',
 			effects:
-				'Si no hi ha Rei, descartar la carta i robar-ne una altra. Si no, el rei escull entre perdre {prestige 1} o (si no pot, o no vol) causar {happiness -1} al regne.'
+				'Si no hi ha Rei, descartar la carta i robar-ne una altra. Si no, el rei escull entre perdre {prestige 1} o (si no pot, o no vol) causar {stability -1} al regne.'
 		}
 	]
 } satisfies EventData;

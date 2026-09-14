@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'gameEnd',
-			effects: 'Si el {food} del teu regne és 2 o menys, guanya {prestige 3}.'
+			effects: 'Si tens 3+ més cartes amb la propietat {food}, guanya {prestige 4}.'
 		}
 	]
 } satisfies GoalData;

@@ -3,7 +3,11 @@ import type { OfficeData } from '$lib/models/cards';
 export default {
 	title: 'Rei',
 	capabilities: [
-		{ type: 'reaction', trigger: 'turnStart', effects: 'Guanya {power 1}' },
+		{
+			type: 'reaction',
+			trigger: 'turnStart',
+			effects: 'Reparteix {favour} igual a {players} al regne - 1.'
+		},
 		{
 			title: 'Reorganitzar el consell',
 			type: 'action',

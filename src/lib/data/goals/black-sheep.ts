@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'gameEnd',
-			effects: 'Si la {supremacy} del teu regne és 2 o menys, guanya {prestige 4}.'
+			effects: "Si l'{stability} del teu regne és 2 o menys, guanya {prestige 4}."
 		}
 	]
 } satisfies GoalData;
