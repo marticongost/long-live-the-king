@@ -21,7 +21,8 @@ const propertyData = {
 	selfishness: 'Egoïsme',
 	boost: 'Millora',
 	food: 'Menjar',
-	adversity: 'Adversitat'
+	adversity: 'Adversitat',
+	holy: 'Sagrat'
 } as const;
 
 export type PropertyId = keyof typeof propertyData;

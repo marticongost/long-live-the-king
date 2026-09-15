@@ -2,7 +2,7 @@ import type { AssetData } from '$lib/models/cards';
 
 export default {
 	title: 'Església',
-	properties: ['land'],
+	properties: ['object', 'holy'],
 	capabilities: [
 		{
 			title: 'Fervor',
