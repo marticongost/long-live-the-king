@@ -5,14 +5,39 @@
    viewBox="0 0 62.99996 88"
    version="1.1"
    id="svg1"
-   sodipodi:docname="tactic.svg"
+   sodipodi:docname="collective-goal.svg"
    inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1" />
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#d7b489;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#cb9c5f;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2"
+       cx="31.499886"
+       cy="13.835703"
+       fx="31.499886"
+       fy="13.835703"
+       r="29.23516"
+       gradientTransform="matrix(1,0,0,0.43235947,0,7.8537056)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -32,23 +57,19 @@
      inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
-  <g
-     id="g1"
-     transform="scale(1,0.92009484)">
-    <path
-       id="rect1"
-       style="fill:#cb9a5c;fill-opacity:1;stroke-width:0.264583"
-       d="m 0,0 v 31.51849 c 9.2279525,-3.237402 20.22699,-4.974339 31.499886,-4.974374 11.272896,3.5e-5 22.271934,1.736972 31.499886,4.974374 V 0 Z"
-       sodipodi:nodetypes="cccccc" />
-    <path
-       id="path2"
-       style="fill:#ddbd94;fill-opacity:1;stroke-width:0.246153"
-       d="M 1.6212892,1.299436 V 29.669844 C 10.374282,26.71571 20.807202,25.130752 31.499886,25.13072 c 10.692684,3.2e-5 21.125604,1.58499 29.878597,4.539124 V 1.299436 Z"
-       sodipodi:nodetypes="cccccc" />
-    <path
-       id="path3"
-       style="fill:#cfa36a;fill-opacity:1;stroke-width:0.237056"
-       d="m 2.264726,1.299436 v 27.475642 c 8.564497,-2.800118 18.772744,-4.302444 29.23516,-4.302474 10.462416,3e-5 20.670663,1.502356 29.23516,4.302474 V 1.299436 Z"
-       sodipodi:nodetypes="cccccc" />
-  </g>
+  <path
+     id="rect1"
+     style="fill:#cb9a5c;fill-opacity:1;stroke-width:0.253792"
+     d="M 0,0 V 29 C 9.2279525,26.021283 20.22699,24.423136 31.499886,24.423104 42.772782,24.423136 53.77182,26.021283 62.999772,29 V 0 Z"
+     sodipodi:nodetypes="cccccc" />
+  <path
+     id="path2"
+     style="fill:#ddbd94;fill-opacity:1;stroke-width:0.236114"
+     d="M 1.6212892,1.1956044 V 27.29907 C 10.374282,24.580987 20.807202,23.122675 31.499886,23.122646 42.19257,23.122675 52.62549,24.580987 61.378483,27.29907 V 1.1956044 Z"
+     sodipodi:nodetypes="cccccc" />
+  <path
+     id="path3"
+     style="fill:url(#radialGradient2);fill-opacity:1;stroke-width:0.227388"
+     d="M 2.264726,1.1956044 V 26.475801 c 8.564497,-2.576374 18.772744,-3.958657 29.23516,-3.958684 10.462416,2.7e-5 20.670663,1.38231 29.23516,3.958684 V 1.1956044 Z"
+     sodipodi:nodetypes="cccccc" />
 </svg>

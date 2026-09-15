@@ -5,14 +5,39 @@
    viewBox="0 0 63.000006 87.999876"
    version="1.1"
    id="svg3"
-   sodipodi:docname="event.svg"
+   sodipodi:docname="tactic.svg"
    inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs3" />
+     id="defs3">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#4f5b7e;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#414a62;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2"
+       cx="31.500004"
+       cy="14.729596"
+       fx="31.500004"
+       fy="14.729596"
+       r="29.912504"
+       gradientTransform="matrix(1.0051123,-0.4978102,0.31310434,0.63217874,-4.7729383,21.098881)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview3"
      pagecolor="#ffffff"
@@ -25,7 +50,7 @@
      showgrid="false"
      inkscape:zoom="4"
      inkscape:cx="63.25"
-     inkscape:cy="72"
+     inkscape:cy="71.75"
      inkscape:window-width="2560"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -45,7 +70,7 @@
      sodipodi:nodetypes="ccccc" />
   <path
      id="path5"
-     style="fill:#454e68;fill-opacity:1;stroke-width:0.259809"
+     style="fill:url(#radialGradient2);fill-opacity:1;stroke-width:0.259809"
      d="M 61.412508,1.1909335 H 1.5875002 V 26.97424 C 34.5599,16.389014 28.307816,35.565063 61.412508,24.9433 Z"
      sodipodi:nodetypes="ccccc" />
 </svg>

@@ -42,7 +42,8 @@
 			width: '100%',
 			fontWeight: 900,
 			margin: 0,
-			textAlign: 'center'
+			textAlign: 'center',
+			textShadow: '0 0 0.2em rgba(0,0,0,0.3)'
 		},
 		iconFrame: {
 			position: 'relative',
@@ -71,6 +72,7 @@
 			height: 'auto',
 			zIndex: 2,
 			color: css.palette.white,
+			filter: 'drop-shadow(0 0 0.2em rgba(0,0,0,0.3))',
 			[variant('office')]: {
 				width: '60%',
 				top: '-10%'

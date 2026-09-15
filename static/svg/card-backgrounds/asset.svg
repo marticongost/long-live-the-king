@@ -9,10 +9,35 @@
    inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs3" />
+     id="defs3">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#bdb8a7;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#9e9487;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="radialGradient2"
+       cx="31.500154"
+       cy="13.686094"
+       fx="31.500154"
+       fy="13.686094"
+       r="22.909214"
+       gradientTransform="matrix(1.1611464,-0.73464195,0.67387295,1.0650973,-14.298825,22.250407)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview3"
      pagecolor="#ffffff"
@@ -25,7 +50,7 @@
      showgrid="false"
      inkscape:zoom="4"
      inkscape:cx="82"
-     inkscape:cy="53.5"
+     inkscape:cy="53.25"
      inkscape:window-width="2560"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -49,7 +74,7 @@
      sodipodi:nodetypes="cccccc" />
   <path
      id="path3"
-     style="fill:#a39a8e;fill-opacity:1;stroke-width:0.243945"
+     style="fill:url(#radialGradient2);fill-opacity:1;stroke-width:0.243945"
      d="M 8.7390207,-6.6639056e-5 C 8.2780118,7.9003922 8.6868183,14.334459 12.987724,18.765697 c 4.140684,4.296184 11.45102,7.585258 18.512067,8.606558 7.061173,-1.02129 14.372023,-4.310411 18.51278,-8.606558 4.30099,-4.431198 4.709723,-10.8653745 4.248706,-18.765763639056 z"
      sodipodi:nodetypes="cccccc" />
 </svg>
