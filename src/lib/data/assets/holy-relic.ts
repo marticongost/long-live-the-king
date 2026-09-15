@@ -8,7 +8,7 @@ export default {
 			type: 'reaction',
 			trigger: 'eventRevealed',
 			cost: { faith: 4 },
-			effects: "Si {grace} ≥ 1, descartar l'esdeveniment."
+			effects: "Si {grace} ≥ 4, descartar l'esdeveniment."
 		}
 	]
 } satisfies AssetData;

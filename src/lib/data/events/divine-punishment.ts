@@ -7,7 +7,7 @@ export default {
 			type: 'reaction',
 			trigger: 'whenRevealed',
 			effects:
-				'Si {grace} és < 0, roba i resol immediatament 2 cartes amb la propietat {adversity}, en ordre.'
+				'Si {grace} és < 3, roba i resol immediatament 2 cartes amb la propietat {adversity}, en ordre.'
 		}
 	]
 } satisfies EventData;
