@@ -23,7 +23,6 @@ class CardsCatalog {
 		for (const [path, data] of Object.entries(records)) {
 			const id = pathToId(path);
 			const card = new cardConstructor(id, data);
-			console.log(path, id, card);
 			this.cards[id] = card;
 		}
 	}
