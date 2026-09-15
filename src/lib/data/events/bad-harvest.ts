@@ -2,6 +2,7 @@ import type { EventData } from '$lib/models/cards';
 
 export default {
 	title: 'Mala collita',
+	properties: ['adversity'],
 	capabilities: [
 		{
 			type: 'crisis',

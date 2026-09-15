@@ -2,6 +2,7 @@ import type { EventData } from '$lib/models/cards';
 
 export default {
 	title: 'Guerra',
+	properties: ['adversity'],
 	capabilities: [
 		{
 			type: 'crisis',

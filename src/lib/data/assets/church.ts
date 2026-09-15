@@ -5,14 +5,14 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: "L'ombra de la creu",
+			title: 'Fervor',
 			type: 'action',
-			effects: 'Guanyar {power 1} o {gold 1}.'
+			effects: 'Guanyar {faith 1}.'
 		},
 		{
 			title: 'Pregària',
 			type: 'action',
-			cost: { gold: 2 },
+			cost: { faith: 2 },
 			effects:
 				"Mira en secret les dues següents cartes d'esdeveniment. Torna una de les cartes a dalt de la pila, descarta l'altra."
 		}
