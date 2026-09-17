@@ -27,13 +27,16 @@ export interface CrisisData {
 }
 
 export type ActionSpec = { type: 'action' } & BaseActionData;
+export type ConflictSpec = { type: 'conflict' } & BaseActionData;
 export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
 export type ConstantSpec = { type: 'constant' } & CapabilityEffectsFields;
 export type CrisisSpec = { type: 'crisis' } & CrisisData;
-export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
+export type CapabilitySpec =
+	ActionSpec | ConflictSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
 export function buildCapability(spec: ActionSpec): Action;
+export function buildCapability(spec: ConflictSpec): Conflict;
 export function buildCapability(spec: SecretSpec): Secret;
 export function buildCapability(spec: ReactionSpec): Reaction;
 export function buildCapability(spec: ConstantSpec): Constant;
@@ -43,6 +46,8 @@ export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
 		case 'action':
 			return new Action(spec);
+		case 'conflict':
+			return new Conflict(spec);
 		case 'secret':
 			return new Secret(spec);
 		case 'reaction':
@@ -77,6 +82,8 @@ export abstract class BaseAction extends ConcreteCapability {
 }
 
 export class Action extends BaseAction {}
+
+export class Conflict extends BaseAction {}
 
 export class Secret extends BaseAction {}
 

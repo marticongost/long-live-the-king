@@ -11,7 +11,7 @@ export default {
 		},
 		{
 			title: 'Ampliació',
-			type: 'action',
+			type: 'conflict',
 			cost: { gold: 2 },
 			effects: 'El teu regne guanya {might 1}.'
 		}

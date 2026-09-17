@@ -3,6 +3,7 @@
 		Action,
 		BaseAction,
 		ConcreteCapability,
+		Conflict,
 		Constant,
 		Crisis,
 		Reaction,
@@ -113,6 +114,8 @@
 			return 'capabilities/constant.svg';
 		} else if (capability instanceof Secret) {
 			return 'capabilities/secret.svg';
+		} else if (capability instanceof Conflict) {
+			return 'capabilities/conflict.svg';
 		} else if (capability instanceof Crisis) {
 			return 'capabilities/crisis.svg';
 		}

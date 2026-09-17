@@ -27,6 +27,8 @@ export const keywords = {
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
+	action: undefined,
+	conflict: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
 };
 

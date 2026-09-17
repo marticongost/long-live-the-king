@@ -6,12 +6,12 @@ export default {
 	capabilities: [
 		{
 			title: 'Fervor',
-			type: 'action',
+			type: 'conflict',
 			effects: 'Guanyar {faith 1}.'
 		},
 		{
 			title: 'Pregària',
-			type: 'action',
+			type: 'conflict',
 			cost: { faith: 2 },
 			effects:
 				"Mira en secret les dues següents cartes d'esdeveniment. Torna una de les cartes a dalt de la pila, descarta l'altra."

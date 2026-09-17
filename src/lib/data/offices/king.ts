@@ -10,13 +10,13 @@ export default {
 		},
 		{
 			title: 'Reorganitzar el consell',
-			type: 'action',
+			type: 'conflict',
 			cost: { power: 3 },
 			effects: 'Assigna, reassigna o retira qualsevol número de {offices}.'
 		},
 		{
 			title: 'Tirania',
-			type: 'action',
+			type: 'conflict',
 			cost: { power: 1 },
 			effects:
 				'Escull 1+ {subjects}. Cada un ha de donar-te una {card} o un {resource} de la seva el·lecció.'

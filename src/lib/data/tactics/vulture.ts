@@ -6,7 +6,7 @@ export default {
 	properties: ['selfishness'],
 	capabilities: [
 		{
-			type: 'action',
+			type: 'conflict',
 			cost: { intrigue: 1 },
 			effects: 'Per cada {kingdomStat} a -2 guanyes {gold 1} i {power 1}.'
 		}

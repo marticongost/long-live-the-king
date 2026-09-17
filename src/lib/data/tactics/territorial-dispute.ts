@@ -6,7 +6,7 @@ export default {
 	properties: ['agression'],
 	capabilities: [
 		{
-			type: 'action',
+			type: 'conflict',
 			cost: { power: 1 },
 			effects:
 				'Resol un {duel} {strength} contra un jugador. Si guanyes, roba una de les seves {land} {visible}.'

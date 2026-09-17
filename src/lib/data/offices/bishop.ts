@@ -10,13 +10,13 @@ export default {
 		},
 		{
 			title: 'Sermó',
-			type: 'action',
+			type: 'conflict',
 			cost: { faith: 3 },
 			effects: 'El teu regne guanya {grace 1}.'
 		},
 		{
 			title: 'Excomulgar',
-			type: 'action',
+			type: 'conflict',
 			effects: '{duel} {any} contra un altre membre del regne. El perdedor és {exiled} del regne.'
 		}
 	]
