@@ -138,6 +138,8 @@
 	function getSubtitle(capability: Capability): string | undefined {
 		if (capability instanceof Action) {
 			return 'Acció';
+		} else if (capability instanceof Conflict) {
+			return 'Conflicte';
 		} else if (capability instanceof Secret) {
 			return 'Secret';
 		}
