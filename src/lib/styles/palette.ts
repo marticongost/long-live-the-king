@@ -14,6 +14,7 @@ export const ash: HexColor = '#333';
 export const cinder: HexColor = '#444';
 export const gray: HexColor = '#888';
 export const ivory: HexColor = '#f0f0e0';
+export const linen: HexColor = '#faf9f2';
 export const moonMist: HexColor = '#dad7c7';
 export const gurkha: HexColor = '#bcb8a0';
 export const wood: HexColor = '#594D4C';
