@@ -1,6 +1,8 @@
 <script lang="ts" module>
 	import * as css from '$lib/styles';
-	const paragraphSpacing = '0.8em';
+	const simpleParagraphSpacing = '0.8em';
+	const intermediateParagraphSpacing = '1.2em';
+	const doubleParagraphSpacing = '1.5em';
 
 	const styles = css.styles({
 		root: {
@@ -10,20 +12,23 @@
 				marginTop: 0
 			},
 			h1: {
-				marginTop: css.spacing.md,
+				marginTop: doubleParagraphSpacing,
 				color: css.palette.red,
 				paddingBottom: '0.25em',
 				borderImage: "url('/svg/decorations/separator.svg') 0 0 100% 0 / 0 0 0.1em 0 repeat"
 			},
 			h2: {
-				marginTop: css.spacing.md,
+				marginTop: doubleParagraphSpacing,
 				paddingBottom: '0.2em',
 				borderBottom: css.separators.regularBorder
 			},
 			h3: {
-				marginTop: paragraphSpacing,
+				marginTop: intermediateParagraphSpacing,
 				paddingBottom: '0.2em',
 				borderBottom: css.separators.thinBorder
+			},
+			h4: {
+				marginTop: intermediateParagraphSpacing
 			}
 		},
 		heading: {
@@ -33,10 +38,10 @@
 			margin: 0
 		},
 		paragraph: {
-			...css.vmargin(paragraphSpacing)
+			...css.vmargin(simpleParagraphSpacing)
 		},
 		list: {
-			...css.vmargin(paragraphSpacing),
+			...css.vmargin(simpleParagraphSpacing),
 			paddingLeft: css.spacing.lg,
 			listStyleType: 'disc'
 		},
