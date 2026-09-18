@@ -317,7 +317,7 @@ Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
 vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
 
 Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
-em dones {gold 2}, jo et nomenaré tresorer a la fase de conflicte"). Els jugadors són
+em dones {gold 2}, jo et nomenaré tresorer a la fase de conflicte"_). Els jugadors són
 lliures d'incomplir-los - a costa de la seva reputació, i el que els altres jugadors
 puguin pensar d'ells...
 
