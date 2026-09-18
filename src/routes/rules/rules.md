@@ -73,8 +73,7 @@ noves lleis al consell.
 
 Els diners representen el poder econòmic i financer del jugador. Com la majoria de
 recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; a més a més, són
-especialment rellevants a l'hora d'aquirir nous **actius**, durant la **subhasta de
-bens**.
+especialment rellevants a l'hora d'aquirir nous **actius**, durant la {assetsBid}.
 
 ### {intrigue} Intriga
 
@@ -112,10 +111,10 @@ Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
   conjunts. Això pot ser rellevant per altres cartes, que poden fer referència a aquestes
   propietats (_p. ex. un objectiu podria basar-se en acumular cartes amb la propietat
   {luxury}_).
-- **Bonificació per descartar:** La majoria de cartes es poden sacrificar en comptes
+- **Bonificació per descartar:** Algunes cartes es poden sacrificar en comptes
   d'utilitzar les seves capacitats normals, per guanyar una compensació en recursos. Els
   recursos que es guanyaran si es sacrifica una carta s'indiquen a la cantonada inferior
-  dreta.
+  dreta. Si no es mostra cap recurs, la carta no es pot sacrificar.
 
 ### Tipus de cartes
 
@@ -140,11 +139,11 @@ divideixen en dos tipus:
 
 Cada jugador comença el joc amb un objectiu de cada tipus. Les cartes d'objectiu s'han
 de mantenir en secret durant tota la partida - malgrat els jugadors poden preguntar i
-fer promeses al respecte (_"M'has de creure, el meu objectiu és que el regne tingui
-menjar de sobra!"_).
+fer promeses al respecte (_"M'has de creure, el meu objectiu és que el regne sigui
+estable!"_).
 
 Cada objectiu estableix una o més condicions a complir, i un número de punts de
-{prestige} prestigi que es guanyaran si es complexen.
+{prestige} prestigi que el seu propietari guanyarà si les compleix.
 
 #### Tàctiques
 
@@ -154,7 +153,7 @@ una addicional.
 
 #### Actius
 
-Els actius representen possessions, bens i aliats de cada jugadors. A diferència de les
+Els actius representen les possessions, bens i aliats dels jugadors. A diferència de les
 tàctiques, un cop adquirits els actius es queden en joc, i el seu propietari pot activar
 les seves capacitats un cop cada torn.
 
@@ -162,8 +161,8 @@ Els actius poden ser tant {visible} visibles com {hidden} ocults, tal i com s'in
 la seva carta (tant a la icona inferior esquerra, com pel color diferenciat de la
 carta - més clara en el cas d'actius visibles, més fosca pels ocults).
 
-La forma principal d'adquirir actius és la **subhasta de bens**, que es descriu a una
-secció posterior.
+La forma principal d'adquirir actius és la {assetsBid}, que es descriu a una secció
+posterior.
 
 #### Lleis
 
@@ -171,7 +170,7 @@ Les lleis són propostes legislatives que, de ser aprovades, canvien les regles 
 per tots els membres del regne.
 
 Al principi del joc, les cartes de llei s'apilen i barregen en una baralla, i se'n
-roben 3, col·locant-les a la **fila de lleis**.
+roben 3, col·locant-les a la {lawsPool}.
 
 Per posar un joc una llei, cal seguir els següents passos:
 
@@ -208,7 +207,7 @@ dels demés jugadors en tot moment, incloent les cartes de casa, els càrrecs i 
 fons clar.
 
 Les cartes d'esdeveniment en curs i les lleis en vigor o a la fila de lleis es situen
-als espais comuns, i com a tal, són visibles.
+als espais comuns (davant de la pantalla), i com a tal, són visibles.
 
 En posar en joc una capacitat d'una carta cal revelar la carta corresponent als demés
 jugadors - fins i tot si es tracta d'una carta oculta. La única excepció a aquesta regla
@@ -233,7 +232,7 @@ Els jugadors poden comerciar amb:
 
 - Cartes de tàctica de la seva ma
 - Actius que posseeixin ({visible} visibles o {hidden} ocults)
-- Recursos ({gold}, {power}, {intrigue}, {strength})
+- Recursos ({gold}, {power}, {intrigue}, {strength}, {faith})
 - Informació (_ex. "et revelaré qui et va robar el torn anterior"_)
 - Promeses (_"ex. et donaré el primer {gold} que obtingui"_, _"votaré a favor teu quan
   es debati la llei X"_)

@@ -24,6 +24,8 @@ export const keywords = {
 	secrets: 'secrets',
 	kingdomStat: 'indicador del regne',
 	kingdomStats: 'indicadors del regne',
+	assetsBid: "subhasta d'actius",
+	lawsPool: 'fila de lleis',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
