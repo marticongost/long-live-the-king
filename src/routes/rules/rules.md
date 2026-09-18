@@ -313,7 +313,7 @@ guanyar el duel._
 ### Tractes vinculants
 
 Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
-{intrigue 2}"_, "tu em dones {strength 1}, jo et dic quin és el meu objectiu") són
+{intrigue 2}", "tu em dones {strength 1}, jo et dic quin és el meu objectiu"_) són
 vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
 
 Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
@@ -327,7 +327,7 @@ Un duel és un conflicte entre dos o més jugadors, que imposa beneficis al venc
 perjudicis al perdedor.
 
 Els duels es basen en un o més recursos (_ex. un duel podria ser de {strength}, o de
-{gold} + {intrigue}, etc).
+{gold} + {intrigue}, etc_).
 
 Per resoldre un duel, cada jugador implicat al duel agafa al seu puny tants recursos
 dels tipus admesos com vulgui. Els jugadors revelen els recursos escollits
