@@ -271,6 +271,23 @@ puguin pensar d'ells...
 
 ## Duels
 
+Un duel és un conflicte entre dos o més jugadors, que imposa beneficis al vencedor i/o
+perjudicis al perdedor.
+
+Els duels es basen en un o més recursos (_ex. un duel podria ser de {strength}, o de
+{gold} + {intrigue}, etc).
+
+Per resoldre un duel, cada jugador implicat al duel agafa al seu puny tants recursos
+dels tipus admesos com vulgui. Els jugadors revelen els recursos escollits
+simultàniament.
+
+El jugador amb la quantitat més alta de fitxes de recurs al seu puny guanya el duel;
+tots els demés jugadors el perden. Si es produeix un empat, el duel finalitza sense
+efectes.
+
+Independentment de si ha guanyat, perdut o empatat, cada jugador perd els recursos
+assignats al duel, i els torna a la reserva general.
+
 ## Complots
 
 ## Crisis
