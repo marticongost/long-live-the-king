@@ -247,9 +247,17 @@ intercanvi:
 
 ### Quan es pot fer un intercanvi
 
-Els intercanvis es poden fer en qualsevol moment de la partida, exceptuant aquells
-moments en que el director de joc hagi la interrupció del joc per resoldre una capacitat
-o regla.
+Els jugadors són lliures de discutir possibles tractes en qualsevol moment. Tanmateix,
+només està permès intercanviar components físics (cartes i marcadors de recurs) durant
+la fase de preparació, o si una carta ho permet, específicament.
+
+_Ex. el Ricard decreta un duel de {strength} contra el Tomàs: el vencedor haurà de donar
+a l'altre tres {power}. El Tomàs podria intentar escapolir-se passant tot el seu {power}
+a la Dària temporalment, de manera que si perd el duel no pugui donar res al Ricard.
+Això faria molt fàcil escapar de molts d'aquests efectes nocius, així que en
+circumstàncies normals no està permès. Per contra, si el Tomàs jugués una carta de
+tàctica *Ajuda* podria demanar a la Dària part de la seva {strength} per intentar
+guanyar el duel._
 
 ### Tractes vinculants
 
