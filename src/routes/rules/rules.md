@@ -302,7 +302,9 @@ assignats al duel, i els torna a la reserva general.
 
 ## Fase d'esdeveniments
 
-## Fase d'acció
+## Fase de preparació
+
+## Fase de conflicte
 
 ## Fase de secrets
 
