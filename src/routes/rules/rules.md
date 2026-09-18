@@ -264,9 +264,10 @@ Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
 {intrigue 2}"_, "tu em dones {strength 1}, jo et dic quin és el meu objectiu") són
 vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
 
-Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures. Els
-jugadors són lliures d'incomplir-los - a costa de la seva reputació, i el que els altres
-jugadors puguin pensar d'ells...
+Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
+em dones {gold 2}, jo et nomenaré tresorer a la fase de conflicte"). Els jugadors són
+lliures d'incomplir-los - a costa de la seva reputació, i el que els altres jugadors
+puguin pensar d'ells...
 
 ## Duels
 
