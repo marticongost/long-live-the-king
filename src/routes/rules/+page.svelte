@@ -10,8 +10,8 @@
 </script>
 
 <script lang="typescript">
-	import MarkdownRules from '$lib/components/MarkdownRules.svelte';
+	import Markdown from '$lib/components/Markdown.svelte';
 	import rules from './rules.md?raw';
 </script>
 
-<MarkdownRules class={styles.rules} markdown={rules} />
+<Markdown class={styles.rules} markdown={rules} />
