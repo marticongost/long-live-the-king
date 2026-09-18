@@ -78,14 +78,66 @@ especialment rellevants a l'hora d'aquirir nous **actius**, durant la {assetsBid
 ### {intrigue} Intriga
 
 La intriga representa l'astúcia, plans secrets i afinitat pel joc brut del jugador. Com
-la majoria de recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; en
+la majoria de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en
 particular, són la moneda principal a l'hora d'executar (o evitar) **complots**.
 
 ### {strength} Força
 
-La intriga representen les forces militars i talent marcial del jugador. Com la majoria
-de recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; en particular,
+La força representa les forces militars i talent marcial del jugador. Com la majoria
+de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en particular,
 agressions directes o defensa del regne contra els invasors, entre d'altres.
+
+### {faith} Fè
+
+La fè representa el fervor religiós i espiritualitat del jugador i els seus vasalls. Com
+la majoria de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en
+particular, en crisis de caràcter religiós o moral.
+
+### {favour} Favor reial
+
+El favor reial representa l'autoritat i voluntat del monarca, i actua com un comodí que
+pot utilitzar-se per substituir qualsevol dels altres recursos - cosa que el fa altament
+valuós!
+
+_Ex. El Marc ha de pagar un efecte que costa {power 3}. Utilitza dues fitxes de {power}
+i una de {favour}._
+
+El favor reial només és produit pel Rei: a l'inici del torn, el jugador que controla el
+rei el reparteix entre els demés membres del regne, proporcionant-li un control
+indirecte sobre els afers del regne, i una eina de negociació important amb els seus
+consellers.
+
+## Indicadors del regne
+
+El regne té un seguit d'_indicadors_ que reflecteixen la seva fortalesa en diferents
+àrees.
+
+Cada indicador es representa amb un valor numèric entre l'1 (desastre) i el 5
+(excel·lència). A l'inici del joc els indicadors comencen amb un valor neutre de 3, però
+diferents cartes i efectes poden moure'ls en una o altra direcció.
+
+Cada indicador està estretament vinculat a un tipus de recurs, com s'indica a
+continuació. Aquesta relació serà rellevant durant la _fase de producció_, en que els
+membres del regne guanyaran més o menys recursos en funció del valor de cada indicador.
+
+### {stability} Estabilitat
+
+Representa l'ordre i seguretat interna del regne, i el grau de contentament dels seus
+habitants. Recurs vinculat: {power} **Poder**.
+
+### {wealth} Riquesa
+
+Un reflex de la riquesa material del regne. Recurs vinculat: {gold} **Diners**.
+
+### {might} Exèrcit
+
+Reflecteix la mida i preparació de les forces armades del regne. Recurs vinculat:
+{strength} **Força**.
+
+### {grace} Gràcia
+
+Indica la riquesa espiritual del regne i la seva rectitud moral. Recurs vinculat:
+{faith} **Fè**.
 
 ## Cartes
 
