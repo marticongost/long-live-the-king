@@ -342,6 +342,125 @@ assignats al duel, i els torna a la reserva general.
 
 ## Complots
 
+Els complots són maniobres encobertes que els jugadors poden utilitzar pel seu benefici
+i/o el detriment del seu regne i o altres jugadors. Es resolen en secret, a la fase de
+secrets, i poden ser detectats per altres jugadors.
+
+### Actors
+
+Un complot implicarà sempre a múltiples actors:
+
+- El jugador que inicia el complot, a qui anomenarem el **conspirador**
+- El **destinatari** del complot, que pot ser el regne o un o més jugadors concrets, tal
+  i com s'indicarà a la carta
+- El **mestre d'espies**, que pot intercedir en complots contra el regne o altres
+  membres del regne
+
+### Declarar un complot
+
+Per decretar un complot cal afegir una entrada a l'apartat _Secrets_ del full del torn,
+indicant:
+
+- La carta que proporciona la capacitat {plot} que es vol executar
+- El nom de la capacitat (opcional si la carta només té una única capacitat)
+- El destinatari o destinataris del complot
+- La {intrigue} que es vol destinar al complot (mínim 1)
+
+La intriga invertida en el complot s'ha d'afegir a la bossa del jugador; el director de
+joc la retornarà a la reserva, independentment del resultat del complot. Si en el moment
+d'executar-se el complot no hi ha suficient intriga (_ex. perquè un altre complot previ
+ha fet que el jugador perdi intriga_), el complot és cancel·lat.
+
+### Vigilància
+
+Com que els complots s'executen en secret, els jugadors no saben quan poden ser-ne
+l'objectiu. Per tant, cal que es defensin preventivament, dedicant recursos per
+defensar-se contra aquestes maniobres encobertes. Això representa els esforços de la
+casa per contractar vigilants, anar amb cura al compartir informació sensible, etc.
+
+Per representar-ho, abans d'entregar el seu full amb instruccions pel director de joc,
+els jugadors poden escriure-hi un valor a la casella {vigilance}, corresponent a la
+quantitat d'{intrigue} que volen invertir en defensar-se de complots durant aquell torn.
+Com més alt sigui aquest valor, més probable serà que els complots dirigits contra ells
+fallin i/o siguin detectats.
+
+### Contraespionatge
+
+El _mestre d'espies_ té un paper essencial en la resolució dels complots: a diferència
+dels demés jugadors, la seva {vigilance} té efectes sobre tots els complots - no només
+els que es dirigeixin contra ell.
+
+Tanmateix, el _mestre d'espies_ té la potestat de decidir a quins jugadors vol protegir
+i amb quins farà la vista grossa (_ex. Per què hauria de protegir al Jordi, si va
+guanyant?_). Per fer-ho, pot annotar un seguit de destinaris (el regne en conjunt, o un
+o més jugadors) al costat del seu indicador de vigilància, que quedaran exempts de la
+seva protecció.
+
+### Determinar el resultat d'un complot
+
+L'èxit d'un complot no està garantit: depèn directament de la {intrigue} que els
+diferents actors destinin a executar-lo o a evitar-lo, i d'un element de sort.
+
+El resultat d'un complot és divideix en dues parts:
+
+- **Èxit o fracàs:** determina si el complot aconsegueix els objectius que es buscaven
+  (_ex. he conseguit robar els recursors que volia del rival?_)
+- **Detecció:** determina si el complot es resol en secret, sense que els altres actors
+  se n'adonin o puguin identificar al conspirador (_ex. saben que els he intentat
+  robar?_)
+
+Cal destacar que aquesta divisió vol dir que es poden produir diferents combinacions
+d'èxit i detecció:
+
+- _Robes els recursos i fuges sense que ningú et vegi_
+- _Robes els recursos però et veuen fugint de l'escena_
+- _No has conseguit robar els recursos, però almenys no t'han detectat_
+- _No has conseguit robar els recursos, i a més has estat detectat_
+
+Per establir aquests resultats, el director de joc resoldrà en secret un seguit de
+_tests d'èxit_ i _tests de detecció_:
+
+- Resoldre un test contra cada destinatari
+- Resoldre un test contra el metres d'espies (només si un jugador té el càrrec assignat)
+
+### Test d'èxit
+
+Per determinar si el complot té èxit o fracassa, el director de joc llança en secret un
+dau de 6 cares, i compara el seu valor al _llindar d'èxit_, que s'obté amb la següent
+fórmula:
+
+- Partir d'un valor base de 3
+- Sumar-hi la {intrigue} del conspirador
+- Restar-hi la {vigilance} de l'oponent (només si és un jugador)
+- Limitar el llindar entre 1 (mínim) i 5 (màxim)
+
+Si el resultat és igual o inferior al llindar, el complot té èxit. Del contrari,
+fracassa.
+
+Cal tenir present que si un complot va dirigit contra múltiples destinataris, pot tenir
+un èxit parcial, aconseguint els seus objectius contra alguns jugadors però fallant
+contra d'altres.
+
+Els tests fets pel mestre d'espies tenen un tractament especial: si un test fracassa i
+el seu objectiu era el mestre d'espies, també fracassa contra tota la resta de
+destinataris - a menys que el mestre d'espies hagi indicat que estaven exempts de
+protecció, com s'explica a la secció _Contraespionatge_.
+
+### Test de detecció
+
+Per determinar si el complot és detectat, el director de joc llança en secret dos daus
+de 6 cares, comparant-los contra el mateix _llindar d'èxit_ utilitzat al _test d'èxit_:
+
+- **Detecció:** Si els dos resultats són iguals o inferiors al llindar, el complot és
+  detectat. El director de joc anota al full del torn de l'oponent els detalls del
+  complot, incloent la identitat del conspirador.
+- **Detecció parcial:** Si només un dels dos resultats és igual o inferior al llindar,
+  el complot és parcialment detectat. El director de joc anota al full del torn de
+  l'oponent els detalls del complot, però omet la identitat del conspirador.
+- **Discreció:** El complot és executat sense que l'oponent el detecti. Naturalment, si
+  és el destinatari en notarà qualsevol efecte material (_ex. veurà que ha perdut
+  recursos_), però no sabrà per què ni qui ha estat el responsable.
+
 ## Crisis
 
 ## Expulsió de jugadors
