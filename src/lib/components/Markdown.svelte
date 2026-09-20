@@ -87,6 +87,7 @@
 	import { lexer } from 'marked';
 	import type { Token, Tokens } from 'marked';
 	import { parse } from '$lib/models/effects';
+	import type { Snippet } from 'svelte';
 	import EffectsChunks from './EffectsChunks.svelte';
 	import { standardAttributes, type StandardAttributeProps } from './utils';
 
@@ -94,7 +95,23 @@
 		markdown: string;
 	}
 
-	const { markdown, ...attributes }: Props = $props();
+	const { markdown, ...rest }: Props = $props();
+
+	const split = $derived.by(() => {
+		const attributes: Record<string, unknown> = {};
+		const blockSnippets: Record<string, Snippet> = {};
+
+		for (const [key, value] of Object.entries(rest)) {
+			if (typeof value === 'function') {
+				blockSnippets[key] = value as Snippet;
+			} else {
+				attributes[key] = value;
+			}
+		}
+
+		return { attributes, blockSnippets };
+	});
+
 	const tokens = $derived(lexer(markdown));
 
 	const headingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
@@ -104,7 +121,7 @@
 	}
 </script>
 
-<div {...standardAttributes(attributes, styles.root)}>
+<div {...standardAttributes(split.attributes, styles.root)}>
 	{#snippet renderBlocks(blocks: Token[])}
 		{#each blocks as token (token)}
 			{#if token.type === 'heading'}
@@ -138,7 +155,12 @@
 					{@render renderBlocks(token.tokens ?? [])}
 				</blockquote>
 			{:else if token.type === 'code'}
-				<pre class={styles.code}><code>{token.text}</code></pre>
+				{@const block = split.blockSnippets?.[token.lang]}
+				{#if token.lang && block}
+					{@render block()}
+				{:else}
+					<pre class={styles.code}><code>{token.text}</code></pre>
+				{/if}
 			{:else if token.type === 'hr'}
 				<hr class={styles.hr} />
 			{/if}
