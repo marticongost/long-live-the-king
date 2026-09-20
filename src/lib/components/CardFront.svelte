@@ -125,10 +125,6 @@
 		}
 	});
 
-	function assertNever(value: never): never {
-		throw new Error(`Unknown card type: ${value}`);
-	}
-
 	function getIcon(card: Card): string {
 		switch (card.type) {
 			case 'office':
@@ -146,7 +142,7 @@
 			case 'house':
 				return `houses/${card.id}.svg`;
 			default:
-				return assertNever(card.type);
+				return assertNever(card.type, 'Unknown card type');
 		}
 	}
 
@@ -161,7 +157,11 @@
 </script>
 
 <script lang="ts">
-	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
+	import {
+		assertNever,
+		standardAttributes,
+		type StandardAttributeProps
+	} from '$lib/components/utils';
 	import {
 		Asset,
 		cardTypes,

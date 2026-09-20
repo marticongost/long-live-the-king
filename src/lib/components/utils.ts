@@ -26,3 +26,7 @@ export const standardAttributes = <T extends Record<string | symbol, any>>(
 		rest
 	);
 };
+
+export function assertNever(value: never, description: string): never {
+	throw new Error(`Unknown ${description}: ${value}`);
+}
