@@ -463,6 +463,58 @@ de 6 cares, comparant-los contra el mateix _llindar d'èxit_ utilitzat al _test 
 
 ## Crisis
 
+Les crisis representen un perill o repte al que s'enfronta el regne, que requerirà que
+els seus membres col·laborin per superar-la amb èxit.
+
+### Quan tenen lloc?
+
+Les crisis només poden aparèixer com a una capacitat de les _cartes d'esdeveniment_.
+Tanmateix, tot i que són força freqüents, no totes les cartes d'esdeveniment contenen
+crisis.
+
+Si la carta d'esdeveniment revelada durant el torn conté una crisi, s'anunciarà als
+membres del regne, explicant el repte plantejat i les conseqüències de l'èxit i el
+fracàs.
+
+### Requeriment
+
+Cada crisi especifica un requeriment que cal assolir per tal de superar la crisi. Això
+prendrà la forma d'un o més recursos, i un valor llindar - sovint expressat en funció
+del nombre de {players} membres del regne.
+
+_Ex. Si el requeriment és "{power} ≥ {players} x 2" i el regne té 5 membres, els membres
+hauran d'intentar reunir 10 {power} entre tots._
+
+### Contribuint a la crisi
+
+Durant la fase de preparació, els jugadors poden anotar la seva contribució a la crisi
+a l'espai habilitat al seu diari.
+
+Cal tenir present:
+
+- Els recursos invertits es sumen a una mateixa pila conjunta, i tornen a la reserva
+  general un cop finalitzada la crisi
+- Si no hi ha prous recursos a la bossa per cobrir la contribució, es destinaran tants
+  recursos com sigui possible
+- No és obligatori contribuir - però fer-ho o no fer-ho pot tenir recompensa o càstig
+- Les contribucions són públiques: el director de joc desvelarà la quantitat aportada
+  per cada membre del regne
+
+### Resultat de la crisi
+
+A més del seu requeriment, cada crisi també indicarà una _recompensa_ i un _càstig_.
+
+Un cop s'hagin comptabilitzat tots els recursos, el director de joc els compara amb el
+llindar del requeriment:
+
+- **Èxit:** si s'ha assolit o superat el llindar, la crisi es supera amb èxit. El
+  jugador o jugadors que hagin aportat la major contribució reben la _recompensa_
+  indicades.
+- **Fracàs:** si no s'ha assolit el llindar, la crisi desemboca en un fracàs. El regne
+  i/o alguns dels seus membres pateixen el _càstig_ indicat per la crisi.
+
+A continuació, la crisi es descarta.
+
 ## Expulsió de jugadors
 
 ## Execució de jugadors
