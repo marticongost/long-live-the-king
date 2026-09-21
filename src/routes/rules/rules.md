@@ -451,15 +451,16 @@ protecció, com s'explica a la secció _Contraespionatge_.
 Per determinar si el complot és detectat, el director de joc llança en secret dos daus
 de 6 cares, comparant-los contra el mateix _llindar d'èxit_ utilitzat al _test d'èxit_:
 
-- **Detecció:** Si els dos resultats són iguals o inferiors al llindar, el complot és
+- **Detecció:** Si els dos resultats són **superiors** al llindar, el complot és
   detectat. El director de joc anota al full del torn de l'oponent els detalls del
   complot, incloent la identitat del conspirador.
-- **Detecció parcial:** Si només un dels dos resultats és igual o inferior al llindar,
+- **Detecció parcial:** Si només un dels dos resultats és **superior** al llindar,
   el complot és parcialment detectat. El director de joc anota al full del torn de
   l'oponent els detalls del complot, però omet la identitat del conspirador.
-- **Discreció:** El complot és executat sense que l'oponent el detecti. Naturalment, si
-  és el destinatari en notarà qualsevol efecte material (_ex. veurà que ha perdut
-  recursos_), però no sabrà per què ni qui ha estat el responsable.
+- **Discreció:** Si cap dels resultats supera el llindar, el complot és executat sense
+  que l'oponent el detecti. Naturalment, si és el destinatari sí que percebrà qualsevol
+  efecte material (_ex. veurà que ha perdut recursos_), però no sabrà per què, ni qui
+  n'ha estat el responsable.
 
 ## Crisis
 
