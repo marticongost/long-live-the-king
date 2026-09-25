@@ -1,0 +1,21 @@
+import type { LawData } from '$lib/models/cards';
+
+export default {
+	title: 'Llei de crèdit',
+	properties: ['privilege'],
+	capabilities: [
+		{
+			type: 'conflict',
+			title: 'Demanar crèdit',
+			cost: { favour: 1 },
+			effects:
+				'Només executable pel Tresorer, si la llei està en vigor. El Tresorer augmenta la casella inferior en X i guanya X {gold}.'
+		},
+		{
+			type: 'reaction',
+			trigger: 'turnStart',
+			effects:
+				'Deute: {input number}. Si > 0, el Tresorer paga {gold} = Deute. Si no pot, {wealth -1}. Reduir Deute en 1.'
+		}
+	]
+} satisfies LawData;
