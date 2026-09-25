@@ -522,6 +522,107 @@ llindar del requeriment:
 
 A continuació, la crisi es descarta.
 
+## Subhasta d'actius
+
+Cada torn, els jugadors tenen la oportunitat de participar a una subhasta cega per
+adquirir nous {assets}.
+
+### El mercat d'actius
+
+Durant el joc, el director de joc disposa cartes d'{asset} en una àrea separada del joc,
+a la vista de tots els jugadors. Aquest conjunt de cartes s'anomena el {assetsMarket}.
+
+El mercat es divideix en dues files:
+
+- La primera fila correspon a les cartes a les que els jugadors podran optar durant el
+  torn en curs
+- La segona fila correspon a cartes que encara no estan a la venda, però que els
+  jugadors podran adquirir en el torn següent. Això permet als jugadors preparar-se per
+  compres futures.
+
+Durant la preparació del torn, totes les cartes restants a la primera fila es descarten,
+i les cartes de la segona fila es mouen a la primera fila, passant a estar a la venta;
+es roba una nova fornada de cartes per omplir la segona fila.
+
+### Preparar les files del mercat
+
+Quan calgui preparar una fila del mercat (ja sigui al principi del joc, o al final de
+cada torn), cal seguir les següents indicacions:
+
+- La fila ha de contenir tantes cartes d'{asset} com {players} (excloent el director de
+  joc)
+- La meitat de les cartes de la fila s'han de robar de la pila d'{assets} {visible}
+  (arrodonint amunt)
+- La meitat de les cartes de la fila s'han de robar de la pila d'{assets} {hidden}
+  (arrodonint avall)
+
+```example
+En una partida de 6 jugadors cada fila del mercat hauria de contenir 5 cartes (6, -1 ja
+que el director de joc no es compta). D'aquestes, 3 seran {visible} (5 / 2 arrodonint
+amunt) i 2 seran {hidden} (5 / 2 arrodonint avall).
+```
+
+### Declarant l'aposta
+
+En entregar el seu full de torn al director de joc, els jugadors poden optar a fer un
+seguit d'apostes per adquirir actius del mercat, seguint les següents indicacions:
+
+- Cada aposta ha de referenciar clarament un actiu de la primera fila del mercat
+- Cada aposta ha d'indicar la quantitat de {gold} que es vol apostar, amb un mínim de 1
+- Es poden fer entre 0 i 2 apostes: una aposta _principal_ i una de _secundària_, només
+  una de principal, o cap
+
+### Resolució de les apostes
+
+Al final del torn, durant la fase de {assetsBid}, el director de joc mira en secret les
+apostes de cada jugador i determina quines tenen èxit i quines fracassen.
+
+Per fer-ho, comença resolent les **apostes principals**. Per cada actiu a la
+fila, comprova els apostants que l'han escollit com el seu objectiu principal:
+
+- Corregir el valor de les apostes segons els fons disponibles - si un jugador ha
+  apostat més {gold} del que té disponible al cofre, la seva aposta es redueix al {gold}
+  disponible (comptar el {favour} com a {gold} en realitzar els còmputs). Ignorar les
+  apostes de valor 0.
+- Si no hi ha cap aposta principal per l'actiu, ignorar-lo
+- Si un jugador ha fet una aposta en {gold} més alta que la de qualsevol altre jugador -
+  o si és l'únic apostant - guanya l'aposta immediatament
+- Si dos o més jugadors han fet apostes per l'actiu del mateix valor en {gold}, el
+  guanyador de l'aposta serà el jugador amb el valor de {prestige} més baix. En cas que
+  dos o més jugadors segueixin empatats, l'aposta acabarà en empat.
+
+El director de joc retorna a la reserva el {gold} invertit per cada un dels guanyadors,
+i afegeix la seva carta seleccionada al cofre del jugador. Les apostes no guanyadores no
+tenen cap cost.
+
+A continuació, es resol una segona ronda d'apostes, corresponent a les **apostes
+secundàries**. Funciona exactament igual que la principal, però es tenen en compte
+únicament les apostes _secundàries_.
+
+Això obre diverses possibilitats als jugadors:
+
+- Poden fer dos intents per adquirir un mateix actiu (fins i tot canviant el {gold}
+  apostat en segona instància)
+- Poden intentar optar per un premi de consolació si el seu objectiu principal falla
+- Poden intentar adquirir múltiples actius (si tenen molts diners!)
+
+Resoltes les dues rondes, les cartes que encara quedin a la primera fila es descarten,
+i es prepara el mercat de nou (fent que la segona fila passi a ser la primera, i robant
+una nova segona fila).
+
+### Apostes i secretisme
+
+Donada la presència d'actius {hidden} a la subhasta, és important que els jugadors no
+sàpiguen quines apostes s'han fet, i quines han resultat guanyadores. Per tant, tots els
+passos relatius a la {assetsBid} s'han de realitzar en el més estricte secret:
+
+- Els jugadors han d'anotar les apostes al seu full de torn, sense revelar-lo a la resta
+  de jugadors en cap moment
+- El director de joc ha de resoldre les apostes en secret, darrere la seva pantalla
+
+Naturalment, els jugadors sí que sabran quin jugador ha guanyat l'aposta pels actius
+{visible} adquirits, ja que aquests quedaran a la vista i sota el control d'un jugador.
+
 ## Expulsió de jugadors
 
 ## Execució de jugadors
