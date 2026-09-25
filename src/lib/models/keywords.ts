@@ -22,6 +22,7 @@ export const keywords = {
 	exhaust: 'exhaurir',
 	assets: 'actius',
 	secrets: 'secrets',
+	objectives: 'objectius',
 	kingdomStat: 'indicador del regne',
 	kingdomStats: 'indicadors del regne',
 	assetsBid: "subhasta d'actius",
