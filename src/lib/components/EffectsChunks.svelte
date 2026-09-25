@@ -15,7 +15,7 @@
 		keywordIcon: {},
 		input: {
 			display: 'inline-block',
-			border: `2px solid ${css.palette.dawn}`,
+			border: `1px dashed ${css.palette.dawn}`,
 			verticalAlign: 'middle',
 			height: '1.5em',
 			borderRadius: '0.3em',
