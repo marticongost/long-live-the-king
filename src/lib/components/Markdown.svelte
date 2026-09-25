@@ -11,6 +11,9 @@
 			'& > *:first-child': {
 				marginTop: 0
 			},
+			'& > *:last-child': {
+				marginBottom: 0
+			},
 			h1: {
 				marginTop: doubleParagraphSpacing,
 				color: css.palette.red,
@@ -99,11 +102,11 @@
 
 	const split = $derived.by(() => {
 		const attributes: Record<string, unknown> = {};
-		const blockSnippets: Record<string, Snippet> = {};
+		const blockSnippets: Record<string, Snippet<[text: string]>> = {};
 
 		for (const [key, value] of Object.entries(rest)) {
 			if (typeof value === 'function') {
-				blockSnippets[key] = value as Snippet;
+				blockSnippets[key] = value as Snippet<[text: string]>;
 			} else {
 				attributes[key] = value;
 			}
@@ -157,7 +160,7 @@
 			{:else if token.type === 'code'}
 				{@const block = split.blockSnippets?.[token.lang]}
 				{#if token.lang && block}
-					{@render block()}
+					{@render block(token.text)}
 				{:else}
 					<pre class={styles.code}><code>{token.text}</code></pre>
 				{/if}

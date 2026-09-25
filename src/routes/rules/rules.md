@@ -99,8 +99,10 @@ El favor reial representa l'autoritat i voluntat del monarca, i actua com un com
 pot utilitzar-se per substituir qualsevol dels altres recursos - cosa que el fa altament
 valuós!
 
-_Ex. El Marc ha de pagar un efecte que costa {power 3}. Utilitza dues fitxes de {power}
-i una de {favour}._
+```example
+El Marc ha de pagar un efecte que costa {power 3}. Utilitza dues fitxes de {power} i una
+de {favour}.
+```
 
 El favor reial només és produit pel Rei: a l'inici del torn, el jugador que controla el
 rei el reparteix entre els demés membres del regne, proporcionant-li un control
@@ -302,13 +304,15 @@ Els jugadors són lliures de discutir possibles tractes en qualsevol moment. Tan
 només està permès intercanviar components físics (cartes i marcadors de recurs) durant
 la fase de preparació, o si una carta ho permet, específicament.
 
-_Ex. el Ricard decreta un duel de {strength} contra el Tomàs: el vencedor haurà de donar
+```example
+El Ricard decreta un duel de {strength} contra el Tomàs: el vencedor haurà de donar
 a l'altre tres {power}. El Tomàs podria intentar escapolir-se passant tot el seu {power}
 a la Dària temporalment, de manera que si perd el duel no pugui donar res al Ricard.
 Això faria molt fàcil escapar de molts d'aquests efectes nocius, així que en
 circumstàncies normals no està permès. Per contra, si el Tomàs jugués una carta de
 tàctica *Ajuda* podria demanar a la Dària part de la seva {strength} per intentar
-guanyar el duel._
+guanyar el duel.
+```
 
 ### Tractes vinculants
 
@@ -483,8 +487,10 @@ Cada crisi especifica un requeriment que cal assolir per tal de superar la crisi
 prendrà la forma d'un o més recursos, i un valor llindar - sovint expressat en funció
 del nombre de {players} membres del regne.
 
-_Ex. Si el requeriment és "{power} ≥ {players} x 2" i el regne té 5 membres, els membres
-hauran d'intentar reunir 10 {power} entre tots._
+```example
+Si el requeriment és "{power} ≥ {players} x 2" i el regne té 5 membres, els membres
+hauran d'intentar reunir 10 {power} entre tots.
+```
 
 ### Contribuint a la crisi
 
