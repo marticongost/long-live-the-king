@@ -16,7 +16,8 @@ const triggerData: Record<string, TriggerData> = {
 	lawSuggested: { title: 'Quan entri a votació' },
 	voting: { title: 'Quan votis una llei' },
 	ownerIsExecuted: { title: 'Quan siguis executat' },
-	playerDiscards: { title: 'Quan descartis una carta' }
+	playerDiscards: { title: 'Quan descartis una carta' },
+	spendingFavour: { title: 'Quan es gasti favor' }
 };
 
 export type TriggerType = keyof typeof triggerData;
