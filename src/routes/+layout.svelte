@@ -3,14 +3,22 @@
 	import * as css from '$lib/styles';
 
 	const styles = css.styles({
+		layout: {
+			...css.column(),
+			height: '100vh',
+			overflow: 'hidden'
+		},
 		header: {
 			...css.row('md'),
 			borderBottom: `2px solid ${css.palette.sandal}`,
 			backgroundColor: css.palette.ivory,
-			color: css.palette.sandal
+			color: css.palette.sandal,
+			flex: '0 0 auto'
 		},
 		main: {
-			padding: css.spacing.md
+			padding: css.spacing.md,
+			flex: '1 1 auto',
+			overflow: 'auto'
 		}
 	});
 </script>
@@ -31,10 +39,12 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<header class={styles.header}>
-	<Navigation {entries} />
-</header>
+<div class={styles.layout}>
+	<header class={styles.header}>
+		<Navigation {entries} />
+	</header>
 
-<main class={styles.main}>
-	{@render children()}
-</main>
+	<main class={styles.main}>
+		{@render children()}
+	</main>
+</div>
