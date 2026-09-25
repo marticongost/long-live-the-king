@@ -7,7 +7,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Si està en vigor, cada {players} del regne que tingui {land} {visible} que generin un total de 2+ {gold} per torn ha de pagar {gold 1} al Tresorer.'
+				'Si està en vigor, cada {players} del regne (excloent el Tresorer i el Rei) que tingui 2+ {land} {visible} ha de pagar {gold 1} al Tresorer.'
 		}
 	]
 } satisfies LawData;
