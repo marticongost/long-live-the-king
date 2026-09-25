@@ -13,6 +13,7 @@ const triggerData: Record<string, TriggerData> = {
 	gameEnd: { title: 'Final de la partida' },
 	actionActivated: { title: "Quan s'activi una acció" },
 	afterWinningDuel: { title: 'Després de guanyar un duel' },
+	lawSuggested: { title: 'Quan entri a votació' },
 	voting: { title: 'Quan votis una llei' },
 	ownerIsExecuted: { title: 'Quan siguis executat' },
 	playerDiscards: { title: 'Quan descartis una carta' }
