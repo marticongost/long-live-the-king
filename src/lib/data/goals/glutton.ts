@@ -2,7 +2,7 @@ import type { GoalData } from '$lib/models/cards';
 
 export default {
 	title: 'Golut',
-	goalType: 'collective',
+	goalType: 'personal',
 	capabilities: [
 		{
 			type: 'reaction',
