@@ -5,8 +5,8 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Nucli de població',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {power 1}, {gold 1}, {intrigue 1} o {strength 1}.'
 		}
 	]

@@ -5,13 +5,13 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Impostos',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {gold 1}.'
 		},
 		{
 			title: 'Collita',
-			type: 'conflict',
+			type: 'action',
 			cost: { gold: 2 },
 			effects: 'El teu regne guanya {stability 1}.'
 		}

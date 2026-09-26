@@ -146,7 +146,7 @@ export class House extends Card {
 
 const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
 	{
-		type: 'conflict',
+		type: 'action',
 		title: 'Proposar llei',
 		cost: { power: 1 },
 		effects: 'Sotmetre una llei de la fila a {vote}.'

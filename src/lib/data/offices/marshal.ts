@@ -10,13 +10,13 @@ export default {
 		},
 		{
 			title: 'Preparacions de guerra',
-			type: 'conflict',
+			type: 'action',
 			cost: { strength: 3 },
 			effects: 'El teu regne guanya {might 1}.'
 		},
 		{
 			title: 'Intimidació',
-			type: 'conflict',
+			type: 'action',
 			effects: '{duel} {strength}. El perdedor dona {power 1} al vencedor.'
 		}
 	]

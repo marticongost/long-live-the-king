@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Decretar',
 			cost: { favour: 1 },
 			requirements: 'Només executable pel Canceller, si la llei està en vigor.',

@@ -5,8 +5,8 @@ export default {
 	properties: ['land', 'luxury'],
 	capabilities: [
 		{
-			title: 'Ostentació',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {power 1}.'
 		},
 		{

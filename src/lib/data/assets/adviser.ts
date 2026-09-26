@@ -5,8 +5,8 @@ export default {
 	properties: ['retinue'],
 	capabilities: [
 		{
-			title: 'Consell',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar 1 carta.'
 		}
 	]

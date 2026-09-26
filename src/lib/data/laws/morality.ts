@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Denunciar els excessos',
 			cost: { favour: 1 },
 			requirements: 'Només executable pel Bisbe, si la llei està en vigor.',

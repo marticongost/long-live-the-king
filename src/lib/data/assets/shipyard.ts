@@ -5,8 +5,8 @@ export default {
 	properties: ['land', 'maritime'],
 	capabilities: [
 		{
-			title: 'Guanys',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {gold 2}.'
 		}
 	]

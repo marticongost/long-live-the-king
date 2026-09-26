@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Demanar crèdit',
 			cost: { favour: 1 },
 			requirements:

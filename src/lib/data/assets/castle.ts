@@ -5,13 +5,13 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Fortalesa',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {strength 1}.'
 		},
 		{
 			title: 'Ampliació',
-			type: 'conflict',
+			type: 'action',
 			cost: { gold: 2 },
 			effects: 'El teu regne guanya {might 1}.'
 		}

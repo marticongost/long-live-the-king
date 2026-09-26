@@ -6,7 +6,7 @@ export default {
 	discardBonus: { gold: 1 },
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			cost: { gold: 2 },
 			effects: 'El teu regne guanya {wealth 1}.'
 		}

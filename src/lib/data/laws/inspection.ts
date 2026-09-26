@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Inspeccionar',
 			cost: { favour: 1 },
 			requirements: "Només executable pel Mestre d'espies, si la llei està en vigor.",

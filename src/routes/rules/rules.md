@@ -248,6 +248,106 @@ descarta sense efecte.
 Tot el {power} gastat pels jugadors es perd i torna a la reserva
 (independentment de quina opció hagi guanyat).
 
+## Capacitats
+
+Les capacitats representen els diferents efectes associats a les cartes.
+
+### Cost de les capacitats
+
+Moltes capacitats tenen un cost associat. Els jugadors que vulguin executar una d'aquestes
+capacitats hauran de pagar el cost indicat en recursos, retornant els recursos necessaris
+del seu cofre a la reserva. Si no disposen de fons suficients, no podran executat la
+capacitat.
+
+### Tipus de capacitats
+
+Les capacitats es classifiquen en diferents tipus, que determinen el moment en que es podran
+executar els seus efectes, i la visibilitat dels mateixos.
+
+#### Accions {action}
+
+Representen iniciatives i empreses iniciades voluntàriament pels jugadors durant el seu
+torn. Les accions es declaren i executen de forma pública, i els seus resultats i efectes
+són visibles a tots els jugadors.
+
+Executar una acció fa que la seva carta quedi {exhausted}. Les accions d'una carta exhaurida
+no es poden executar fins que la carta es prepari. Normalment això no passarà fins al final
+del torn, cosa que vol dir que en circumstàncies normals les accions es poden executar un sol
+cop per torn.
+
+A més, executar una acció a una {tactic} fa que la seva carta es descarti.
+
+#### Secrets {secret}
+
+Representen subterfugis, maniobres secretes i conspiracions que els jugadors declaren i
+executen en secret, d'amagat dels demés jugadors. Només el director de joc sabrà quins secrets
+han estat declarat durant el torn per cada jugador, i en resoldrà els efectes en privat,
+darrere la seva pantalla, a la _fase de secrets_.
+
+Per declarar l'execució d'un secret, els jugadors utilitzen un rotulador per marcar la capacitat
+desitjada sobre una de les seves cartes. Aquestes marques han de ser un número que indiqui
+l'ordre en que el jugador vol executar els seus secrets.
+
+```example
+La Verònica té dues cartes amb secrets que vol executar. Marca la carta que vol que s'executi
+primer amb un 1, i l'altra carta amb un 2.
+```
+
+Els jugadors poden fer les marques en qualsevol moment, i poden canviar d'opinió esborrant les
+marques i/o afegint-ne de noves. L'únic important és que hagin fet les marques que vulguin
+abans de retornar el seu cofre al director de joc quan _passin_ durant la fase d'acció; a
+partir d'aquest moment ja no les podran modificar.
+
+#### Reaccions {reaction}
+
+Representen respostes a situacions determinades de la partida. Cada reacció indica les
+condicions necessàries per la seva activació.
+
+Si una reacció té un cost en recursos, la seva activació serà opcional - quan es donin les
+condicions d'activació, el jugador que posseix la carta serà lliure de decidir si vol
+invertir o no els recursos necessaris per executar-la.
+
+```example
+El Joan té una carta amb una capacitat {reaction} **Després de guanyar un duel**. La
+reacció li permet gastar {gold 1} per guanyar {prestige}. Guanya un duel contra un rival,
+i decideix gastar el cost en {gold 1} per guanyar el prestigi. El torn prossegueix i
+guanya un altre duel de nou. Tot i que podria executar la reacció de nou, decideix no
+fer-ho i conservar els diners.
+```
+
+Per contra, si no s'indica el contrari, les reaccions gratuïtes són obligatòries - quan es
+donin les condicions d'activació, el jugador que posseix la carta estarà obligat a executar
+els efectes de la reacció.
+
+```example
+El Jordi té una carta amb una capacitat {reaction} **Després que gastis favor**. La
+reacció fa que perdi una carta aleatòria de la seva ma. Gasta {favour} per pagar una acció,
+així que es veu obligat a perdre una carta. El torn prossegueix i torn$a a gastar {favour}.
+La reacció es torna executar, però ja no li queden cartes a la ma, així que no té més
+efecte.
+```
+
+Si múltiples reaccions s'apliquen al mateix moment, es resoldran en l'ordre de torn.
+
+```example
+El Jordi i la Marta tenen cada un una carta que els proporciona una capacitat {reaction}
+**A l'inici del torn**. La reacció els permet robar un recurs d'un altre jugador. El torn
+comença, i tots dos volen executar la reacció. Com que la Marta va abans en l'ordre de
+torn, comença ella executant la reacció per robar un {power} del Jordi. A continuació el
+Jordi executa la seva reacció i l'utilitza per recuperar el recurs que la Marta li havia
+robat.
+```
+
+#### Constants {constant}
+
+Representen estipulacions i regles addicionals que estan sempre actives i cal tenir en compte
+en tot moment.
+
+#### Crisis {crisis}
+
+Descriuen situacions adverses que afecten al regne i els seus membres. Estan vinculades a
+cartes d'esdeveniment, i es descriuen en més detall a una secció posterior.
+
 ## Visibilitat
 
 Cada jugador té una pantalla que ha d'utilitzar per mantenir en secret la major part de
@@ -321,7 +421,7 @@ Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
 vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
 
 Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
-em dones {gold 2}, jo et nomenaré tresorer a la fase de conflicte"_). Els jugadors són
+em dones {gold 2}, jo et nomenaré tresorer el següent torn"_). Els jugadors són
 lliures d'incomplir-los - a costa de la seva reputació, i el que els altres jugadors
 puguin pensar d'ells...
 
@@ -626,8 +726,6 @@ Naturalment, els jugadors sí que sabran quin jugador ha guanyat l'aposta pels a
 ## Expulsió de jugadors
 
 ## Execució de jugadors
-
-## Conflictes
 
 # Seqüència del joc
 

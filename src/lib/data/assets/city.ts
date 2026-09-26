@@ -5,8 +5,8 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Centre de poder',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {power 2}, {gold 2}, {intrigue 2} o {strength 2}.'
 		}
 	]

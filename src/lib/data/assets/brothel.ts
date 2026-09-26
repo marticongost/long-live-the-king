@@ -5,8 +5,8 @@ export default {
 	properties: ['land', 'illicit'],
 	capabilities: [
 		{
-			title: 'Guanys',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {gold 1} o {intrigue 1}.'
 		},
 		{

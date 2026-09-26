@@ -29,11 +29,15 @@ export const keywords = {
 	assetsBid: "subhasta d'actius",
 	assetsMarket: "mercat d'actius",
 	lawsPool: 'fila de lleis',
+	exhausted: 'exhaurida',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
 	action: undefined,
-	conflict: undefined,
+	secret: undefined,
+	crisis: undefined,
+	reaction: undefined,
+	constant: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
 };
 

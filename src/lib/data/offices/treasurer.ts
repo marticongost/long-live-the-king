@@ -10,13 +10,13 @@ export default {
 		},
 		{
 			title: 'Augmentar els ingressos',
-			type: 'conflict',
+			type: 'action',
 			cost: { gold: 3 },
 			effects: 'El teu regne guanya {wealth 1}.'
 		},
 		{
 			title: 'Fixar impostos',
-			type: 'conflict',
+			type: 'action',
 			cost: { power: 1 },
 			effects:
 				'Moure {taxes} 1 o 2 espais en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'

@@ -5,8 +5,8 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Beneficis',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {gold 1}.'
 		},
 		{

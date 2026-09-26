@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Caos i rauxa',
 			cost: { favour: 1 },
 			requirements: 'Només executable pel Bufó, si la llei està en vigor.',

@@ -5,7 +5,7 @@ export default {
 	properties: ['land', 'holy'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Centre de culte',
 			effects: 'Guanyar {faith 2} i {gold 1}.'
 		}

@@ -5,7 +5,7 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
-			type: 'conflict',
+			type: 'action',
 			title: 'Cridar a files',
 			cost: { favour: 1 },
 			requirements: 'Només executable pel Comandant, si la llei està en vigor.',

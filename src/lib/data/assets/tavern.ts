@@ -5,8 +5,8 @@ export default {
 	properties: ['land'],
 	capabilities: [
 		{
-			title: 'Rumors',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {intrigue 1}.'
 		},
 		{
