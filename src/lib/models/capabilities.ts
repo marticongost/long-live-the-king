@@ -9,7 +9,10 @@ export interface CapabilityEffectsFields {
 	effects: string;
 }
 
-export type ConcreteCapabilityData = CapabilityCostFields & CapabilityEffectsFields;
+export type ConcreteCapabilityData = CapabilityCostFields &
+	CapabilityEffectsFields & {
+		requirements?: string;
+	};
 
 export interface ReactionData extends ConcreteCapabilityData {
 	trigger: TriggerType;
@@ -64,11 +67,13 @@ export abstract class Capability {}
 export abstract class ConcreteCapability extends Capability {
 	readonly cost: ResourceSet;
 	readonly effects: string;
+	readonly requirements?: string;
 
-	constructor({ cost, effects }: ConcreteCapabilityData) {
+	constructor({ cost, effects, requirements }: ConcreteCapabilityData) {
 		super();
 		this.cost = new ResourceSet(cost ?? {});
 		this.effects = effects;
+		this.requirements = requirements;
 	}
 }
 

@@ -8,8 +8,8 @@ export default {
 			type: 'conflict',
 			title: 'Demanar crèdit',
 			cost: { favour: 1 },
-			effects:
-				'Només executable pel Tresorer, si la llei està en vigor. El Tresorer augmenta la casella inferior en X i guanya X {gold}.'
+			requirements: 'Només executable pel Tresorer, si la llei està en vigor.',
+			effects: 'El Tresorer augmenta la casella inferior en X i guanya X {gold}.'
 		},
 		{
 			type: 'reaction',

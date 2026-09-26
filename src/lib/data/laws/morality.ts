@@ -8,8 +8,9 @@ export default {
 			type: 'conflict',
 			title: 'Denunciar els excessos',
 			cost: { favour: 1 },
+			requirements: 'Només executable pel Bisbe, si la llei està en vigor.',
 			effects:
-				"Només executable pel Bisbe, si la llei està en vigor. Seleccionar dos jugadors (excloent el Bisbe): si un dels jugadors seleccionats té més {assets} {visible} i {prestige} que l'altre, ha d'escollir entre donar {prestige 1} a l'altre jugador o donar un dels seus {assets} {visible} al Bisbe."
+				"Seleccionar dos jugadors (excloent el Bisbe): si un dels jugadors seleccionats té més {assets} {visible} i {prestige} que l'altre, ha d'escollir entre donar {prestige 1} a l'altre jugador o donar un dels seus {assets} {visible} al Bisbe."
 		}
 	]
 } satisfies LawData;

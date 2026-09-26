@@ -8,8 +8,9 @@ export default {
 			type: 'conflict',
 			title: 'Inspeccionar',
 			cost: { favour: 1 },
+			requirements: "Només executable pel Mestre d'espies, si la llei està en vigor.",
 			effects:
-				"Només executable pel Mestre d'espies, si la llei està en vigor. El Mestre d'espies pot veure en secret els {assets} {hidden} o un dels {objectives} del jugador seleccionat."
+				"El Mestre d'espies pot veure en secret els {assets} {hidden} o un dels {objectives} del jugador seleccionat."
 		}
 	]
 } satisfies LawData;

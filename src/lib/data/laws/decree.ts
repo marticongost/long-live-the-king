@@ -8,8 +8,8 @@ export default {
 			type: 'conflict',
 			title: 'Decretar',
 			cost: { favour: 1 },
-			effects:
-				'Només executable pel Canceller, si la llei està en vigor. Buscar una llei a la pila i posar-la a votació.'
+			requirements: 'Només executable pel Canceller, si la llei està en vigor.',
+			effects: 'Buscar una llei a la pila i posar-la a votació.'
 		}
 	]
 } satisfies LawData;

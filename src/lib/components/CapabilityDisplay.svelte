@@ -69,6 +69,12 @@
 		body: {
 			fontSize: '0.8em'
 		},
+		requirements: {
+			display: 'block',
+			fontStyle: 'italic',
+			marginBottom: css.spacing.xs,
+			color: css.palette.red
+		},
 		crisisTest: {
 			...css.row('sm'),
 			padding: css.spacing.sm,
@@ -207,6 +213,11 @@
 					{/if}
 				</div>
 				<div class={styles.body}>
+					{#if capability instanceof ConcreteCapability && capability.requirements}
+						<div class={styles.requirements}>
+							<EffectsText effects={capability.requirements} />
+						</div>
+					{/if}
 					<EffectsText effects={capability.effects} />
 				</div>
 			{/if}
