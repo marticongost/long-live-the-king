@@ -723,9 +723,61 @@ passos relatius a la {assetsBid} s'han de realitzar en el més estricte secret:
 Naturalment, els jugadors sí que sabran quin jugador ha guanyat l'aposta pels actius
 {visible} adquirits, ja que aquests quedaran a la vista i sota el control d'un jugador.
 
-## Expulsió de jugadors
+## Regnes
+
+### Crear un nou regne
+
+Com a acció, un jugador (que no sigui Rei) pot crear un nou regne, per un cost de
+{power 8}. Si ho fa, el jugador renuncia als seus càrrecs actuals i assumeix el càrrec
+de rei del nou regne.
+
+La resta de jugadors poden decidir unir-se al nou regne; per cada un que ho faci el
+cost de crear el nou regne es divideix en 2.
+
+```example
+El Marc decideix crear un nou regne. Dels demés jugadors, només la Sara i la Marta
+decideixen unir-se al nou regne. Per tant, el cost original de 8 es divideix per 2
+dues vegades, quedant en un total de 2.
+```
+
+Si un o més jugadors decideix unir-se al nou regne, el rei pot assignar-los càrrecs
+immediatament.
+
+### Unir-se a un regne
+
+Com a acció, un jugador (que no sigui Rei) pot sol·licitar unir-se a un regne del que
+no formi part (ja sigui perquè no té regne actualment, o perquè vol canviar de regne).
+
+Per decidir si la sol·licitud és admesa, resoldre una {vote}. Si té èxit, el jugador
+passa a formar part del regne; del contrari, la sol·licitud fracassa i el canvi de
+regne no té lloc. Com és habitual, el Rei del regne resol els empats.
+
+Un jugador no pot canviar de regne més d'una vegada per torn.
+
+### Expulsar membres d'un regne
+
+Diverses capacitats de les cartes poden resultar en un jugador sent expulsat del regne.
+Quan això succeeixi, aplicar els següents efectes:
+
+- Per cada una dels {assets} {visible} del jugador, realitzar un {duel} {any} entre el
+  jugador i la resta de membres del regne. El vencedor del duel es quedat la carta (en
+  cas d'empat, se la queda el jugador expulsat.
+- A partir d'ara es considera que el jugador no forma part de cap regne. Durant el torn
+  en curs no podrà crear o unir-se a un regne, però sí que podrà fer-ho a partir del
+  torn següent.
 
 ## Execució de jugadors
+
+Algunes capacitats de les cartes poden resultar en un jugador sent executat. Quan això
+succeeixi, l'hereu de la casas del jugador assumeix el lloc del líder assassinat, i
+hereta bona part de les possessions del seu progenitor. En termes del joc, això es
+tradueix en:
+
+- El jugador perd {prestige 1}
+- El jugador perd els seus càrrecs
+- El jugador perd la seva ma de cartes de tàctica, i en roba una per substituir-les
+- El jugador perd els seus objectius, i els substitueix per un nou objectiu personal
+  i un nou objectiu col·lectiu
 
 # Seqüència del joc
 
