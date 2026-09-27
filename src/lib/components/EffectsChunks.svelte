@@ -31,6 +31,11 @@
 		},
 		textInput: {
 			width: '5em'
+		},
+		listInput: {
+			display: 'block',
+			height: '4em',
+			marginTop: css.spacing.xs
 		}
 	});
 </script>
@@ -75,6 +80,7 @@
 			class={cx(styles.input, {
 				[styles.numericInput]: chunk.format === 'number',
 				[styles.textInput]: chunk.format === 'text',
+				[styles.listInput]: chunk.format === 'list',
 				[styles.checkInput]: chunk.format === 'check'
 			})}
 		></span>
