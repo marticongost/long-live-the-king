@@ -759,12 +759,25 @@ Un jugador no pot canviar de regne més d'una vegada per torn.
 Diverses capacitats de les cartes poden resultar en un jugador sent expulsat del regne.
 Quan això succeeixi, aplicar els següents efectes:
 
-- Per cada una dels {assets} {visible} del jugador, realitzar un {duel} {any} entre el
-  jugador i la resta de membres del regne. El vencedor del duel es quedat la carta (en
-  cas d'empat, se la queda el jugador expulsat.
+- El jugador perd tots els seus càrrecs
 - A partir d'ara es considera que el jugador no forma part de cap regne. Durant el torn
   en curs no podrà crear o unir-se a un regne, però sí que podrà fer-ho a partir del
   torn següent.
+- Si el jugador era el Rei del seu regne, iniciar un {successionStruggle} (el jugador
+  expulsat no hi pren part)
+- Per cada una dels {assets} {visible} del jugador, realitzar un {duel} {any} entre el
+  jugador i la resta de membres del regne. El vencedor del duel es quedat la carta (en
+  cas d'empat, se la queda el jugador expulsat.
+
+### Lluita per la successió
+
+Quan el Rei d'un regne perdi la seva posició, els membres del regne pugnaran per
+omplir el buit de poder i fer-se amb el tron. Per resoldre aquesta situació, resoldre
+un {duel} {any}; el vencedor es converteix en el nou rei.
+
+Si el Rei era l'únic membre del regne restant no cal resoldre el duel: si el seu
+hereu encara forma part del regne, seguirà sent rei automàticament; si ha estat
+expulsat, el regne es disol i deixa d'existir.
 
 ## Execució de jugadors
 
@@ -778,6 +791,7 @@ tradueix en:
 - El jugador perd la seva ma de cartes de tàctica, i en roba una per substituir-les
 - El jugador perd els seus objectius, i els substitueix per un nou objectiu personal
   i un nou objectiu col·lectiu
+- Si el jugador executat era el Rei del seu regne, iniciar un {successionStruggle}
 
 # Seqüència del joc
 

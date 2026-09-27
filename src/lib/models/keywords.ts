@@ -30,6 +30,7 @@ export const keywords = {
 	assetsMarket: "mercat d'actius",
 	lawsPool: 'fila de lleis',
 	exhausted: 'exhaurida',
+	successionStruggle: 'lluita per la successió',
 	players: undefined,
 	visible: undefined,
 	hidden: undefined,
