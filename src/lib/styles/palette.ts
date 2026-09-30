@@ -8,6 +8,7 @@ export const buccaneer: HexColor = '#702e2e';
 export const thatch: HexColor = '#bd9898';
 export const green: HexColor = '#2B8519';
 export const grass: HexColor = '#83a57d';
+export const willow: HexColor = '#dce8da';
 export const shade: HexColor = '#282828';
 export const somber: HexColor = '#222';
 export const ash: HexColor = '#333';

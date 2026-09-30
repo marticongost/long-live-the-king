@@ -19,12 +19,16 @@
 	import Markdown from '$lib/components/Markdown.svelte';
 	import Example from '$lib/components/Example.svelte';
 	import rules from './rules.md?raw';
+	import Comment from '$lib/components/Comment.svelte';
 </script>
 
 <div class={styles.rules}>
 	<Markdown class={styles.content} markdown={rules}>
 		{#snippet example(markdown = '')}
 			<Example {markdown} />
+		{/snippet}
+		{#snippet comment(markdown = '')}
+			<Comment {markdown} />
 		{/snippet}
 	</Markdown>
 </div>
