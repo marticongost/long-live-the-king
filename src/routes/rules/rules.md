@@ -7,7 +7,7 @@ excelsa? O l'enfonsaràs a la més abjecte ignomínia?
 
 # Preparació
 
-## 1. Escollir el rei
+## 1. Escollir el(s) rei(s)
 
 Un dels jugadors comencarà el joc exercint el paper de _rei_. El rei és la major
 autoritat del regne, i desenvolupa un paper central al joc.
@@ -15,8 +15,27 @@ autoritat del regne, i desenvolupa un paper central al joc.
 Per escollir qui farà de rei al principi de la partida es pot utilitzar una selecció
 aleatòria, o bé escollir a un jugador en concret, si tots els jugadors hi estan d'acord.
 
-```comment
-Need to account for multiple kingdoms
+Si la partida té un nombre elevat de jugadors, es començarà amb múltiples regnes en joc,
+cada un amb el seu rei. Per cada fracció completa de 4 jugadors (sense comptar al
+director de joc), afegir un regne a la partida. Designar un rei per cada regne, ja sigui
+aleatòriament o segons les preferències dels jugadors. De la mateixa manera, cada
+jugador s'emparella amb un dels regnes (altre cop, de forma aleatòria o segons les
+preferències d'uns i altres). Sigui quin sigui el mètode de selecció, els jugadors han
+de repartir-se entre els regnes disponibles de la forma més equitativa possible.
+
+```example
+En Marc, la Dària, el Jordi, la Marta, el Joan i la Verònica estan preparant una
+partida. El Marc fa de director de joc, així que el total és de 5 jugadors. 5 / 4
+arrodonint cap a baix = 1, així que comencen la partida amb un sol regne, i designen
+a la Verònica com a rei.
+
+El cap de setmana següent tornen a jugar, però aquest cop se'ls uneixen el Gerard,
+l'Oriol, la Marina i el Jan, portant el total de jugadors fins a 9. Com que 9 / 4
+arrodonint cap a baix = 2, començaran amb 2 regnes en joc. Els jugadors escullen la
+Marta i el Jan per assumir el càrrec de rei dels seus respectius regnes. El Jordi demana
+si pot unir-se al regne del Jan, i els jugadors li permeten. La resta es reparteixen
+aleatòriament entre els dos regnes restants. Un dels regnes tindrà 4 jugadors, i l'altre
+5.
 ```
 
 ## 2. Repartir objectius
@@ -44,16 +63,13 @@ Repartir 3 recursos de cada tipus ({prestige}, {gold}, {power}, {intrigue},
 
 ## 5. Nomenaments inicials
 
-El rei pren totes les **cartes de càrrec**, formant una reserva. A continuació, pot
-assignar un o més dels càrrecs disponibles a cada jugador.
+Per cada regne, el seu rei pren una còpia de cada **carta de càrrec** (excepte la de
+Rei), formant la seva reserva de càrrecs. A continuació, pot assignar un o més d'aquests
+càrrecs a membres del seu regne.
 
 Cada càrrec proporciona poder i responsabilitats addicionals al jugador que el rep. El
 rei haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
 poder i ambicions personals dels membres del consell amb les necessitats del seu regne.
-
-```comment
-Need to account for multiple kingdoms
-```
 
 ```comment
 Need to setup the law and asset rows
