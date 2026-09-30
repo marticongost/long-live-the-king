@@ -15,6 +15,10 @@ autoritat del regne, i desenvolupa un paper central al joc.
 Per escollir qui farà de rei al principi de la partida es pot utilitzar una selecció
 aleatòria, o bé escollir a un jugador en concret, si tots els jugadors hi estan d'acord.
 
+```comment
+Need to account for multiple kingdoms
+```
+
 ## 2. Repartir objectius
 
 Cada jugador compta amb un seguit de metes i ambicions personals, i opinions sobre què
@@ -46,6 +50,14 @@ assignar un o més dels càrrecs disponibles a cada jugador.
 Cada càrrec proporciona poder i responsabilitats addicionals al jugador que el rep. El
 rei haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
 poder i ambicions personals dels membres del consell amb les necessitats del seu regne.
+
+```comment
+Need to account for multiple kingdoms
+```
+
+```comment
+Need to setup the law and asset rows
+```
 
 # Conceptes
 
@@ -170,6 +182,12 @@ Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
   recursos que es guanyaran si es sacrifica una carta s'indiquen a la cantonada inferior
   dreta. Si no es mostra cap recurs, la carta no es pot sacrificar.
 
+```comment
+Need to discuss _when_ cards can be discarded. It could either be a planned action,
+resolved during the resolution phase, or an immediate one, resolved during the planning
+phase.
+```
+
 ### Tipus de cartes
 
 #### Esdeveniments
@@ -181,6 +199,10 @@ d'esdeveniment, la llegeix en veu alta i en resol els efectes corresponents.
 Alguns esdeveniments tindran efecte immediat, descartant la carta immediatament després
 de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar en joc
 per un o més torns.
+
+```comment
+Need to account for multiple kingdoms; each kingdom should get its own event.
+```
 
 #### Objectius
 
@@ -248,6 +270,10 @@ descarta sense efecte.
 Tot el {power} gastat pels jugadors es perd i torna a la reserva
 (independentment de quina opció hagi guanyat).
 
+```comment
+Need to differentiate the planning of the voting action and its resolution.
+```
+
 ## Capacitats
 
 Les capacitats representen els diferents efectes associats a les cartes.
@@ -258,6 +284,11 @@ Moltes capacitats tenen un cost associat. Els jugadors que vulguin executar una 
 capacitats hauran de pagar el cost indicat en recursos, retornant els recursos necessaris
 del seu cofre a la reserva. Si no disposen de fons suficients, no podran executat la
 capacitat.
+
+```comment
+Need to explain the timing of the payment, and what happens if the necessary resources
+are not available when a capability is resolved.
+```
 
 ### Tipus de capacitats
 
@@ -276,6 +307,10 @@ del torn, cosa que vol dir que en circumstàncies normals les accions es poden e
 cop per torn.
 
 A més, executar una acció a una {tactic} fa que la seva carta es descarti.
+
+```comment
+Exhausting cards is no longer a thing.
+```
 
 #### Secrets {secret}
 
@@ -297,6 +332,13 @@ Els jugadors poden fer les marques en qualsevol moment, i poden canviar d'opini�
 marques i/o afegint-ne de noves. L'únic important és que hagin fet les marques que vulguin
 abans de retornar el seu cofre al director de joc quan _passin_ durant la fase d'acció; a
 partir d'aquest moment ja no les podran modificar.
+
+```comment
+A lot of this is no longer specific to secrets. All capabilities are now planned in
+secret - the difference is that secrets A) secrets are resolved after all other actions
+and B) the execution and outcome of secrets is not revealed publicly (except when a plot
+is detected or the secret's outcome is reflected in the game state).
+```
 
 #### Reaccions {reaction}
 
@@ -367,6 +409,10 @@ En posar en joc una capacitat d'una carta cal revelar la carta corresponent als 
 jugadors - fins i tot si es tracta d'una carta oculta. La única excepció a aquesta regla
 són els {secrets}, que el director de joc resol a esquenes dels jugadors.
 
+```comment
+This needs to be updated with the planning / resolution split.
+```
+
 Els jugadors són lliures de preguntar als demés sobre les seves possessions, i de
 respondre amb la veritat, mentir o guardar silenci - però no poden ensenyar físicament
 components designats com a no visibles.
@@ -427,8 +473,8 @@ puguin pensar d'ells...
 
 ## Duels
 
-Un duel és un conflicte entre dos o més jugadors, que imposa beneficis al vencedor i/o
-perjudicis al perdedor.
+Un duel és un conflicte entre dos o més jugadors, que normalment imposa beneficis al
+vencedor i/o perjudicis al perdedor.
 
 Els duels es basen en un o més recursos (_ex. un duel podria ser de {strength}, o de
 {gold} + {intrigue}, etc_).
@@ -457,23 +503,32 @@ Un complot implicarà sempre a múltiples actors:
 - El jugador que inicia el complot, a qui anomenarem el **conspirador**
 - El **destinatari** del complot, que pot ser el regne o un o més jugadors concrets, tal
   i com s'indicarà a la carta
-- El **mestre d'espies**, que pot intercedir en complots contra el regne o altres
-  membres del regne
+- El **mestre d'espies**, que pot intercedir en complots contra el seu regne o altres
+  membres del seu mateix regne
 
 ### Declarar un complot
 
 Per decretar un complot cal afegir una entrada a l'apartat _Secrets_ del full del torn,
 indicant:
 
+```comment
+The turn sheet is no longer a thing.
+```
+
 - La carta que proporciona la capacitat {plot} que es vol executar
 - El nom de la capacitat (opcional si la carta només té una única capacitat)
 - El destinatari o destinataris del complot
 - La {intrigue} que es vol destinar al complot (mínim 1)
 
-La intriga invertida en el complot s'ha d'afegir a la bossa del jugador; el director de
+La intriga invertida en el complot s'ha d'afegir al cofre del jugador; el director de
 joc la retornarà a la reserva, independentment del resultat del complot. Si en el moment
 d'executar-se el complot no hi ha suficient intriga (_ex. perquè un altre complot previ
 ha fet que el jugador perdi intriga_), el complot és cancel·lat.
+
+```comment
+Needs to be updated. Would need to add an {input number} slot to plots, so players can
+indicate the amount of {intrigue} to spend in the card itself.
+```
 
 ### Vigilància
 
@@ -488,17 +543,29 @@ quantitat d'{intrigue} que volen invertir en defensar-se de complots durant aque
 Com més alt sigui aquest valor, més probable serà que els complots dirigits contra ells
 fallin i/o siguin detectats.
 
+```comment
+The turn sheet is no longer a thing.
+```
+
 ### Contraespionatge
 
 El _mestre d'espies_ té un paper essencial en la resolució dels complots: a diferència
 dels demés jugadors, la seva {vigilance} té efectes sobre tots els complots - no només
 els que es dirigeixin contra ell.
 
+```comment
+Need to clarify all is "all in his own kingdom".
+```
+
 Tanmateix, el _mestre d'espies_ té la potestat de decidir a quins jugadors vol protegir
 i amb quins farà la vista grossa (_ex. Per què hauria de protegir al Jordi, si va
 guanyant?_). Per fer-ho, pot annotar un seguit de destinaris (el regne en conjunt, o un
 o més jugadors) al costat del seu indicador de vigilància, que quedaran exempts de la
 seva protecció.
+
+```comment
+Need to clarify only members of his own kingdom can be selected.
+```
 
 ### Determinar el resultat d'un complot
 
@@ -597,6 +664,10 @@ hauran d'intentar reunir 10 {power} entre tots.
 Durant la fase de preparació, els jugadors poden anotar la seva contribució a la crisi
 a l'espai habilitat al seu diari.
 
+```comment
+This should be a space in their house card instead.
+```
+
 Cal tenir present:
 
 - Els recursos invertits es sumen a una mateixa pila conjunta, i tornen a la reserva
@@ -621,6 +692,10 @@ llindar del requeriment:
   i/o alguns dels seus membres pateixen el _càstig_ indicat per la crisi.
 
 A continuació, la crisi es descarta.
+
+```comment
+Need to indicate the timing of the resolution.
+```
 
 ## Subhasta d'actius
 
@@ -666,6 +741,10 @@ amunt) i 2 seran {hidden} (5 / 2 arrodonint avall).
 
 En entregar el seu full de torn al director de joc, els jugadors poden optar a fer un
 seguit d'apostes per adquirir actius del mercat, seguint les següents indicacions:
+
+```comment
+Need to replace the player sheet with the house card.
+```
 
 - Cada aposta ha de referenciar clarament un actiu de la primera fila del mercat
 - Cada aposta ha d'indicar la quantitat de {gold} que es vol apostar, amb un mínim de 1
