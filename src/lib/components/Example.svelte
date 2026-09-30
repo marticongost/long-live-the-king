@@ -5,6 +5,7 @@
 		example: {
 			fontStyle: 'italic',
 			backgroundColor: css.palette.wheat,
+			...css.vmargin(css.spacing.md),
 			...css.vpadding(css.spacing.sm),
 			...css.hpadding(css.spacing.md),
 			borderLeft: `4px solid ${css.palette.twine}80`
