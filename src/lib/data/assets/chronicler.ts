@@ -7,7 +7,8 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'afterWinningDuel',
-			effects: 'Guanyar {prestige 1}. Màxim un cop per torn.'
+			restrictions: 'Màxim un cop per torn.',
+			effects: 'Guanyar {prestige 1}.'
 		}
 	]
 } satisfies AssetData;
