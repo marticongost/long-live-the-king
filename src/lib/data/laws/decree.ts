@@ -8,7 +8,7 @@ export default {
 			type: 'action',
 			title: 'Decretar',
 			cost: { favour: 1 },
-			requirements: 'Només executable pel Canceller, si la llei està en vigor.',
+			restrictions: 'Només executable pel Canceller, si la llei està en vigor.',
 			effects: 'Buscar una llei a la pila i posar-la a votació.'
 		}
 	]

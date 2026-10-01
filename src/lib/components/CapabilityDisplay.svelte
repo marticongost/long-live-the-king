@@ -68,7 +68,7 @@
 		body: {
 			fontSize: '0.8em'
 		},
-		requirements: {
+		restrictions: {
 			display: 'block',
 			fontStyle: 'italic',
 			marginBottom: css.spacing.xs,
@@ -208,9 +208,9 @@
 					{/if}
 				</div>
 				<div class={styles.body}>
-					{#if capability instanceof ConcreteCapability && capability.requirements}
-						<div class={styles.requirements}>
-							<EffectsText effects={capability.requirements} />
+					{#if capability instanceof ConcreteCapability && capability.restrictions}
+						<div class={styles.restrictions}>
+							<EffectsText effects={capability.restrictions} />
 						</div>
 					{/if}
 					<EffectsText effects={capability.effects} />

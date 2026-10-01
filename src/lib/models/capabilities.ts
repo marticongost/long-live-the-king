@@ -11,7 +11,7 @@ export interface CapabilityEffectsFields {
 
 export type ConcreteCapabilityData = CapabilityCostFields &
 	CapabilityEffectsFields & {
-		requirements?: string;
+		restrictions?: string;
 	};
 
 export interface ReactionData extends ConcreteCapabilityData {
@@ -62,13 +62,13 @@ export abstract class Capability {}
 export abstract class ConcreteCapability extends Capability {
 	readonly cost: ResourceSet;
 	readonly effects: string;
-	readonly requirements?: string;
+	readonly restrictions?: string;
 
-	constructor({ cost, effects, requirements }: ConcreteCapabilityData) {
+	constructor({ cost, effects, restrictions }: ConcreteCapabilityData) {
 		super();
 		this.cost = new ResourceSet(cost ?? {});
 		this.effects = effects;
-		this.requirements = requirements;
+		this.restrictions = restrictions;
 	}
 }
 

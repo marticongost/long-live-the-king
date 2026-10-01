@@ -8,7 +8,7 @@ export default {
 			type: 'action',
 			title: 'Demanar crèdit',
 			cost: { favour: 1 },
-			requirements:
+			restrictions:
 				'Només executable pel Tresorer, si la llei està en vigor i la casella inferior ≤ {wealth}.',
 			effects: 'El Tresorer augmenta la casella inferior en X i guanya X {gold}.'
 		},

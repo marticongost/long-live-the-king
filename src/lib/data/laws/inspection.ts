@@ -8,7 +8,7 @@ export default {
 			type: 'action',
 			title: 'Inspeccionar',
 			cost: { favour: 1 },
-			requirements: "Només executable pel Mestre d'espies, si la llei està en vigor.",
+			restrictions: "Només executable pel Mestre d'espies, si la llei està en vigor.",
 			effects:
 				"El Mestre d'espies pot veure en secret els {assets} {hidden} o un dels {objectives} del jugador seleccionat."
 		}
