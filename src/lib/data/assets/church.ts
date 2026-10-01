@@ -5,8 +5,8 @@ export default {
 	properties: ['object', 'holy'],
 	capabilities: [
 		{
-			title: 'Fervor',
-			type: 'action',
+			type: 'reaction',
+			trigger: 'turnStart',
 			effects: 'Guanyar {faith 1}.'
 		},
 		{
