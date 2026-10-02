@@ -1,12 +1,9 @@
 <script lang="ts" module>
 	import {
-		Action,
 		BaseAction,
 		ConcreteCapability,
 		Constant,
 		Crisis,
-		Reaction,
-		Secret,
 		type Capability
 	} from '$lib/models/capabilities';
 	import * as css from '$lib/styles';
@@ -109,43 +106,6 @@
 			color: css.text.regularColor
 		}
 	});
-
-	function getIcon(capability: Capability): string {
-		if (capability instanceof Action) {
-			return 'capabilities/action.svg';
-		} else if (capability instanceof Reaction) {
-			return 'capabilities/reaction.svg';
-		} else if (capability instanceof Constant) {
-			return 'capabilities/constant.svg';
-		} else if (capability instanceof Secret) {
-			return 'capabilities/secret.svg';
-		} else if (capability instanceof Crisis) {
-			return 'capabilities/crisis.svg';
-		}
-		throw new Error(`Unknown capability type: ${capability.constructor.name}`);
-	}
-
-	function getTitle(capability: Capability): string {
-		if (capability instanceof BaseAction) {
-			return capability.title;
-		} else if (capability instanceof Reaction) {
-			return capability.trigger.title;
-		} else if (capability instanceof Constant) {
-			return 'Constant';
-		} else if (capability instanceof Crisis) {
-			return 'Crisis';
-		}
-		throw new Error(`Unknown capability type: ${capability.constructor.name}`);
-	}
-
-	function getSubtitle(capability: Capability): string | undefined {
-		if (capability instanceof Action) {
-			return 'Acció';
-		} else if (capability instanceof Secret) {
-			return 'Secret';
-		}
-		return undefined;
-	}
 </script>
 
 <script lang="ts">
@@ -154,6 +114,11 @@
 	import InlineSvg from './InlineSvg.svelte';
 	import CostDisplay from './CostDisplay.svelte';
 	import { cx } from '@emotion/css';
+	import {
+		getCapabilityIcon,
+		getCapabilitySubtitle,
+		getCapabilityTitle
+	} from '$lib/cardattributes';
 
 	interface Props extends StandardAttributeProps {
 		capability: Capability;
@@ -165,7 +130,7 @@
 
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>
 	<div class={styles.entry}>
-		<InlineSvg class={styles.icon} src={getIcon(capability)} />
+		<InlineSvg class={styles.icon} src={getCapabilityIcon(capability)} />
 		<div class={styles.details}>
 			{#if capability instanceof Crisis}
 				<div class={styles.header}>
@@ -190,8 +155,8 @@
 					</div>
 				</div>
 			{:else if capability instanceof ConcreteCapability || capability instanceof Constant}
-				{@const title = getTitle(capability)}
-				{@const subtitle = getSubtitle(capability)}
+				{@const title = getCapabilityTitle(capability)}
+				{@const subtitle = getCapabilitySubtitle(capability)}
 				<div class={styles.header}>
 					<div class={styles.heading}>
 						<div class={styles.title}>

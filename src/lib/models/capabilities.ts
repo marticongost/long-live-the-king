@@ -1,5 +1,8 @@
+import { assertNever } from '$lib/components/utils';
 import { type ResourceSetProps, ResourceSet } from './resourcesets';
 import { getTrigger, type Trigger, type TriggerType } from './triggers';
+
+export type CapabilityType = 'action' | 'secret' | 'reaction' | 'constant' | 'crisis';
 
 export interface CapabilityCostFields {
 	cost?: ResourceSetProps;
@@ -36,6 +39,8 @@ export type ConstantSpec = { type: 'constant' } & CapabilityEffectsFields;
 export type CrisisSpec = { type: 'crisis' } & CrisisData;
 export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
+export type Capability = Action | Secret | Reaction | Constant | Crisis;
+
 export function buildCapability(spec: ActionSpec): Action;
 export function buildCapability(spec: SecretSpec): Secret;
 export function buildCapability(spec: ReactionSpec): Reaction;
@@ -54,12 +59,16 @@ export function buildCapability(spec: CapabilitySpec): Capability {
 			return new Constant(spec);
 		case 'crisis':
 			return new Crisis(spec);
+		default:
+			assertNever(spec, 'Unknown capability type');
 	}
 }
 
-export abstract class Capability {}
+export abstract class BaseCapability {
+	abstract readonly type: CapabilityType;
+}
 
-export abstract class ConcreteCapability extends Capability {
+export abstract class ConcreteCapability extends BaseCapability {
 	readonly cost: ResourceSet;
 	readonly effects: string;
 	readonly restrictions?: string;
@@ -81,9 +90,13 @@ export abstract class BaseAction extends ConcreteCapability {
 	}
 }
 
-export class Action extends BaseAction {}
+export class Action extends BaseAction {
+	override readonly type = 'action';
+}
 
-export class Secret extends BaseAction {}
+export class Secret extends BaseAction {
+	override readonly type = 'secret';
+}
 
 export class Reaction extends ConcreteCapability {
 	readonly trigger: Trigger;
@@ -92,18 +105,22 @@ export class Reaction extends ConcreteCapability {
 		super(base);
 		this.trigger = getTrigger(trigger);
 	}
+
+	override readonly type = 'reaction';
 }
 
-export class Constant extends Capability {
+export class Constant extends BaseCapability {
 	readonly effects: string;
 
 	constructor({ effects }: CapabilityEffectsFields) {
 		super();
 		this.effects = effects;
 	}
+
+	override readonly type = 'constant';
 }
 
-export class Crisis extends Capability {
+export class Crisis extends BaseCapability {
 	readonly test: string;
 	readonly difficulty: string;
 	readonly penalty: string;
@@ -116,4 +133,6 @@ export class Crisis extends Capability {
 		this.penalty = penalty;
 		this.highestContributionReward = highestContributionReward;
 	}
+
+	override readonly type = 'crisis';
 }
