@@ -4,10 +4,6 @@
 	const cardWidth = 63;
 	const cardHeight = 41;
 
-	function cw(percent: number) {
-		return `${(cardWidth * percent) / 100}mm`;
-	}
-
 	const styles = css.styles({
 		card: {
 			...css.column(),
@@ -22,7 +18,7 @@
 			...css.column(),
 			position: 'relative',
 			color: css.palette.white,
-			height: '9.4mm',
+			height: '8mm',
 			justifyContent: 'center'
 		},
 		title: {
@@ -32,7 +28,7 @@
 			height: '9.4mm',
 			width: '100%',
 			fontWeight: 900,
-			fontSize: '0.9em',
+			fontSize: '0.8em',
 			margin: 0,
 			textAlign: 'center',
 			textShadow: '0 0 0.2em rgba(0,0,0,0.3)'
@@ -45,8 +41,8 @@
 			position: 'absolute',
 			left: 0,
 			top: 0,
-			width: cw(20),
-			height: cw(20)
+			width: '10mm',
+			height: '10mm'
 		},
 		icon: {
 			position: 'relative',
@@ -55,7 +51,7 @@
 			zIndex: 2,
 			color: css.palette.white,
 			filter: 'drop-shadow(0 0 0.2em rgba(0,0,0,0.3))',
-			top: '-10%'
+			top: '-5%'
 		},
 		body: {
 			...css.column('sm'),

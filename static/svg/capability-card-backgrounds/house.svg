@@ -15,18 +15,6 @@
   <defs
      id="defs3">
     <linearGradient
-       id="linearGradient8"
-       inkscape:collect="always">
-      <stop
-         style="stop-color:#c2c2a4;stop-opacity:1;"
-         offset="0"
-         id="stop7" />
-      <stop
-         style="stop-color:#88887f;stop-opacity:1;"
-         offset="1"
-         id="stop8" />
-    </linearGradient>
-    <linearGradient
        id="linearGradient6"
        inkscape:collect="always">
       <stop
@@ -43,19 +31,9 @@
        xlink:href="#linearGradient6"
        id="linearGradient5"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0604705,0,0,0.543985,-1.9048254,-2.4496306)"
+       gradientTransform="matrix(1.0604705,0,0,0.36860752,-1.9048254,-1.659906)"
        x1="16.765982"
        y1="-24.679794"
-       x2="34.230717"
-       y2="26.390095" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8"
-       id="linearGradient7"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0604705,0,0,0.58415493,-1.9048254,-2.6305158)"
-       x1="20.508425"
-       y1="-0.026336273"
        x2="34.230717"
        y2="26.390095" />
   </defs>
@@ -70,7 +48,7 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="3.5897414"
-     inkscape:cx="68.807185"
+     inkscape:cx="68.667899"
      inkscape:cy="57.942892"
      inkscape:window-width="2560"
      inkscape:window-height="1011"
@@ -96,13 +74,8 @@
        visible="true" />
   </sodipodi:namedview>
   <path
-     id="path6"
-     style="fill:url(#linearGradient7);fill-opacity:1;stroke-width:0.174273"
-     d="M 0,-6.6639056e-5 -1.2068647e-4,12.678024 C 9.2604183,8.6732092 52.916676,8.6732092 63.000132,12.678024 L 63.000253,-6.6639056e-5 Z"
-     sodipodi:nodetypes="ccccc" />
-  <path
      id="path4"
-     style="fill:url(#linearGradient5);fill-opacity:1;stroke-width:0.168174"
-     d="M 0,-6.6639056e-5 -1.2068647e-4,11.806205 C 9.2604183,8.0767844 52.916676,8.0767844 63.000132,11.806205 L 63.000253,-6.6639056e-5 Z"
+     style="fill:url(#linearGradient5);fill-opacity:1;stroke-width:0.138435"
+     d="M 0,-6.6639057e-5 -1.2068647e-4,7.9999343 H 63.000132 l 1.21e-4,-8.000000939057 z"
      sodipodi:nodetypes="ccccc" />
 </svg>
