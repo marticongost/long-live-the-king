@@ -15,28 +15,20 @@
 			lineHeight: '1em'
 		},
 		entry: {
-			...css.row('sm'),
-			alignItems: 'flex-start'
+			...css.column()
 		},
 		icon: {
 			flexShrink: 0,
-			width: '1em',
+			width: '0.9em',
 			height: 'auto',
 			color: css.palette.dawn
 		},
-		details: {
-			flex: '1 1 auto'
-		},
 		header: {
-			...css.row(),
+			...css.row('xs'),
 			color: css.palette.wood,
 			marginBottom: '0.1em',
 			paddingBottom: '0.1em',
 			borderBottom: `1px solid ${css.palette.blush}`
-		},
-		heading: {
-			...css.row('xs'),
-			marginRight: 'auto'
 		},
 		title: {
 			fontSize: '0.85em',
@@ -60,6 +52,7 @@
 			}
 		},
 		cost: {
+			marginLeft: 'auto',
 			fontSize: '0.9em'
 		},
 		body: {
@@ -130,57 +123,54 @@
 
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>
 	<div class={styles.entry}>
-		<InlineSvg class={styles.icon} src={getCapabilityIcon(capability)} />
-		<div class={styles.details}>
-			{#if capability instanceof Crisis}
-				<div class={styles.header}>
-					<div class={styles.title}>Crisis</div>
+		{#if capability instanceof Crisis}
+			<div class={styles.header}>
+				<div class={styles.title}>Crisis</div>
+				<InlineSvg class={styles.icon} src="capabilities/crisis.svg" />
+			</div>
+			<div class={styles.crisisBody}>
+				<div class={styles.crisisTest}>
+					<EffectsText effects={capability.test} />
+					≥
+					<EffectsText effects={capability.difficulty} />
 				</div>
-				<div class={styles.crisisBody}>
-					<div class={styles.crisisTest}>
-						<EffectsText effects={capability.test} />
-						≥
-						<EffectsText effects={capability.difficulty} />
-					</div>
-					<div class={cx(styles.crisisOutcome, styles.reward)}>
-						<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/reward.svg" />
-						<EffectsText
-							class={styles.crisisOutcomeValue}
-							effects={capability.highestContributionReward}
-						/>
-					</div>
-					<div class={cx(styles.crisisOutcome, styles.penalty)}>
-						<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/penalty.svg" />
-						<EffectsText class={styles.crisisOutcomeValue} effects={capability.penalty} />
-					</div>
+				<div class={cx(styles.crisisOutcome, styles.reward)}>
+					<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/reward.svg" />
+					<EffectsText
+						class={styles.crisisOutcomeValue}
+						effects={capability.highestContributionReward}
+					/>
 				</div>
-			{:else if capability instanceof ConcreteCapability || capability instanceof Constant}
-				{@const title = getCapabilityTitle(capability)}
-				{@const subtitle = getCapabilitySubtitle(capability)}
-				<div class={styles.header}>
-					<div class={styles.heading}>
-						<div class={styles.title}>
-							{title}
-						</div>
-						{#if subtitle}
-							<span class={styles.subtitle}>
-								{subtitle}
-							</span>
-						{/if}
+				<div class={cx(styles.crisisOutcome, styles.penalty)}>
+					<InlineSvg class={styles.crisisOutcomeIcon} src="capabilities/penalty.svg" />
+					<EffectsText class={styles.crisisOutcomeValue} effects={capability.penalty} />
+				</div>
+			</div>
+		{:else if capability instanceof ConcreteCapability || capability instanceof Constant}
+			{@const title = getCapabilityTitle(capability)}
+			{@const subtitle = getCapabilitySubtitle(capability)}
+			<div class={styles.header}>
+				<div class={styles.title}>
+					{title}
+				</div>
+				{#if subtitle}
+					<span class={styles.subtitle}>
+						<InlineSvg class={styles.icon} src={getCapabilityIcon(capability)} />
+						{subtitle}
+					</span>
+				{/if}
+				{#if capability instanceof ConcreteCapability && !capability.cost.empty()}
+					<CostDisplay class={styles.cost} cost={capability.cost} />
+				{/if}
+			</div>
+			<div class={styles.body}>
+				{#if capability instanceof ConcreteCapability && capability.restrictions}
+					<div class={styles.restrictions}>
+						<EffectsText effects={capability.restrictions} />
 					</div>
-					{#if capability instanceof ConcreteCapability}
-						<CostDisplay class={styles.cost} cost={capability.cost} />
-					{/if}
-				</div>
-				<div class={styles.body}>
-					{#if capability instanceof ConcreteCapability && capability.restrictions}
-						<div class={styles.restrictions}>
-							<EffectsText effects={capability.restrictions} />
-						</div>
-					{/if}
-					<EffectsText effects={capability.effects} />
-				</div>
-			{/if}
-		</div>
+				{/if}
+				<EffectsText effects={capability.effects} />
+			</div>
+		{/if}
 	</div>
 </div>

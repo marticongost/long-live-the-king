@@ -61,6 +61,8 @@ export function getCapabilitySubtitle(capability: Capability): string | undefine
 		return 'Acció';
 	} else if (capability.type === 'secret') {
 		return 'Secret';
+	} else if (capability.type === 'reaction') {
+		return 'Reacció';
 	}
 	return undefined;
 }

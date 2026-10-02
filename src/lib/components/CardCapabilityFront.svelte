@@ -25,7 +25,6 @@
 			display: 'flex',
 			alignItems: 'center',
 			justifyContent: 'center',
-			height: '9.4mm',
 			width: '100%',
 			fontWeight: 900,
 			fontSize: '0.8em',
@@ -46,18 +45,17 @@
 		},
 		icon: {
 			position: 'relative',
-			width: '60%',
+			width: '55%',
 			height: 'auto',
 			zIndex: 2,
 			color: css.palette.white,
 			filter: 'drop-shadow(0 0 0.2em rgba(0,0,0,0.3))',
-			top: '-5%'
+			top: '-8%'
 		},
 		body: {
 			...css.column('sm'),
 			padding: css.spacing.sm,
-			flex: '1 1 auto',
-			paddingTop: css.spacing.md
+			flex: '1 1 auto'
 		}
 	});
 

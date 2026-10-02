@@ -46,7 +46,7 @@
        fx="31.500004"
        fy="14.359456"
        r="29.663969"
-       gradientTransform="matrix(0.21201296,-0.32089405,0.09832028,0.37856809,-1.780684,11.61559)"
+       gradientTransform="matrix(0.16800958,-0.2723043,0.07791386,0.32124534,-1.4111023,9.8567531)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        id="linearGradient1"
@@ -71,9 +71,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="26.008525"
-     inkscape:cx="28.663678"
-     inkscape:cy="36.295791"
+     inkscape:zoom="13.004263"
+     inkscape:cx="29.105841"
+     inkscape:cy="13.380228"
      inkscape:window-width="2560"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -90,26 +90,26 @@
      y="-3.1816406e-05" />
   <g
      id="g2"
-     transform="matrix(0.79244958,0,0,0.84858007,0,-5.0422838e-6)">
+     transform="matrix(1,0,0,0.95453857,0,-1.5138657e-6)">
     <path
        id="path27"
-       style="fill:#7e597e;fill-opacity:1;stroke-width:0.0823426"
-       d="M 0,-3.33e-5 V 9.3144713 11.542336 L 6.309528,9.7599676 12.619055,11.542336 V 9.3144713 -3.33e-5 Z"
+       style="fill:#7e597e;fill-opacity:1;stroke-width:0.0675238"
+       d="m 0,-3.33e-5 v 7.904103 1.3208364 L 4.9999828,8.2821089 9.9999648,9.2249061 V 7.9040697 -3.33e-5 Z"
        sodipodi:nodetypes="cccccccc" />
     <path
        id="rect1"
-       style="fill:#5f385f;fill-opacity:1;stroke-width:0.0823426"
-       d="M 12.6191,-3.33e-5 H 0 v 9.4090028 l 6.30955,2.3494395 6.309551,-2.3494395 z"
+       style="fill:#5f385f;fill-opacity:1;stroke-width:0.0675238"
+       d="M 10,-3.33e-5 H 0 V 7.984259 L 5.0000002,9.4286073 10.000001,7.984259 Z"
        sodipodi:nodetypes="cccccc" />
     <path
        id="path28"
-       style="fill:#835a83;fill-opacity:1;stroke-width:0.0804181"
-       d="M 12.426836,0.2053565 H 0.208801 V 9.2646804 L 6.30955,11.614812 12.426836,9.2646804 Z"
+       style="fill:#835a83;fill-opacity:1;stroke-width:0.0659456"
+       d="M 9.847641,0.17425639 H 0.16546426 V 7.8618181 L 5.0000002,9.2660619 9.847641,7.8618181 Z"
        sodipodi:nodetypes="cccccc" />
     <path
        id="path29"
-       style="fill:url(#radialGradient2);fill-opacity:1;stroke-width:0.079528"
-       d="M 12.251337,0.3539429 H 0.367763 V 9.1789645 L 6.30955,11.432842 12.251337,9.1789645 Z"
+       style="fill:url(#radialGradient2);fill-opacity:1;stroke-width:0.0652157"
+       d="M 9.7085669,0.30034385 H 0.29143363 V 7.7890813 L 5.0000002,9.1319917 9.7085669,7.7890813 Z"
        sodipodi:nodetypes="cccccc" />
   </g>
 </svg>
