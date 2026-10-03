@@ -28,10 +28,6 @@
 			[variant('office')]: {
 				height: '9.4mm',
 				justifyContent: 'center'
-			},
-			[variant('house')]: {
-				height: '9.4mm',
-				justifyContent: 'center'
 			}
 		},
 		title: {
@@ -57,13 +53,6 @@
 				top: 0,
 				width: cw(20),
 				height: cw(20)
-			},
-			[variant('house')]: {
-				position: 'absolute',
-				left: 0,
-				top: 0,
-				width: cw(20),
-				height: cw(20)
 			}
 		},
 		icon: {
@@ -78,15 +67,8 @@
 				top: '-10%'
 			},
 			[variant('house')]: {
-				width: '80%'
+				width: '25%'
 			}
-		},
-		houseCapabilities: {
-			...css.column('sm'),
-			marginTop: css.spacing.sm,
-			padding: css.spacing.sm,
-			flex: '0 0 auto',
-			height: '22%'
 		},
 		body: {
 			...css.column('sm'),
