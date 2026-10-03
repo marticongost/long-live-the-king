@@ -6,8 +6,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects:
-				'Reparteix {favour} igual a {players} al regne - 1 entre els demés {players} del regne.'
+			effects: 'Reparteix {favour} igual a {kingdom-members} - 2 entre els teus súbdits.'
 		},
 		{
 			title: 'Reorganitzar el consell',

@@ -7,7 +7,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Guanya {power 1} o {intrigue 1}. Si ets el membre del regne amb < {prestige}, guanya {prestige 1}.'
+				'Guanya {power 1} o {intrigue 1}. Si ets el {kingdom-member} amb menys {prestige}, guanya {prestige 1}.'
 		},
 		{
 			type: 'constant',
