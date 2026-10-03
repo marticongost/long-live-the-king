@@ -126,9 +126,9 @@
 	});
 
 	function getBackgroundImage(card: Card): string {
-		if (card instanceof Asset && card.hidden) {
+		if (card.type === 'asset' && card.hidden) {
 			return 'url(/svg/card-backgrounds/hidden-asset.svg)';
-		} else if (card instanceof Goal) {
+		} else if (card.type === 'goal') {
 			return `url(/svg/card-backgrounds/${card.goalType}-goal.svg)`;
 		}
 		return `url(/svg/card-backgrounds/${card.type}.svg)`;
@@ -137,15 +137,7 @@
 
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
-	import {
-		Asset,
-		cardTypes,
-		Goal,
-		House,
-		Tactic,
-		type Card,
-		type CardType
-	} from '$lib/models/cards';
+	import { cardTypes, type Card, type CardType } from '$lib/models/cards';
 	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
@@ -172,7 +164,7 @@
 			<InlineSvg class={styles.icon} src={icon} />
 		</div>
 	</div>
-	{#if card instanceof House}
+	{#if card.type === 'house'}
 		<div class={styles.houseCapabilities}>
 			{#each card.houseCapabilities as capability, index (index)}
 				<CapabilityDisplay {capability} />
@@ -194,7 +186,7 @@
 				<li class={styles.propertyEntry}>{property.title}</li>
 			{/each}
 		</ul>
-		{#if card instanceof Tactic && !card.discardBonus.empty()}
+		{#if card.type === 'tactic' && !card.discardBonus.empty()}
 			<div class={styles.discardBonus}>
 				{#each resourceTypes as resourceType (resourceType)}
 					{#each { length: card.discardBonus[resourceType] } as _, index (index)}

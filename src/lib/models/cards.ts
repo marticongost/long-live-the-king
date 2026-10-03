@@ -12,10 +12,11 @@ export interface CardData {
 	properties?: ReadonlyArray<PropertyId>;
 }
 
-export abstract class Card {
+export abstract class BaseCard {
 	readonly id: string;
 	readonly title: string;
 	readonly capabilities: Array<Capability>;
+	abstract readonly type: CardType;
 	private readonly ownProperties: ReadonlyArray<PropertyId>;
 
 	constructor(id: string, { title, capabilities, properties }: CardData) {
@@ -24,8 +25,6 @@ export abstract class Card {
 		this.capabilities = capabilities ? capabilities.map(buildCapability) : [];
 		this.ownProperties = properties ?? [];
 	}
-
-	abstract get type(): CardType;
 
 	/**
 	 * Indicates whether the card is kept secret from other players (true) or must be
@@ -42,18 +41,14 @@ export abstract class Card {
 
 export type EventData = CardData;
 
-export class Event extends Card {
-	override get type(): CardType {
-		return 'event';
-	}
+export class Event extends BaseCard {
+	override readonly type = 'event';
 }
 
 export type OfficeData = CardData;
 
-export class Office extends Card {
-	override get type(): CardType {
-		return 'office';
-	}
+export class Office extends BaseCard {
+	override readonly type = 'office';
 
 	override get hidden(): boolean {
 		return false;
@@ -66,16 +61,13 @@ export interface GoalData extends CardData {
 	goalType: GoalType;
 }
 
-export class Goal extends Card {
+export class Goal extends BaseCard {
+	override readonly type = 'goal';
 	readonly goalType: GoalType;
 
 	constructor(id: string, { goalType, ...base }: GoalData) {
 		super(id, base);
 		this.goalType = goalType;
-	}
-
-	override get type(): CardType {
-		return 'goal';
 	}
 }
 
@@ -83,16 +75,13 @@ export interface TacticData extends CardData {
 	discardBonus?: ResourceSetProps;
 }
 
-export class Tactic extends Card {
+export class Tactic extends BaseCard {
+	override readonly type = 'tactic';
 	readonly discardBonus: ResourceSet;
 
 	constructor(id: string, { discardBonus, ...base }: TacticData) {
 		super(id, base);
 		this.discardBonus = new ResourceSet(discardBonus ?? {});
-	}
-
-	override get type(): CardType {
-		return 'tactic';
 	}
 }
 
@@ -100,16 +89,13 @@ export interface AssetData extends CardData {
 	hidden?: boolean;
 }
 
-export class Asset extends Card {
+export class Asset extends BaseCard {
+	override readonly type = 'asset';
 	private readonly _hidden: boolean;
 
 	constructor(id: string, { hidden = false, ...base }: AssetData) {
 		super(id, base);
 		this._hidden = hidden;
-	}
-
-	override get type(): CardType {
-		return 'asset';
 	}
 
 	override get hidden(): boolean {
@@ -119,24 +105,19 @@ export class Asset extends Card {
 
 export type LawData = CardData;
 
-export class Law extends Card {
-	override get type(): CardType {
-		return 'law';
-	}
+export class Law extends BaseCard {
+	override readonly type = 'law';
 }
 
 export type HouseData = CardData;
 
-export class House extends Card {
+export class House extends BaseCard {
+	override readonly type = 'house';
 	readonly houseCapabilities: ReadonlyArray<Capability>;
 
 	constructor(id: string, { capabilities, ...base }: HouseData) {
 		super(id, { capabilities: commonHouseCapabilities, ...base });
 		this.houseCapabilities = (capabilities ?? []).map(buildCapability);
-	}
-
-	override get type(): CardType {
-		return 'house';
 	}
 
 	override get hidden(): boolean {
@@ -162,3 +143,5 @@ const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
 		effects: 'Aposta {input gold} per adquirir {input text} o {input gold} per {input text}.'
 	}
 ] as const;
+
+export type Card = Event | Office | Goal | Tactic | Asset | Law | House;

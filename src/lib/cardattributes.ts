@@ -19,7 +19,7 @@ export function getCardIcon(card: Card): string {
 		case 'house':
 			return `houses/${card.id}.svg`;
 		default:
-			return assertNever(card.type, 'Unknown card type');
+			return assertNever(card, 'Unknown card type');
 	}
 }
 

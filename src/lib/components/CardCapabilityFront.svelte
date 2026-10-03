@@ -76,15 +76,15 @@
 			case 'house':
 				return `houses/${card.id}.svg`;
 			default:
-				return assertNever(card.type, 'Unknown card type');
+				return assertNever(card, 'Unknown card type');
 		}
 	}
 
 	function getBackgroundImage(cardCapability: CardCapability): string {
 		const card = cardCapability.card;
-		if (card instanceof Asset && card.hidden) {
+		if (card.type === 'asset' && card.hidden) {
 			return 'url(/svg/capability-card-backgrounds/hidden-asset.svg)';
-		} else if (card instanceof Goal) {
+		} else if (card.type === 'goal') {
 			return `url(/svg/capability-card-backgrounds/${card.goalType}-goal.svg)`;
 		}
 		return `url(/svg/capability-card-backgrounds/${card.type}.svg)`;
@@ -97,7 +97,7 @@
 		standardAttributes,
 		type StandardAttributeProps
 	} from '$lib/components/utils';
-	import { Asset, Goal, type Card } from '$lib/models/cards';
+	import { type Card } from '$lib/models/cards';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
 	import type { CardCapability } from '$lib/models/cardcapabilities';

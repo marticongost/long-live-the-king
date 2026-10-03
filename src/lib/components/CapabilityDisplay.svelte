@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import { ConcreteCapability, Constant, Crisis, type Capability } from '$lib/models/capabilities';
+	import { ConcreteCapability, Constant, type Capability } from '$lib/models/capabilities';
 	import * as css from '$lib/styles';
 
 	const variants = css.styleVariants(['regular', 'reaction']);
@@ -117,7 +117,7 @@
 
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>
 	<div class={styles.entry}>
-		{#if capability instanceof Crisis}
+		{#if capability.type === 'crisis'}
 			<div class={styles.header}>
 				<div class={styles.title}>Crisis</div>
 				<InlineSvg class={styles.icon} src="capabilities/crisis.svg" />

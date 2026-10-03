@@ -1,6 +1,5 @@
 <script lang="ts" module>
 	import * as css from '$lib/styles';
-	import { Event, Goal, Law, Tactic } from '$lib/models/cards';
 
 	const styles = css.styles({
 		browser: {
@@ -20,9 +19,9 @@
 			return false;
 		}
 		if (capability.type === 'reaction') {
-			return card instanceof Tactic;
+			return card.type === 'tactic';
 		}
-		if (card instanceof Event || card instanceof Goal || card instanceof Law) {
+		if (card.type === 'event' || card.type === 'goal' || card.type === 'law') {
 			return capability.type === 'action' || capability.type === 'secret';
 		}
 		return true;
@@ -36,7 +35,7 @@
 	import CardSearchControls from './CardSearchControls.svelte';
 	import CapabilitiesGrid from './CapabilitiesGrid.svelte';
 	import { CardCapability } from '$lib/models/cardcapabilities';
-	import { Action, Reaction, Secret, type Capability } from '$lib/models/capabilities';
+	import { type Capability } from '$lib/models/capabilities';
 
 	interface Props extends StandardAttributeProps {
 		cards: Array<Card>;

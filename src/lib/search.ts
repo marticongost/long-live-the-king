@@ -1,4 +1,4 @@
-import { cardTypes, Goal, type Card } from './models/cards';
+import { cardTypes, type Card } from './models/cards';
 import { getProperties, getProperty, type Property, type PropertyId } from './models/properties';
 
 export type FilterOption = {
@@ -34,19 +34,19 @@ export const filterEntries: ReadonlyArray<FilterEntry> = [
 				kind: 'option',
 				id: 'goal',
 				title: 'Objectiu',
-				matches: (card) => card instanceof Goal
+				matches: (card) => card.type === 'goal'
 			},
 			{
 				kind: 'option',
 				id: 'goal-collective',
 				title: 'Objectiu (col·lectiu)',
-				matches: (card) => card instanceof Goal && card.goalType === 'collective'
+				matches: (card) => card.type === 'goal' && card.goalType === 'collective'
 			},
 			{
 				kind: 'option',
 				id: 'goal-personal',
 				title: 'Objectiu (personal)',
-				matches: (card) => card instanceof Goal && card.goalType === 'personal'
+				matches: (card) => card.type === 'goal' && card.goalType === 'personal'
 			}
 		]
 	},
