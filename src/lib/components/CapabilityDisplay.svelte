@@ -13,12 +13,12 @@
 		},
 		icon: {
 			flexShrink: 0,
-			width: '0.9em',
-			height: 'auto',
+			height: '1.1em',
+			width: 'auto',
 			color: css.palette.dawn
 		},
 		header: {
-			...css.row('xs'),
+			...css.row('sm'),
 			color: css.palette.wood,
 			marginBottom: '0.1em',
 			paddingBottom: '0.1em',
@@ -29,6 +29,7 @@
 			fontFamily: css.fonts.heading,
 			margin: 0,
 			fontWeight: 600,
+			marginRight: 'auto',
 			[variants('regular')]: {
 				fontWeight: 900
 			},
@@ -37,17 +38,10 @@
 			}
 		},
 		subtitle: {
-			fontSize: '0.7em',
-			':before': {
-				content: '"("'
-			},
-			':after': {
-				content: '")"'
-			}
+			fontSize: '0.75em'
 		},
 		cost: {
-			marginLeft: 'auto',
-			fontSize: '0.9em'
+			fontSize: '0.75em'
 		},
 		body: {
 			fontSize: '0.8em'
