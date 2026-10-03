@@ -5,18 +5,22 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: '{augments} el Tresorer del regne. Deute: {input number}.'
+		},
+		{
 			type: 'action',
 			title: 'Demanar crèdit',
 			cost: { favour: 1 },
-			restrictions:
-				'Només executable pel Tresorer, si la llei està en vigor i la casella inferior ≤ {wealth}.',
-			effects: 'El Tresorer augmenta la casella inferior en X i guanya X {gold}.'
+			effects:
+				'Augmentar Deute en X {input number} i guanyar X {gold}. Deute no pot superar {wealth}.'
 		},
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Deute: {input number}. Si > 0, el Tresorer paga {gold} = Deute. Si no pot, {wealth -1}. Reduir Deute en 1.'
+				'Si Deute > 0: el Tresorer paga {gold} = Deute; si no pot, {wealth -1}. A continuació, reduir Deute en 1.'
 		}
 	]
 } satisfies LawData;

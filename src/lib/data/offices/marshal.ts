@@ -17,7 +17,8 @@ export default {
 		{
 			title: 'Intimidació',
 			type: 'action',
-			effects: '{duel} {strength}. El perdedor dona {power 1} al vencedor.'
+			effects:
+				'{duel} {strength} contra {input kingdom-member}. El perdedor dona tot el seu {favour} al vencedor.'
 		}
 	]
 } satisfies OfficeData;

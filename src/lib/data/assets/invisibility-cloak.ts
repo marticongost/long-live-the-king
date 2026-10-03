@@ -6,6 +6,7 @@ export default {
 	hidden: true,
 	capabilities: [
 		{
+			title: 'Passar desapercebut',
 			type: 'constant',
 			effects: 'Repeteix els daus fallits en resoldre els {plots} que hagis iniciat.'
 		}

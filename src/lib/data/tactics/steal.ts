@@ -8,7 +8,7 @@ export default {
 		{
 			type: 'secret',
 			effects:
-				'Escull un jugador {input text} i resol un {plot} contra ell. Si el {plot} té èxit, el director de joc et revela dues de les seves cartes {tactic} i/o {object}, escollides aleatòriament, i pots quedar-te una de les cartes.'
+				'Resolve un {plot} {input intrigue} contra {input player}; si té èxit, el director de joc et revela dues de les seves cartes {tactic} i/o {object}, escollides aleatòriament, i pots quedar-te una de les cartes.'
 		}
 	]
 } satisfies TacticData;

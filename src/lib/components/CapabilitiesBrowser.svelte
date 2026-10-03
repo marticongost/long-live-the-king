@@ -16,11 +16,14 @@
 	});
 
 	function needsCapabilityCard(card: Card, capability: Capability) {
-		if (capability instanceof Reaction) {
+		if (capability.type === 'constant') {
+			return false;
+		}
+		if (capability.type === 'reaction') {
 			return card instanceof Tactic;
 		}
 		if (card instanceof Event || card instanceof Goal || card instanceof Law) {
-			return capability instanceof Action || capability instanceof Secret;
+			return capability.type === 'action' || capability.type === 'secret';
 		}
 		return true;
 	}

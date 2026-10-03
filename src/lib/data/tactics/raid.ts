@@ -8,7 +8,7 @@ export default {
 		{
 			type: 'action',
 			effects:
-				'Resol un {duel} {strength} contra un jugador. Si guanyes, {exhaust} una de les seves {land} {visible}.'
+				'Resol un {duel} {strength} contra {input player}. Si guanyes, {exhaust} una de les seves {land} {visible}.'
 		}
 	]
 } satisfies TacticData;

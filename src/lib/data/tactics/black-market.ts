@@ -10,7 +10,7 @@ export default {
 			type: 'secret',
 			cost: { gold: 2 },
 			effects:
-				"Resol un {plot} contra el teu regne. Si té èxit, el director de joc t'ensenya dues cartes {hidden} aleatòries. Pots decidir quedar-te una de les cartes sense pagar cap cost addicional. Les cartes que no et quedis es descarten."
+				"Resol un {plot} {input intrigue} contra el teu regne. Si té èxit, el director de joc t'ensenya dos {assets} {hidden} aleatoris. Pots decidir quedar-te'n un sense pagar cap cost addicional. Les cartes que no et quedis es descarten."
 		}
 	]
 } satisfies TacticData;

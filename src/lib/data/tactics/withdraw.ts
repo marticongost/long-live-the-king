@@ -9,7 +9,7 @@ export default {
 			title: 'No els calen les meves tropes...',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {strength 1}, i el regne rep {might -1}.'
+				'Resol un {plot} {input intrigue} contra el teu regne. Si té èxit, guanya {prestige 1} i {strength 1}, i el regne rep {might -1}.'
 		}
 	]
 } satisfies TacticData;

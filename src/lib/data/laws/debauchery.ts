@@ -5,12 +5,19 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: '{augments} el Bufó del regne.'
+		},
+		{
 			type: 'action',
 			title: 'Caos i rauxa',
 			cost: { favour: 1 },
-			restrictions: 'Només executable pel Bufó, si la llei està en vigor.',
-			effects:
-				'Llançar 1d6 i aplicar el resultat. 1: Disminuir un {kingdomStat} en 1. 2: Els {players} revelen i descarten una carta {tactic} o {asset} {hidden}. 3: Els {players} passen les seves {tactics} al següent jugador en sentit horari. 4: Els {players} guanyen {any 1}. 5: Els {players} guanyen una carta. 6: Augmentar un {kingdomStat} en 1.'
+			effects: `Llançar 1d6.
+				 1 → ±1 a un {kingdomStat}.
+				 2 → Els {kingdom-members} passen les seves {tactics} al següent jugador en sentit horari.
+				 3-4 → Els {kingdom-members} descarten les seves {tactics} i en roben 3 de noves.
+				 5-6 → Els {kingdom-members} guanyen {any 1}.`
 		}
 	]
 } satisfies LawData;

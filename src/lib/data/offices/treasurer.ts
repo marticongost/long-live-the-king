@@ -19,7 +19,7 @@ export default {
 			type: 'action',
 			cost: { power: 1 },
 			effects:
-				'Moure {taxes} 1 o 2 espais en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'
+				'Moure {taxes} {input check} 1 o {input check} 2 espais en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'
 		}
 	]
 } satisfies OfficeData;

@@ -10,7 +10,7 @@ export default {
 			type: 'secret',
 			cost: { gold: 5 },
 			effects:
-				'Seleccionar un jugador {input text} i resoldre un {plot} contra ell. Si el {plot} té èxit, {execute} el jugador designat.'
+				"Resoldre un {plot} {input intrigue} contra {input player}. En cas d'èxit, {execute} el jugador designat."
 		}
 	]
 } satisfies AssetData;

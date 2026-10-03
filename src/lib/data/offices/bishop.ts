@@ -17,7 +17,7 @@ export default {
 		{
 			title: 'Excomulgar',
 			type: 'action',
-			effects: '{duel} {any} contra un altre membre del regne. El perdedor és {exiled} del regne.'
+			effects: '{duel} {any} contra {input kingdom-member}. El perdedor és {exiled} del regne.'
 		}
 	]
 } satisfies OfficeData;

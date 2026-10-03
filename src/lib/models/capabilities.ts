@@ -32,10 +32,14 @@ export interface CrisisData {
 	highestContributionReward: string;
 }
 
+export interface ConstantData extends CapabilityEffectsFields {
+	title: string;
+}
+
 export type ActionSpec = { type: 'action' } & BaseActionData;
 export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
-export type ConstantSpec = { type: 'constant' } & CapabilityEffectsFields;
+export type ConstantSpec = { type: 'constant' } & ConstantData;
 export type CrisisSpec = { type: 'crisis' } & CrisisData;
 export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
@@ -110,10 +114,12 @@ export class Reaction extends ConcreteCapability {
 }
 
 export class Constant extends BaseCapability {
+	readonly title: string;
 	readonly effects: string;
 
-	constructor({ effects }: CapabilityEffectsFields) {
+	constructor({ title, effects }: ConstantData) {
 		super();
+		this.title = title;
 		this.effects = effects;
 	}
 

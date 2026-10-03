@@ -5,12 +5,16 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: "{augments} el Mestre d'espies del regne."
+		},
+		{
 			type: 'action',
 			title: 'Inspeccionar',
 			cost: { favour: 1 },
-			restrictions: "Només executable pel Mestre d'espies, si la llei està en vigor.",
 			effects:
-				"El Mestre d'espies pot veure en secret els {assets} {hidden} o un dels {objectives} del jugador seleccionat."
+				'El director de joc et revela en secret els {input check} {assets} {hidden} o {input check} un dels {objectives} de {input kingdom-member}.'
 		}
 	]
 } satisfies LawData;

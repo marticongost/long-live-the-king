@@ -10,3 +10,7 @@ export const resourceTypes = [
 ] as const;
 
 export type ResourceType = (typeof resourceTypes)[number];
+
+export function isResourceType(value: string): value is ResourceType {
+	return resourceTypes.includes(value as ResourceType);
+}

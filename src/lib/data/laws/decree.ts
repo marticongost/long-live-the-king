@@ -5,10 +5,14 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: '{augments} el Canceller del regne.'
+		},
+		{
 			type: 'action',
 			title: 'Decretar',
 			cost: { favour: 1 },
-			restrictions: 'Només executable pel Canceller, si la llei està en vigor.',
 			effects: 'Buscar una llei a la pila i posar-la a votació.'
 		}
 	]

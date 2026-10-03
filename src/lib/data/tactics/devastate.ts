@@ -9,7 +9,7 @@ export default {
 			type: 'action',
 			cost: { strength: 2 },
 			effects:
-				'Resol un {duel} {strength} contra un jugador. Si guanyes, {discard} una de les seves {land} {visible}.'
+				'Resol un {duel} {strength} contra {input player}. Si guanyes, {discard} una de les seves {land} {visible}.'
 		}
 	]
 } satisfies TacticData;

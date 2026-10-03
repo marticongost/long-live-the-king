@@ -6,14 +6,9 @@ export default {
 	capabilities: [
 		{
 			type: 'reaction',
-			trigger: 'preparingForDuel',
-			effects: 'Els demés {players} poden donar-te qualsevol quantitat dels seus recursos.'
-		},
-		{
-			type: 'reaction',
 			trigger: 'afterDuelDeclared',
-			cost: { power: 1 },
-			effects: 'Si ets el Rei, cancel·la el duel.'
+			effects:
+				'Si ets el Rei, pots pagar {power 1} per cancel·lar el duel. Si no, els demés {players} poden donar-te qualsevol quantitat dels seus recursos.'
 		}
 	]
 } satisfies TacticData;

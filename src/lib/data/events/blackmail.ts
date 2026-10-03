@@ -14,7 +14,7 @@ export default {
 			title: 'Solució permanent',
 			type: 'secret',
 			cost: { intrigue: 2 },
-			effects: 'Eliminar aquesta carta.'
+			effects: "Eliminar l'esdeveniment."
 		},
 		{
 			type: 'reaction',

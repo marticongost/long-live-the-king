@@ -9,7 +9,7 @@ export default {
 			title: 'Segur que ningú ho notarà...',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra el teu regne. Si té èxit, guanya {prestige 1} i {gold 1}, i el regne rep {wealth -1}.'
+				'Resol un {plot} {input intrigue} contra el teu regne. Si té èxit, guanya {prestige 1} i {gold 1}, i el regne rep {wealth -1}.'
 		}
 	]
 } satisfies TacticData;

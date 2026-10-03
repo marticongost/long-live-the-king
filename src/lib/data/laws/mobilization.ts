@@ -5,11 +5,15 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: '{augments} el Comandant del regne.'
+		},
+		{
 			type: 'action',
 			title: 'Cridar a files',
 			cost: { favour: 1 },
-			restrictions: 'Només executable pel Comandant, si la llei està en vigor.',
-			effects: 'Cada jugador del regne perd {any 1} i guanya {strength 1}.'
+			effects: 'Cada {kingdom-member} perd {any 1} i guanya {strength 1}.'
 		}
 	]
 } satisfies LawData;

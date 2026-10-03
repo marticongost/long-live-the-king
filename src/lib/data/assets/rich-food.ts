@@ -14,7 +14,7 @@ export default {
 		{
 			title: 'Compartir',
 			type: 'action',
-			effects: 'El teu regne guanya {stability 1}. {discard} aquesta carta.'
+			effects: 'El teu regne guanya {stability 1}. {discard} aquest actiu.'
 		}
 	]
 } satisfies AssetData;

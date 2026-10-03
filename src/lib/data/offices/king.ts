@@ -20,7 +20,7 @@ export default {
 			type: 'action',
 			cost: { power: 1 },
 			effects:
-				'Escull 1+ {subjects}. Cada un ha de donar-te una {card} o un {resource} de la seva el·lecció.'
+				'{input kingdom-members} han de donar-te una {card} o un {resource} de la seva el·lecció.'
 		}
 	]
 } satisfies OfficeData;

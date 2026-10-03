@@ -5,12 +5,16 @@ export default {
 	properties: ['privilege'],
 	capabilities: [
 		{
+			type: 'constant',
+			title: 'Privilegi',
+			effects: '{augments} el Bisbe del regne.'
+		},
+		{
 			type: 'action',
 			title: 'Denunciar els excessos',
 			cost: { favour: 1 },
-			restrictions: 'Només executable pel Bisbe, si la llei està en vigor.',
 			effects:
-				"Seleccionar dos jugadors (excloent el Bisbe): si un dels jugadors seleccionats té més {assets} {visible} i {prestige} que l'altre, ha d'escollir entre donar {prestige 1} a l'altre jugador o donar un dels seus {assets} {visible} al Bisbe."
+				"Seleccionar {input kingdom-member} i {input kingdom-member} (excloent el Bisbe): si un dels {players} seleccionats té més {assets} {visible} i {prestige} que l'altre, ha d'escollir entre donar {prestige 1} a l'altre {player} o donar un dels seus {assets} {visible} al Bisbe."
 		}
 	]
 } satisfies LawData;

@@ -44,11 +44,10 @@ export function getCapabilityTitle(capability: Capability): string {
 	switch (capability.type) {
 		case 'action':
 		case 'secret':
+		case 'constant':
 			return capability.title;
 		case 'reaction':
 			return capability.trigger.title;
-		case 'constant':
-			return 'Constant';
 		case 'crisis':
 			return 'Crisis';
 		default:
@@ -63,6 +62,8 @@ export function getCapabilitySubtitle(capability: Capability): string | undefine
 		return 'Secret';
 	} else if (capability.type === 'reaction') {
 		return 'Reacció';
+	} else if (capability.type === 'constant') {
+		return 'Constant';
 	}
 	return undefined;
 }

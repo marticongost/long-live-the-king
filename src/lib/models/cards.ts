@@ -154,13 +154,11 @@ const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
 	{
 		type: 'secret',
 		title: 'Vigilar',
-		effects:
-			'Paga {input number} {intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
+		effects: 'Paga {input intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
 	},
 	{
 		type: 'secret',
 		title: 'Adquisicions',
-		effects:
-			'Aposta {input number} {gold} per adquirir {input text} o {input number} per {input text}.'
+		effects: 'Aposta {input gold} per adquirir {input text} o {input gold} per {input text}.'
 	}
 ] as const;

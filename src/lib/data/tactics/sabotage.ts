@@ -9,7 +9,7 @@ export default {
 			title: 'Un lamentable accident...',
 			type: 'secret',
 			effects:
-				'Resol un {plot} contra un jugador {input text} i escull un {asset} {visible} que controli {input text}. Si el {plot} té èxit, la carta escollida no es pot utilitzar el torn següent.'
+				'Resol un {plot} {input intrigue} contra {input player}; si té èxit, {disable} un dels seus {assets} {visible}.'
 		}
 	]
 } satisfies TacticData;

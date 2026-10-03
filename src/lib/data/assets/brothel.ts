@@ -13,7 +13,7 @@ export default {
 			title: 'Confidències',
 			type: 'action',
 			cost: { intrigue: 1 },
-			effects: 'Guanya una carta.'
+			effects: 'Guanyar una {tactic}.'
 		}
 	]
 } satisfies AssetData;

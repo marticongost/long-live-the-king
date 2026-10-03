@@ -8,14 +8,8 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'voting',
-			effects: 'Suma +/- 2 al resultat de la {vote}.'
-		},
-		{
-			type: 'reaction',
-			trigger: 'voting',
-			cost: { power: 1 },
 			effects:
-				'Si ets el Rei, pots vetar la {vote} en curs: la {vote} finalitza en fracàs i la llei proposada es descarta.'
+				'Si ets el Rei, pots vetar la {vote} en curs: la {vote} finalitza en fracàs i la llei proposada es descarta. Si no, guanya +2 vots.'
 		}
 	]
 } satisfies TacticData;

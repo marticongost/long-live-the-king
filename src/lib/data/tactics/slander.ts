@@ -9,7 +9,7 @@ export default {
 			type: 'secret',
 			cost: { power: 2 },
 			effects:
-				'Escull un jugador {input text} i resol un {plot} contra ell. Si el {plot} té èxit el jugador escollit perd {prestige 1}.'
+				'Resol un {plot} {input intrigue} contra {input player}. Si el {plot} té èxit, el jugador escollit perd {prestige 1}.'
 		}
 	]
 } satisfies TacticData;

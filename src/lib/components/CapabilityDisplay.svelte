@@ -1,14 +1,8 @@
 <script lang="ts" module>
-	import {
-		BaseAction,
-		ConcreteCapability,
-		Constant,
-		Crisis,
-		type Capability
-	} from '$lib/models/capabilities';
+	import { ConcreteCapability, Constant, Crisis, type Capability } from '$lib/models/capabilities';
 	import * as css from '$lib/styles';
 
-	const variants = css.styleVariants(['regular', 'actionLike']);
+	const variants = css.styleVariants(['regular', 'reaction']);
 
 	const stylesFor = css.multipleStyles({
 		capabilityDisplay: {
@@ -35,10 +29,10 @@
 			fontFamily: css.fonts.heading,
 			margin: 0,
 			fontWeight: 600,
-			[variants('actionLike')]: {
+			[variants('regular')]: {
 				fontWeight: 900
 			},
-			[variants('regular')]: {
+			[variants('reaction')]: {
 				fontStyle: 'italic'
 			}
 		},
@@ -118,7 +112,7 @@
 	}
 
 	const { capability, ...attributes }: Props = $props();
-	const styles = $derived(stylesFor(capability instanceof BaseAction ? 'actionLike' : 'regular'));
+	const styles = $derived(stylesFor(capability.type === 'reaction' ? 'reaction' : 'regular'));
 </script>
 
 <div {...standardAttributes(attributes, styles.capabilityDisplay)}>

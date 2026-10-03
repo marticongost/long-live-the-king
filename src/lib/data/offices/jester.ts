@@ -11,6 +11,7 @@ export default {
 		},
 		{
 			type: 'constant',
+			title: "L'ase dels cops",
 			effects:
 				'No pots participar en lleis. Perds els teus altres {offices} i no en pots guanyar de nous.'
 		},
@@ -18,7 +19,7 @@ export default {
 			title: 'Ridiculitzar',
 			type: 'action',
 			effects:
-				'{duel} {power} + {intrigue} contra un altre membre del regne. El perdedor dona {prestige 1} al vencedor. Si el bufó guanya el duel per 2+, roba una carta aleatòria al rival.'
+				'{duel} {power} + {intrigue} contra {input kingdom-member}. El perdedor dona {prestige 1} al vencedor. Si el bufó guanya el duel per 2 o més, roba una {tactic} aleatòria al rival.'
 		}
 	]
 } satisfies OfficeData;
