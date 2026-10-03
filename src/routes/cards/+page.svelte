@@ -3,4 +3,4 @@
 	import { cardsCatalog } from '$lib/data/catalog';
 </script>
 
-<CardBrowser cards={cardsCatalog.all()} />
+<CardBrowser cards={cardsCatalog.all().filter((card) => card.type !== 'tactic')} />

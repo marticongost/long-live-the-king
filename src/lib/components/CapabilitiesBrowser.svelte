@@ -54,13 +54,7 @@
 </script>
 
 <div {...standardAttributes(attributes, styles.browser)}>
-	<CardSearchControls
-		bind:search={searchState.search}
-		bind:selectedFilter={searchState.selectedFilter}
-		bind:selectedProperties={searchState.selectedProperties}
-		counts={searchState.optionCounts}
-		propertyCounts={searchState.propertyCounts}
-	/>
+	<CardSearchControls {searchState} />
 
 	<section class={styles.results}>
 		{#if searchState.filteredCards.length}

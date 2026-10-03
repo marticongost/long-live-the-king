@@ -206,3 +206,28 @@ export function countByProperty(
 	}
 	return counts;
 }
+
+export function getVisibleOptionIds(cards: Array<Card>): ReadonlySet<string> {
+	const ids = new Set<string>(['all']);
+	const options = allOptions(filterEntries);
+	for (const card of cards) {
+		for (const option of options) {
+			if (option.matches(card)) {
+				ids.add(option.id);
+			}
+		}
+	}
+	return ids;
+}
+
+export function getVisiblePropertyIds(cards: Array<Card>): ReadonlySet<PropertyId> {
+	const ids = new Set<PropertyId>();
+	for (const card of cards) {
+		for (const property of filterableProperties) {
+			if (card.properties.has(property)) {
+				ids.add(property.id);
+			}
+		}
+	}
+	return ids;
+}

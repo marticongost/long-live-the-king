@@ -4,7 +4,14 @@ import type { ResolvedPathname } from '$app/types';
 import { SvelteSet, SvelteURL } from 'svelte/reactivity';
 import type { Card } from '$lib/models/cards';
 import { getProperties, type PropertyId } from '$lib/models/properties';
-import { countByOption, countByProperty, filterCards, findFilterOption } from '$lib/search';
+import {
+	countByOption,
+	countByProperty,
+	filterCards,
+	findFilterOption,
+	getVisibleOptionIds,
+	getVisiblePropertyIds
+} from '$lib/search';
 
 export type BrowserCardSearchState = {
 	search: string;
@@ -12,6 +19,8 @@ export type BrowserCardSearchState = {
 	selectedProperties: Array<PropertyId>;
 	readonly optionCounts: Map<string, number>;
 	readonly propertyCounts: Map<PropertyId, number>;
+	readonly visibleOptionIds: ReadonlySet<string>;
+	readonly visiblePropertyIds: ReadonlySet<PropertyId>;
 	readonly filteredCards: Array<Card>;
 };
 
@@ -60,6 +69,8 @@ export function getBrowserCardSearchState(getCards: () => Array<Card>): BrowserC
 	const filteredCards = $derived(
 		filterCards(getCards(), search, selectedFilter, selectedProperties)
 	);
+	const visibleOptionIds = $derived(getVisibleOptionIds(getCards()));
+	const visiblePropertyIds = $derived(getVisiblePropertyIds(getCards()));
 
 	return {
 		get search() {
@@ -88,6 +99,12 @@ export function getBrowserCardSearchState(getCards: () => Array<Card>): BrowserC
 		},
 		get filteredCards() {
 			return filteredCards;
+		},
+		get visibleOptionIds() {
+			return visibleOptionIds;
+		},
+		get visiblePropertyIds() {
+			return visiblePropertyIds;
 		}
 	};
 }

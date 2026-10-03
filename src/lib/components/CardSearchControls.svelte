@@ -81,32 +81,37 @@
 <script lang="ts">
 	import { cx } from '@emotion/css';
 	import { standardAttributes, type StandardAttributeProps } from './utils';
-	import { filterEntries, filterableProperties } from '$lib/search';
-	import type { PropertyId } from '$lib/models/properties';
+	import { filterEntries, filterableProperties, type FilterEntry } from '$lib/search';
+	import type { BrowserCardSearchState } from '$lib/browsercardsearchstate.svelte';
 	import Button from './Button.svelte';
 
 	interface Props extends StandardAttributeProps {
-		search?: string;
-		selectedFilter?: string;
-		selectedProperties?: Array<PropertyId>;
-		counts: Map<string, number>;
-		propertyCounts: Map<PropertyId, number>;
+		searchState: BrowserCardSearchState;
 	}
 
-	let {
-		search = $bindable(''),
-		selectedFilter = $bindable('all'),
-		selectedProperties = $bindable([]),
-		counts,
-		propertyCounts,
-		...attributes
-	}: Props = $props();
+	let { searchState, ...attributes }: Props = $props();
 
 	function clearFilters() {
-		search = '';
-		selectedFilter = 'all';
-		selectedProperties = [];
+		searchState.search = '';
+		searchState.selectedFilter = 'all';
+		searchState.selectedProperties = [];
 	}
+
+	const visibleEntries: ReadonlyArray<FilterEntry> = $derived(
+		filterEntries.flatMap((entry): Array<FilterEntry> => {
+			if (entry.kind === 'group') {
+				const options = entry.options.filter((option) =>
+					searchState.visibleOptionIds.has(option.id)
+				);
+				return options.length ? [{ ...entry, options }] : [];
+			}
+			return searchState.visibleOptionIds.has(entry.id) ? [entry] : [];
+		})
+	);
+
+	const visibleProperties = $derived(
+		filterableProperties.filter((property) => searchState.visiblePropertyIds.has(property.id))
+	);
 </script>
 
 <aside {...standardAttributes(attributes, styles.sidebar)}>
@@ -115,19 +120,19 @@
 		type="search"
 		placeholder="Cerca..."
 		aria-label="Cerca cartes"
-		bind:value={search}
+		bind:value={searchState.search}
 	/>
 
 	<section>
 		<h1 class={styles.filterHeading}>Tipus de carta</h1>
 
 		<ul class={styles.filters}>
-			{#each filterEntries as entry (entry.id)}
+			{#each visibleEntries as entry (entry.id)}
 				{#if entry.kind === 'group'}
 					{#each entry.options as option, index (option.id)}
 						<li
 							class={cx(index === 0 ? styles.rootFilter : styles.nestedFilter, {
-								[styles.dimmed]: (counts.get(option.id) ?? 0) === 0
+								[styles.dimmed]: (searchState.optionCounts.get(option.id) ?? 0) === 0
 							})}
 						>
 							<label class={styles.filterLabel}>
@@ -136,19 +141,21 @@
 									type="radio"
 									name="card-type-filter"
 									value={option.id}
-									bind:group={selectedFilter}
+									bind:group={searchState.selectedFilter}
 								/>
-								<span class={selectedFilter === option.id ? styles.selectedTitle : undefined}
-									>{option.title}</span
+								<span
+									class={searchState.selectedFilter === option.id
+										? styles.selectedTitle
+										: undefined}>{option.title}</span
 								>
-								<span class={styles.count}>{counts.get(option.id) ?? 0}</span>
+								<span class={styles.count}>{searchState.optionCounts.get(option.id) ?? 0}</span>
 							</label>
 						</li>
 					{/each}
 				{:else}
 					<li
 						class={cx(styles.rootFilter, {
-							[styles.dimmed]: (counts.get(entry.id) ?? 0) === 0
+							[styles.dimmed]: (searchState.optionCounts.get(entry.id) ?? 0) === 0
 						})}
 					>
 						<label class={styles.filterLabel}>
@@ -157,12 +164,13 @@
 								type="radio"
 								name="card-type-filter"
 								value={entry.id}
-								bind:group={selectedFilter}
+								bind:group={searchState.selectedFilter}
 							/>
-							<span class={selectedFilter === entry.id ? styles.selectedTitle : undefined}
+							<span
+								class={searchState.selectedFilter === entry.id ? styles.selectedTitle : undefined}
 								>{entry.title}</span
 							>
-							<span class={styles.count}>{counts.get(entry.id) ?? 0}</span>
+							<span class={styles.count}>{searchState.optionCounts.get(entry.id) ?? 0}</span>
 						</label>
 					</li>
 				{/if}
@@ -174,10 +182,10 @@
 		<h1 class={styles.filterHeading}>Propietats</h1>
 
 		<ul class={styles.filters}>
-			{#each filterableProperties as property (property.id)}
+			{#each visibleProperties as property (property.id)}
 				<li
 					class={cx(styles.nestedFilter, {
-						[styles.dimmed]: (propertyCounts.get(property.id) ?? 0) === 0
+						[styles.dimmed]: (searchState.propertyCounts.get(property.id) ?? 0) === 0
 					})}
 				>
 					<label class={styles.filterLabel}>
@@ -185,13 +193,14 @@
 							class={styles.checkbox}
 							type="checkbox"
 							value={property.id}
-							bind:group={selectedProperties}
+							bind:group={searchState.selectedProperties}
 						/>
 						<span
-							class={selectedProperties.includes(property.id) ? styles.selectedTitle : undefined}
-							>{property.title}</span
+							class={searchState.selectedProperties.includes(property.id)
+								? styles.selectedTitle
+								: undefined}>{property.title}</span
 						>
-						<span class={styles.count}>{propertyCounts.get(property.id) ?? 0}</span>
+						<span class={styles.count}>{searchState.propertyCounts.get(property.id) ?? 0}</span>
 					</label>
 				</li>
 			{/each}
