@@ -8,7 +8,7 @@ export default {
 		{
 			type: 'action',
 			cost: { intrigue: 1 },
-			effects: 'Per cada {kingdomStat} a -2 guanyes {gold 1} i {power 1}.'
+			effects: 'Per cada {kingdomStat} amb valor 1 guanyes {gold 1} i {power 1}.'
 		}
 	]
 } satisfies TacticData;
