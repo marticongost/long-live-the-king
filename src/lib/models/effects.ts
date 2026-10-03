@@ -24,9 +24,25 @@ export interface KeywordChunk {
 	keyword: Keyword;
 }
 
+export const inputFormats = [
+	'text',
+	'list',
+	'number',
+	'check',
+	'player',
+	'players',
+	'kingdom-member',
+	'kingdom-members',
+	...resourceTypes
+] as const;
+
+export function isInputFormat(value: string): value is (typeof inputFormats)[number] {
+	return inputFormats.includes(value as (typeof inputFormats)[number]);
+}
+
 export interface InputChunk {
 	type: 'input';
-	format: 'text' | 'list' | 'number' | 'check';
+	format: (typeof inputFormats)[number];
 }
 
 export interface InvalidChunk {
@@ -80,10 +96,10 @@ function keywordBuilder(keyword: Keyword): ChunkBuilder {
 
 function buildInput({ params, args }: BuilderInput): Chunk {
 	const format: string = (params.format || args[0]) ?? 'text';
-	if (format !== 'text' && format !== 'list' && format !== 'number' && format !== 'check') {
+	if (!isInputFormat(format)) {
 		return {
 			type: 'invalid',
-			message: `Invalid input format; expected 'text', 'list', 'number' or 'check', got '${format}' instead`
+			message: `Invalid input format; expected ${inputFormats.map((f) => `'${f}'`).join(', ')}, got '${format}' instead`
 		};
 	}
 	return { type: 'input', format };

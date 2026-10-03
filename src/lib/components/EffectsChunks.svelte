@@ -36,6 +36,25 @@
 			display: 'block',
 			height: '4em',
 			marginTop: css.spacing.xs
+		},
+		formatWrapper: {
+			height: '1em',
+			padding: '0.1em',
+			borderRight: `1px solid ${css.palette.ivory}`
+		},
+		formatIcon: {
+			width: '1em',
+			height: '1em',
+			verticalAlign: 'middle'
+		},
+		playerInput: {
+			width: '5em'
+		},
+		playerListInput: {
+			width: '100%'
+		},
+		resourceInput: {
+			width: '2.5em'
 		}
 	});
 </script>
@@ -45,6 +64,7 @@
 	import InlineSvg from './InlineSvg.svelte';
 	import KingdomStatDisplay from './KingdomStatDisplay.svelte';
 	import ResourceDisplay from './ResourceDisplay.svelte';
+	import { isResourceType } from '$lib/models/resources';
 
 	interface Props {
 		chunks: Array<Chunk>;
@@ -81,9 +101,34 @@
 				[styles.numericInput]: chunk.format === 'number',
 				[styles.textInput]: chunk.format === 'text',
 				[styles.listInput]: chunk.format === 'list',
-				[styles.checkInput]: chunk.format === 'check'
+				[styles.checkInput]: chunk.format === 'check',
+				[styles.playerInput]: chunk.format === 'player' || chunk.format === 'kingdom-member',
+				[styles.playerListInput]: chunk.format === 'players' || chunk.format === 'kingdom-members',
+				[styles.resourceInput]: isResourceType(chunk.format)
 			})}
-		></span>
+		>
+			{#if chunk.format === 'player'}
+				<span class={styles.formatWrapper}>
+					<InlineSvg class={styles.formatIcon} src="keywords/player.svg" />
+				</span>
+			{:else if chunk.format === 'kingdom-member'}
+				<span class={styles.formatWrapper}>
+					<InlineSvg class={styles.formatIcon} src="keywords/kingdom-member.svg" />
+				</span>
+			{:else if chunk.format === 'players'}
+				<span class={styles.formatWrapper}>
+					<InlineSvg class={styles.formatIcon} src="keywords/players.svg" />
+				</span>
+			{:else if chunk.format === 'kingdom-members'}
+				<span class={styles.formatWrapper}>
+					<InlineSvg class={styles.formatIcon} src="keywords/kingdom-members.svg" />
+				</span>
+			{:else if isResourceType(chunk.format)}
+				<span class={styles.formatWrapper}>
+					<ResourceDisplay resource={chunk.format} />
+				</span>
+			{/if}
+		</span>
 	{:else}
 		{exhaustiveCheck(chunk)}
 	{/if}
