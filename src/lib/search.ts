@@ -21,6 +21,12 @@ const unsortedFilterEntries: Array<FilterEntry> = [
 	{ kind: 'option', id: 'all', title: 'Qualsevol', matches: () => true },
 	{
 		kind: 'option',
+		id: 'common',
+		title: getProperty('common').title,
+		matches: (card) => card.type === 'common'
+	},
+	{
+		kind: 'option',
 		id: 'office',
 		title: getProperty('office').title,
 		matches: (card) => card.type === 'office'
