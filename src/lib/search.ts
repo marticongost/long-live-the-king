@@ -17,7 +17,7 @@ export type FilterGroup = {
 
 export type FilterEntry = FilterOption | FilterGroup;
 
-export const filterEntries: ReadonlyArray<FilterEntry> = [
+const unsortedFilterEntries: Array<FilterEntry> = [
 	{ kind: 'option', id: 'all', title: 'Qualsevol', matches: () => true },
 	{
 		kind: 'option',
@@ -100,6 +100,13 @@ export const filterEntries: ReadonlyArray<FilterEntry> = [
 		matches: (card) => card.type === 'house'
 	}
 ];
+
+export const filterEntries: ReadonlyArray<FilterEntry> = unsortedFilterEntries.sort((a, b) => {
+	// Keep "Qualsevol" first, then sort the rest alphabetically.
+	if (a.id === 'all') return -1;
+	if (b.id === 'all') return 1;
+	return a.title.localeCompare(b.title, 'ca', { sensitivity: 'base' });
+});
 
 const typePropertyIds = new Set<string>(cardTypes);
 
