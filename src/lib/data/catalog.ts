@@ -1,5 +1,6 @@
 import {
 	Asset,
+	Common,
 	Event,
 	Goal,
 	House,
@@ -8,6 +9,7 @@ import {
 	Tactic,
 	type AssetData,
 	type Card,
+	type CommonData,
 	type EventData,
 	type GoalData,
 	type HouseData,
@@ -39,6 +41,14 @@ function pathToId(path: string) {
 }
 
 export const cardsCatalog = new CardsCatalog();
+
+cardsCatalog.load(
+	import.meta.glob<CommonData>(`./common/**/*.ts`, {
+		eager: true,
+		import: 'default'
+	}),
+	Common
+);
 
 cardsCatalog.load(
 	import.meta.glob<OfficeData>(`./offices/**/*.ts`, {

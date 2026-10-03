@@ -59,27 +59,6 @@
 		}
 	});
 
-	function getIcon(card: Card): string {
-		switch (card.type) {
-			case 'office':
-				return `offices/${card.id}.svg`;
-			case 'goal':
-				return `goals/${card.id}.svg`;
-			case 'event':
-				return `events/${card.id}.svg`;
-			case 'law':
-				return `laws/${card.id}.svg`;
-			case 'tactic':
-				return `tactics/${card.id}.svg`;
-			case 'asset':
-				return `assets/${card.id}.svg`;
-			case 'house':
-				return `houses/${card.id}.svg`;
-			default:
-				return assertNever(card, 'Unknown card type');
-		}
-	}
-
 	function getBackgroundImage(cardCapability: CardCapability): string {
 		const card = cardCapability.card;
 		if (card.type === 'asset' && card.hidden) {
@@ -92,22 +71,18 @@
 </script>
 
 <script lang="ts">
-	import {
-		assertNever,
-		standardAttributes,
-		type StandardAttributeProps
-	} from '$lib/components/utils';
-	import { type Card } from '$lib/models/cards';
+	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
 	import type { CardCapability } from '$lib/models/cardcapabilities';
+	import { getCardIcon } from '$lib/cardattributes';
 
 	interface Props extends StandardAttributeProps {
 		cardCapability: CardCapability;
 	}
 
 	const { cardCapability, ...attributes }: Props = $props();
-	const icon = $derived(getIcon(cardCapability.card));
+	const icon = $derived(getCardIcon(cardCapability.card));
 </script>
 
 <div

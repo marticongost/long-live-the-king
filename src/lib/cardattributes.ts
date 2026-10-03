@@ -4,6 +4,8 @@ import type { Card } from './models/cards';
 
 export function getCardIcon(card: Card): string {
 	switch (card.type) {
+		case 'common':
+			return `common/${card.id}.svg`;
 		case 'office':
 			return `offices/${card.id}.svg`;
 		case 'goal':

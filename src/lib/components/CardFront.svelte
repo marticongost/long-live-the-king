@@ -164,13 +164,6 @@
 			<InlineSvg class={styles.icon} src={icon} />
 		</div>
 	</div>
-	{#if card.type === 'house'}
-		<div class={styles.houseCapabilities}>
-			{#each card.houseCapabilities as capability, index (index)}
-				<CapabilityDisplay {capability} />
-			{/each}
-		</div>
-	{/if}
 	<div class={styles.body}>
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />

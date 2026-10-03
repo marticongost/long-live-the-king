@@ -1,5 +1,6 @@
 const propertyData = {
 	// Card types (implicit properties)
+	common: 'Accions comunes',
 	event: 'Esdeveniment',
 	office: 'Càrrec',
 	goal: 'Objectiu',

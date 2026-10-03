@@ -2,7 +2,16 @@ import { buildCapability, type Capability, type CapabilitySpec } from './capabil
 import { getProperty, type Property, type PropertyId } from './properties';
 import { ResourceSet, type ResourceSetProps } from './resourcesets';
 
-export const cardTypes = ['office', 'goal', 'event', 'law', 'tactic', 'asset', 'house'] as const;
+export const cardTypes = [
+	'common',
+	'office',
+	'goal',
+	'event',
+	'law',
+	'tactic',
+	'asset',
+	'house'
+] as const;
 
 export type CardType = (typeof cardTypes)[number];
 
@@ -37,6 +46,12 @@ export abstract class BaseCard {
 	get properties(): ReadonlySet<Property> {
 		return new Set([this.type, ...this.ownProperties].map(getProperty));
 	}
+}
+
+export type CommonData = CardData;
+
+export class Common extends BaseCard {
+	override readonly type = 'common';
 }
 
 export type EventData = CardData;
@@ -113,35 +128,10 @@ export type HouseData = CardData;
 
 export class House extends BaseCard {
 	override readonly type = 'house';
-	readonly houseCapabilities: ReadonlyArray<Capability>;
-
-	constructor(id: string, { capabilities, ...base }: HouseData) {
-		super(id, { capabilities: commonHouseCapabilities, ...base });
-		this.houseCapabilities = (capabilities ?? []).map(buildCapability);
-	}
 
 	override get hidden(): boolean {
 		return false;
 	}
 }
 
-const commonHouseCapabilities: ReadonlyArray<CapabilitySpec> = [
-	{
-		type: 'action',
-		title: 'Proposar llei',
-		cost: { power: 1 },
-		effects: 'Sotmetre una llei de la fila a {vote}.'
-	},
-	{
-		type: 'secret',
-		title: 'Vigilar',
-		effects: 'Paga {input intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
-	},
-	{
-		type: 'secret',
-		title: 'Adquisicions',
-		effects: 'Aposta {input gold} per adquirir {input text} o {input gold} per {input text}.'
-	}
-] as const;
-
-export type Card = Event | Office | Goal | Tactic | Asset | Law | House;
+export type Card = Common | Event | Office | Goal | Tactic | Asset | Law | House;
