@@ -7,7 +7,33 @@ excelsa? O l'enfonsaràs a la més abjecte ignomínia?
 
 # Preparació
 
-## 1. Escollir el(s) rei(s)
+## 1. Escollir el director de joc
+
+Un dels jugadors serà designat com a _director de joc_. No prendrà part directament en
+el joc, si no que assumirà un rol d'àrbitre, dinamitzador i narrador de la partida, i
+s'encarregarà de gestionar secrets i altra informació que hagi de romandre oculta a un o
+més dels jugadors. Es recomana que aquest rol s'assigni al jugador més experimentat del
+grup.
+
+El paper del director de joc i les seves atribucions s'expliquen amb més detall a una
+secció posterior.
+
+## 2. Assignar cases als jugadors
+
+Durant el joc els jugadors prenen el paper d'una de les cases nobles del regne. Hi ha
+diverses cases, cada una amb el seu emblema i habilitat especial; per determinar quina
+casa s'assigna a cada jugador, reunir les _cartes de casa_ en un piló, barrejar-lo, i
+repartir una carta a cada jugador (exceptuant el director de joc).
+
+Els jugadors posen la carta davant seu, a la vista de la resta dels jugadors, i roben
+les _targetes de capacitat_ corresponents a la carta (com s'explica en les seccions
+posteriors que detallen el funcionament de les cartes i les targetes). Les targetes es
+mantenen darrere la seva pantalla.
+
+Per acabar, roben també un _emblema_ de la seva casa, l'insereixen dins del seu penjoll
+i se'l pengen al coll.
+
+## 2. Escollir el(s) rei(s)
 
 Un dels jugadors comencarà el joc exercint el paper de _rei_. El rei és la major
 autoritat del regne, i desenvolupa un paper central al joc.
@@ -18,16 +44,15 @@ aleatòria, o bé escollir a un jugador en concret, si tots els jugadors hi esta
 Si la partida té un nombre elevat de jugadors, es començarà amb múltiples regnes en joc,
 cada un amb el seu rei. Per cada fracció completa de 4 jugadors (sense comptar al
 director de joc), afegir un regne a la partida. Designar un rei per cada regne, ja sigui
-aleatòriament o segons les preferències dels jugadors. De la mateixa manera, cada
-jugador s'emparella amb un dels regnes (altre cop, de forma aleatòria o segons les
-preferències d'uns i altres). Sigui quin sigui el mètode de selecció, els jugadors han
-de repartir-se entre els regnes disponibles de la forma més equitativa possible.
+aleatòriament o segons les preferències dels jugadors. La resta de jugadors són
+assignats als diferents regnes de la forma més equitativa possible (altre cop, de forma
+aleatòria o segons les preferències d'uns i altres).
 
 ```example
 En Marc, la Dària, el Jordi, la Marta, el Joan i la Verònica estan preparant una
 partida. El Marc fa de director de joc, així que el total és de 5 jugadors. 5 / 4
-arrodonint cap a baix = 1, així que comencen la partida amb un sol regne, i designen
-a la Verònica com a rei.
+arrodonint cap a baix = 1, de manera que comencen la partida amb un sol regne, i
+designen a la Verònica com a rei.
 
 El cap de setmana següent tornen a jugar, però aquest cop se'ls uneixen el Gerard,
 l'Oriol, la Marina i el Jan, portant el total de jugadors fins a 9. Com que 9 / 4
@@ -38,30 +63,38 @@ aleatòriament entre els dos regnes restants. Un dels regnes tindrà 4 jugadors,
 5.
 ```
 
-## 2. Repartir objectius
+Cada jugador ha d'afegir un segon emblema al seu penjoll, sobre el de la seva casa,
+corresponent a la casa del seu rei (si són súbdits d'un altre jugador) o un emblema de
+rei (si són els reis del seu regne).
+
+## 3. Repartir objectius
 
 Cada jugador compta amb un seguit de metes i ambicions personals, i opinions sobre què
 és el més adequat pel regne. Aquestes fites es representen amb les **cartes
 d'objectiu**.
 
-Barallar les dues piles d'objectius col·lectius i personals. Repartir dues cartes
-d'objectiu col·lectiu i dues cartes d'objectiu personal cada jugador, en secret. Cada
-jugador ha de quedar-se un objectiu col·lectiu i un de personal, i tornar la resta a les
-seves respectives baralles - amb compte de no revelar els objectius retornats als altres
-jugadors.
+Barallar les dues piles d'objectius col·lectius i personals. El director de joc
+reparteix dues cartes d'objectiu col·lectiu i dues cartes d'objectiu personal a cada
+jugador, en secret. Abans de donar-les als jugadors, el director de joc ha de comprovar
+que no hi hagi cap carta repetida a la selecció - si fos el cas, descartar les cartes
+repetides i robar substituts, tants cops com sigui necessari.
 
-Un cop tornats tots els objectius, remenar les dues baralles.
+Cada jugador ha de quedar-se un objectiu col·lectiu i un de personal, i tornar la resta
+a les seves respectives baralles - amb compte de no revelar els objectius retornats als
+altres jugadors.
 
-## 3. Repartir tàctiques
+Un cop tornats tots els objectius, remenar les dues baralles i deixar-les a part.
 
-Remenar la baralla de **cartes de tàctica**, i repartir-ne 4 a cada jugador.
+## 4. Repartir tàctiques
 
-## 4. Repartir recursos inicials
+Remenar la baralla de **cartes de tàctica**, i repartir-ne 3 a cada jugador.
 
-Repartir 3 recursos de cada tipus ({prestige}, {gold}, {power}, {intrigue},
-{strength}) a cada jugador.
+## 5. Repartir recursos inicials
 
-## 5. Nomenaments inicials
+Repartir 3 recursos de cada tipus exceptuant el {favour} ({prestige}, {gold}, {power},
+{intrigue}, {strength}, {faith}) a cada jugador.
+
+## 6. Nomenaments inicials
 
 Per cada regne, el seu rei pren una còpia de cada **carta de càrrec** (excepte la de
 Rei), formant la seva reserva de càrrecs. A continuació, pot assignar un o més d'aquests
@@ -71,9 +104,18 @@ Cada càrrec proporciona poder i responsabilitats addicionals al jugador que el 
 rei haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
 poder i ambicions personals dels membres del consell amb les necessitats del seu regne.
 
-```comment
-Need to setup the law and asset rows
-```
+En rebre una carta de càrrec es reben també totes les targetes de capacitat
+corresponents.
+
+## 7. Preparar el mercat d'actius
+
+Reunir les cartes d'{asset} en dos pilons (visible i no visible). Seguir les indicacions
+de la secció [](#prepare-market) per preparar el mercat d'actius, robant dels dos
+pilons.
+
+### 8. Preparar la fila de lleis
+
+Foobar
 
 # Conceptes
 
@@ -735,7 +777,7 @@ Durant la preparació del torn, totes les cartes restants a la primera fila es d
 i les cartes de la segona fila es mouen a la primera fila, passant a estar a la venta;
 es roba una nova fornada de cartes per omplir la segona fila.
 
-### Preparar les files del mercat
+### Preparar les files del mercat #prepare-market
 
 Quan calgui preparar una fila del mercat (ja sigui al principi del joc, o al final de
 cada torn), cal seguir les següents indicacions:
