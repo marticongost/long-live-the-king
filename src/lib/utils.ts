@@ -31,3 +31,17 @@ export const mapToRecord = <
 	}
 	return record;
 };
+
+/** Transforms a heading title into a URL-safe fragment id.
+ *  Strips Catalan elision articles ("d'", "l'") so "subhasta d'actius" becomes
+ *  "subhasta-actius", removes diacritics, lowercases, and collapses any run of
+ *  non-alphanumeric characters into a single hyphen.
+ */
+export const slugify = (text: string): string =>
+	text
+		.toLowerCase()
+		.replace(/\b[dl]'/g, '')
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-+|-+$/g, '');
