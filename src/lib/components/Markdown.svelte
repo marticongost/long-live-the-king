@@ -76,6 +76,9 @@
 			paddingLeft: css.spacing.md,
 			color: css.text.subtleColor
 		},
+		table: {
+			...css.vmargin(simpleParagraphSpacing)
+		},
 		code: {
 			backgroundColor: css.palette.blush,
 			border: `1px solid ${css.palette.thatch}`,
@@ -166,6 +169,7 @@
 	import { cx } from '@emotion/css';
 	import EffectsChunks from './EffectsChunks.svelte';
 	import InlineSvg from './InlineSvg.svelte';
+	import Table from './Table.svelte';
 	import { standardAttributes, type StandardAttributeProps } from './utils';
 
 	interface Props extends StandardAttributeProps {
@@ -284,6 +288,25 @@
 				{:else}
 					<pre class={styles.code}><code>{token.text}</code></pre>
 				{/if}
+			{:else if token.type === 'table'}
+				<Table class={styles.table}>
+					<thead>
+						<tr>
+							{#each token.header as cell (cell)}
+								{@render renderTableCell(cell)}
+							{/each}
+						</tr>
+					</thead>
+					<tbody>
+						{#each token.rows as row (row)}
+							<tr>
+								{#each row as cell (cell)}
+									{@render renderTableCell(cell)}
+								{/each}
+							</tr>
+						{/each}
+					</tbody>
+				</Table>
 			{:else if token.type === 'hr'}
 				<hr class={styles.hr} />
 			{/if}
@@ -294,6 +317,18 @@
 		<li class={styles.listItem}>
 			{@render renderBlocks(item.tokens)}
 		</li>
+	{/snippet}
+
+	{#snippet renderTableCell(cell: Tokens.TableCell)}
+		{#if cell.header}
+			<th style:text-align={cell.align ?? undefined}>
+				{@render renderInline(cell.tokens)}
+			</th>
+		{:else}
+			<td style:text-align={cell.align ?? undefined}>
+				{@render renderInline(cell.tokens)}
+			</td>
+		{/if}
 	{/snippet}
 
 	{#snippet renderInline(inlineTokens: Token[])}
