@@ -967,8 +967,8 @@ per la {intrigue} Intriga i el {favour} Favor:
   estable sigui el regne, menys {intrigue} Intriga produirà, i viceversa.
 - El Rei serà més donat a repartir el seu {favour} Favor si el regne prospera, i
   viceversa. El {favour} Favor es calcula a partir del valor de l'indicador de regne més
-  baix entre la resta d'indicadors ({gold} Diners, {power} Poder, {strength} Força i
-  {faith} Fè).
+  baix (d'entre {wealth} Riquesa, {stability} Estabilitat, {might} Exèrcit i {grace}
+  Gràcia).
 
 ```example
 Comença la fase de producció. La partida té dos regnes:
