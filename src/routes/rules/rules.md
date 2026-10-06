@@ -934,6 +934,104 @@ tradueix en:
 
 ## Fase d'esdeveniments
 
+## Fase de producció
+
+En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
+membres.
+
+### Recursos produïts
+
+Cada regne produeix recursos segons el nombre de membres i el valor del seu
+{kingdomStat} associat, tal com s'indica a la taula següent:
+
+```kingdomProductionTable
+
+```
+
+Es produeixen recursos de tots els tipus, exceptuant el {prestige} prestigi, utilitzant
+per cada tipus de recurs el seu {kingdomStat} associat:
+
+| Recurs                 | Indicador                   |
+| ---------------------- | --------------------------- |
+| {gold} **Diners**      | {wealth} Riquesa            |
+| {power} **Poder**      | {stability} Estabilitat     |
+| {strength} **Força**   | {might} Exèrcit             |
+| {faith} **Fè**         | {grace} Gràcia              |
+| {intrigue} **Intriga** | 6 - {stability} Estabilitat |
+| {favour} **Favor**     | El més baix                 |
+
+Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdomStat}, excepte
+per la {intrigue} Intriga i el {favour} Favor:
+
+- La intriga és inversament proporcional a l'{stability} Estabilitat del regne. Com més
+  estable sigui el regne, menys {intrigue} Intriga produirà, i viceversa.
+- El Rei serà més donat a repartir el seu {favour} Favor si el regne prospera, i
+  viceversa. El {favour} Favor es calcula a partir del valor de l'indicador de regne més
+  baix entre la resta d'indicadors ({gold} Diners, {power} Poder, {strength} Força i
+  {faith} Fè).
+
+```example
+Comença la fase de producció. La partida té dos regnes:
+- Un de 3 membres, amb els indicadors força alts: {wealth} 4, {stability} 5, {might} 3 i
+  {grace} 5
+- Un de 5 membres, amb els indicadors força baixos: {wealth} 2, {stability} 1, {might} 1
+  i {grace} 2
+
+Consultant la taula, veiem que el primer regne produirà {gold 6}, {power 8},
+{strength 5}, {faith 8}, {intrigue 2} i {favour 5}.
+
+Per contra, tot i tenir dos membres més, el segon regne produirà menys quantitat de la
+majoria de recursos: {gold 5}, {power 3}, {strength 3}, {faith 5}, {intrigue 13} i
+{favour 3}. En canvi, produrià una gran quantitat d'{intrigue} Intriga - resultat de
+tenir l'{stability} Estabilitat tan baixa!
+```
+
+### Repartiment
+
+Un cop determinada la quantitat d'un recurs que s'ha produït, es procedeix a repartir-lo
+entre els membres del regne.
+
+En primer lloc, cal determinar quin dels membres del regne serà el responsable de
+repartir el recurs:
+
+| Recurs             | Responsable     |
+| ------------------ | --------------- |
+| {gold} Diners      | Tresorer        |
+| {power} Poder      | Canceller       |
+| {strength} Força   | Comandant       |
+| {faith} Fè         | Bisbe           |
+| {intrigue} Intriga | Mestre d'espies |
+| {favour} Favor     | Rei             |
+
+Si el càrrec indicat està buit, el repartiment d'aquell recurs passarà a ser
+responsabilitat del rei.
+
+El jugador responsable pren tots els recursos, i els reparteix de la forma adequada al
+tipus de recurs que s'estigui repartint, com s'indica a continuació.
+
+#### Repartir favor
+
+Si el recurs a repartir és el {favour} Favor, es reparteix lliurement entre els
+membres del regne. No cal mantenir cap equitat, a menys que així es desitgi (al cap de
+vall, el rei és el rei i dona el seu favor a qui ell vulgui!). Tanmateix, el Rei no
+pot donar-se favor a sí mateix.
+
+#### Repartir altres recursos
+
+En primer lloc, el responsable del repartiment pot decidir si vol quedar-se una
+unitat del recurs per sí mateix (privilegis de gestionar la caixa!). Si ho fa, el recurs
+manllevat no es comptabilitza en el recompte.
+
+A continuació, reparteix els recursos restants entre els membres del regne (incloent ell
+mateix, tan equitativament com sigui possible. En cas que el total de recursos restants
+no sigui divisible pel nombre de membres del regne, el responsable del repartiment
+decideix quins jugadors rebran un recurs menys que els demés.
+
+### Jugadors sense regne
+
+Durant aquesta fase, tractar els jugadors que no pertanyin a cap regne com si
+pertanyessin a un regne amb ells mateixos com a únic membre i Rei.
+
 ## Fase de preparació
 
 ## Fase de conflicte
