@@ -6,7 +6,11 @@
 	const styles = css.styles({
 		kingdomStatDisplay: {},
 		icon: {
-			color: css.palette.wood
+			height: '1.2em',
+			backgroundColor: css.palette.wood,
+			color: css.palette.white,
+			padding: '0.2em',
+			borderRadius: '0.4em'
 		},
 		name: {
 			fontWeight: 'bold'
@@ -26,7 +30,7 @@
 </script>
 
 <span {...standardAttributes(attributes, styles.kingdomStatDisplay)}>
-	<InlineSvg class={styles.icon} src="kingdomStats/{kingdomStat}.svg" />
+	<InlineSvg class={styles.icon} src="kingdom-stats/{kingdomStat}.svg" />
 	<span class={styles.name}>
 		{getKingdomStat(kingdomStat).title}
 	</span>
