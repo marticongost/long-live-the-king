@@ -185,32 +185,79 @@ consellers.
 El regne té un seguit d'_indicadors_ que reflecteixen la seva fortalesa en diferents
 àrees.
 
-Cada indicador es representa amb un valor numèric entre l'1 (desastre) i el 5
-(excel·lència). A l'inici del joc els indicadors comencen amb un valor neutre de 3, però
-diferents cartes i efectes poden moure'ls en una o altra direcció.
+### Tipus d'indicadors
 
-Cada indicador està estretament vinculat a un tipus de recurs, com s'indica a
-continuació. Aquesta relació serà rellevant durant la _fase de producció_, en que els
-membres del regne guanyaran més o menys recursos en funció del valor de cada indicador.
-
-### {stability} Estabilitat
+#### {stability} Estabilitat
 
 Representa l'ordre i seguretat interna del regne, i el grau de contentament dels seus
 habitants. Recurs vinculat: {power} **Poder**.
 
-### {wealth} Riquesa
+L'estabilitat també és rellevant per establir la {intrigue} **Intriga** disponible al
+regne; els regnes més inestables generaran més intriga, i viceversa.
+
+#### {wealth} Riquesa
 
 Un reflex de la riquesa material del regne. Recurs vinculat: {gold} **Diners**.
 
-### {might} Exèrcit
+#### {might} Exèrcit
 
 Reflecteix la mida i preparació de les forces armades del regne. Recurs vinculat:
 {strength} **Força**.
 
-### {grace} Gràcia
+#### {grace} Gràcia
 
 Indica la riquesa espiritual del regne i la seva rectitud moral. Recurs vinculat:
 {faith} **Fè**.
+
+### Valors
+
+Cada indicador es representa amb un valor numèric entre l'1 (desastre) i el 5
+(excel·lència). A l'inici del joc els indicadors comencen amb un valor neutre de 3, però
+diferents cartes i efectes poden moure'ls en una o altra direcció.
+
+### Efectes sobre la producció
+
+Cada indicador està estretament vinculat a un tipus de recurs, com s'indica a
+continuació. Aquesta relació serà rellevant durant la [](#production-fase), en que els
+membres del regne guanyaran més o menys recursos en funció del valor de cada indicador.
+En general, com més alt sigui un indicador, més recursos del tipus vinculat seran
+generats pel regne.
+
+### Fricció
+
+Al llarg de la partida, diferents cartes i efectes poden fer que el valor d'un indicador
+fluctui amunt i avall. Si la direcció del canvi allunya l'indicador del seu valor central,
+caldrà pagar una penalització per fricció per fer-ho (a més del cost normal de l'efecte),
+tal i com s'indica a la taula següent:
+
+| Nou valor | Fricció |
+| --------- | ------- |
+| 5         | 2       |
+| 4         | 1       |
+| 3         | 0       |
+| 2         | 1       |
+| 1         | 2       |
+
+```example
+El regne té l'indicador de {wealth} **Riquesa** a 4. El Marc paga un efecte de cost
+{power 3} per augmentar-lo en 1. Consultant la taula, haurà de pagar una penalització
+per fricció de {power 2}, per un total de {power 5}.
+
+A continuació, la Dària utilitza un efecte de cost {intrigue 2} per reduir {wealth}
+en 1. Com que la direcció del canvi acosta l'indicador cap al centre (3), no haurà de
+pagar cap cost addicional.
+```
+
+Si un mateix efecte fa avançar un indicador múltiples vegades, sumar la penalització per
+fricció de cada pas de forma separada.
+
+```example
+L'indicador de {wealth} ha quedat establert en 4. A continuació, el Gerard utilitza un
+efecte de cost {strength 6} que li permet reduir-lo en 3. El pas de 4 a 3 acosta
+l'indicador al centre, així que no suposa un cost addicional; tanmateix, el pas de 3 a
+2 i de 2 a 1 l'allunyen, així que haurà de pagar la penalització associada a cada un
+d'aquests passos (1 i 2, respectivament). El cost total serà de {strength 9} (6 + 1 + 2).
+```
 
 ## Cartes
 
@@ -935,7 +982,7 @@ tradueix en:
 
 ## Fase d'esdeveniments
 
-## Fase de producció
+## Fase de producció #production-fase
 
 En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
 membres.
