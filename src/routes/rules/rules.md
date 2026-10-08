@@ -109,13 +109,14 @@ corresponents.
 
 ## 7. Preparar el mercat d'actius
 
-Reunir les cartes d'{asset} en dos pilons (visible i no visible). Seguir les indicacions
-de la secció [](#prepare-market) per preparar el mercat d'actius, robant dels dos
-pilons.
+Reunir les cartes d'{asset} en dos pilons ({visible} visible i {hidden} no visible).
+Remenar els dos pilons. Seguir les indicacions de la secció [](#prepare-market) per
+preparar el mercat d'actius, robant dels dos pilons.
 
-### 8. Preparar la fila de lleis
+## 8. Preparar la fila de lleis
 
-Foobar
+Reunir les cartes de {law} en un piló. Remenar el piló, robar 3 cartes i disposar les
+cartes en fila a l'espai dedicat del taulell.
 
 # Conceptes
 
