@@ -126,45 +126,45 @@ Els jugadors poden acumular diferents tipus de recursos. Els recursos es poden g
 perdre, gastar i intercanviar durant la partida, a través de diferents accions i efectes
 del joc.
 
-### {prestige} Prestigi
+### {prestige-label}
 
 El prestigi representa el reconeixement, la fama i el llegat acumulat per un personatge.
 És el recurs més valuós del joc: a diferència de la resta de recursos, no és habitual
 utilitzar-lo per pagar l'activació d'habilitats i efectes, ja que l'objectiu de la
 partida és acumular tant prestigi com sigui possible.
 
-### {power} Poder
+### {power-label}
 
 El poder representa el capital polític i la influència del jugador. Com la majoria de
 recursos, s'utilitza per pagar el cost de molts efectes i habilitats; a més a més, és
 especialment important per influir en el resultat de les **votacions** quan es debaten
 noves lleis al consell.
 
-### {gold} Diners
+### {gold-label}
 
 Els diners representen el poder econòmic i financer del jugador. Com la majoria de
 recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; a més a més, són
 especialment rellevants a l'hora d'aquirir nous **actius**, durant la {assetsBid}.
 
-### {intrigue} Intriga
+### {intrigue-label}
 
 La intriga representa l'astúcia, plans secrets i afinitat pel joc brut del jugador. Com
 la majoria de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en
 particular, són la moneda principal a l'hora d'executar (o evitar) **complots**.
 
-### {strength} Força
+### {strength-label}
 
 La força representa les forces militars i talent marcial del jugador. Com la majoria
 de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en particular,
 agressions directes o defensa del regne contra els invasors, entre d'altres.
 
-### {faith} Fè
+### {faith-label}
 
 La fè representa el fervor religiós i espiritualitat del jugador i els seus vasalls. Com
 la majoria de recursos, s'utilitza per pagar el cost de molts efectes i habilitats; en
 particular, en crisis de caràcter religiós o moral.
 
-### {favour} Favor reial
+### {favour-label}
 
 El favor reial representa l'autoritat i voluntat del monarca, i actua com un comodí que
 pot utilitzar-se per substituir qualsevol dels altres recursos - cosa que el fa altament
@@ -187,27 +187,27 @@ El regne té un seguit d'_indicadors_ que reflecteixen la seva fortalesa en dife
 
 ### Tipus d'indicadors
 
-#### {stability} Estabilitat
+#### {stability-label}
 
 Representa l'ordre i seguretat interna del regne, i el grau de contentament dels seus
-habitants. Recurs vinculat: {power} **Poder**.
+habitants. Recurs vinculat: {power-label}.
 
-L'estabilitat també és rellevant per establir la {intrigue} **Intriga** disponible al
+L'estabilitat també és rellevant per establir la {intrigue-label} disponible al
 regne; els regnes més inestables generaran més intriga, i viceversa.
 
-#### {wealth} Riquesa
+#### {wealth-label}
 
-Un reflex de la riquesa material del regne. Recurs vinculat: {gold} **Diners**.
+Un reflex de la riquesa material del regne. Recurs vinculat: {gold-label}.
 
-#### {might} Exèrcit
+#### {might-label}
 
 Reflecteix la mida i preparació de les forces armades del regne. Recurs vinculat:
-{strength} **Força**.
+{strength-label}.
 
-#### {grace} Gràcia
+#### {grace-label}
 
 Indica la riquesa espiritual del regne i la seva rectitud moral. Recurs vinculat:
-{faith} **Fè**.
+{faith-label}.
 
 ### Valors
 
@@ -239,7 +239,7 @@ tal i com s'indica a la taula següent:
 | 1         | 2       |
 
 ```example
-El regne té l'indicador de {wealth} **Riquesa** a 4. El Marc paga un efecte de cost
+El regne té l'indicador de {wealth-label} a 4. El Marc paga un efecte de cost
 {power 3} per augmentar-lo en 1. Consultant la taula, haurà de pagar una penalització
 per fricció de {power 2}, per un total de {power 5}.
 
@@ -1019,24 +1019,23 @@ Cada regne produeix recursos segons el nombre de membres i el valor del seu
 Es produeixen recursos de tots els tipus, exceptuant el {prestige} prestigi, utilitzant
 per cada tipus de recurs el seu {kingdomStat} associat:
 
-| Recurs                 | Indicador                   |
-| ---------------------- | --------------------------- |
-| {gold} **Diners**      | {wealth} Riquesa            |
-| {power} **Poder**      | {stability} Estabilitat     |
-| {strength} **Força**   | {might} Exèrcit             |
-| {faith} **Fè**         | {grace} Gràcia              |
-| {intrigue} **Intriga** | 6 - {stability} Estabilitat |
-| {favour} **Favor**     | El més baix                 |
+| Recurs           | Indicador             |
+| ---------------- | --------------------- |
+| {gold-label}     | {wealth-label}        |
+| {power-label}    | {stability-label}     |
+| {strength-label} | {might}               |
+| {faith-label}    | {grace}               |
+| {intrigue-label} | 6 - {stability-label} |
+| {favour-label}   | El més baix           |
 
 Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdomStat}, excepte
-per la {intrigue} Intriga i el {favour} Favor:
+per la {intrigue-label} el {favour-label}:
 
-- La intriga és inversament proporcional a l'{stability} Estabilitat del regne. Com més
-  estable sigui el regne, menys {intrigue} Intriga produirà, i viceversa.
-- El Rei serà més donat a repartir el seu {favour} Favor si el regne prospera, i
-  viceversa. El {favour} Favor es calcula a partir del valor de l'indicador de regne més
-  baix (d'entre {wealth} Riquesa, {stability} Estabilitat, {might} Exèrcit i {grace}
-  Gràcia).
+- La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
+  estable sigui el regne, menys {intrigue-label} produirà, i viceversa.
+- El Rei serà més donat a repartir el seu {favour-label} si el regne prospera, i
+  viceversa. El {favour-label} es calcula a partir del valor de l'indicador de regne més
+  baix (d'entre {wealth-label}, {stability-label}, {might-label} i {grace-label}.
 
 ```example
 Comença la fase de producció. La partida té dos regnes:
@@ -1050,8 +1049,8 @@ Consultant la taula, veiem que el primer regne produirà {gold 6}, {power 8},
 
 Per contra, tot i tenir dos membres més, el segon regne produirà menys quantitat de la
 majoria de recursos: {gold 5}, {power 3}, {strength 3}, {faith 5}, {intrigue 13} i
-{favour 3}. En canvi, produrià una gran quantitat d'{intrigue} Intriga - resultat de
-tenir l'{stability} Estabilitat tan baixa!
+{favour 3}. En canvi, produrià una gran quantitat d'{intrigue-label} - resultat de
+tenir l'{stability-label] tan baixa!
 ```
 
 ### Repartiment
@@ -1062,14 +1061,14 @@ entre els membres del regne.
 En primer lloc, cal determinar quin dels membres del regne serà el responsable de
 repartir el recurs:
 
-| Recurs             | Responsable     |
-| ------------------ | --------------- |
-| {gold} Diners      | Tresorer        |
-| {power} Poder      | Canceller       |
-| {strength} Força   | Comandant       |
-| {faith} Fè         | Bisbe           |
-| {intrigue} Intriga | Mestre d'espies |
-| {favour} Favor     | Rei             |
+| Recurs           | Responsable     |
+| ---------------- | --------------- |
+| {gold-label}     | Tresorer        |
+| {power-label}    | Canceller       |
+| {strength-label} | Comandant       |
+| {faith-label}    | Bisbe           |
+| {intrigue-label} | Mestre d'espies |
+| {favour-label}   | Rei             |
 
 Si el càrrec indicat està buit, el repartiment d'aquell recurs passarà a ser
 responsabilitat del rei.
@@ -1079,7 +1078,7 @@ tipus de recurs que s'estigui repartint, com s'indica a continuació.
 
 #### Repartir favor
 
-Si el recurs a repartir és el {favour} Favor, es reparteix lliurement entre els
+Si el recurs a repartir és el {favour-label}, es reparteix lliurement entre els
 membres del regne. No cal mantenir cap equitat, a menys que així es desitgi (al cap de
 vall, el rei és el rei i dona el seu favor a qui ell vulgui!). Tanmateix, el Rei no
 pot donar-se favor a sí mateix.

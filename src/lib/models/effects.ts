@@ -1,5 +1,5 @@
 import { keywords, type Keyword } from './keywords';
-import { kingdomStats, type KingdomStat } from './kingdomstats';
+import { kingdomStatTypes, type KingdomStatType } from './kingdomstats';
 import { resourceTypes, type ResourceType } from './resources';
 
 export interface TextChunk {
@@ -13,10 +13,20 @@ export interface ResourceChunk {
 	amount: number;
 }
 
+export interface ResourceLabelChunk {
+	type: 'resource-label';
+	resource: ResourceType;
+}
+
 export interface KingdomStatChunk {
 	type: 'kingdom-stat';
-	stat: KingdomStat;
+	stat: KingdomStatType;
 	amount: number;
+}
+
+export interface KingdomStatLabelChunk {
+	type: 'kingdom-stat-label';
+	stat: KingdomStatType;
 }
 
 export interface KeywordChunk {
@@ -51,7 +61,14 @@ export interface InvalidChunk {
 }
 
 export type Chunk =
-	TextChunk | ResourceChunk | KeywordChunk | KingdomStatChunk | InputChunk | InvalidChunk;
+	| TextChunk
+	| ResourceChunk
+	| ResourceLabelChunk
+	| KeywordChunk
+	| KingdomStatChunk
+	| KingdomStatLabelChunk
+	| InputChunk
+	| InvalidChunk;
 
 export interface BuilderInput {
 	params: Record<string, string>;
@@ -71,7 +88,13 @@ function resourceBuilder(resource: ResourceType): ChunkBuilder {
 	};
 }
 
-function kingdomStatBuilder(stat: KingdomStat): ChunkBuilder {
+function resourceLabelBuilder(resource: ResourceType): ChunkBuilder {
+	return (): Chunk => {
+		return { type: 'resource-label', resource };
+	};
+}
+
+function kingdomStatBuilder(stat: KingdomStatType): ChunkBuilder {
 	return ({ params, args }: BuilderInput): Chunk => {
 		const raw = params.amount ?? args[0] ?? '0';
 		const amount = Number(raw);
@@ -79,6 +102,12 @@ function kingdomStatBuilder(stat: KingdomStat): ChunkBuilder {
 			throw new Error(`Amount must be a number for kingdom stat "${stat}"`);
 		}
 		return { type: 'kingdom-stat', stat, amount };
+	};
+}
+
+function kingdomStatLabelBuilder(stat: KingdomStatType): ChunkBuilder {
+	return (): Chunk => {
+		return { type: 'kingdom-stat-label', stat };
 	};
 }
 
@@ -111,10 +140,12 @@ const builders: Partial<Record<string, ChunkBuilder>> = {
 
 for (const resourceType of resourceTypes) {
 	builders[resourceType] = resourceBuilder(resourceType);
+	builders[`${resourceType}-label`] = resourceLabelBuilder(resourceType);
 }
 
-for (const kingdomStat of kingdomStats) {
+for (const kingdomStat of kingdomStatTypes) {
 	builders[kingdomStat] = kingdomStatBuilder(kingdomStat);
+	builders[`${kingdomStat}-label`] = kingdomStatLabelBuilder(kingdomStat);
 }
 
 for (const keyword of Object.keys(keywords)) {

@@ -65,6 +65,8 @@
 	import KingdomStatDisplay from './KingdomStatDisplay.svelte';
 	import ResourceDisplay from './ResourceDisplay.svelte';
 	import { isResourceType } from '$lib/models/resources';
+	import ResourceLabel from './ResourceLabel.svelte';
+	import KingdomStatLabel from './KingdomStatLabel.svelte';
 
 	interface Props {
 		chunks: Array<Chunk>;
@@ -93,8 +95,12 @@
 		{/if}
 	{:else if chunk.type === 'resource'}
 		<ResourceDisplay resource={chunk.resource} amount={chunk.amount} />
+	{:else if chunk.type === 'resource-label'}
+		<ResourceLabel resource={chunk.resource} />
 	{:else if chunk.type === 'kingdom-stat'}
 		<KingdomStatDisplay stat={chunk.stat} amount={chunk.amount} />
+	{:else if chunk.type === 'kingdom-stat-label'}
+		<KingdomStatLabel stat={chunk.stat} />
 	{:else if chunk.type === 'input'}
 		<span
 			class={cx(styles.input, {

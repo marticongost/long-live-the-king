@@ -1,18 +1,16 @@
 <script lang="ts" module>
-	import type { KingdomStatType } from '$lib/models/kingdomstats';
+	import { getKingdomStat, type KingdomStatType } from '$lib/models/kingdomstats';
 	import * as css from '$lib/styles';
 	import InlineSvg from './InlineSvg.svelte';
 
 	const styles = css.styles({
 		kingdomStatDisplay: {},
 		icon: {
-			height: '1.2em',
-			backgroundColor: css.palette.wood,
-			color: css.palette.white,
-			padding: '0.2em',
-			borderRadius: '0.4em'
+			color: css.palette.wood
 		},
-		amount: {}
+		name: {
+			fontWeight: 'bold'
+		}
 	});
 </script>
 
@@ -24,15 +22,12 @@
 		amount?: number;
 	}
 
-	const { stat, amount = 0, ...attributes }: Props = $props();
+	const { stat: kingdomStat, ...attributes }: Props = $props();
 </script>
 
 <span {...standardAttributes(attributes, styles.kingdomStatDisplay)}>
-	<InlineSvg class={styles.icon} src="kingdom-stats/{stat}.svg" />
-	{#if amount}
-		<span class={styles.amount}>
-			{#if amount > 0}+{/if}
-			{amount}
-		</span>
-	{/if}
+	<InlineSvg class={styles.icon} src="kingdomStats/{kingdomStat}.svg" />
+	<span class={styles.name}>
+		{getKingdomStat(kingdomStat).title}
+	</span>
 </span>
