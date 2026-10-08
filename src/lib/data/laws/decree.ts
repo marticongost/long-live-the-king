@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'constant',
 			title: 'Privilegi',
-			effects: '{augments} el Canceller del regne.'
+			effects: '{augments} el {chancellor} del regne.'
 		},
 		{
 			type: 'action',

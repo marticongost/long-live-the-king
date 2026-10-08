@@ -6,7 +6,7 @@ export default {
 		{
 			title: 'Supervisió',
 			type: 'constant',
-			effects: 'Si està en vigor, els vots del Rei compten el doble.'
+			effects: 'Si està en vigor, els vots del {king} compten el doble.'
 		}
 	]
 } satisfies LawData;

@@ -8,7 +8,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects:
-				'{duel} {power} + {intrigue} + {strength} entre tots els membres del regne. Si el vencedor no és el Rei, el vencedor renúncia als seus càrrecs actuals i esdevé el nou Rei del regne.'
+				'{duel} {power} + {intrigue} + {strength} entre tots els membres del regne. Si el vencedor no és el {king}, el vencedor renúncia als seus càrrecs actuals i esdevé el nou {king} del regne.'
 		}
 	]
 } satisfies EventData;

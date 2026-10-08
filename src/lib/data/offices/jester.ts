@@ -1,7 +1,8 @@
 import type { OfficeData } from '$lib/models/cards';
+import { getOfficeName } from '$lib/models/offices';
 
 export default {
-	title: 'Bufó',
+	title: getOfficeName('jester'),
 	capabilities: [
 		{
 			type: 'reaction',

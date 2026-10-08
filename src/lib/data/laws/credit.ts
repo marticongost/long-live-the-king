@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'constant',
 			title: 'Privilegi',
-			effects: '{augments} el Tresorer del regne. Deute: {input number}.'
+			effects: '{augments} el {treasurer} del regne. Deute: {input number}.'
 		},
 		{
 			type: 'action',
@@ -20,7 +20,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnStart',
 			effects:
-				'Si Deute > 0: el Tresorer paga {gold} = Deute; si no pot, {wealth -1}. A continuació, reduir Deute en 1.'
+				'Si Deute > 0: el {treasurer} paga {gold} = Deute; si no pot, {wealth -1}. A continuació, reduir Deute en 1.'
 		}
 	]
 } satisfies LawData;

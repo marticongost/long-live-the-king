@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'constant',
 			title: 'Privilegi',
-			effects: '{augments} el Comandant del regne.'
+			effects: '{augments} el {marshal} del regne.'
 		},
 		{
 			type: 'action',

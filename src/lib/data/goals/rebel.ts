@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'gameEnd',
-			effects: 'Si el rei del teu regne inicial ha estat deposat, guanya {prestige 3}.'
+			effects: 'Si el {king} del teu regne inicial ha estat deposat, guanya {prestige 3}.'
 		}
 	]
 } satisfies GoalData;

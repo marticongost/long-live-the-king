@@ -9,7 +9,7 @@ export default {
 			type: 'reaction',
 			trigger: 'voting',
 			effects:
-				'Si ets el Rei, pots vetar la {vote} en curs: la {vote} finalitza en fracàs i la llei proposada es descarta. Si no, guanya +2 vots.'
+				'Si ets el {king}, pots vetar la {vote} en curs: la {vote} finalitza en fracàs i la llei proposada es descarta. Si no, guanya +2 vots.'
 		}
 	]
 } satisfies TacticData;

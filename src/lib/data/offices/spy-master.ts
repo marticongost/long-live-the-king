@@ -1,7 +1,8 @@
 import type { OfficeData } from '$lib/models/cards';
+import { getOfficeName } from '$lib/models/offices';
 
 export default {
-	title: "Mestre d'espies",
+	title: getOfficeName('spy-master'),
 	capabilities: [
 		{
 			type: 'reaction',

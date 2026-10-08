@@ -1,3 +1,4 @@
+import { getOfficeName, officeTypes } from './offices';
 import { getProperties } from './properties';
 
 export const keywords = {
@@ -44,7 +45,8 @@ export const keywords = {
 	crisis: undefined,
 	reaction: undefined,
 	constant: undefined,
-	...Object.fromEntries(getProperties().map((property) => [property.id, property.title]))
+	...Object.fromEntries(getProperties().map((property) => [property.id, property.title])),
+	...Object.fromEntries(officeTypes.map((type) => [type, getOfficeName(type)]))
 };
 
 export type Keyword = keyof typeof keywords;

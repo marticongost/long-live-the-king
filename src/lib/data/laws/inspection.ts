@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'constant',
 			title: 'Privilegi',
-			effects: "{augments} el Mestre d'espies del regne."
+			effects: '{augments} el {spy-master} del regne.'
 		},
 		{
 			type: 'action',

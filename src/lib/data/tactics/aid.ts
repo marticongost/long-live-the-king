@@ -8,7 +8,7 @@ export default {
 			type: 'reaction',
 			trigger: 'afterDuelDeclared',
 			effects:
-				'Si ets el Rei, pots pagar {power 1} per cancel·lar el duel. Si no, els demés {players} poden donar-te qualsevol quantitat dels seus recursos.'
+				'Si ets el {king}, pots pagar {power 1} per cancel·lar el duel. Si no, els demés {players} poden donar-te qualsevol quantitat dels seus recursos.'
 		}
 	]
 } satisfies TacticData;

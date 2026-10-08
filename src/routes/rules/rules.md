@@ -33,17 +33,17 @@ mantenen darrere la seva pantalla.
 Per acabar, roben també un _emblema_ de la seva casa, l'insereixen dins del seu penjoll
 i se'l pengen al coll.
 
-## 2. Escollir el(s) rei(s)
+## 2. Escollir el(s) {king}(s)
 
-Un dels jugadors comencarà el joc exercint el paper de _rei_. El rei és la major
+Un dels jugadors comencarà el joc exercint el paper de _rei_. El {king} és la major
 autoritat del regne, i desenvolupa un paper central al joc.
 
-Per escollir qui farà de rei al principi de la partida es pot utilitzar una selecció
+Per escollir qui farà de {king} al principi de la partida es pot utilitzar una selecció
 aleatòria, o bé escollir a un jugador en concret, si tots els jugadors hi estan d'acord.
 
 Si la partida té un nombre elevat de jugadors, es començarà amb múltiples regnes en joc,
-cada un amb el seu rei. Per cada fracció completa de 4 jugadors (sense comptar al
-director de joc), afegir un regne a la partida. Designar un rei per cada regne, ja sigui
+cada un amb el seu {king}. Per cada fracció completa de 4 jugadors (sense comptar al
+director de joc), afegir un regne a la partida. Designar un {king} per cada regne, ja sigui
 aleatòriament o segons les preferències dels jugadors. La resta de jugadors són
 assignats als diferents regnes de la forma més equitativa possible (altre cop, de forma
 aleatòria o segons les preferències d'uns i altres).
@@ -52,20 +52,20 @@ aleatòria o segons les preferències d'uns i altres).
 En Marc, la Dària, el Jordi, la Marta, el Joan i la Verònica estan preparant una
 partida. El Marc fa de director de joc, així que el total és de 5 jugadors. 5 / 4
 arrodonint cap a baix = 1, de manera que comencen la partida amb un sol regne, i
-designen a la Verònica com a rei.
+designen a la Verònica com a {king}.
 
 El cap de setmana següent tornen a jugar, però aquest cop se'ls uneixen el Gerard,
 l'Oriol, la Marina i el Jan, portant el total de jugadors fins a 9. Com que 9 / 4
 arrodonint cap a baix = 2, començaran amb 2 regnes en joc. Els jugadors escullen la
-Marta i el Jan per assumir el càrrec de rei dels seus respectius regnes. El Jordi demana
+Marta i el Jan per assumir el càrrec de {king} dels seus respectius regnes. El Jordi demana
 si pot unir-se al regne del Jan, i els jugadors li permeten. La resta es reparteixen
 aleatòriament entre els dos regnes restants. Un dels regnes tindrà 4 jugadors, i l'altre
 5.
 ```
 
 Cada jugador ha d'afegir un segon emblema al seu penjoll, sobre el de la seva casa,
-corresponent a la casa del seu rei (si són súbdits d'un altre jugador) o un emblema de
-rei (si són els reis del seu regne).
+corresponent a la casa del seu {king} (si són súbdits d'un altre jugador) o un emblema de
+{king} (si són els reis del seu regne).
 
 ## 3. Repartir objectius
 
@@ -96,12 +96,12 @@ Repartir 3 recursos de cada tipus exceptuant el {favour} ({prestige}, {gold}, {p
 
 ## 6. Nomenaments inicials
 
-Per cada regne, el seu rei pren una còpia de cada **carta de càrrec** (excepte la de
-Rei), formant la seva reserva de càrrecs. A continuació, pot assignar un o més d'aquests
+Per cada regne, el seu {king} pren una còpia de cada **carta de càrrec** (excepte la de
+{king}), formant la seva reserva de càrrecs. A continuació, pot assignar un o més d'aquests
 càrrecs a membres del seu regne.
 
 Cada càrrec proporciona poder i responsabilitats addicionals al jugador que el rep. El
-rei haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
+{king} haurà de considerar curosament com distribuir aquestes potestats, equilibrant el
 poder i ambicions personals dels membres del consell amb les necessitats del seu regne.
 
 En rebre una carta de càrrec es reben també totes les targetes de capacitat
@@ -175,8 +175,8 @@ El Marc ha de pagar un efecte que costa {power 3}. Utilitza dues fitxes de {powe
 de {favour}.
 ```
 
-El favor reial només és produit pel Rei: a l'inici del torn, el jugador que controla el
-rei el reparteix entre els demés membres del regne, proporcionant-li un control
+El favor reial només és produit pel {king}: a l'inici del torn, el jugador que controla el
+{king} el reparteix entre els demés membres del regne, proporcionant-li un control
 indirecte sobre els afers del regne, i una eina de negociació important amb els seus
 consellers.
 
@@ -390,7 +390,7 @@ Per posar un joc una llei, cal seguir els següents passos:
 
 Finalment, si l'opció "a favor" ha acumulat més {power} que l'opció "en contra", la
 carta de llei entra en joc i s'apliquen els seus efectes. En cas d'**empat**, el
-**rei decideix** quina de les opcions guanya. Si no hi ha cap rei actualment, la llei es
+**{king} decideix** quina de les opcions guanya. Si no hi ha cap {king} actualment, la llei es
 descarta sense efecte.
 
 Tot el {power} gastat pels jugadors es perd i torna a la reserva
@@ -593,7 +593,7 @@ Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
 vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
 
 Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
-em dones {gold 2}, jo et nomenaré tresorer el següent torn"_). Els jugadors són
+em dones {gold 2}, jo et nomenaré {treasurer} el següent torn"_). Els jugadors són
 lliures d'incomplir-los - a costa de la seva reputació, i el que els altres jugadors
 puguin pensar d'ells...
 
@@ -629,7 +629,7 @@ Un complot implicarà sempre a múltiples actors:
 - El jugador que inicia el complot, a qui anomenarem el **conspirador**
 - El **destinatari** del complot, que pot ser el regne o un o més jugadors concrets, tal
   i com s'indicarà a la carta
-- El **mestre d'espies**, que pot intercedir en complots contra el seu regne o altres
+- El **{spy-master}**, que pot intercedir en complots contra el seu regne o altres
   membres del seu mateix regne
 
 ### Declarar un complot
@@ -738,9 +738,9 @@ Cal tenir present que si un complot va dirigit contra múltiples destinataris, p
 un èxit parcial, aconseguint els seus objectius contra alguns jugadors però fallant
 contra d'altres.
 
-Els tests fets pel mestre d'espies tenen un tractament especial: si un test fracassa i
-el seu objectiu era el mestre d'espies, també fracassa contra tota la resta de
-destinataris - a menys que el mestre d'espies hagi indicat que estaven exempts de
+Els tests fets pel {spy-master} tenen un tractament especial: si un test fracassa i
+el seu objectiu era el {spy-master}, també fracassa contra tota la resta de
+destinataris - a menys que el {spy-master} hagi indicat que estaven exempts de
 protecció, com s'explica a la secció _Contraespionatge_.
 
 ### Test de detecció
@@ -932,9 +932,9 @@ Naturalment, els jugadors sí que sabran quin jugador ha guanyat l'aposta pels a
 
 ### Crear un nou regne
 
-Com a acció, un jugador (que no sigui Rei) pot crear un nou regne, per un cost de
+Com a acció, un jugador (que no sigui {king}) pot crear un nou regne, per un cost de
 {power 8}. Si ho fa, el jugador renuncia als seus càrrecs actuals i assumeix el càrrec
-de rei del nou regne.
+de {king} del nou regne.
 
 La resta de jugadors poden decidir unir-se al nou regne; per cada un que ho faci el
 cost de crear el nou regne es divideix en 2.
@@ -945,17 +945,17 @@ decideixen unir-se al nou regne. Per tant, el cost original de 8 es divideix per
 dues vegades, quedant en un total de 2.
 ```
 
-Si un o més jugadors decideix unir-se al nou regne, el rei pot assignar-los càrrecs
+Si un o més jugadors decideix unir-se al nou regne, el {king} pot assignar-los càrrecs
 immediatament.
 
 ### Unir-se a un regne
 
-Com a acció, un jugador (que no sigui Rei) pot sol·licitar unir-se a un regne del que
+Com a acció, un jugador (que no sigui {king}) pot sol·licitar unir-se a un regne del que
 no formi part (ja sigui perquè no té regne actualment, o perquè vol canviar de regne).
 
 Per decidir si la sol·licitud és admesa, resoldre una {vote}. Si té èxit, el jugador
 passa a formar part del regne; del contrari, la sol·licitud fracassa i el canvi de
-regne no té lloc. Com és habitual, el Rei del regne resol els empats.
+regne no té lloc. Com és habitual, el {king} del regne resol els empats.
 
 Un jugador no pot canviar de regne més d'una vegada per torn.
 
@@ -968,7 +968,7 @@ Quan això succeeixi, aplicar els següents efectes:
 - A partir d'ara es considera que el jugador no forma part de cap regne. Durant el torn
   en curs no podrà crear o unir-se a un regne, però sí que podrà fer-ho a partir del
   torn següent.
-- Si el jugador era el Rei del seu regne, iniciar un {successionStruggle} (el jugador
+- Si el jugador era el {king} del seu regne, iniciar un {successionStruggle} (el jugador
   expulsat no hi pren part)
 - Per cada una dels {assets} {visible} del jugador, realitzar un {duel} {any} entre el
   jugador i la resta de membres del regne. El vencedor del duel es quedat la carta (en
@@ -976,12 +976,12 @@ Quan això succeeixi, aplicar els següents efectes:
 
 ### Lluita per la successió
 
-Quan el Rei d'un regne perdi la seva posició, els membres del regne pugnaran per
+Quan el {king} d'un regne perdi la seva posició, els membres del regne pugnaran per
 omplir el buit de poder i fer-se amb el tron. Per resoldre aquesta situació, resoldre
-un {duel} {any}; el vencedor es converteix en el nou rei.
+un {duel} {any}; el vencedor es converteix en el nou {king}.
 
-Si el Rei era l'únic membre del regne restant no cal resoldre el duel: si el seu
-hereu encara forma part del regne, seguirà sent rei automàticament; si ha estat
+Si el {king} era l'únic membre del regne restant no cal resoldre el duel: si el seu
+hereu encara forma part del regne, seguirà sent {king} automàticament; si ha estat
 expulsat, el regne es disol i deixa d'existir.
 
 ## Execució de jugadors
@@ -996,7 +996,7 @@ tradueix en:
 - El jugador perd la seva ma de cartes de tàctica, i en roba una per substituir-les
 - El jugador perd els seus objectius, i els substitueix per un nou objectiu personal
   i un nou objectiu col·lectiu
-- Si el jugador executat era el Rei del seu regne, iniciar un {successionStruggle}
+- Si el jugador executat era el {king} del seu regne, iniciar un {successionStruggle}
 
 # Seqüència del joc
 
@@ -1033,7 +1033,7 @@ per la {intrigue-label} el {favour-label}:
 
 - La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
   estable sigui el regne, menys {intrigue-label} produirà, i viceversa.
-- El Rei serà més donat a repartir el seu {favour-label} si el regne prospera, i
+- El {king} serà més donat a repartir el seu {favour-label} si el regne prospera, i
   viceversa. El {favour-label} es calcula a partir del valor de l'indicador de regne més
   baix (d'entre {wealth-label}, {stability-label}, {might-label} i {grace-label}.
 
@@ -1061,17 +1061,17 @@ entre els membres del regne.
 En primer lloc, cal determinar quin dels membres del regne serà el responsable de
 repartir el recurs:
 
-| Recurs           | Responsable     |
-| ---------------- | --------------- |
-| {gold-label}     | Tresorer        |
-| {power-label}    | Canceller       |
-| {strength-label} | Comandant       |
-| {faith-label}    | Bisbe           |
-| {intrigue-label} | Mestre d'espies |
-| {favour-label}   | Rei             |
+| Recurs           | Responsable  |
+| ---------------- | ------------ |
+| {gold-label}     | {treasurer}  |
+| {power-label}    | {chancellor} |
+| {strength-label} | {marshal}    |
+| {faith-label}    | {bishop}     |
+| {intrigue-label} | {spy-master} |
+| {favour-label}   | {king}       |
 
 Si el càrrec indicat està buit, el repartiment d'aquell recurs passarà a ser
-responsabilitat del rei.
+responsabilitat del {king}.
 
 El jugador responsable pren tots els recursos, i els reparteix de la forma adequada al
 tipus de recurs que s'estigui repartint, com s'indica a continuació.
@@ -1080,7 +1080,7 @@ tipus de recurs que s'estigui repartint, com s'indica a continuació.
 
 Si el recurs a repartir és el {favour-label}, es reparteix lliurement entre els
 membres del regne. No cal mantenir cap equitat, a menys que així es desitgi (al cap de
-vall, el rei és el rei i dona el seu favor a qui ell vulgui!). Tanmateix, el Rei no
+vall, el {king} és el {king} i dona el seu favor a qui ell vulgui!). Tanmateix, el {king} no
 pot donar-se favor a sí mateix.
 
 #### Repartir altres recursos
@@ -1097,7 +1097,7 @@ decideix quins jugadors rebran un recurs menys que els demés.
 ### Jugadors sense regne
 
 Durant aquesta fase, tractar els jugadors que no pertanyin a cap regne com si
-pertanyessin a un regne amb ells mateixos com a únic membre i Rei.
+pertanyessin a un regne amb ells mateixos com a únic membre i {king}.
 
 ## Fase de preparació
 
