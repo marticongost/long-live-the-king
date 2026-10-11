@@ -368,37 +368,13 @@ posterior.
 
 #### Lleis
 
-Les lleis són propostes legislatives que, de ser aprovades, canvien les regles del joc
-per tots els membres del regne.
+Les lleis són propostes legislatives que, de ser aprovades, canvien un o més aspectes del
+joc.
 
 Al principi del joc, les cartes de llei s'apilen i barregen en una baralla, i se'n
-roben 3, col·locant-les a la {lawsPool}.
-
-Per posar un joc una llei, cal seguir els següents passos:
-
-- Activar una capacitat que permeti fer una {vote} (típicament, l'acció _Proposar
-  llei_ de la carta de casa)
-- Escollir una de les lleis de la fila, i llegir-ne el títol i els efectes en veu alta:
-  aquesta serà la llei que serà sotmesa a votació
-- Començant pel jugador que fa la proposta, i seguint en ordre del rellotge, els
-  jugadors s'alternen per influir en la votació:
-  - Si vol participar en la votació, el jugador gasta una quantitat de {power} i
-    l'assigna a una pila corresponent a la seva opció preferida ("a favor" o
-    "en contra")
-  - Alternativament, pot retirar-se i no gastar cap recurs
-  - El procés continua fins que tots els jugadors es retiren
-
-Finalment, si l'opció "a favor" ha acumulat més {power} que l'opció "en contra", la
-carta de llei entra en joc i s'apliquen els seus efectes. En cas d'**empat**, el
-**{king} decideix** quina de les opcions guanya. Si no hi ha cap {king} actualment, la llei es
-descarta sense efecte.
-
-Tot el {power} gastat pels jugadors es perd i torna a la reserva
-(independentment de quina opció hagi guanyat).
-
-```comment
-Need to differentiate the planning of the voting action and its resolution.
-```
+roben 3, col·locant-les a la {lawsPool}. Durant el joc, els jugadors podran prendre part
+en {votes} per intentar instaurar una de les lleis de la fila, tal i com s'explica a
+la secció [](#voting).
 
 ## Capacitats
 
@@ -615,6 +591,49 @@ efectes.
 
 Independentment de si ha guanyat, perdut o empatat, cada jugador perd els recursos
 assignats al duel, i els torna a la reserva general.
+
+## Votacions #voting
+
+Les {votes} són embats en que els jugadors dediquen la seva influència i capital polític
+per decidir si una {law} concreta entra en vigor.
+
+### Sotmetre una llei a votació
+
+Diferents capacitats i efectes del joc permeten "sotmetre una llei a {vote}" - incloent la
+capacitat comú _Proposar llei_. Els jugadors poden utilitzar qualsevol d'aquestes capacitats
+per planificar la votació d'una llei. La votació en sí es resoldrà durant la {execution-phase},
+quan s'executi la capacitat.
+
+### Votar una llei
+
+Quan s'executi una capacitat que sotmeti una llei a {vote}, cal seguir els següents passos:
+
+- El jugador actiu escull una de les lleis de la fila i en llegeix el títol i els efectes en veu alta:
+  aquesta serà la llei que serà sotmesa a votació
+- Els jugadors s'alternen en ordre invers de joc per prendre part en la votació:
+  - Si vol participar-hi, el jugador gasta una quantitat de {power} i
+    l'assigna a una pila corresponent a la seva opció preferida ("a favor" o
+    "en contra")
+  - Alternativament, pot retirar-se i no gastar cap recurs
+  - El procés continua fins que tots els jugadors es retiren
+
+### Resultat d'una votació
+
+Un cop recollits els vots de tots els jugadors elegibles es determina el resultat de la
+votació:
+
+- **A favor**: si l'opció "a favor" ha acumulat més {power} que l'opció "en contra", la
+  carta de llei entra en joc i s'apliquen els seus efectes. Moure-la a la fila de lleis vigents, per recordar que està en vigor.
+- **En contra**: Si l'opció "en contra" supera els vots de l'opció "a favor", la votació fracassa
+  i la llei es descarta sense més efectes.
+- **Empat**: si les opcions "a favor" i "en contra" tenen exactament els mateixos vots, el {king}
+  decideix quina de les opcions guanya.
+
+Independentment de quina opció hagi guanyat), tot el {power} gastat pels jugadors es perd i torna
+a la reserva.
+
+A continuació, desplaçar totes les lleis de la fila cap a l'esquerra, robar una nova carta de llei
+i situar-la a l'extrem dret de la fila.
 
 ## Complots
 
