@@ -56,7 +56,17 @@
 			...css.column('sm'),
 			padding: css.spacing.sm,
 			flex: '1 1 auto'
-		}
+		},
+		discardAction: {
+			...css.row('xs'),
+			position: 'absolute',
+			right: css.spacing.sm,
+			bottom: css.spacing.xs,
+			fontSize: '0.7em',
+			borderTopLeftRadius: '0.5em'
+		},
+		discardLabel: {},
+		discardBonus: {}
 	});
 
 	function getBackgroundImage(cardCapability: CardCapability): string {
@@ -76,6 +86,7 @@
 	import InlineSvg from './InlineSvg.svelte';
 	import type { CardCapability } from '$lib/models/cardcapabilities';
 	import { getCardIcon } from '$lib/cardattributes';
+	import CostDisplay from './CostDisplay.svelte';
 
 	interface Props extends StandardAttributeProps {
 		cardCapability: CardCapability;
@@ -98,5 +109,11 @@
 	</div>
 	<div class={styles.body}>
 		<CapabilityDisplay capability={cardCapability.capability} />
+		{#if cardCapability.card.type === 'tactic'}
+			<div class={styles.discardAction}>
+				<span class={styles.discardLabel}>... o descartar per</span>
+				<CostDisplay class={styles.discardBonus} cost={cardCapability.card.discardBonus} />
+			</div>
+		{/if}
 	</div>
 </div>
