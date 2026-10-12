@@ -460,10 +460,16 @@ Jordi executa la seva reacció i l'utilitza per recuperar el recurs que la Marta
 robat.
 ```
 
+#### Preparatius {preparation}
+
+Representen opcions que els jugadors activen per la duració del torn. Es planifiquen com
+la resta de capacitats, però prenen efecte abans que es resolgui qualsevol altra
+{action} _acció_ o {secret} _secret_.
+
 #### Constants {constant}
 
-Representen estipulacions i regles addicionals que estan sempre actives i cal tenir en compte
-en tot moment.
+Representen estipulacions i regles addicionals que estan sempre actives i cal tenir en
+compte en tot moment.
 
 #### Crisis {crisis}
 

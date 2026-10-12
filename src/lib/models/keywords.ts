@@ -46,6 +46,7 @@ export const keywords = {
 	action: undefined,
 	secret: undefined,
 	crisis: undefined,
+	preparation: undefined,
 	reaction: undefined,
 	constant: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title])),
