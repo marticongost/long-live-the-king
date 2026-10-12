@@ -8,7 +8,7 @@ export default {
 			type: 'reaction',
 			trigger: 'turnEnd',
 			effects:
-				"El regne pateix {stability -2}. Llançar 1d6 per cada jugador al regne. Amb un resultat d'1 o 2, escollir una carta {retinue} aleatòria del jugador i descartar-la."
+				"El regne pateix {stability -2}. Llançar 1d6 per cada {kingdom-member}. Amb un resultat d'1 o 2, escollir una de les seves cartes {retinue} aleatòria i descartar-la. A continuació, descartar aquesta carta."
 		}
 	]
 } satisfies EventData;

@@ -6,7 +6,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'turnStart',
-			effects: 'El regne guanya {stability 1}.'
+			effects: 'El regne guanya {stability 1}. Descartar aquesta carta.'
 		}
 	]
 } satisfies EventData;
