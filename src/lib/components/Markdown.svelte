@@ -96,8 +96,17 @@
 		},
 		link: {
 			color: css.text.linkColor,
+			fontWeight: 'bold',
+			textDecorationLine: 'underline',
+			textDecorationStyle: 'dotted',
+			textUnderlineOffset: '0.2em',
 			':hover': {
-				color: css.text.linkHoverColor
+				textDecoration: 'underline',
+				color: css.text.linkHoverColor,
+				textDecorationStyle: 'solid'
+			},
+			'@media print': {
+				textDecoration: 'none !important'
 			}
 		},
 		hr: {
