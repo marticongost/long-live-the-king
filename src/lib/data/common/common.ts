@@ -19,6 +19,11 @@ export default {
 			title: 'Adquisicions',
 			effects:
 				'Aposta {input gold} per adquirir {input text} i/o {input gold} per adquirir {input text}.'
+		},
+		{
+			type: 'action',
+			title: 'Contribuir a la crisi',
+			effects: 'Paga {input number} recursos per contribuir a la crisi.'
 		}
 	]
 } satisfies CommonData;
