@@ -302,6 +302,13 @@ phase.
 
 ### Tipus de cartes
 
+#### Accions comunes
+
+Aquestes cartes representen accions habituals disponibles per a tots els jugadors. Cada
+jugador compta amb la seva pila de cartes d'accions comunes, i pot utilitzar cada una
+d'elles un cop per torn. Al final del torn, el director de joc tornarà les cartes
+utilitzades al seu propietari.
+
 #### Esdeveniments
 
 Els esdeveniments representen situacions fora del normal que afecten al regne i
