@@ -10,7 +10,7 @@ export default {
 			effects: 'Sotmetre una llei de la fila a {vote}.'
 		},
 		{
-			type: 'secret',
+			type: 'preparation',
 			title: 'Vigilar',
 			effects: 'Paga {input intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
 		},

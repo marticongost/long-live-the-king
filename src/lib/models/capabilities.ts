@@ -2,7 +2,8 @@ import { assertNever } from '$lib/components/utils';
 import { type ResourceSetProps, ResourceSet } from './resourcesets';
 import { getTrigger, type Trigger, type TriggerType } from './triggers';
 
-export type CapabilityType = 'action' | 'secret' | 'reaction' | 'constant' | 'crisis';
+export type CapabilityType =
+	'preparation' | 'action' | 'secret' | 'reaction' | 'constant' | 'crisis';
 
 export interface CapabilityCostFields {
 	cost?: ResourceSetProps;
@@ -36,15 +37,18 @@ export interface ConstantData extends CapabilityEffectsFields {
 	title: string;
 }
 
+export type PreparationSpec = { type: 'preparation' } & BaseActionData;
 export type ActionSpec = { type: 'action' } & BaseActionData;
 export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
 export type ConstantSpec = { type: 'constant' } & ConstantData;
 export type CrisisSpec = { type: 'crisis' } & CrisisData;
-export type CapabilitySpec = ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
+export type CapabilitySpec =
+	PreparationSpec | ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
 
-export type Capability = Action | Secret | Reaction | Constant | Crisis;
+export type Capability = Preparation | Action | Secret | Reaction | Constant | Crisis;
 
+export function buildCapability(spec: PreparationSpec): Preparation;
 export function buildCapability(spec: ActionSpec): Action;
 export function buildCapability(spec: SecretSpec): Secret;
 export function buildCapability(spec: ReactionSpec): Reaction;
@@ -53,6 +57,8 @@ export function buildCapability(spec: CrisisSpec): Crisis;
 export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
+		case 'preparation':
+			return new Preparation(spec);
 		case 'action':
 			return new Action(spec);
 		case 'secret':
@@ -92,6 +98,10 @@ export abstract class BaseAction extends ConcreteCapability {
 		super(base);
 		this.title = title;
 	}
+}
+
+export class Preparation extends BaseAction {
+	override readonly type = 'preparation';
 }
 
 export class Action extends BaseAction {
