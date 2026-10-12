@@ -1110,8 +1110,9 @@ decideix quins jugadors rebran un recurs menys que els demés.
 
 ### Jugadors sense regne
 
-Durant aquesta fase, tractar els jugadors que no pertanyin a cap regne com si
-pertanyessin a un regne amb ells mateixos com a únic membre i {king}.
+Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recursos de la
+seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
+{intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
 
 ## Fase de preparació
 
