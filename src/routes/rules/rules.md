@@ -647,33 +647,19 @@ Un complot implicarà sempre a múltiples actors:
 
 - El jugador que inicia el complot, a qui anomenarem el **conspirador**
 - El **destinatari** del complot, que pot ser el regne o un o més jugadors concrets, tal
-  i com s'indicarà a la carta
+  i com s'indicarà a la targeta
 - El **{spy-master}**, que pot intercedir en complots contra el seu regne o altres
   membres del seu mateix regne
 
 ### Declarar un complot
 
-Per decretar un complot cal afegir una entrada a l'apartat _Secrets_ del full del torn,
-indicant:
+Per decretar un complot cal afegir una capacitat amb la paraula clau {plot} a la cua
+d'accions del jugador, indicant:
 
-```comment
-The turn sheet is no longer a thing.
-```
-
-- La carta que proporciona la capacitat {plot} que es vol executar
-- El nom de la capacitat (opcional si la carta només té una única capacitat)
-- El destinatari o destinataris del complot
-- La {intrigue} que es vol destinar al complot (mínim 1)
-
-La intriga invertida en el complot s'ha d'afegir al cofre del jugador; el director de
-joc la retornarà a la reserva, independentment del resultat del complot. Si en el moment
-d'executar-se el complot no hi ha suficient intriga (_ex. perquè un altre complot previ
-ha fet que el jugador perdi intriga_), el complot és cancel·lat.
-
-```comment
-Needs to be updated. Would need to add an {input number} slot to plots, so players can
-indicate the amount of {intrigue} to spend in the card itself.
-```
+- El destinatari o destinataris del complot (normalment indicat per caselles {player},
+  {kingdom-member}, {players} o {kingdom-members}, segons el complot es pugui dirigir
+  a un o múltiples destinataris i a jugadors del )
+- La {intrigue-label} que es vol destinar al complot, a la casella {input intrigue} (mínim 1)
 
 ### Vigilància
 
