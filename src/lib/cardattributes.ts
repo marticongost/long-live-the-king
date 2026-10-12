@@ -56,16 +56,3 @@ export function getCapabilityTitle(capability: Capability): string {
 			return assertNever(capability, 'Unknown capability type');
 	}
 }
-
-export function getCapabilitySubtitle(capability: Capability): string | undefined {
-	if (capability.type === 'action') {
-		return 'Acció';
-	} else if (capability.type === 'secret') {
-		return 'Secret';
-	} else if (capability.type === 'reaction') {
-		return 'Reacció';
-	} else if (capability.type === 'constant') {
-		return 'Constant';
-	}
-	return undefined;
-}

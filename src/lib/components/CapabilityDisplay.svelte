@@ -13,12 +13,12 @@
 		},
 		icon: {
 			flexShrink: 0,
-			height: '1.1em',
+			height: '1em',
 			width: 'auto',
 			color: css.palette.dawn
 		},
 		header: {
-			...css.row('sm'),
+			...css.row('xs'),
 			color: css.palette.wood,
 			marginBottom: '0.1em',
 			paddingBottom: '0.1em',
@@ -29,7 +29,6 @@
 			fontFamily: css.fonts.heading,
 			margin: 0,
 			fontWeight: 600,
-			marginRight: 'auto',
 			[variants('regular')]: {
 				fontWeight: 900
 			},
@@ -37,10 +36,8 @@
 				fontStyle: 'italic'
 			}
 		},
-		subtitle: {
-			fontSize: '0.75em'
-		},
 		cost: {
+			marginLeft: 'auto',
 			fontSize: '0.75em'
 		},
 		body: {
@@ -95,11 +92,7 @@
 	import InlineSvg from './InlineSvg.svelte';
 	import CostDisplay from './CostDisplay.svelte';
 	import { cx } from '@emotion/css';
-	import {
-		getCapabilityIcon,
-		getCapabilitySubtitle,
-		getCapabilityTitle
-	} from '$lib/cardattributes';
+	import { getCapabilityIcon, getCapabilityTitle } from '$lib/cardattributes';
 
 	interface Props extends StandardAttributeProps {
 		capability: Capability;
@@ -136,17 +129,11 @@
 			</div>
 		{:else if capability instanceof ConcreteCapability || capability instanceof Constant}
 			{@const title = getCapabilityTitle(capability)}
-			{@const subtitle = getCapabilitySubtitle(capability)}
 			<div class={styles.header}>
+				<InlineSvg class={styles.icon} src={getCapabilityIcon(capability)} />
 				<div class={styles.title}>
 					{title}
 				</div>
-				{#if subtitle}
-					<span class={styles.subtitle}>
-						<InlineSvg class={styles.icon} src={getCapabilityIcon(capability)} />
-						{subtitle}
-					</span>
-				{/if}
 				{#if capability instanceof ConcreteCapability && !capability.cost.empty()}
 					<CostDisplay class={styles.cost} cost={capability.cost} />
 				{/if}
