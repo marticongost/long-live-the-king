@@ -1064,7 +1064,7 @@ Consultant la taula, veiem que el primer regne produirà {gold 6}, {power 8},
 Per contra, tot i tenir dos membres més, el segon regne produirà menys quantitat de la
 majoria de recursos: {gold 5}, {power 3}, {strength 3}, {faith 5}, {intrigue 13} i
 {favour 3}. En canvi, produrià una gran quantitat d'{intrigue-label} - resultat de
-tenir l'{stability-label] tan baixa!
+tenir l'{stability-label} tan baixa!
 ```
 
 ### Repartiment
