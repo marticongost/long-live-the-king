@@ -964,11 +964,14 @@ Quan això succeeixi, aplicar els següents efectes:
 
 Quan el {king} d'un regne perdi la seva posició, els membres del regne pugnaran per
 omplir el buit de poder i fer-se amb el tron. Per resoldre aquesta situació, resoldre
-un {duel} {any}; el vencedor es converteix en el nou {king}.
+un {duel} {any}; el vencedor es converteix en el nou {king}. En cas d'empat, l'antic
+{king} conserva la seva posició. Si el nou {king} tenia altres càrrecs ha de
+renunciar-hi - en aquest cas, les cartes de càrrec que tingués tornen a la reserva de
+càrrecs del nou {king}.
 
-Si el {king} era l'únic membre del regne restant no cal resoldre el duel: si el seu
-hereu encara forma part del regne, seguirà sent {king} automàticament; si ha estat
-expulsat, el regne es disol i deixa d'existir.
+Si el {king} era l'únic membre del regne no cal resoldre el duel: si el seu hereu encara
+forma part del regne, seguirà sent {king} automàticament; si ha estat expulsat, el regne
+es disol i deixa d'existir.
 
 ## Execució de jugadors
 
