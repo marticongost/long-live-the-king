@@ -1,17 +1,11 @@
 <script lang="ts" module>
 	import { getKingdomStat, type KingdomStatType } from '$lib/models/kingdomstats';
 	import * as css from '$lib/styles';
-	import InlineSvg from './InlineSvg.svelte';
+	import KingdomStatIcon from './KingdomStatIcon.svelte';
 
 	const styles = css.styles({
 		kingdomStatDisplay: {},
-		icon: {
-			height: '1.2em',
-			backgroundColor: css.palette.wood,
-			color: css.palette.white,
-			padding: '0.2em',
-			borderRadius: '0.4em'
-		},
+		icon: {},
 		name: {
 			fontWeight: 'bold'
 		}
@@ -26,12 +20,12 @@
 		amount?: number;
 	}
 
-	const { stat: kingdomStat, ...attributes }: Props = $props();
+	const { stat, ...attributes }: Props = $props();
 </script>
 
 <span {...standardAttributes(attributes, styles.kingdomStatDisplay)}>
-	<InlineSvg class={styles.icon} src="kingdom-stats/{kingdomStat}.svg" />
+	<KingdomStatIcon class={styles.icon} {stat} />
 	<span class={styles.name}>
-		{getKingdomStat(kingdomStat).title}
+		{getKingdomStat(stat).title}
 	</span>
 </span>
