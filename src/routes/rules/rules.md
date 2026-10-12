@@ -1043,7 +1043,7 @@ per cada tipus de recurs el seu {kingdomStat} associat:
 | {favour-label}   | El més baix           |
 
 Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdomStat}, excepte
-per la {intrigue-label} el {favour-label}:
+per la {intrigue-label} i el {favour-label}:
 
 - La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
   estable sigui el regne, menys {intrigue-label} produirà, i viceversa.
