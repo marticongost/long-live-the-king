@@ -1037,8 +1037,8 @@ per cada tipus de recurs el seu {kingdomStat} associat:
 | ---------------- | --------------------- |
 | {gold-label}     | {wealth-label}        |
 | {power-label}    | {stability-label}     |
-| {strength-label} | {might}               |
-| {faith-label}    | {grace}               |
+| {strength-label} | {might-label}         |
+| {faith-label}    | {grace-label}         |
 | {intrigue-label} | 6 - {stability-label} |
 | {favour-label}   | El més baix           |
 
