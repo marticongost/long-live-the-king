@@ -85,7 +85,9 @@ altres jugadors.
 
 Un cop tornats tots els objectius, remenar les dues baralles i deixar-les a part.
 
-## 4. Repartir tàctiques
+## 4. Repartir cartes inicials
+
+Reunir les targetes d'**Accions comunes** i donar-ne una de cada a cada jugador.
 
 Remenar la baralla de **cartes de tàctica**, i repartir-ne 3 a cada jugador.
 
