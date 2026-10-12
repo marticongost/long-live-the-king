@@ -755,7 +755,9 @@ crisis.
 
 Si la carta d'esdeveniment revelada durant el torn conté una crisi, s'anunciarà als
 membres del regne, explicant el repte plantejat i les conseqüències de l'èxit i el
-fracàs.
+fracàs. Els membres del regne tindran l'oportunitat de reunir els recursos necessaris
+durant la resta del torn per superar la crisi. El resultat de la crisi no es determina
+fins a la [](#crisis-resolution-phase), després que els jugadors hagin actuat.
 
 ### Requeriment
 
@@ -771,11 +773,7 @@ hauran d'intentar reunir 10 {power} entre tots.
 ### Contribuint a la crisi
 
 Durant la fase de preparació, els jugadors poden anotar la seva contribució a la crisi
-a l'espai habilitat al seu diari.
-
-```comment
-This should be a space in their house card instead.
-```
+utilitzant l'acció comuna _Contribuir a la crisi_.
 
 Cal tenir present:
 
@@ -783,11 +781,14 @@ Cal tenir present:
   general un cop finalitzada la crisi
 - Si no hi ha prous recursos a la bossa per cobrir la contribució, es destinaran tants
   recursos com sigui possible
+- Si la crisi accepta diferents tipus de recursos, els jugadors poden combinar els tipus
+  acceptats lliurement (_per exemple, una contribució d'un mateix jugador podria
+  contenir {power 2} i {might 3}, per un total de 5_)
 - No és obligatori contribuir - però fer-ho o no fer-ho pot tenir recompensa o càstig
 - Les contribucions són públiques: el director de joc desvelarà la quantitat aportada
   per cada membre del regne
 
-### Resultat de la crisi
+### Resultat de la crisi #crisis-result
 
 A més del seu requeriment, cada crisi també indicarà una _recompensa_ i un _càstig_.
 
@@ -801,10 +802,6 @@ llindar del requeriment:
   i/o alguns dels seus membres pateixen el _càstig_ indicat per la crisi.
 
 A continuació, la crisi es descarta.
-
-```comment
-Need to indicate the timing of the resolution.
-```
 
 ## Subhasta d'actius
 
@@ -1121,6 +1118,11 @@ seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label
 ## Fase de secrets
 
 ## Fase d'adquisició
+
+## Fase de resolució de crisis #crisis-resolution-phase
+
+Durant aquesta fase, si hi ha una o més crisis en joc, el director de joc les resol una
+per una, en ordre de joc, tal com s'explica a la secció [](#crisis-result).
 
 ## Final del torn
 

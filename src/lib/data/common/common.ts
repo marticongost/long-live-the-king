@@ -23,7 +23,8 @@ export default {
 		{
 			type: 'action',
 			title: 'Contribuir a la crisi',
-			effects: 'Paga {input number} recursos per contribuir a la crisi.'
+			effects:
+				'Contribueix amb {input gold} {input power} {input strength} {input faith} {input intrigue} {input favour} a la crisi.'
 		}
 	]
 } satisfies CommonData;
