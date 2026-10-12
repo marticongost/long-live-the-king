@@ -534,7 +534,7 @@ intercanvi:
 
 Els jugadors són lliures de discutir possibles tractes en qualsevol moment. Tanmateix,
 només està permès intercanviar components físics (cartes i marcadors de recurs) durant
-la fase de preparació, o si una carta ho permet, específicament.
+la [](#planning-phase), o si una carta ho permet, específicament.
 
 ```example
 El Ricard decreta un duel de {strength} contra el Tomàs: el vencedor haurà de donar
@@ -778,7 +778,7 @@ hauran d'intentar reunir 10 {power} entre tots.
 
 ### Contribuint a la crisi
 
-Durant la fase de preparació, els jugadors poden anotar la seva contribució a la crisi
+Durant la ()[#planning-phase], els jugadors poden anotar la seva contribució a la crisi
 utilitzant l'acció comuna _Contribuir a la crisi_.
 
 Cal tenir present:
@@ -1117,13 +1117,15 @@ Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recurs
 seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
 {intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
 
-## Fase de preparació
+## Fase de planificació #planning-phase
 
-## Fase de conflicte
+## Fase de preparació #preparation-phase
 
-## Fase de secrets
+## Fase d'accions #actions-phase
 
-## Fase d'adquisició
+## Fase de secrets #secrets-phase
+
+## Fase d'adquisició #acquisition-phase
 
 ## Fase de resolució de crisis #crisis-resolution-phase
 
