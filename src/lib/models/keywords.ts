@@ -38,6 +38,7 @@ export const keywords = {
 	'execution-phase': "Fase d'execució",
 	'kingdom-member': undefined,
 	'kingdom-members': undefined,
+	'kingdom-stat-friction': undefined,
 	player: undefined,
 	players: undefined,
 	visible: undefined,

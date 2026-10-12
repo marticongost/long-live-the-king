@@ -14,6 +14,7 @@ export default {
 		{
 			title: 'Compartir',
 			type: 'action',
+			cost: { gold: '{kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {stability 1}. {discard} aquest actiu.'
 		}
 	]

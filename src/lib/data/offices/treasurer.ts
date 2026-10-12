@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Augmentar els ingressos',
 			type: 'action',
-			cost: { gold: 3 },
+			cost: { gold: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {wealth 1}.'
 		},
 		{

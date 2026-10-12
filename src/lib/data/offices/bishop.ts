@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Sermó',
 			type: 'action',
-			cost: { faith: 3 },
+			cost: { faith: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {grace 1}.'
 		},
 		{

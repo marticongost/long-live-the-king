@@ -240,14 +240,17 @@ tal i com s'indica a la taula següent:
 | 2         | 1       |
 | 1         | 2       |
 
+Aquests costs addicionals s'indiquen a les capacitats de les cartes amb la icona
+{kingdom-stat-friction}.
+
 ```example
 El regne té l'indicador de {wealth-label} a 4. El Marc paga un efecte de cost
-{power 3} per augmentar-lo en 1. Consultant la taula, haurà de pagar una penalització
-per fricció de {power 2}, per un total de {power 5}.
+{power 3} + {kingdom-stat-friction} per augmentar-lo en 1. Consultant la taula, haurà de
+pagar una penalització per fricció de {power 2}, per un total de {power 5}.
 
-A continuació, la Dària utilitza un efecte de cost {intrigue 2} per reduir {wealth}
-en 1. Com que la direcció del canvi acosta l'indicador cap al centre (3), no haurà de
-pagar cap cost addicional.
+A continuació, la Dària utilitza un efecte de cost {intrigue 2} +
+{kingdom-stat-friction} per reduir {wealth} en 1. Com que la direcció del canvi acosta
+l'indicador cap al centre (3), no haurà de pagar cap cost addicional.
 ```
 
 Si un mateix efecte fa avançar un indicador múltiples vegades, sumar la penalització per
@@ -255,10 +258,11 @@ fricció de cada pas de forma separada.
 
 ```example
 L'indicador de {wealth} ha quedat establert en 4. A continuació, el Gerard utilitza un
-efecte de cost {strength 6} que li permet reduir-lo en 3. El pas de 4 a 3 acosta
-l'indicador al centre, així que no suposa un cost addicional; tanmateix, el pas de 3 a
-2 i de 2 a 1 l'allunyen, així que haurà de pagar la penalització associada a cada un
-d'aquests passos (1 i 2, respectivament). El cost total serà de {strength 9} (6 + 1 + 2).
+efecte de cost {strength 6} + {kingdom-stat-friction} que li permet reduir-lo en 3. El
+pas de 4 a 3 acosta l'indicador al centre, així que no suposa un cost addicional;
+tanmateix, el pas de 3 a 2 i de 2 a 1 l'allunyen, així que haurà de pagar la
+penalització associada a cada un d'aquests passos (1 i 2, respectivament). El cost total
+serà de {strength 9} (6 + 1 + 2).
 ```
 
 ## Cartes

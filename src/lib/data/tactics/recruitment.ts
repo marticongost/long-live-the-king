@@ -7,7 +7,7 @@ export default {
 	capabilities: [
 		{
 			type: 'action',
-			cost: { strength: 2 },
+			cost: { strength: '2 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {might 1}.'
 		}
 	]

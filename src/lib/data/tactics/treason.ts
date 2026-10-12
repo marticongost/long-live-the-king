@@ -6,10 +6,10 @@ export default {
 	properties: ['machination', 'selfishness'],
 	capabilities: [
 		{
-			title: 'Que ha fet el {king} per mi?',
+			title: 'Que ha fet el rei per mi?',
 			type: 'secret',
 			effects:
-				'Resol un {plot} {input intrigue} contra el teu regne. Si té èxit, guanya {prestige 1} i {intrigue 1}, i el regne rep {stability -1}.'
+				'Resol un {plot} {input intrigue} contra el teu regne. Si té èxit, el regne rep {stability -1} (has de pagar {intrigue}={kingdom-stat-friction}) i tu guanyes {prestige 1} i {intrigue 1}.'
 		}
 	]
 } satisfies TacticData;

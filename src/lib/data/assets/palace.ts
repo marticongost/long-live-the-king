@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Banquet',
 			type: 'action',
-			cost: { gold: 3 },
+			cost: { gold: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {stability 1}.'
 		}
 	]

@@ -8,7 +8,7 @@ export default {
 		{
 			title: "Valuoses com l'or",
 			type: 'action',
-			cost: { power: 3 },
+			cost: { power: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {wealth 1}. Guanyar {gold 1}.'
 		}
 	]

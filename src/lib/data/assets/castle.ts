@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Ampliació',
 			type: 'action',
-			cost: { gold: 2 },
+			cost: { gold: '2 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {might 1}.'
 		}
 	]

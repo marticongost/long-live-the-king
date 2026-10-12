@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Preparacions de guerra',
 			type: 'action',
-			cost: { strength: 3 },
+			cost: { strength: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {might 1}.'
 		},
 		{

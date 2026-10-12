@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Govern',
 			type: 'action',
-			cost: { power: 3 },
+			cost: { power: '3 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {stability 1}.'
 		},
 		{

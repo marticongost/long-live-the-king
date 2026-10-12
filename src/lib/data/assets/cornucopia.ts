@@ -8,7 +8,7 @@ export default {
 		{
 			title: 'Abundància',
 			type: 'secret',
-			cost: { power: 3 },
+			cost: { power: '3 + {kingdom-stat-friction}' },
 			effects: 'Guanyar {prestige 1}. El teu regne guanya {stability 1}.'
 		}
 	]

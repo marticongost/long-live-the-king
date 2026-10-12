@@ -12,7 +12,7 @@ export default {
 		{
 			title: 'Producció',
 			type: 'action',
-			cost: { gold: 2 },
+			cost: { gold: '2 + {kingdom-stat-friction}' },
 			effects: 'El teu regne guanya {wealth 1}.'
 		}
 	]
