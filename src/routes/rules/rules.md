@@ -986,39 +986,6 @@ tradueix en:
 
 # Seqüència del joc
 
-## Fase d'esdeveniments #events-phase
-
-Durant aquesta fase, el director de joc revela una carta d'esdeveniment de la pila per
-cada un dels regnes del joc. Si un o més jugadors no pertanyen a cap regne, es tracten
-com si formessin part d'un regne format per aquests jugadors.
-
-```example
-Al principi del torn, hi ha 4 jugadors que formen part d'un regne, 3 que formen part
-d'un segon regne, i 2 que no formen part de cap regne. El director de joc revela tres
-cartes d'esdeveniment: la primera s'assigna al primer regne, la segona al segon regne,
-i la tercera als dos jugadors sense regne.
-```
-
-Les cartes es revelen en ordre de joc, segons la posició del primer dels membres del
-regne a l'ordre de joc.
-
-```example
-L'ordre de joc és Jordi, Marina, Oriol, Marc, Dària, Sara, Gerard i Jan. Els jugadors es
-divideixen en tres grups: Pharingia (Jordi i Marina), Valkus (Marc, Dària
-i Sara) i jugadors sense regne (Oriol, Jan i Gerard). Consultant l'ordre de joc, el Jordi
-és el primer jugador. Pertany a Pharingia, així que aquest regne serà el primer en revelar
-el seu esdeveniment. La Marina és la següent en ordre, però el seu regne ja ha revelat un
-esdeveniment, així que es salta. Seguint l'ordre, veiem que l'Oriol és el següent
-jugador i no pertany a cap regne, així que es revelarà l'esdeveniment compartit pels
-jugadors sense regne en segon lloc. Finalment, només queda el regne de Valkus per rebre
-el seu esdeveniment, així que ho farà en tercer lloc.
-```
-
-Quan es reveli una carta d'esdeveniment se'n llegeixen els efectes en veu alta. Alguns
-esdeveniments tindran efecte immediat, descartant la carta immediatament després
-de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar en joc
-per un o més torns.
-
 ## Fase de producció #production-fase
 
 En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
@@ -1116,6 +1083,39 @@ decideix quins jugadors rebran un recurs menys que els demés.
 Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recursos de la
 seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
 {intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
+
+## Fase d'esdeveniments #events-phase
+
+Durant aquesta fase, el director de joc revela una carta d'esdeveniment de la pila per
+cada un dels regnes del joc. Si un o més jugadors no pertanyen a cap regne, es tracten
+com si formessin part d'un regne format per aquests jugadors.
+
+```example
+Al principi del torn, hi ha 4 jugadors que formen part d'un regne, 3 que formen part
+d'un segon regne, i 2 que no formen part de cap regne. El director de joc revela tres
+cartes d'esdeveniment: la primera s'assigna al primer regne, la segona al segon regne,
+i la tercera als dos jugadors sense regne.
+```
+
+Les cartes es revelen en ordre de joc, segons la posició del primer dels membres del
+regne a l'ordre de joc.
+
+```example
+L'ordre de joc és Jordi, Marina, Oriol, Marc, Dària, Sara, Gerard i Jan. Els jugadors es
+divideixen en tres grups: Pharingia (Jordi i Marina), Valkus (Marc, Dària
+i Sara) i jugadors sense regne (Oriol, Jan i Gerard). Consultant l'ordre de joc, el Jordi
+és el primer jugador. Pertany a Pharingia, així que aquest regne serà el primer en revelar
+el seu esdeveniment. La Marina és la següent en ordre, però el seu regne ja ha revelat un
+esdeveniment, així que es salta. Seguint l'ordre, veiem que l'Oriol és el següent
+jugador i no pertany a cap regne, així que es revelarà l'esdeveniment compartit pels
+jugadors sense regne en segon lloc. Finalment, només queda el regne de Valkus per rebre
+el seu esdeveniment, així que ho farà en tercer lloc.
+```
+
+Quan es reveli una carta d'esdeveniment se'n llegeixen els efectes en veu alta. Alguns
+esdeveniments tindran efecte immediat, descartant la carta immediatament després
+de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar en joc
+per un o més torns.
 
 ## Fase de planificació #planning-phase
 
