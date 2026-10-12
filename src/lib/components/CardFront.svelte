@@ -120,11 +120,10 @@
 <script lang="ts">
 	import { standardAttributes, type StandardAttributeProps } from '$lib/components/utils';
 	import { cardTypes, type Card, type CardType } from '$lib/models/cards';
-	import { resourceTypes } from '$lib/models/resources';
 	import CapabilityDisplay from './CapabilityDisplay.svelte';
 	import InlineSvg from './InlineSvg.svelte';
-	import ResourceDisplay from './ResourceDisplay.svelte';
 	import { getCardIcon } from '$lib/cardattributes';
+	import CostDisplay from './CostDisplay.svelte';
 
 	interface Props extends StandardAttributeProps {
 		card: Card;
@@ -162,13 +161,7 @@
 			{/each}
 		</ul>
 		{#if card.type === 'tactic' && !card.discardBonus.empty()}
-			<div class={styles.discardBonus}>
-				{#each resourceTypes as resourceType (resourceType)}
-					{#each { length: card.discardBonus[resourceType] } as _, index (index)}
-						<ResourceDisplay resource={resourceType} />
-					{/each}
-				{/each}
-			</div>
+			<CostDisplay class={styles.discardBonus} cost={card.discardBonus} />
 		{/if}
 	</div>
 </div>

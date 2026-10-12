@@ -1,16 +1,18 @@
 import type { ResourceType } from './resources';
 
-export type ResourceSetProps = Partial<Record<ResourceType, number>>;
+export type ResourceSpec = number | string;
+
+export type ResourceSetProps = Partial<Record<ResourceType, ResourceSpec>>;
 
 export class ResourceSet {
-	readonly prestige: number;
-	readonly power: number;
-	readonly intrigue: number;
-	readonly strength: number;
-	readonly gold: number;
-	readonly faith: number;
-	readonly any: number;
-	readonly favour: number;
+	readonly prestige: ResourceSpec;
+	readonly power: ResourceSpec;
+	readonly intrigue: ResourceSpec;
+	readonly strength: ResourceSpec;
+	readonly gold: ResourceSpec;
+	readonly faith: ResourceSpec;
+	readonly any: ResourceSpec;
+	readonly favour: ResourceSpec;
 
 	constructor({ prestige, power, intrigue, strength, gold, faith, any, favour }: ResourceSetProps) {
 		this.prestige = prestige ?? 0;
@@ -30,6 +32,7 @@ export class ResourceSet {
 			!this.intrigue &&
 			!this.strength &&
 			!this.gold &&
+			!this.faith &&
 			!this.any &&
 			!this.favour
 		);

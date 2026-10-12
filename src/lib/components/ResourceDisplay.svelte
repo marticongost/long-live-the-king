@@ -1,6 +1,8 @@
 <script lang="ts" module>
 	import type { ResourceType } from '$lib/models/resources';
+	import { type ResourceSpec } from '$lib/models/resourcesets';
 	import * as css from '$lib/styles';
+	import EffectsText from './EffectsText.svelte';
 	import InlineSvg from './InlineSvg.svelte';
 
 	const styles = css.styles({
@@ -17,7 +19,7 @@
 
 	interface Props extends StandardAttributeProps {
 		resource: ResourceType;
-		amount?: number;
+		amount?: ResourceSpec;
 	}
 
 	const { resource, amount = 0, ...attributes }: Props = $props();
@@ -27,7 +29,11 @@
 	<InlineSvg class={styles.icon} src="resources/{resource}.svg" />
 	{#if amount}
 		<span class={styles.amount}>
-			{amount}
+			{#if typeof amount === 'number'}
+				{amount}
+			{:else}
+				<EffectsText effects={amount} />
+			{/if}
 		</span>
 	{/if}
 </span>
