@@ -33,7 +33,7 @@ mantenen darrere la seva pantalla.
 Per acabar, roben també un _emblema_ de la seva casa, l'insereixen dins del seu penjoll
 i se'l pengen al coll.
 
-## 2. Escollir el(s) {king}(s)
+## 2. Escollir el(s) rei(s)
 
 Un dels jugadors comencarà el joc exercint el paper de _rei_. El {king} és la major
 autoritat del regne, i desenvolupa un paper central al joc.
