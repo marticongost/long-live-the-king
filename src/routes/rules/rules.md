@@ -1087,6 +1087,53 @@ per un o més torns.
 
 ## Fase de planificació #planning-phase
 
+Durant aquesta fase, els jugadors decideixen en secret quines capacitats de les seves
+cartes activaran, i en quin ordre.
+
+### Piles de capacitats
+
+Els jugadors planifiquen el seu torn formant tres piles diferenciades amb les seves
+targetes de capacitat:
+
+- Una pila amb totes les [](#indications) pel torn
+- Una pila ordenada amb les [](#actions) a executar
+- Una pila ordenada amb els [](#secrets) a executar
+
+Els jugadors fan aquesta selecció simultàniament, en secret, darrere la seva pantalla
+de jugador. Quan estiguin satisfets amb la seva tria, desen les piles al seu cofre
+de jugador i entreguen el cofre al director de joc. Un cop entregat, no poden fer
+més modificacions.
+
+### Ordre de la pila
+
+En el cas de les accions i els secrets, l'ordre de les piles és important. El director
+de joc posarà les piles cap per amunt i robarà les cartes d'una en una, començant per
+la primera carta visible i acabant amb la carta al fons de la pila.
+
+```notice
+Aquest pot ser un punt de confusió habitual - al principi de la partida el director de
+joc hauria de clarificar amb tots els jugadors l'ordre en que les cartes haurien de
+posicionar-se a la pila.
+```
+
+### Descartar tàctiques per guanyar recursos
+
+Durant aquesta fase els jugadors poden decidir sacrificar qualsevol nombre de cartes
+de tàctica, donant-les al director de joc cap per aball perquè les descarti. A canvi,
+el director de joc els donarà la bonificació per descart indicada a cada targeta.
+
+### Cartes amb paràmetres
+
+Algunes cartes comptaran amb caselles habilitades per tal que els jugadors indiquin
+aspectes de la capacitat que cal determinar amb antel·lació. Per exemple, una carta
+que permeti agredir a un rival pot comptar amb una casella per tal que el propietari
+de la mateixa especifiqui quin jugador serà el destinatari de l'atac.
+
+Els jugadors escriuen amb rotuladors sobre la superfície de plàstic de les targetes,
+dins d'aquests espais habilitats. Cal que indiquin valors per totes aquestes caselles,
+a menys que el text de la targeta indiqui que alguns d'ells són opcionals o mútuament
+excloents.
+
 ## Fase d'accions #actions-phase
 
 ## Fase de secrets #secrets-phase
