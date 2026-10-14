@@ -367,15 +367,20 @@ Les capacitats representen els diferents efectes associats a les cartes.
 
 ### Cost de les capacitats
 
-Moltes capacitats tenen un cost associat. Els jugadors que vulguin executar una d'aquestes
-capacitats hauran de pagar el cost indicat en recursos, retornant els recursos necessaris
-del seu cofre a la reserva. Si no disposen de fons suficients, no podran executat la
-capacitat.
+Moltes capacitats tenen un cost associat. Per tal d'executar una d'aquestes capacitats,
+caldrà retornar recursos suficients del cofre del jugador a la reserva general.
 
-```comment
-Need to explain the timing of the payment, and what happens if the necessary resources
-are not available when a capability is resolved.
-```
+Cal tenir present que el pagament no es durà a terme fins al mateix punt en que la capacitat
+sigui executada; planificar accions i secrets no té cap cost, i els jugadors poden fer-ho fins
+i tot si no disposen dels fons necessaris per l'execució de la capacitat en aquell moment
+(amb l'expectativa de guanyar-los durant el torn).
+
+Arribat el moment d'executar la capacitat, si el jugador no disposa dels recursos necessaris
+la capacitat no podrà ser executada. Si es tractava d'una capacitat ja planificada, la capacitat
+és cancel·lada i es prossegueix amb l'acció del següent jugador.
+
+A diferència de les accions i els secrets, les reaccions no es planifiquen, així que s'han de
+pagar al mateix moment en que es declaren.
 
 ### Tipus de capacitats
 
