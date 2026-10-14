@@ -469,9 +469,13 @@ robat.
 
 #### Indicacions {preparation}
 
-Representen opcions que els jugadors activen per la duració del torn. Es planifiquen com
-la resta de capacitats, però prenen efecte abans que es resolgui qualsevol altra
-{action} _acció_ o {secret} _secret_.
+Representen indicacions que els jugadors donen al director de joc sobre les seves
+preferències per la resolució de diferents accions durant el torn. No són accions per
+sí mateixes, si no modificadors que afecten diferents punts de la seqüència del torn.
+
+Exmples d'indicacions inclouen especificar quanta {intrigue-label} es vol dedicar a la
+{vigilance} per oposar-se a {plots} contra el jugador, o quant {gold-label} es vol
+apostar durant la {assetsBid}.
 
 #### Constants {constant}
 
