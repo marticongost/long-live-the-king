@@ -1,4 +1,4 @@
-export const kingdomStatTypes = ['stability', 'wealth', 'taxes', 'might', 'grace'] as const;
+export const kingdomStatTypes = ['stability', 'wealth', 'might', 'grace'] as const;
 
 export type KingdomStatType = (typeof kingdomStatTypes)[number];
 
@@ -17,7 +17,6 @@ const kingdomStats = {} as Record<KingdomStatType, KingdomStat>;
 for (const [type, title] of Object.entries({
 	stability: 'Estabilitat',
 	wealth: 'Riquesa',
-	taxes: 'Impostos',
 	might: 'Exèrcit',
 	grace: 'Gràcia'
 } as Record<KingdomStatType, string>) as Array<[KingdomStatType, string]>) {

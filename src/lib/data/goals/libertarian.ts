@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'gameEnd',
-			effects: 'Si els {taxes} del teu regne són 2 o menys, guanya {prestige 3}.'
+			effects: 'Si pertanys a un regne que tingui 2 o menys lleis en vigor, guanya {prestige 3}.'
 		}
 	]
 } satisfies GoalData;

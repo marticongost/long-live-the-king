@@ -18,9 +18,9 @@ export default {
 		{
 			title: 'Fixar impostos',
 			type: 'action',
-			cost: { power: 1 },
+			cost: { power: '1 + {friction}' },
 			effects:
-				'Moure {taxes} {input check} 1 o {input check} 2 espais en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'
+				'Moure {wealth} un espai en qualsevol direcció. Canviar {stability} en la mateixa quantitat, en la direcció oposada.'
 		}
 	]
 } satisfies OfficeData;
