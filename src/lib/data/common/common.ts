@@ -15,7 +15,7 @@ export default {
 			effects: 'Paga {input intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
 		},
 		{
-			type: 'secret',
+			type: 'preparation',
 			title: 'Adquisicions',
 			effects:
 				'Aposta {input gold} per adquirir {input text} i/o {input gold} per adquirir {input text}.'
