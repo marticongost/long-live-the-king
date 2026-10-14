@@ -531,7 +531,8 @@ guanyar el duel.
 
 Els intercanvis de caràcter immediat (_ex. "tu em dones {gold 3}, jo et dono
 {intrigue 2}", "tu em dones {strength 1}, jo et dic quin és el meu objectiu"_) són
-vinculants: si les parts acorden uns termes, els jugadors han de complir-los.
+transaccions vinculants: si les parts acorden uns termes, els jugadors han de complir-los
+en la seva totalitat.
 
 Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures (_ex. "tu
 em dones {gold 2}, jo et nomenaré {treasurer} el següent torn"_). Els jugadors són
