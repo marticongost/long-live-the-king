@@ -470,22 +470,15 @@ Cada jugador té una pantalla que ha d'utilitzar per mantenir en secret la major
 les seves possessions, incloent:
 
 - Tots els recursos (incloent els punts de victòria)
-- Totes les cartes amb la icona {hidden} (objectius, tàctiques, actius amb fons fosc)
+- Totes les cartes amb la icona {hidden} (objectius, tàctiques, actius amb fons fosc,
+  targetes de capacitat)
 
 Únicament aquelles cartes marcades amb la icona {visible} han de romandre a la vista
-dels demés jugadors en tot moment, incloent les cartes de casa, els càrrecs i actius amb
-fons clar.
+dels demés jugadors en tot moment, incloent les cartes de casa, els càrrecs i els actius
+amb fons clar.
 
 Les cartes d'esdeveniment en curs i les lleis en vigor o a la fila de lleis es situen
 als espais comuns (davant de la pantalla), i com a tal, són visibles.
-
-En posar en joc una capacitat d'una carta cal revelar la carta corresponent als demés
-jugadors - fins i tot si es tracta d'una carta oculta. La única excepció a aquesta regla
-són els {secrets}, que el director de joc resol a esquenes dels jugadors.
-
-```comment
-This needs to be updated with the planning / resolution split.
-```
 
 Els jugadors són lliures de preguntar als demés sobre les seves possessions, i de
 respondre amb la veritat, mentir o guardar silenci - però no poden ensenyar físicament
