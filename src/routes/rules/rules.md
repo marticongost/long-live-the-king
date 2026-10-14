@@ -398,28 +398,11 @@ jugadors.
 Representen subterfugis, maniobres secretes i conspiracions que els jugadors declaren i
 executen en secret, d'amagat dels demés jugadors. Només el director de joc sabrà quins secrets
 han estat declarat durant el torn per cada jugador, i en resoldrà els efectes en privat,
-darrere la seva pantalla, a la _fase de secrets_.
+darrere la seva pantalla, a la [](#secrets-phase).
 
-Per declarar l'execució d'un secret, els jugadors utilitzen un rotulador per marcar la capacitat
-desitjada sobre una de les seves cartes. Aquestes marques han de ser un número que indiqui
-l'ordre en que el jugador vol executar els seus secrets.
-
-```example
-La Verònica té dues cartes amb secrets que vol executar. Marca la carta que vol que s'executi
-primer amb un 1, i l'altra carta amb un 2.
-```
-
-Els jugadors poden fer les marques en qualsevol moment, i poden canviar d'opinió esborrant les
-marques i/o afegint-ne de noves. L'únic important és que hagin fet les marques que vulguin
-abans de retornar el seu cofre al director de joc quan _passin_ durant la fase d'acció; a
-partir d'aquest moment ja no les podran modificar.
-
-```comment
-A lot of this is no longer specific to secrets. All capabilities are now planned in
-secret - the difference is that secrets A) secrets are resolved after all other actions
-and B) the execution and outcome of secrets is not revealed publicly (except when a plot
-is detected or the secret's outcome is reflected in the game state).
-```
+La majoria de secrets tenen caselles habilitades perquè els jugadors especifiquin diferents
+paràmetres per la seva execució. Els jugadors utilitzen un rotulador per introduir els valors
+necessaris. El director de joc esborrarà aquestes marques després de la seva execució.
 
 #### Reaccions {reaction}
 
