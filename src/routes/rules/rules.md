@@ -467,7 +467,7 @@ Jordi executa la seva reacció i l'utilitza per recuperar el recurs que la Marta
 robat.
 ```
 
-#### Preparatius {preparation}
+#### Indicacions {preparation}
 
 Representen opcions que els jugadors activen per la duració del torn. Es planifiquen com
 la resta de capacitats, però prenen efecte abans que es resolgui qualsevol altra
