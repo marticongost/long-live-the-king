@@ -820,12 +820,8 @@ amunt) i 2 seran {hidden} (5 / 2 arrodonint avall).
 
 ### Declarant l'aposta
 
-En entregar el seu full de torn al director de joc, els jugadors poden optar a fer un
-seguit d'apostes per adquirir actius del mercat, seguint les següents indicacions:
-
-```comment
-Need to replace the player sheet with the house card.
-```
+Els jugadors compten amb una targeta d'acció comuna on poden annotar les seves apostes
+pel torn:
 
 - Cada aposta ha de referenciar clarament un actiu de la primera fila del mercat
 - Cada aposta ha d'indicar la quantitat de {gold} que es vol apostar, amb un mínim de 1
