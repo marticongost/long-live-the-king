@@ -390,19 +390,8 @@ executar els seus efectes, i la visibilitat dels mateixos.
 #### Accions {action}
 
 Representen iniciatives i empreses iniciades voluntàriament pels jugadors durant el seu
-torn. Les accions es declaren i executen de forma pública, i els seus resultats i efectes
-són visibles a tots els jugadors.
-
-Executar una acció fa que la seva carta quedi {exhausted}. Les accions d'una carta exhaurida
-no es poden executar fins que la carta es prepari. Normalment això no passarà fins al final
-del torn, cosa que vol dir que en circumstàncies normals les accions es poden executar un sol
-cop per torn.
-
-A més, executar una acció a una {tactic} fa que la seva carta es descarti.
-
-```comment
-Exhausting cards is no longer a thing.
-```
+torn. Les accions són de caràcter públic: els seus resultats i efectes són visibles a tots els
+jugadors.
 
 #### Secrets {secret}
 
