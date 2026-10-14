@@ -968,7 +968,7 @@ Cada regne produeix recursos segons el nombre de membres i el valor del seu
 
 ```
 
-Es produeixen recursos de tots els tipus, exceptuant el {prestige} prestigi, utilitzant
+Es produeixen recursos de tots els tipus, exceptuant el {prestige-label}, utilitzant
 per cada tipus de recurs el seu {kingdomStat} associat:
 
 | Recurs           | Indicador             |
