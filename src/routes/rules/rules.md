@@ -444,7 +444,7 @@ Jordi executa la seva reacció i l'utilitza per recuperar el recurs que la Marta
 robat.
 ```
 
-#### Indicacions {preparation}
+#### Indicacions {indications}
 
 Representen indicacions que els jugadors donen al director de joc sobre les seves
 preferències per la resolució de diferents accions durant el torn. No són accions per
@@ -1086,8 +1086,6 @@ de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar
 per un o més torns.
 
 ## Fase de planificació #planning-phase
-
-## Fase de preparació #preparation-phase
 
 ## Fase d'accions #actions-phase
 
