@@ -634,35 +634,22 @@ l'objectiu. Per tant, cal que es defensin preventivament, dedicant recursos per
 defensar-se contra aquestes maniobres encobertes. Això representa els esforços de la
 casa per contractar vigilants, anar amb cura al compartir informació sensible, etc.
 
-Per representar-ho, abans d'entregar el seu full amb instruccions pel director de joc,
-els jugadors poden escriure-hi un valor a la casella {vigilance}, corresponent a la
-quantitat d'{intrigue} que volen invertir en defensar-se de complots durant aquell torn.
-Com més alt sigui aquest valor, més probable serà que els complots dirigits contra ells
-fallin i/o siguin detectats.
-
-```comment
-The turn sheet is no longer a thing.
-```
+Per representar-ho, els jugadors compten amb una targeta d'acció comuna que els permet
+indicar al director de joc la quantitat d'{intrigue-label} que volen destinar a la
+{vigilance} durant el torn vigent. Com més alt sigui aquest valor, més probable serà
+que els complots dirigits contra ells fallin i/o siguin detectats.
 
 ### Contraespionatge
 
 El _mestre d'espies_ té un paper essencial en la resolució dels complots: a diferència
-dels demés jugadors, la seva {vigilance} té efectes sobre tots els complots - no només
-els que es dirigeixin contra ell.
-
-```comment
-Need to clarify all is "all in his own kingdom".
-```
+dels demés jugadors, la seva {vigilance} té efectes sobre tots els complots que es
+duguin a terme al seu regne - no només els que es dirigeixin contra ell.
 
 Tanmateix, el _mestre d'espies_ té la potestat de decidir a quins jugadors vol protegir
 i amb quins farà la vista grossa (_ex. Per què hauria de protegir al Jordi, si va
-guanyant?_). Per fer-ho, pot annotar un seguit de destinaris (el regne en conjunt, o un
-o més jugadors) al costat del seu indicador de vigilància, que quedaran exempts de la
-seva protecció.
-
-```comment
-Need to clarify only members of his own kingdom can be selected.
-```
+guanyant?_). Per fer-ho, compta amb una targeta on annotar un seguit de destinaris
+(el regne en conjunt, o un o més membres del seu regne) que quedaran exempts de la seva
+protecció.
 
 ### Determinar el resultat d'un complot
 
