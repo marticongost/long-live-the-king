@@ -21,12 +21,16 @@
 	import rules from './rules.md?raw';
 	import Comment from '$lib/components/Comment.svelte';
 	import KingdomProductionTable from '$lib/components/KingdomProductionTable.svelte';
+	import Notice from '$lib/components/Notice.svelte';
 </script>
 
 <div class={styles.rules}>
 	<Markdown class={styles.content} markdown={rules}>
 		{#snippet example(markdown = '')}
 			<Example {markdown} />
+		{/snippet}
+		{#snippet notice(markdown = '')}
+			<Notice {markdown} />
 		{/snippet}
 		{#snippet comment(markdown = '')}
 			<Comment {markdown} />
