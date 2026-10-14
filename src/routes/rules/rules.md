@@ -941,7 +941,7 @@ es disol i deixa d'existir.
 ## Execució de jugadors
 
 Algunes capacitats de les cartes poden resultar en un jugador sent executat. Quan això
-succeeixi, l'hereu de la casas del jugador assumeix el lloc del líder assassinat, i
+succeeixi, l'hereu de la casa del jugador assumeix el lloc del líder assassinat, i
 hereta bona part de les possessions del seu progenitor. En termes del joc, això es
 tradueix en:
 
