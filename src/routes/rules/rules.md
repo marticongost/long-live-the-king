@@ -444,7 +444,7 @@ Jordi executa la seva reacció i l'utilitza per recuperar el recurs que la Marta
 robat.
 ```
 
-#### Indicacions {indications}
+#### Indicacions {indication}
 
 Representen indicacions que els jugadors donen al director de joc sobre les seves
 preferències per la resolució de diferents accions durant el torn. No són accions per

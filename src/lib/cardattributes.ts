@@ -27,8 +27,8 @@ export function getCardIcon(card: Card): string {
 
 export function getCapabilityIcon(capability: Capability): string {
 	switch (capability.type) {
-		case 'preparation':
-			return `capabilities/preparation.svg`;
+		case 'indication':
+			return `capabilities/indication.svg`;
 		case 'action':
 			return `capabilities/action.svg`;
 		case 'reaction':
@@ -46,7 +46,7 @@ export function getCapabilityIcon(capability: Capability): string {
 
 export function getCapabilityTitle(capability: Capability): string {
 	switch (capability.type) {
-		case 'preparation':
+		case 'indication':
 		case 'action':
 		case 'secret':
 		case 'constant':

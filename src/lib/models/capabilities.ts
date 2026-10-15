@@ -3,7 +3,7 @@ import { type ResourceSetProps, ResourceSet } from './resourcesets';
 import { getTrigger, type Trigger, type TriggerType } from './triggers';
 
 export type CapabilityType =
-	'preparation' | 'action' | 'secret' | 'reaction' | 'constant' | 'crisis';
+	'indication' | 'action' | 'secret' | 'reaction' | 'constant' | 'crisis';
 
 export interface CapabilityCostFields {
 	cost?: ResourceSetProps;
@@ -37,7 +37,7 @@ export interface ConstantData extends CapabilityEffectsFields {
 	title: string;
 }
 
-export type IndicationSpec = { type: 'preparation' } & BaseActionData;
+export type IndicationSpec = { type: 'indication' } & BaseActionData;
 export type ActionSpec = { type: 'action' } & BaseActionData;
 export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
@@ -57,7 +57,7 @@ export function buildCapability(spec: CrisisSpec): Crisis;
 export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
-		case 'preparation':
+		case 'indication':
 			return new Indication(spec);
 		case 'action':
 			return new Action(spec);
@@ -101,7 +101,7 @@ export abstract class BaseAction extends ConcreteCapability {
 }
 
 export class Indication extends BaseAction {
-	override readonly type = 'preparation';
+	override readonly type = 'indication';
 }
 
 export class Action extends BaseAction {

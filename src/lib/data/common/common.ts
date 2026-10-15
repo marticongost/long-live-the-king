@@ -10,12 +10,12 @@ export default {
 			effects: 'Sotmetre una llei de la fila a {vote}.'
 		},
 		{
-			type: 'preparation',
+			type: 'indication',
 			title: 'Vigilar',
 			effects: 'Paga {input intrigue} per establir la teva {vigilance} a aquesta mateixa quantitat.'
 		},
 		{
-			type: 'preparation',
+			type: 'indication',
 			title: 'Adquisicions',
 			effects:
 				'Aposta {input gold} per adquirir {input text} i/o {input gold} per adquirir {input text}.'

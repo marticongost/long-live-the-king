@@ -17,7 +17,7 @@ export default {
 		},
 		{
 			title: 'Mirar cap a una altra banda',
-			type: 'preparation',
+			type: 'indication',
 			effects: 'Els següents {players} estan exclosos de la teva protecció: {input kingdom-members}'
 		}
 	]
