@@ -931,6 +931,8 @@ dues vegades, quedant en un total de 2.
 Si un o més jugadors decideix unir-se al nou regne, el {king} pot assignar-los càrrecs
 immediatament.
 
+Els {kingdom-stats} del nou regne s'estableixen al valor neutre (3).
+
 ### Unir-se a un regne
 
 Com a acció, un jugador (que no sigui {king}) pot sol·licitar unir-se a un regne del que
