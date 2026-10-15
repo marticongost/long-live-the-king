@@ -633,7 +633,7 @@ indicar al director de joc la quantitat d'{intrigue-label} que volen destinar a 
 {vigilance} durant el torn vigent. Com més alt sigui aquest valor, més probable serà
 que els complots dirigits contra ells fallin i/o siguin detectats.
 
-### Contraespionatge
+### Contraespionatge #countersurveillance
 
 El _mestre d'espies_ té un paper essencial en la resolució dels complots: a diferència
 dels demés jugadors, la seva {vigilance} té efectes sobre tots els complots que es
@@ -693,7 +693,7 @@ contra d'altres.
 Els tests fets pel {spy-master} tenen un tractament especial: si un test fracassa i
 el seu objectiu era el {spy-master}, també fracassa contra tota la resta de
 destinataris - a menys que el {spy-master} hagi indicat que estaven exempts de
-protecció, com s'explica a la secció _Contraespionatge_.
+protecció, com s'explica a la secció [](#countersurveillance).
 
 ### Test de detecció
 
