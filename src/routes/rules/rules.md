@@ -919,13 +919,13 @@ Quan això succeeixi, aplicar els següents efectes:
 - A partir d'ara es considera que el jugador no forma part de cap regne. Durant el torn
   en curs no podrà crear o unir-se a un regne, però sí que podrà fer-ho a partir del
   torn següent.
-- Si el jugador era el {king} del seu regne, iniciar un {successionStruggle} (el jugador
+- Si el jugador era el {king} del seu regne, iniciar un {succession-struggle} (el jugador
   expulsat no hi pren part)
 - Per cada una dels {assets} {visible} del jugador, realitzar un {duel} {any} entre el
   jugador i la resta de membres del regne. El vencedor del duel es quedat la carta (en
   cas d'empat, se la queda el jugador expulsat.
 
-### Lluita per la successió
+### Lluita per la successió #succession-struggle
 
 Quan el {king} d'un regne perdi la seva posició, els membres del regne pugnaran per
 omplir el buit de poder i fer-se amb el tron. Per resoldre aquesta situació, resoldre
@@ -938,6 +938,31 @@ Si el {king} era l'únic membre del regne no cal resoldre el duel: si el seu her
 forma part del regne, seguirà sent {king} automàticament; si ha estat expulsat, el regne
 es disol i deixa d'existir.
 
+### Insurreccions
+
+Cada vegada que un {kingdomStat} anés a reduir-se per sota el seu valor mínim (1), en comptes
+d'alterar el seu valor es produirà una {insurrection} al regne.
+
+Per resoldre-la, llançar 3 daus de 6 cares; considerar cada resultat per sobre del valor objectiu
+com un èxit. El valor objectiu és igual al número d'{kingdomStats} amb valor 1. Determinar els
+efectes de la insurrecció a la taula següent:
+
+| Èxits | Resultat                                   |
+| ----- | ------------------------------------------ |
+| 2+    | La insurrecció fracassa, sense més efectes |
+| 1     | El {king} és {exiled}                      |
+| 0     | El {king} és {executed}                    |
+
+#### Esclafar la rebel·lió
+
+Un cop determinat el resultat, però abans d'aplicar els seus efectes, els membres del regne poden
+decidir gastar {strength 3} col·lectivament per tornar a tirar un dels daus. Això es pot fer
+múltiples vegades, ja sigui per afectar a altres daus o per tornar a repetir la tirada; el cost
+per cada repetició es paga independentment.
+
+Un cop els jugadors ja no puguin o vulguin seguir pagant per repetir els daus, els jugadors han
+d'acceptar els daus tal com hagin quedat i aplicar el resultat de la insurrecció.
+
 ## Execució de jugadors
 
 Algunes capacitats de les cartes poden resultar en un jugador sent executat. Quan això
@@ -949,8 +974,8 @@ tradueix en:
 - El jugador perd els seus càrrecs
 - El jugador perd la seva ma de cartes de tàctica, i en roba una per substituir-les
 - El jugador perd els seus objectius, i els substitueix per un nou objectiu personal
-  i un nou objectiu col·lectiu
-- Si el jugador executat era el {king} del seu regne, iniciar un {successionStruggle}
+  i un nou objectiu col·lectiu escollits aleatòriament
+- Si el jugador executat era el {king} del seu regne, iniciar un [](#succession-struggle)
 
 # Seqüència del joc
 
