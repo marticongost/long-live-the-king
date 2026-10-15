@@ -47,6 +47,9 @@
 			height: '1em',
 			verticalAlign: 'middle'
 		},
+		kingdomInput: {
+			width: '5em'
+		},
 		playerInput: {
 			width: '5em'
 		},
@@ -108,6 +111,7 @@
 				[styles.textInput]: chunk.format === 'text',
 				[styles.listInput]: chunk.format === 'list',
 				[styles.checkInput]: chunk.format === 'check',
+				[styles.kingdomInput]: chunk.format === 'kingdom',
 				[styles.playerInput]: chunk.format === 'player' || chunk.format === 'kingdom-member',
 				[styles.playerListInput]: chunk.format === 'players' || chunk.format === 'kingdom-members',
 				[styles.resourceInput]: isResourceType(chunk.format)
@@ -116,6 +120,10 @@
 			{#if chunk.format === 'player'}
 				<span class={styles.formatWrapper}>
 					<InlineSvg class={styles.formatIcon} src="keywords/player.svg" />
+				</span>
+			{:else if chunk.format === 'kingdom'}
+				<span class={styles.formatWrapper}>
+					<InlineSvg class={styles.formatIcon} src="keywords/kingdom.svg" />
 				</span>
 			{:else if chunk.format === 'kingdom-member'}
 				<span class={styles.formatWrapper}>

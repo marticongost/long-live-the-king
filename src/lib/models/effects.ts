@@ -41,6 +41,7 @@ export const inputFormats = [
 	'check',
 	'player',
 	'players',
+	'kingdom',
 	'kingdom-member',
 	'kingdom-members',
 	...resourceTypes
