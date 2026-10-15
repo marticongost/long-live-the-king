@@ -6,7 +6,7 @@ export default {
 		{
 			type: 'reaction',
 			trigger: 'lawSuggested',
-			effects: 'Escollir un {kingdomStat}: {input text}.'
+			effects: 'Escollir un {kingdom-stat}: {input text}.'
 		},
 		{
 			title: 'A qualsevol cost',

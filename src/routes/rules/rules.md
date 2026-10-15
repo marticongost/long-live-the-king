@@ -146,7 +146,7 @@ noves lleis al consell.
 
 Els diners representen el poder econòmic i financer del jugador. Com la majoria de
 recursos, s'utilitzen per pagar el cost de molts efectes i habilitats; a més a més, són
-especialment rellevants a l'hora d'aquirir nous **actius**, durant la {assetsBid}.
+especialment rellevants a l'hora d'aquirir nous **actius**, durant la {assets-bid}.
 
 ### {intrigue-label}
 
@@ -342,7 +342,7 @@ Els actius poden ser tant {visible} visibles com {hidden} ocults, tal i com s'in
 la seva carta (tant a la icona inferior esquerra, com pel color diferenciat de la
 carta - més clara en el cas d'actius visibles, més fosca pels ocults).
 
-La forma principal d'adquirir actius és la {assetsBid}, que es descriu a una secció
+La forma principal d'adquirir actius és la {assets-bid}, que es descriu a una secció
 posterior.
 
 #### Lleis
@@ -351,7 +351,7 @@ Les lleis són propostes legislatives que, de ser aprovades, canvien un o més a
 joc.
 
 Al principi del joc, les cartes de llei s'apilen i barregen en una baralla, i se'n
-roben 3, col·locant-les a la {lawsPool}. Durant el joc, els jugadors podran prendre part
+roben 3, col·locant-les a la {laws-pool}. Durant el joc, els jugadors podran prendre part
 en {votes} per intentar instaurar una de les lleis de la fila, tal i com s'explica a
 la secció [](#voting).
 
@@ -446,7 +446,7 @@ sí mateixes, si no modificadors que afecten diferents punts de la seqüència d
 
 Exmples d'indicacions inclouen especificar quanta {intrigue-label} es vol dedicar a la
 {vigilance} per oposar-se a {plots} contra el jugador, o quant {gold-label} es vol
-apostar durant la {assetsBid}.
+apostar durant la {assets-bid}.
 
 #### Constants {constant}
 
@@ -780,7 +780,7 @@ adquirir nous {assets}.
 ### El mercat d'actius
 
 Durant el joc, el director de joc disposa cartes d'{asset} en una àrea separada del joc,
-a la vista de tots els jugadors. Aquest conjunt de cartes s'anomena el {assetsMarket}.
+a la vista de tots els jugadors. Aquest conjunt de cartes s'anomena el {assets-market}.
 
 El mercat es divideix en dues files:
 
@@ -824,7 +824,7 @@ pel torn:
 
 ### Resolució de les apostes
 
-Al final del torn, durant la fase de {assetsBid}, el director de joc mira en secret les
+Al final del torn, durant la fase de {assets-bid}, el director de joc mira en secret les
 apostes de cada jugador i determina quines tenen èxit i quines fracassen.
 
 Per fer-ho, comença resolent les **apostes principals**. Per cada actiu a la
@@ -864,7 +864,7 @@ una nova segona fila).
 
 Donada la presència d'actius {hidden} a la subhasta, és important que els jugadors no
 sàpiguen quines apostes s'han fet, i quines han resultat guanyadores. Per tant, tots els
-passos relatius a la {assetsBid} s'han de realitzar en el més estricte secret:
+passos relatius a la {assets-bid} s'han de realitzar en el més estricte secret:
 
 - Els jugadors han d'anotar les apostes al seu full de torn, sense revelar-lo a la resta
   de jugadors en cap moment
@@ -934,11 +934,11 @@ es disol i deixa d'existir.
 
 ### Insurreccions
 
-Cada vegada que un {kingdomStat} anés a reduir-se per sota el seu valor mínim (1), en comptes
+Cada vegada que un {kingdom-stat} anés a reduir-se per sota el seu valor mínim (1), en comptes
 d'alterar el seu valor es produirà una {insurrection} al regne.
 
 Per resoldre-la, llançar 3 daus de 6 cares; considerar cada resultat per sobre del valor objectiu
-com un èxit. El valor objectiu és igual al número d'{kingdomStats} amb valor 1. Determinar els
+com un èxit. El valor objectiu és igual al número d'{kingdom-stats} amb valor 1. Determinar els
 efectes de la insurrecció a la taula següent:
 
 | Èxits | Resultat                                   |
@@ -981,14 +981,14 @@ membres.
 ### Recursos produïts
 
 Cada regne produeix recursos segons el nombre de membres i el valor del seu
-{kingdomStat} associat, tal com s'indica a la taula següent:
+{kingdom-stat} associat, tal com s'indica a la taula següent:
 
 ```kingdomProductionTable
 
 ```
 
 Es produeixen recursos de tots els tipus, exceptuant el {prestige-label}, utilitzant
-per cada tipus de recurs el seu {kingdomStat} associat:
+per cada tipus de recurs el seu {kingdom-stat} associat:
 
 | Recurs           | Indicador             |
 | ---------------- | --------------------- |
@@ -999,7 +999,7 @@ per cada tipus de recurs el seu {kingdomStat} associat:
 | {intrigue-label} | 6 - {stability-label} |
 | {favour-label}   | El més baix           |
 
-Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdomStat}, excepte
+Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdom-stat}, excepte
 per la {intrigue-label} i el {favour-label}:
 
 - La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
