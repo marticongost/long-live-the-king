@@ -1013,6 +1013,46 @@ tradueix en:
 
 # Seqüència del joc
 
+El joc es divideix en un seguit de torns; cada un d'aquests torns es divideix a la seva
+vegada en una sèrie de fases, com s'explica posteriorment a la secció [](#turn-sequence).
+
+## Durada de la partida
+
+Una partida estàndard dura 10 torns. Un cop conclòs l'últim torn es resol el
+[](#game-end).
+
+## Perill creixent
+
+A mida que la partida avança, els reptes i problemes als que els regnes s'hauran
+d'enfrontar seran més perillosos i exigents. Per representar-ho s'utilitza el
+concepte de **perill**, un valor que creix a mida que els torns avancen, i que és
+denotat per la icona {danger}.
+
+Diferents efectes del joc poden veure's incrementats en funció d'aquest valor.
+
+El {danger} es calcula en funció del torn vigent:
+
+| Torn | Perill |
+| ---- | ------ |
+| 1-4  | 1      |
+| 5-7  | 2      |
+| 8-10 | 3      |
+
+# Seqüència del torn #turn-sequence
+
+Els torns es divideixen en una sèrie de fases:
+
+1. Producció
+2. Esdeveniments
+3. Planificació
+4. Accions
+5. Secrets
+6. Adquisició
+7. Resolució de crisis
+8. Final del torn
+
+A continuació s'explica cada una d'aquestes fases en detall.
+
 ## Fase de producció #production-fase
 
 En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
@@ -1297,7 +1337,7 @@ Si el torn actual és l'últim, la partida continua:
 Per contra, si el torn actual era l'últim, la partida conclou i es determina el
 guanyador (veure a continuació).
 
-# Final de la partida
+# Final de la partida #game-end
 
 Els jugadors revelen tots els seus recursos i cartes {hidden}. A continuació, en
 {playing-order}, cada jugador s'alterna per activar una de les seves reaccions
