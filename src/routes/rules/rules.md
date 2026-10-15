@@ -1153,6 +1153,11 @@ dins d'aquests espais habilitats. Cal que indiquin valors per totes aquestes cas
 a menys que el text de la targeta indiqui que alguns d'ells són opcionals o mútuament
 excloents.
 
+### Final de la fase
+
+Un cop tots els jugadors han entregat el seu cofre al director de joc, la fase conclou
+i es procedeix a la fase següent.
+
 ## Fase d'accions #actions-phase
 
 ## Fase de secrets #secrets-phase
