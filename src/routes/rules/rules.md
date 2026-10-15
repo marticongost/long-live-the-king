@@ -364,7 +364,7 @@ la secció [](#voting).
 
 Les capacitats representen els diferents efectes associats a les cartes.
 
-### Cost de les capacitats
+### Cost de les capacitats #capability-cost
 
 Moltes capacitats tenen un cost associat. Per tal d'executar una d'aquestes capacitats,
 caldrà retornar recursos suficients del cofre del jugador a la reserva general.
@@ -739,15 +739,15 @@ Per determinar si el complot és detectat, el director de joc llança en secret 
 de 6 cares, comparant-los contra el mateix _llindar d'èxit_ utilitzat al _test d'èxit_:
 
 - **Detecció:** Si els dos resultats són **superiors** al llindar, el complot és
-  detectat. El director de joc anota al full del torn de l'oponent els detalls del
-  complot, incloent la identitat del conspirador.
+  detectat. El director de joc afegeix una nota al cofre de l'oponent indicant els
+  detalls del complot, incloent la identitat del conspirador.
 - **Detecció parcial:** Si només un dels dos resultats és **superior** al llindar,
-  el complot és parcialment detectat. El director de joc anota al full del torn de
-  l'oponent els detalls del complot, però omet la identitat del conspirador.
+  el complot és parcialment detectat. El director de joc afegeix una nota al cofre
+  de l'oponent indicant els detalls del complot, però omet la identitat del conspirador.
 - **Discreció:** Si cap dels resultats supera el llindar, el complot és executat sense
   que l'oponent el detecti. Naturalment, si és el destinatari sí que percebrà qualsevol
-  efecte material (_ex. veurà que ha perdut recursos_), però no sabrà per què, ni qui
-  n'ha estat el responsable.
+  efecte material (_ex. veurà que ha perdut recursos_), però no sabrà quina capacitat o
+  efecte ho ha causat, ni qui n'ha estat el responsable.
 
 ## Crisis
 
@@ -1168,7 +1168,7 @@ Durant aquesta fase els jugadors poden decidir sacrificar qualsevol nombre de ca
 de tàctica, donant-les al director de joc cap per aball perquè les descarti. A canvi,
 el director de joc els donarà la bonificació per descart indicada a cada targeta.
 
-### Cartes amb paràmetres
+### Cartes amb paràmetres #card-parameters
 
 Algunes cartes comptaran amb caselles habilitades per tal que els jugadors indiquin
 aspectes de la capacitat que cal determinar amb antel·lació. Per exemple, una carta
@@ -1202,7 +1202,78 @@ i es procedeix a la fase següent.
 
 ## Fase d'accions #actions-phase
 
+En aquesta fase, el director de joc resol les {actions} planificades pels jugadors.
+
+Seguint l'[](#playing-order), el director de joc agafa la següent targeta de capacitat
+de la pila d'accions del jugador actiu, i:
+
+1. La mostra als demés jugadors
+2. Valida els [](#card-parameters) de la targeta
+3. Paga el [cost de la capacitat](#capability-cost)
+4. Executa els efectes de la capacitat
+5. Neteja la carta i la retorna al cofre del seu propietari
+
+A continuació, el torn passa al següent jugador en l'{playing-order} que encara tingui
+accions a la seva pila. Quan s'hagin buidat les piles de tots els jugadors, la fase
+conclou.
+
+### Validar les targetes
+
+Per cada targeta, el director de joc verifica que s'hagin emplenat totes les caselles
+necessàries per la seva execució (exceptuant caselles opcionals o mútuament excloents).
+
+Si una o més de les caselles requerides han estat omeses, o algun dels valors indicats
+és invàlid, s'abortarà l'execució de la capacitat (veure a continuació).
+
+### Pagar el cost de la capacitat
+
+El director de joc retorna el conjunt necessari de recursos del cofre del jugador actiu
+a la reserva general. Si el jugador no disposa de fons suficients, abortar l'execució
+de la capacitat (veure a continuació).
+
+A l'hora de pagar el cost de la capacitat, utilitzar {favour-label} únicament com a
+últim recurs.
+
+### Abortar capacitats
+
+Si una capacitat planificada és invàlida o no se'n pot pagar el cost, el director de
+joc n'abortarà l'execució. En tots els casos, això implicarà:
+
+1. Netejar totes les marques de la targeta
+2. Tornar-la al cofre del seu propietari
+3. Explicar el motiu pel qual la capacitat ha estat abortada al seu propietari
+
+En aquests casos, no es cobrarà el cost en recursos de la capacitat.
+
 ## Fase de secrets #secrets-phase
+
+A continuació, el director de joc procedeix a resoldre els {secrets} planificats
+pels jugadors. El procés és exactament igual que l'utilitzat a la [](#actions-phase),
+amb les següents diferències:
+
+- Utilitzar les piles de {secrets} en comptes de les piles d'{actions}
+- Mantenir en secret quines capacitats s'han executat o abortat
+
+### Abortar secrets
+
+Quan un {secret} sigui abortat, ja sigui perquè no s'han especificat els seus
+paràmetres correctament, o perquè no es disposa dels fons necessaris, el director
+de joc ha d'evitar informar al seu propietari de forma pública.
+
+En comptes d'això, el director de joc hauria d'utilitzar un rotulador d'un color
+diferent (e.g. vermell) per afegir anotacions que indiquin al seu propietari la
+raó per la qual la capacitat ha estat abortada.
+
+### Resultat dels complots
+
+En resoldre un {plot}, el director de joc hauria de notificar a les parts
+implicades la informació rellevant. Per fer-ho, escriure petites notes en un paper
+i afegir-les al cofre del jugador rellevant:
+
+- Indicar a l'instigador del complot si el seu complot ha tingut èxit
+- Indicar al destinatari del complot la naturalesa dels complots que hagi detectat,
+  i el seu instigador (si s'ha detectat)
+- Ídem per qualsevol complot que el {spy-master} hagi detectat.
 
 ## Fase d'adquisició #acquisition-phase
 

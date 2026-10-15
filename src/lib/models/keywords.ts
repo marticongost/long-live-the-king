@@ -25,6 +25,7 @@ export const keywords = {
 	exhaust: 'exhaurir',
 	disable: 'inhabilitar',
 	assets: 'actius',
+	actions: 'accions',
 	secrets: 'secrets',
 	objectives: 'objectius',
 	tactics: 'tàctiques',
