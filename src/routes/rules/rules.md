@@ -860,7 +860,7 @@ pel torn:
 - Es poden fer entre 0 i 2 apostes: una aposta _principal_ i una de _secundària_, només
   una de principal, o cap
 
-### Resolució de les apostes
+### Resolució de les apostes #asset-bid-resolution
 
 Al final del torn, durant la fase de {assets-bid}, el director de joc mira en secret les
 apostes de cada jugador i determina quines tenen èxit i quines fracassen.
@@ -1277,6 +1277,9 @@ i afegir-les al cofre del jugador rellevant:
 
 ## Fase d'adquisició #acquisition-phase
 
+Durant aquesta fase, el director de joc resol les apostes per adquirir {assets} del
+{assets-market}, tal com s'explica a la secció [](#asset-bid-resolution).
+
 ## Fase de resolució de crisis #crisis-resolution-phase
 
 Durant aquesta fase, si hi ha una o més crisis en joc, el director de joc les resol una
@@ -1284,4 +1287,23 @@ per una, en ordre de joc, tal com s'explica a la secció [](#crisis-result).
 
 ## Final del torn
 
+Si el torn actual és l'últim, la partida continua:
+
+- El director de joc retorna els cofres als jugadors, amb totes les seves cartes i
+  recursos a dins, més qualsevol nota de paper que s'hagi afegit durant la resolució
+  de les capacitats
+- Es comença un nou torn
+
+Per contra, si el torn actual era l'últim, la partida conclou i es determina el
+guanyador (veure a continuació).
+
 # Final de la partida
+
+Els jugadors revelen tots els seus recursos i cartes {hidden}. A continuació, en
+{playing-order}, cada jugador s'alterna per activar una de les seves reaccions
+_Al final de la partida_ - incloent aquelles proporcionades pels seus objectius
+personals i col·lectius.
+
+Un cop els jugadors hagin resolt aquests efectes es compara el seu {prestige-label}.
+El jugador amb el valor més alt guanya. En cas d'empat els jugadors comparteixen la
+victòria.
