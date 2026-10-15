@@ -38,6 +38,7 @@ export const keywords = {
 	augments: 'Augmenta',
 	insurrection: 'Insurrecció',
 	'execution-phase': "Fase d'execució",
+	'playing-order': 'Ordre de joc',
 	'kingdom-member': undefined,
 	'kingdom-members': undefined,
 	'kingdom-stat-friction': undefined,

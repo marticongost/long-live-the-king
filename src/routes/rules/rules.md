@@ -33,7 +33,12 @@ mantenen darrere la seva pantalla.
 Per acabar, roben també un _emblema_ de la seva casa, l'insereixen dins del seu penjoll
 i se'l pengen al coll.
 
-## 2. Escollir el(s) rei(s)
+## 3. Establir l'ordre de joc inicial
+
+Agafar una fitxa de casa de cada un dels jugadors i disposar-les aleatòriament a l'espai
+que indica l'{playing-order}.
+
+## 4. Escollir el(s) rei(s)
 
 Un dels jugadors comencarà el joc exercint el paper de _rei_. El {king} és la major
 autoritat del regne, i desenvolupa un paper central al joc.
@@ -67,7 +72,7 @@ Cada jugador ha d'afegir un segon emblema al seu penjoll, sobre el de la seva ca
 corresponent a la casa del seu {king} (si són súbdits d'un altre jugador) o un emblema de
 {king} (si són els reis del seu regne).
 
-## 3. Repartir objectius
+## 5. Repartir objectius
 
 Cada jugador compta amb un seguit de metes i ambicions personals, i opinions sobre què
 és el més adequat pel regne. Aquestes fites es representen amb les **cartes
@@ -85,18 +90,18 @@ altres jugadors.
 
 Un cop tornats tots els objectius, remenar les dues baralles i deixar-les a part.
 
-## 4. Repartir cartes inicials
+## 6. Repartir cartes inicials
 
 Reunir les targetes d'**Accions comunes** i donar-ne una de cada a cada jugador.
 
 Remenar la baralla de **cartes de tàctica**, i repartir-ne 3 a cada jugador.
 
-## 5. Repartir recursos inicials
+## 7. Repartir recursos inicials
 
 Repartir 3 recursos de cada tipus exceptuant el {favour} ({prestige}, {gold}, {power},
 {intrigue}, {strength}, {faith}) a cada jugador.
 
-## 6. Nomenaments inicials
+## 8. Nomenaments inicials
 
 Per cada regne, el seu {king} pren una còpia de cada **carta de càrrec** (excepte la de
 {king}), formant la seva reserva de càrrecs. A continuació, pot assignar un o més d'aquests
@@ -109,13 +114,13 @@ poder i ambicions personals dels membres del consell amb les necessitats del seu
 En rebre una carta de càrrec es reben també totes les targetes de capacitat
 corresponents.
 
-## 7. Preparar el mercat d'actius
+## 9. Preparar el mercat d'actius
 
 Reunir les cartes d'{asset} en dos pilons ({visible} visible i {hidden} no visible).
 Remenar els dos pilons. Seguir les indicacions de la secció [](#prepare-market) per
 preparar el mercat d'actius, robant dels dos pilons.
 
-## 8. Preparar la fila de lleis
+## 10. Preparar la fila de lleis
 
 Reunir les cartes de {law} en un piló. Remenar el piló, robar 3 cartes i disposar les
 cartes en fila a l'espai dedicat del taulell.
@@ -532,6 +537,39 @@ Tanmateix, això no s'aplica a aquells tractes que impliquen situacions futures 
 em dones {gold 2}, jo et nomenaré {treasurer} el següent torn"_). Els jugadors són
 lliures d'incomplir-los - a costa de la seva reputació, i el que els altres jugadors
 puguin pensar d'ells...
+
+## Ordre de joc #playing-order
+
+Tot i que algunes fases del joc permeten als jugadors actuar a la vegada (per exemple,
+la [](#planning-phase), a la major part del joc els jugadors s'alternen en ordre per
+resoldre les seves accions i efectes. La seqüència en que els jugadors actuen es
+coneix com a {playing-order}.
+
+## Com s'estableix?
+
+Excepcionalment, al principi de la partida l'ordre de joc s'estableix aleatòriament.
+A partir de la primera [](#planning-phase), els jugadors determinen la seva posició
+a l'ordre de joc segons quant s'afanyin a entregar el seu cofre de jugador al director
+de joc, tal com s'explica a la secció [](#setting-player-order).
+
+## Ordre de joc pels regnes #kingdom-playing-order
+
+Quan calgui determinar l'ordre en que actuen els diferents regnes de la partida (per
+exemple, en [revelar cartes d'esdeveniment](#events-phase)), s'utilitzarà el jugador
+amb la millor posició a l'{playing-order} de qualsevol dels membres de cada regne.
+
+A efectes de determinar l'ordre dels regnes, es considerarà que els jugadors que no
+pertanyin a cap regne pertanyen a un regne anònim conjunt.
+
+```example
+L'ordre de joc és Jordi, Marina, Oriol, Marc, Dària, Sara, Gerard i Jan. Els jugadors es
+divideixen en tres grups: Pharingia (Jordi i Marina), Valkus (Marc, Dària
+i Sara) i jugadors sense regne (Oriol, Jan i Gerard). Consultant l'ordre de joc, el Jordi
+és el primer jugador. Pertany a Pharingia, així que aquest regne serà el primer en actuar.
+La Marina és la següent en ordre, però el seu regne ja ha actuat, així que es salta. Seguint l'ordre, veiem que l'Oriol és el següent jugador i no pertany a cap regne, així
+que el grup de jugadors sense regne actuarà en segon lloc. Finalment, només queda el regne
+de Valkus per rebr el seu esdeveniment, així que ho farà en tercer lloc.
+```
 
 ## Duels
 
@@ -1084,20 +1122,7 @@ cartes d'esdeveniment: la primera s'assigna al primer regne, la segona al segon 
 i la tercera als dos jugadors sense regne.
 ```
 
-Les cartes es revelen en ordre de joc, segons la posició del primer dels membres del
-regne a l'ordre de joc.
-
-```example
-L'ordre de joc és Jordi, Marina, Oriol, Marc, Dària, Sara, Gerard i Jan. Els jugadors es
-divideixen en tres grups: Pharingia (Jordi i Marina), Valkus (Marc, Dària
-i Sara) i jugadors sense regne (Oriol, Jan i Gerard). Consultant l'ordre de joc, el Jordi
-és el primer jugador. Pertany a Pharingia, així que aquest regne serà el primer en revelar
-el seu esdeveniment. La Marina és la següent en ordre, però el seu regne ja ha revelat un
-esdeveniment, així que es salta. Seguint l'ordre, veiem que l'Oriol és el següent
-jugador i no pertany a cap regne, així que es revelarà l'esdeveniment compartit pels
-jugadors sense regne en segon lloc. Finalment, només queda el regne de Valkus per rebre
-el seu esdeveniment, així que ho farà en tercer lloc.
-```
+Les cartes es revelen en l'[ordre de joc dels regnes](#kindom-playing-order).
 
 Quan es reveli una carta d'esdeveniment se'n llegeixen els efectes en veu alta. Alguns
 esdeveniments tindran efecte immediat, descartant la carta immediatament després
@@ -1152,6 +1177,21 @@ Els jugadors escriuen amb rotuladors sobre la superfície de plàstic de les tar
 dins d'aquests espais habilitats. Cal que indiquin valors per totes aquestes caselles,
 a menys que el text de la targeta indiqui que alguns d'ells són opcionals o mútuament
 excloents.
+
+### Determinant l'ordre de joc #establishing-playing-order
+
+L'ordre en que els jugadors entreguen el seu cofre de jugador al director de joc és
+important, ja que s'utilitza per establir l'[](#playing-order).
+
+```example
+El Joan, la Verònica, el Jordi i la Marta estan ocupats planificant les seves
+capacitats pel torn. El Jordi acaba el primer i entrega el seu cofre al director de
+joc. El director de joc situa la fitxa de la seva casa a la primera posició de
+l'ordre de joc. La Verònica és la segona en entregar el cofre, així que la seva fitxa
+es situa en segona posició. El Joan s'avança a la Marta per poc, així que ell ocupa la
+3a posició i ella queda relegada a la última plaça. Durant la resta del torn, les
+capacitats dels jugadors es resoldran alternant entre Jordi, Verònica, Joan i Marta.
+```
 
 ### Final de la fase
 
