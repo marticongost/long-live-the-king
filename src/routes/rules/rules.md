@@ -294,12 +294,6 @@ Siguin del tipus que siguin, les cartes compten amb un seguit de trets comuns:
   recursos que es guanyaran si es sacrifica una carta s'indiquen a la cantonada inferior
   dreta. Si no es mostra cap recurs, la carta no es pot sacrificar.
 
-```comment
-Need to discuss _when_ cards can be discarded. It could either be a planned action,
-resolved during the resolution phase, or an immediate one, resolved during the planning
-phase.
-```
-
 ### Tipus de cartes
 
 #### Accions comunes
