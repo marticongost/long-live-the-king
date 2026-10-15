@@ -7,9 +7,10 @@ export default {
 		{
 			type: 'crisis',
 			test: '{strength}',
-			difficulty: '(5 - {stability}) x {players}',
+			difficulty: '{kingdom-members} × {danger} - {stability}',
 			highestContributionReward: '{prestige 1}',
-			penalty: '{stability -2}. Si {stability} és 1, {execute} al {king}.'
+			penalty:
+				'{stability -2}. Els {kingdom-members} que menys hagin contribuit perden una {tactic} aleatòria.'
 		}
 	]
 } satisfies EventData;

@@ -53,6 +53,7 @@ export const keywords = {
 	indication: undefined,
 	reaction: undefined,
 	constant: undefined,
+	danger: undefined,
 	...Object.fromEntries(getProperties().map((property) => [property.id, property.title])),
 	...Object.fromEntries(officeTypes.map((type) => [type, getOfficeName(type)]))
 };

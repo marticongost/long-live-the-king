@@ -7,7 +7,7 @@ export default {
 		{
 			type: 'crisis',
 			test: '{gold}',
-			difficulty: '{players} al regne x 2',
+			difficulty: '{kingdom-members} × {danger}',
 			highestContributionReward: '{prestige 1}',
 			penalty: 'El regne pateix {stability -2}.'
 		}

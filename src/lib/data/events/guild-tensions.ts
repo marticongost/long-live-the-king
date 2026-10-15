@@ -7,10 +7,10 @@ export default {
 		{
 			type: 'crisis',
 			test: '{power}',
-			difficulty: '{players} al regne',
+			difficulty: '{kingdom-members} × {danger}',
 			highestContributionReward: '{prestige 1}',
 			penalty:
-				'El regne pateix {wealth -1}. Els jugadors que menys hagin contribuit perden {gold 2}.'
+				'El regne pateix {wealth -1}. Els jugadors que menys hagin contribuit perden {gold}={danger}.'
 		}
 	]
 } satisfies EventData;
