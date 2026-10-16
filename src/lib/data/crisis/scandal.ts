@@ -6,5 +6,5 @@ export default {
 	difficulty: '{kingdom-members} × {danger}',
 	highestContributionReward: '{prestige 1}',
 	penalty:
-		'El regne pateix {stability -2}. El jugador amb més {prestige} del regne perd {prestige 1}.'
+		'El regne pateix {stability -2}. El jugador amb més {prestige} del regne perd els seus càrrecs.'
 } satisfies CrisisData;

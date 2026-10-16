@@ -6,6 +6,6 @@ export default {
 	test: '{power} + {gold}',
 	difficulty: '{kingdom-members} × ({danger} + 1)',
 	penalty:
-		'El regne pateix {stability -1}. Els {kingdom-members} que menys hagin contribuit perden {power 2}.',
+		'El regne pateix {stability -1}. Els {kingdom-members} que menys hagin contribuit perden {power}={danger}.',
 	highestContributionReward: `{prestige 1}, {power 2}`
 } satisfies CrisisData;
