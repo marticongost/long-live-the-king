@@ -14,7 +14,7 @@ export default {
 			title: 'Visions del futur',
 			type: 'secret',
 			cost: { intrigue: 1 },
-			effects: "El director de joc t'ensenya en secret les següents 3 cartes d'esdeveniment."
+			effects: "El director de joc t'ensenya en secret les següents 3 cartes de destí."
 		}
 	]
 } satisfies AssetData;

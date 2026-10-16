@@ -12,6 +12,8 @@ export function getCardIcon(card: Card): string {
 			return `goals/${card.id}.svg`;
 		case 'event':
 			return `events/${card.id}.svg`;
+		case 'crisis':
+			return `crisis/${card.id}.svg`;
 		case 'law':
 			return `laws/${card.id}.svg`;
 		case 'tactic':
@@ -37,8 +39,6 @@ export function getCapabilityIcon(capability: Capability): string {
 			return `capabilities/constant.svg`;
 		case 'secret':
 			return `capabilities/secret.svg`;
-		case 'crisis':
-			return `capabilities/crisis.svg`;
 		default:
 			return assertNever(capability, 'Unknown capability type');
 	}
@@ -53,8 +53,6 @@ export function getCapabilityTitle(capability: Capability): string {
 			return capability.title;
 		case 'reaction':
 			return capability.trigger.title;
-		case 'crisis':
-			return 'Crisis';
 		default:
 			return assertNever(capability, 'Unknown capability type');
 	}

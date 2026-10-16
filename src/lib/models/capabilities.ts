@@ -26,13 +26,6 @@ export interface BaseActionData extends ConcreteCapabilityData {
 	title?: string;
 }
 
-export interface CrisisData {
-	test: string;
-	difficulty: string;
-	penalty: string;
-	highestContributionReward: string;
-}
-
 export interface ConstantData extends CapabilityEffectsFields {
 	title: string;
 }
@@ -42,18 +35,15 @@ export type ActionSpec = { type: 'action' } & BaseActionData;
 export type SecretSpec = { type: 'secret' } & BaseActionData;
 export type ReactionSpec = { type: 'reaction' } & ReactionData;
 export type ConstantSpec = { type: 'constant' } & ConstantData;
-export type CrisisSpec = { type: 'crisis' } & CrisisData;
-export type CapabilitySpec =
-	IndicationSpec | ActionSpec | SecretSpec | ReactionSpec | ConstantSpec | CrisisSpec;
+export type CapabilitySpec = IndicationSpec | ActionSpec | SecretSpec | ReactionSpec | ConstantSpec;
 
-export type Capability = Indication | Action | Secret | Reaction | Constant | Crisis;
+export type Capability = Indication | Action | Secret | Reaction | Constant;
 
 export function buildCapability(spec: IndicationSpec): Indication;
 export function buildCapability(spec: ActionSpec): Action;
 export function buildCapability(spec: SecretSpec): Secret;
 export function buildCapability(spec: ReactionSpec): Reaction;
 export function buildCapability(spec: ConstantSpec): Constant;
-export function buildCapability(spec: CrisisSpec): Crisis;
 export function buildCapability(spec: CapabilitySpec): Capability;
 export function buildCapability(spec: CapabilitySpec): Capability {
 	switch (spec.type) {
@@ -67,8 +57,6 @@ export function buildCapability(spec: CapabilitySpec): Capability {
 			return new Reaction(spec);
 		case 'constant':
 			return new Constant(spec);
-		case 'crisis':
-			return new Crisis(spec);
 		default:
 			assertNever(spec, 'Unknown capability type');
 	}
@@ -134,21 +122,4 @@ export class Constant extends BaseCapability {
 	}
 
 	override readonly type = 'constant';
-}
-
-export class Crisis extends BaseCapability {
-	readonly test: string;
-	readonly difficulty: string;
-	readonly penalty: string;
-	readonly highestContributionReward: string;
-
-	constructor({ test, difficulty, penalty, highestContributionReward }: CrisisData) {
-		super();
-		this.test = test;
-		this.difficulty = difficulty;
-		this.penalty = penalty;
-		this.highestContributionReward = highestContributionReward;
-	}
-
-	override readonly type = 'crisis';
 }

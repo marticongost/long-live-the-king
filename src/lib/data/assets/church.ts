@@ -14,7 +14,7 @@ export default {
 			type: 'action',
 			cost: { faith: 2 },
 			effects:
-				"Mira en secret les dues següents cartes d'esdeveniment. Torna una de les cartes a dalt de la pila, descarta l'altra."
+				"Mira en secret les dues següents cartes de destí. Torna una de les cartes a dalt de la pila, descarta l'altra."
 		}
 	]
 } satisfies AssetData;

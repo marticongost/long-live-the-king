@@ -125,6 +125,12 @@ preparar el mercat d'actius, robant dels dos pilons.
 Reunir les cartes de {law} en un piló. Remenar el piló, robar 3 cartes i disposar les
 cartes en fila a l'espai dedicat del taulell.
 
+## 11. Preparar la pila de destí
+
+Separar les cartes de crisis i les cartes d'esdeveniment en dos pilons. Barrejar cada
+un dels pilons. Robar 5 cartes de crisis i 5 cartes d'esdeveniment; barrejar-les per
+formar la pila de destí.
+
 # Conceptes
 
 ## Recursos
@@ -311,8 +317,15 @@ utilitzades al seu propietari.
 #### Esdeveniments
 
 Els esdeveniments representen situacions fora del normal que afecten al regne i
-presenten reptes i oportunitats als seus membres. Cada torn, durant la [](#events-phase),
-el director de joc revela una o més cartes d'esdeveniment, segons el nombre de regnes al joc.
+presenten reptes i oportunitats als seus membres. Formen part de la pila de destí, junt
+amb les crisis, i poden ser revelats a la [](#fate-phase).
+
+#### Crisis
+
+Les crisis representen situacions crítiques o perilloses que amenacen al regne.
+Requeriran que els membres del regne col·laborin reunint recursos per evitar els seus
+efectes, i tenen recompenses i càstigs associats, segons s'arribin a evitar. Formen part
+de la pila de destí, junt amb els esdeveniments, i poden ser revelats a la [](#fate-phase).
 
 #### Objectius
 
@@ -458,11 +471,6 @@ apostar durant la {assets-bid}.
 Representen estipulacions i regles addicionals que estan sempre actives i cal tenir en
 compte en tot moment.
 
-#### Crisis {crisis}
-
-Descriuen situacions adverses que afecten al regne i els seus membres. Estan vinculades a
-cartes d'esdeveniment, i es descriuen en més detall a una secció posterior.
-
 ## Visibilitat
 
 Cada jugador té una pantalla que ha d'utilitzar per mantenir en secret la major part de
@@ -555,7 +563,7 @@ de joc, tal com s'explica a la secció [](#setting-player-order).
 ## Ordre de joc pels regnes #kingdom-playing-order
 
 Quan calgui determinar l'ordre en que actuen els diferents regnes de la partida (per
-exemple, en [revelar cartes d'esdeveniment](#events-phase)), s'utilitzarà el jugador
+exemple, en [revelar cartes d'esdeveniment](#fate-phase)), s'utilitzarà el jugador
 amb la millor posició a l'{playing-order} de qualsevol dels membres de cada regne.
 
 A efectes de determinar l'ordre dels regnes, es considerarà que els jugadors que no
@@ -756,11 +764,9 @@ els seus membres col·laborin per superar-la amb èxit.
 
 ### Quan tenen lloc?
 
-Les crisis només poden aparèixer com a una capacitat de les _cartes d'esdeveniment_.
-Tanmateix, tot i que són força freqüents, no totes les cartes d'esdeveniment contenen
-crisis.
+Les crisis apareixen en revelar cartes de destí durant la [](#fate-phase).
 
-Si la carta d'esdeveniment revelada durant el torn conté una crisi, s'anunciarà als
+Si la carta de destí revelada durant el torn conté una crisi, s'anunciarà als
 membres del regne, explicant el repte plantejat i les conseqüències de l'èxit i el
 fracàs. Els membres del regne tindran l'oportunitat de reunir els recursos necessaris
 durant la resta del torn per superar la crisi. El resultat de la crisi no es determina
@@ -780,7 +786,7 @@ hauran d'intentar reunir 10 {power} entre tots.
 ### Contribuint a la crisi
 
 Durant la ()[#planning-phase], els jugadors poden anotar la seva contribució a la crisi
-utilitzant l'acció comuna _Contribuir a la crisi_.
+/utilitzant l'acció comuna _Contribuir a la crisi_.
 
 Cal tenir present:
 
@@ -1151,23 +1157,23 @@ Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recurs
 seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
 {intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
 
-## Fase d'esdeveniments #events-phase
+## Fase de destí #fate-phase
 
-Durant aquesta fase, el director de joc revela una carta d'esdeveniment de la pila per
+Durant aquesta fase, el director de joc revela una carta de la pila de destí per
 cada un dels regnes del joc. Si un o més jugadors no pertanyen a cap regne, es tracten
 com si formessin part d'un regne format per aquests jugadors.
 
 ```example
 Al principi del torn, hi ha 4 jugadors que formen part d'un regne, 3 que formen part
 d'un segon regne, i 2 que no formen part de cap regne. El director de joc revela tres
-cartes d'esdeveniment: la primera s'assigna al primer regne, la segona al segon regne,
-i la tercera als dos jugadors sense regne.
+cartes de la pila de destí: la primera s'assigna al primer regne, la segona al segon
+regne, i la tercera als dos jugadors sense regne.
 ```
 
 Les cartes es revelen en l'[ordre de joc dels regnes](#kindom-playing-order).
 
-Quan es reveli una carta d'esdeveniment se'n llegeixen els efectes en veu alta. Alguns
-esdeveniments tindran efecte immediat, descartant la carta immediatament després
+Quan es reveli una carta de destí se'n llegeixen els efectes en veu alta. Algunes
+cartes tindran efecte immediat, descartant la carta immediatament després
 de resoldre'n els efectes; d'altres poden tenir un impacte més durador i quedar en joc
 per un o més torns.
 

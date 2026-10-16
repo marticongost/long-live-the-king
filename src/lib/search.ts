@@ -64,6 +64,12 @@ const unsortedFilterEntries: Array<FilterEntry> = [
 	},
 	{
 		kind: 'option',
+		id: 'crisis',
+		title: getProperty('crisis').title,
+		matches: (card) => card.type === 'crisis'
+	},
+	{
+		kind: 'option',
 		id: 'law',
 		title: getProperty('law').title,
 		matches: (card) => card.type === 'law'

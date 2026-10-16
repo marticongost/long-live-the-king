@@ -1,6 +1,7 @@
 import {
 	Asset,
 	Common,
+	Crisis,
 	Event,
 	Goal,
 	House,
@@ -10,6 +11,7 @@ import {
 	type AssetData,
 	type Card,
 	type CommonData,
+	type CrisisData,
 	type EventData,
 	type GoalData,
 	type HouseData,
@@ -72,6 +74,14 @@ cardsCatalog.load(
 		import: 'default'
 	}),
 	Event
+);
+
+cardsCatalog.load(
+	import.meta.glob<CrisisData>(`./crisis/**/*.ts`, {
+		eager: true,
+		import: 'default'
+	}),
+	Crisis
 );
 
 cardsCatalog.load(

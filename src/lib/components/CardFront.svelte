@@ -124,6 +124,7 @@
 	import InlineSvg from './InlineSvg.svelte';
 	import { getCardIcon } from '$lib/cardattributes';
 	import CostDisplay from './CostDisplay.svelte';
+	import CrisisDetails from './CrisisDetails.svelte';
 
 	interface Props extends StandardAttributeProps {
 		card: Card;
@@ -146,6 +147,9 @@
 		</div>
 	</div>
 	<div class={styles.body}>
+		{#if card.type === 'crisis'}
+			<CrisisDetails crisis={card} />
+		{/if}
 		{#each card.capabilities as capability, index (index)}
 			<CapabilityDisplay {capability} />
 		{/each}

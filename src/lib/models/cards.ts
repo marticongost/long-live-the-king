@@ -7,6 +7,7 @@ export const cardTypes = [
 	'office',
 	'goal',
 	'event',
+	'crisis',
 	'law',
 	'tactic',
 	'asset',
@@ -58,6 +59,33 @@ export type EventData = CardData;
 
 export class Event extends BaseCard {
 	override readonly type = 'event';
+}
+
+export interface CrisisData extends CardData {
+	test: string;
+	difficulty: string;
+	penalty: string;
+	highestContributionReward: string;
+}
+
+export class Crisis extends BaseCard {
+	override readonly type = 'crisis';
+
+	readonly test: string;
+	readonly difficulty: string;
+	readonly penalty: string;
+	readonly highestContributionReward: string;
+
+	constructor(
+		id: string,
+		{ test, difficulty, penalty, highestContributionReward, ...base }: CrisisData
+	) {
+		super(id, base);
+		this.test = test;
+		this.difficulty = difficulty;
+		this.penalty = penalty;
+		this.highestContributionReward = highestContributionReward;
+	}
 }
 
 export type OfficeData = CardData;
@@ -134,4 +162,4 @@ export class House extends BaseCard {
 	}
 }
 
-export type Card = Common | Event | Office | Goal | Tactic | Asset | Law | House;
+export type Card = Common | Event | Crisis | Office | Goal | Tactic | Asset | Law | House;
