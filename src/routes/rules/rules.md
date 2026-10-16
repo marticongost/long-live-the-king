@@ -1048,114 +1048,16 @@ El {danger} es calcula en funció del torn vigent:
 
 Els torns es divideixen en una sèrie de fases:
 
-1. Producció
-2. Esdeveniments
-3. Planificació
-4. Accions
-5. Secrets
-6. Adquisició
-7. Resolució de crisis
+1. Destí
+2. Planificació
+3. Accions
+4. Secrets
+5. Adquisició
+6. Resolució de crisis
+7. Producció
 8. Final del torn
 
 A continuació s'explica cada una d'aquestes fases en detall.
-
-## Fase de producció #production-fase
-
-En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
-membres.
-
-### Recursos produïts
-
-Cada regne produeix recursos segons el nombre de membres i el valor del seu
-{kingdom-stat} associat, tal com s'indica a la taula següent:
-
-```kingdomProductionTable
-
-```
-
-Es produeixen recursos de tots els tipus, exceptuant el {prestige-label}, utilitzant
-per cada tipus de recurs el seu {kingdom-stat} associat:
-
-| Recurs           | Indicador             |
-| ---------------- | --------------------- |
-| {gold-label}     | {wealth-label}        |
-| {power-label}    | {stability-label}     |
-| {strength-label} | {might-label}         |
-| {faith-label}    | {grace-label}         |
-| {intrigue-label} | 6 - {stability-label} |
-| {favour-label}   | El més baix           |
-
-Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdom-stat}, excepte
-per la {intrigue-label} i el {favour-label}:
-
-- La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
-  estable sigui el regne, menys {intrigue-label} produirà, i viceversa.
-- El {king} serà més donat a repartir el seu {favour-label} si el regne prospera, i
-  viceversa. El {favour-label} es calcula a partir del valor de l'indicador de regne més
-  baix (d'entre {wealth-label}, {stability-label}, {might-label} i {grace-label}.
-
-```example
-Comença la fase de producció. La partida té dos regnes:
-- Un de 3 membres, amb els indicadors força alts: {wealth} 4, {stability} 5, {might} 3 i
-  {grace} 5
-- Un de 5 membres, amb els indicadors força baixos: {wealth} 2, {stability} 1, {might} 1
-  i {grace} 2
-
-Consultant la taula, veiem que el primer regne produirà {gold 6}, {power 8},
-{strength 5}, {faith 8}, {intrigue 2} i {favour 5}.
-
-Per contra, tot i tenir dos membres més, el segon regne produirà menys quantitat de la
-majoria de recursos: {gold 5}, {power 3}, {strength 3}, {faith 5}, {intrigue 13} i
-{favour 3}. En canvi, produrià una gran quantitat d'{intrigue-label} - resultat de
-tenir l'{stability-label} tan baixa!
-```
-
-### Repartiment
-
-Un cop determinada la quantitat d'un recurs que s'ha produït, es procedeix a repartir-lo
-entre els membres del regne.
-
-En primer lloc, cal determinar quin dels membres del regne serà el responsable de
-repartir el recurs:
-
-| Recurs           | Responsable  |
-| ---------------- | ------------ |
-| {gold-label}     | {treasurer}  |
-| {power-label}    | {chancellor} |
-| {strength-label} | {marshal}    |
-| {faith-label}    | {bishop}     |
-| {intrigue-label} | {spy-master} |
-| {favour-label}   | {king}       |
-
-Si el càrrec indicat està buit, el repartiment d'aquell recurs passarà a ser
-responsabilitat del {king}.
-
-El jugador responsable pren tots els recursos, i els reparteix de la forma adequada al
-tipus de recurs que s'estigui repartint, com s'indica a continuació.
-
-#### Repartir favor
-
-Si el recurs a repartir és el {favour-label}, es reparteix lliurement entre els
-membres del regne. No cal mantenir cap equitat, a menys que així es desitgi (al cap de
-vall, el {king} és el {king} i dona el seu favor a qui ell vulgui!). Tanmateix, el {king} no
-pot donar-se favor a sí mateix.
-
-#### Repartir altres recursos
-
-En primer lloc, el responsable del repartiment pot decidir si vol quedar-se una
-unitat del recurs per sí mateix (privilegis de gestionar la caixa!). Si ho fa, el recurs
-manllevat no es comptabilitza en el recompte.
-
-A continuació, reparteix els recursos restants entre els membres del regne (incloent ell
-mateix, tan equitativament com sigui possible. En cas que el total de recursos restants
-no sigui divisible pel nombre de membres del regne, el responsable del repartiment
-decideix quins jugadors rebran un recurs menys que els demés.
-
-### Jugadors sense regne
-
-Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recursos de la
-seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
-{intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
 
 ## Fase de destí #fate-phase
 
@@ -1330,6 +1232,104 @@ Durant aquesta fase, el director de joc resol les apostes per adquirir {assets} 
 
 Durant aquesta fase, si hi ha una o més crisis en joc, el director de joc les resol una
 per una, en ordre de joc, tal com s'explica a la secció [](#crisis-result).
+
+## Fase de producció #production-fase
+
+En aquesta fase es produeixen recursos per cada regne, i es reparteixen entre els seus
+membres.
+
+### Recursos produïts
+
+Cada regne produeix recursos segons el nombre de membres i el valor del seu
+{kingdom-stat} associat, tal com s'indica a la taula següent:
+
+```kingdomProductionTable
+
+```
+
+Es produeixen recursos de tots els tipus, exceptuant el {prestige-label}, utilitzant
+per cada tipus de recurs el seu {kingdom-stat} associat:
+
+| Recurs           | Indicador             |
+| ---------------- | --------------------- |
+| {gold-label}     | {wealth-label}        |
+| {power-label}    | {stability-label}     |
+| {strength-label} | {might-label}         |
+| {faith-label}    | {grace-label}         |
+| {intrigue-label} | 6 - {stability-label} |
+| {favour-label}   | El més baix           |
+
+Cal fer notar que tots els recursos estan vinculats 1:1 amb un {kingdom-stat}, excepte
+per la {intrigue-label} i el {favour-label}:
+
+- La {intrigue-label} és inversament proporcional a l'{stability-label} del regne. Com més
+  estable sigui el regne, menys {intrigue-label} produirà, i viceversa.
+- El {king} serà més donat a repartir el seu {favour-label} si el regne prospera, i
+  viceversa. El {favour-label} es calcula a partir del valor de l'indicador de regne més
+  baix (d'entre {wealth-label}, {stability-label}, {might-label} i {grace-label}.
+
+```example
+Comença la fase de producció. La partida té dos regnes:
+- Un de 3 membres, amb els indicadors força alts: {wealth} 4, {stability} 5, {might} 3 i
+  {grace} 5
+- Un de 5 membres, amb els indicadors força baixos: {wealth} 2, {stability} 1, {might} 1
+  i {grace} 2
+
+Consultant la taula, veiem que el primer regne produirà {gold 6}, {power 8},
+{strength 5}, {faith 8}, {intrigue 2} i {favour 5}.
+
+Per contra, tot i tenir dos membres més, el segon regne produirà menys quantitat de la
+majoria de recursos: {gold 5}, {power 3}, {strength 3}, {faith 5}, {intrigue 13} i
+{favour 3}. En canvi, produrià una gran quantitat d'{intrigue-label} - resultat de
+tenir l'{stability-label} tan baixa!
+```
+
+### Repartiment
+
+Un cop determinada la quantitat d'un recurs que s'ha produït, es procedeix a repartir-lo
+entre els membres del regne.
+
+En primer lloc, cal determinar quin dels membres del regne serà el responsable de
+repartir el recurs:
+
+| Recurs           | Responsable  |
+| ---------------- | ------------ |
+| {gold-label}     | {treasurer}  |
+| {power-label}    | {chancellor} |
+| {strength-label} | {marshal}    |
+| {faith-label}    | {bishop}     |
+| {intrigue-label} | {spy-master} |
+| {favour-label}   | {king}       |
+
+Si el càrrec indicat està buit, el repartiment d'aquell recurs passarà a ser
+responsabilitat del {king}.
+
+El jugador responsable pren tots els recursos, i els reparteix de la forma adequada al
+tipus de recurs que s'estigui repartint, com s'indica a continuació.
+
+#### Repartir favor
+
+Si el recurs a repartir és el {favour-label}, es reparteix lliurement entre els
+membres del regne. No cal mantenir cap equitat, a menys que així es desitgi (al cap de
+vall, el {king} és el {king} i dona el seu favor a qui ell vulgui!). Tanmateix, el {king} no
+pot donar-se favor a sí mateix.
+
+#### Repartir altres recursos
+
+En primer lloc, el responsable del repartiment pot decidir si vol quedar-se una
+unitat del recurs per sí mateix (privilegis de gestionar la caixa!). Si ho fa, el recurs
+manllevat no es comptabilitza en el recompte.
+
+A continuació, reparteix els recursos restants entre els membres del regne (incloent ell
+mateix, tan equitativament com sigui possible. En cas que el total de recursos restants
+no sigui divisible pel nombre de membres del regne, el responsable del repartiment
+decideix quins jugadors rebran un recurs menys que els demés.
+
+### Jugadors sense regne
+
+Durant aquesta fase, els jugadors que no pertanyin a cap regne reben tres recursos de la
+seva elecció (entre {gold-label}, {power-label}, {strength-label}, {faith-label} i
+{intrigue-label}). Tots els recursos guanyats pel jugador han de ser de tipus diferents.
 
 ## Final del torn
 
