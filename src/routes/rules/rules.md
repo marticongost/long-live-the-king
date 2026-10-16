@@ -131,8 +131,6 @@ Separar les cartes de crisis i les cartes d'esdeveniment en dos pilons. Barrejar
 un dels pilons. Robar 5 cartes de crisis i 5 cartes d'esdeveniment; barrejar-les per
 formar la pila de destí.
 
-# Conceptes
-
 ## Recursos
 
 Els jugadors poden acumular diferents tipus de recursos. Els recursos es poden guanyar,
@@ -1353,3 +1351,39 @@ personals i col·lectius.
 Un cop els jugadors hagin resolt aquests efectes es compara el seu {prestige-label}.
 El jugador amb el valor més alt guanya. En cas d'empat els jugadors comparteixen la
 victòria.
+
+# Apèndix
+
+## Icones
+
+Al llarg d'aquest manual i a les cartes i materials de joc s'utilitzen un seguit
+d'icones, per raons d'economia d'espai. Es llisten a continuació, a mode de referència:
+
+| Icona                   | Significat                                                |
+| ----------------------- | --------------------------------------------------------- |
+| {visible}               | Carta visible als altres jugadors                         |
+| {hidden}                | Carta només visible al seu propietari                     |
+| {player}                | Un jugador                                                |
+| {players}               | Múltiples jugadors                                        |
+| {kingdom}               | Regne                                                     |
+| {kingdom-member}        | Un membre del regne                                       |
+| {kingdom-members}       | Múltiples membres del regne                               |
+| {kingdom-stat-friction} | Fricció (cost addicional) per modificar un {kingdom-stat} |
+| {danger}                | Perill - risc i càstig creixent a mida que avança el joc  |
+| {gold}                  | Recurs (Or)                                               |
+| {power}                 | Recurs (Poder)                                            |
+| {strength}              | Recurs (Força)                                            |
+| {faith}                 | Recurs (Fè)                                               |
+| {intrigue}              | Recurs (Intriga)                                          |
+| {favour}                | Recurs (Favor)                                            |
+| {any}                   | Recurs (Qualsevol)                                        |
+| {prestige}              | Prestigi                                                  |
+| {stability}             | Indicador del regne (Estabilitat)                         |
+| {wealth}                | Indicador del regne (Riquesa)                             |
+| {might}                 | Indicador del regne (Exèrcit)                             |
+| {grace}                 | Indicador del regne (Gràcia)                              |
+| {action}                | Capacitat (Acció)                                         |
+| {secret}                | Capacitat (Secret)                                        |
+| {reaction}              | Capacitat (Reacció)                                       |
+| {indication}            | Capacitat (Indicació)                                     |
+| {constant}              | Capacitat (Constant)                                      |

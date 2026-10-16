@@ -43,6 +43,7 @@ export const keywords = {
 	'kingdom-member': undefined,
 	'kingdom-members': undefined,
 	'kingdom-stat-friction': undefined,
+	kingdom: undefined,
 	player: undefined,
 	players: undefined,
 	visible: undefined,
